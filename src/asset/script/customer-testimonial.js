@@ -1,4 +1,21 @@
-"use strict";/* global Vimeo */ /*
+/* global Vimeo */
+
+/*
  * Play video when user clicks poster image
- */(function(){"use strict";function a(){var a=document.querySelector("iframe"),d=new Vimeo.Player(a);b.classList.add("hidden"),c.classList.add("hidden"),d.play()}var b=document.querySelector(".poster"),c=document.querySelector(".play-icon");b.addEventListener("click",a),c.addEventListener("click",a)})();
-//# sourceMappingURL=customer-testimonial.js.map
+ */
+(function() {
+	"use strict";
+
+	var poster = document.querySelector('.poster');
+	var playIcon = document.querySelector('.play-icon');
+	poster.addEventListener("click", playVideo);
+	playIcon.addEventListener("click", playVideo);
+
+	function playVideo() {
+		var iframe = document.querySelector('iframe');
+		var player = new Vimeo.Player(iframe);
+		poster.classList.add("hidden");
+		playIcon.classList.add("hidden");
+		player.play();
+	}
+} ());

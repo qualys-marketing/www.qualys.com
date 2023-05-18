@@ -1,8 +1,308 @@
----js
-{
-  layout: "default.njk",
-  title: "Company page"
-}
 ---
-<h2>{{ title }}</h2>
-<p>This is a test.</p>
+layout: default.njk
+title: About Qualys | Qualys
+description: The leading provider of information security and compliance cloud solutions.
+og:description: The leading provider of information security and compliance cloud solutions.
+og:title: About Qualys | Qualys, Inc.
+og:type: website
+og:url: https://www.qualys.com/company/
+twitter:card: summary
+---
+{%- from "component.njk" import component -%}
+
+{% layoutblock 'appendStyles' %}
+    <link rel="stylesheet" href="index.css">
+{% endlayoutblock %}
+
+{# add any scripts that need to go AFTER other scripts before the closing </body> tag #}
+{% layoutblock 'appendScripts' %}
+    {% include "vimeo-player.njk" %}
+    <script src="index.js"></script>
+{% endlayoutblock %}
+
+{{ component('default-hero', {
+	href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css',
+	color: "red",
+	heroTitle: "About Qualys.",
+	subheading: "The leading provider of information security and compliance cloud solutions.",
+	background: "about-us-hero-desktop.jpg",
+	squarePartial: "company/square.njk",
+	squareBaseline: true
+}) }}
+
+<div class="q-company-intro">
+	<div class="q-company-intro__container">
+		<div class="q-company-intro__container-inner">
+			<div class="q-company-intro__content">
+
+				<h2 class="q-company-intro__heading">
+					Born in the cloud, with a fresh approach to security
+				</h2>
+				<p class="q-company-intro__copy">
+					The Qualys Cloud Platform and its integrated apps help
+					businesses simplify security operations and lower the cost
+					of compliance by delivering critical security intelligence
+					on demand and automating the full spectrum of auditing,
+					compliance and protection for IT systems and
+					web applications.
+				</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="q-company-video">
+	<div class="q-company-video__container">
+		<div class="q-company-video__container__inner">
+
+			{# <div style="padding:56.25% 0 0 0;position:relative;" class="q-company-video__container__inner2">
+				<svg class="play-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68">
+					<path class="bg" fill="#ED2E26" d="M0 0h68v68H0z" />
+					<path fill="#FFF" d="M29 28l10 6-10 6" />
+				</svg>
+				<img loading="lazy"  data-src="{{site.asset}}/image/company-video-poster-2021.jpg" class="poster lazyload" width="1070" height="602">
+				<iframe src="https://player.vimeo.com/video/321568314?byline=0&portrait=0"
+						style="position:absolute;top:0;left:0;width:100%;height:100%;"
+						frameborder="0"
+						allowfullscreen></iframe>
+			</div> #}
+			<h2 class="q-company-counter__heading">
+				Over 10,000 subscription customers worldwide trust Qualys
+			</h2>
+			<div class="q-company-counters">
+				<div class="q-company-counter" id="counter__1">
+					<div class="q-company-counter-text">
+						<p class="counter-text" id="counter_text_50">70</p>
+						<span class="percentage">%</span>
+					</div>
+					<p class="counter-desc">Forbes Global 50</p>
+				</div>
+				<div class="q-company-counter"id="counter__2" >
+					<div class="q-company-counter-text">
+						<p class="counter-text" id="counter_text_100">70</p>
+						<span class="percentage">%</span>
+					</div>
+					<p class="counter-desc">Forbes Global 100</p>
+				</div>
+				<div class="q-company-counter" id="counter__3">
+					<div class="q-company-counter-text">
+						<p class="counter-text" id="counter_text_500">53</p>
+						<span class="percentage">%</span>
+					</div>
+					<p class="counter-desc">Forbes Global 500</p>
+				</div>
+				<div class="q-company-counter" id="counter__4">
+					<div class="q-company-counter-text">
+						<p class="counter-text" id="counter_text_1000">31</p>
+						<span class="percentage">%</span>
+					</div>
+					<p class="counter-desc">Forbes Global 2000</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="q-company-facts">
+	<div class="q-company-facts__container">
+		<div class="q-company-facts__container--inner">
+			<div class="q-company-facts__row">
+				<div class="q-company-facts__left">
+
+					<h1 class="q-company-facts__heading">
+						Leading the industry for 20+ years
+					</h1>
+					<p class="q-company-facts__text">
+						Founded in 1999 as one of the first SaaS security companies, Qualys has established strategic partnerships with leading cloud providers like Amazon Web Services, Microsoft Azure and the Google Cloud Platform, and managed service providers and consulting organizations including Accenture, BT, Cognizant Technology Solutions, Deutsche Telekom, DXC Technology, Fujitsu, HCL Technologies, IBM, Infosys, NTT, Optiv, SecureWorks, Tata Communications, Verizon and Wipro. The company is also a founding member of the Cloud Security Alliance (CSA).
+					</p>
+					<div class="q-company-facts__awards">
+						<div class="q-company-facts__awards-left">
+							<img loading="lazy"  data-src="{{site.asset}}/image/awards/sc-awards-2020-winner-200-2x.png" alt="Frost &amp; Sullivan" 								 class="q-company-facts__awards-image lazyload" 								 width="96" 								 height="31">
+						</div>
+						<div class="q-company-facts__awards-right">
+							<h2 class="q-company-facts__awards-heading">
+								Qualys Wins Best Vulnerability Management Solution at <span class="nowrap">SC Awards</span>
+							</h2>
+							<p class="q-company-facts__awards-text">
+								2020
+							</p>
+							<a href="/company/newsroom/news-releases/usa/qualys-wins-best-vulnerability-management-at-sc-awards-2020/"
+							   class="q-link">Read more</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="q-company-facts__right">
+
+					<h1 class="q-company-facts__heading">
+						More than 70% of the Forbes Global 100 rely on Qualys
+					</h1>
+					<ul class="q-company-facts__list">
+						<li class="q-company-facts__list-item">
+							<img loading="lazy"  data-src="{{site.asset}}/image/icon/company/retail.svg" class="q-company-facts__icon lazyload">
+							Retail - 7 out of top 10
+						</li>
+						<li class="q-company-facts__list-item">
+							<img loading="lazy"  data-src="{{site.asset}}/image/icon/company/technology.svg" class="q-company-facts__icon lazyload">
+							Technology - 9 out of top 10
+						</li>
+						<li class="q-company-facts__list-item">
+							<img loading="lazy" data-src="{{site.asset}}/image/icon/company/icon-telecom.svg"
+								class="q-company-facts__icon lazyload" width="40">
+							Telecom - 7 out of top 10
+						</li>
+						<li class="q-company-facts__list-item">
+							<img loading="lazy" data-src="{{site.asset}}/image/icon/company/icon-healthcare.svg"
+								class="q-company-facts__icon lazyload" width="40">
+							Healthcare - 7 out of top 10
+						</li>
+						<li class="q-company-facts__list-item">
+							<img loading="lazy"  data-src="{{site.asset}}/image/icon/company/banking.svg" class="q-company-facts__icon lazyload">
+							Diversified Financials - 8 out of top 10
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="q-company-management" id="management-team">
+	<div class="q-heading-plus-cta">
+		<div class="q-heading-plus-cta__inner">
+
+			<h2 class="q-heading-plus-cta__heading">
+				Management team
+			</h2>
+
+		</div>
+	</div>
+	<div class="q-company-management__container">
+		<div class="q-company-management__container-inner">
+			<div class="q-company-management__row">
+
+				<p class="q-company-management__copy">
+					Our experienced executive team brings decades of experience
+					in top security, technology, and Fortune 500 companies.
+				</p>
+
+			</div>
+			<div class="q-company-management__blocks">
+
+          {% include "company/members.njk" %}
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Qualys, Inc.",
+		"url": "https://www.qualys.com",
+		"logo": "https://www.qualys.com/favicon-256.png",
+		"address":{
+			"@type":"PostalAddress",
+			"streetAddress":"919 E Hillsdale Blvd, 4th Floor",
+			"addressLocality":"Foster City",
+			"addressRegion":"CA",
+			"postalCode":"94404",
+			"addressCountry":"US"
+		},
+		"location":{
+			"@type":"PostalAddress",
+			"streetAddress":"919 E Hillsdale Blvd, 4th Floor",
+			"addressLocality":"Foster City",
+			"addressRegion":"CA",
+			"postalCode":"94404",
+			"addressCountry":"US"
+		},
+		"contactPoint": [
+			{ "@type": "ContactPoint",
+				"telephone": "+1-800-745-4355",
+				"contactType": "sales",
+				"contactOption": "TollFree"
+			}
+		],
+		"sameAs": [
+			"https://twitter.com/qualys",
+			"https://www.linkedin.com/company/qualys",
+			"https://www.facebook.com/qualys",
+			"https://www.youtube.com/user/QualysGuard",
+			"https://vimeo.com/qualys"
+		]
+	}
+</script>
+
+<div class="q-company-contact">
+	<div class="q-company-contact__container">
+		<div class="q-company-contact__row">
+			<div class="q-company-contact__left">
+
+				<h2 class="q-company-contact__heading">
+					Contact info
+				</h2>
+				<p class="q-company-contact__info">
+					<a href="/forms/contact-sales/">Contact sales</a>,
+					call us at
+					<a href="tel:18007454355">+1 800 745 4355</a>,
+					or visit a Qualys office near you.
+				</p>
+				<div class="q-company-contact__link">
+					<a href="/company/contacts/"
+					   class="q-link">Global Offices &amp; Contacts</a>
+				</div>
+
+				<h3 class="q-company-contact__headquartersTitle">
+					Headquarters
+				</h3>
+				<p class="q-company-contact__headquartersInfo">
+					919 E Hillsdale Blvd, 4th Floor<br />
+					Foster City, CA 94404 USA <br>
+					<a href="https://www.google.com/maps/place/919+E+Hillsdale+Blvd,+Foster+City,+CA+94404/" target="_blank" rel="noopener" class="q-link">Directions</a>
+				</p>
+				<div class="q-company-contact__socialLinks">
+          {{ component('social-list', {
+            dark: true
+          }) }}
+				</div>
+
+			</div>
+			<div class="q-company-contact__right">
+				<a href="https://www.google.com/maps/place/919+E+Hillsdale+Blvd,+Foster+City,+CA+94404/"><img loading="lazy"  data-src="{{site.asset}}/image/company/qualys-map-2x.jpg" 	class="lazyload"			   width="630" 				   height="630"></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="q-company-info">
+	<div class="q-company-info__container">
+		<div class="q-company-info__row">
+			<div class="q-company-info__left">
+				<h3 class="q-company-info__heading">
+					Stay up-to-date
+				</h3>
+				<p class="q-company-info__text">
+					Read our blog for the latest news about vulnerabilities,
+					regulations, and Qualys Cloud Platform updates.
+				</p>
+				<a href="https://blog.qualys.com"
+				   class="q-link">Read our blog</a>
+			</div>
+			<div class="q-company-info__right">
+				<h3 class="q-company-info__heading">
+					Want to help transform security?
+				</h3>
+				<p class="q-company-info__text">
+					Qualys is looking for talented and motivated individuals
+					to join our growing team.
+				</p>
+				<a href="/careers/" class="q-link">Join the Qualys team</a>
+			</div>
+		</div>
+	</div>
+</div>
+

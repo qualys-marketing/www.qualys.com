@@ -1,2 +1,9 @@
-"use strict";(function(){var a=document.getElementsByTagName("head")[0],b=document.createElement("link");b.rel="stylesheet",b.type="text/css",b.href="/asset/stylesheet/main.print.css",b.media="print",a.appendChild(b)})();
-//# sourceMappingURL=lazy-load-print-css.js.map
+(function() {
+	var s = document.getElementsByTagName("head")[0]
+		, l = document.createElement("link");
+	l.rel = "stylesheet";
+	l.type = "text/css";
+	l.href = "/asset/stylesheet/main.print.css";
+	l.media = "print";
+	s.appendChild(l);
+})();

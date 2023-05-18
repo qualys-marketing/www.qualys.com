@@ -1,2 +1,70 @@
-"use strict";/* global jQuery */(function(a){"use strict";function b(d){var e,f,g;if(e="",f=d.split(" "),g=f[1].split("-"),2===f.length)2===g.length&&(f[1]=g[1]),e=(f[0].charAt(0)+f[1]).toLowerCase();else throw new Error("input format error, input = &gt;&gt;&gt;".concat(d,"&lt;&lt;&lt;"));return e+String.fromCharCode(64)}a(document).on("ready",function(){/* show a popup over each person's image in the image map */ /* animate the window scrolling to each anchor position */a("div.company-management-bodyshots area").on("mouseover",function(b){var c;/* get unique ID from area link */a("ul.company-management-links li").css({display:"none"}),c=b.currentTarget.href.split("#").pop(),a("ul.company-management-links li.company-management-"+c).fadeIn("fast")}),a("ul.company-management-links li a, div.company-management-bodyshots map area, div.back-to-top a").on("click",function(b){var c,d;c=a(b.currentTarget).attr("href").replace("#",""),d=a("#"+c).offset().top,a("html:not(:animated),body:not(:animated)").animate({scrollTop:d-20},750,null,function(){window.location.hash=a(b.currentTarget).attr("href")}),b.preventDefault()}),a("a.company-management-bio-email").bind("click",function(c){var d,e,f,g;d=a(c.currentTarget).attr("href"),e=d.split(":"),f=e[0],g=decodeURIComponent(e[1]),g.match(/\s/)&&a(c.currentTarget).attr("href",f+String.fromCharCode(58)+b(g)+"qualys"+String.fromCharCode(46,99,111,109))})})})(jQuery);
-//# sourceMappingURL=management.js.map
+/* global jQuery */
+(function ($) {
+
+	"use strict";
+
+	function deliberatelyObfusticatedFunction(i) {
+		var a, b, c;
+
+		a = "";
+		b = i.split(" ");
+		c = b[1].split("-");
+
+		if (b.length === 2) {
+
+			if (c.length === 2) {
+				b[1] = c[1];
+			}
+			a = (b[0].charAt(0) + b[1]).toLowerCase();
+		} else {
+
+			throw new Error(`input format error, input = &gt;&gt;&gt;${i}&lt;&lt;&lt;`);
+
+		}
+
+		return a + String.fromCharCode(0x40);
+	}
+
+	$(document).on("ready", function () {
+
+		/* show a popup over each person's image in the image map */
+		$("div.company-management-bodyshots area").on("mouseover", function (event) {
+			var id;
+
+			$("ul.company-management-links li").css({"display": "none"});
+
+			/* get unique ID from area link */
+			id = event.currentTarget.href.split("#").pop();
+			$("ul.company-management-links li.company-management-" + id).fadeIn("fast");
+		});
+
+		/* animate the window scrolling to each anchor position */
+		$("ul.company-management-links li a, div.company-management-bodyshots map area, div.back-to-top a").on("click", function (event) {
+			var destinationElement, destinationOffset;
+
+			destinationElement = $(event.currentTarget).attr("href").replace("#","");
+			destinationOffset = $("#"+destinationElement).offset().top;
+
+			$("html:not(:animated),body:not(:animated)").animate({
+				scrollTop: destinationOffset-20
+			}, 750, null, function () {
+				window.location.hash = $(event.currentTarget).attr("href");
+			});
+
+			event.preventDefault();
+		});
+
+		$("a.company-management-bio-email").bind("click", function (event) {
+			var href, hrefSplit, protocol, remainder;
+
+			href = $(event.currentTarget).attr("href");
+			hrefSplit = href.split(":");
+			protocol = hrefSplit[0];
+			remainder = decodeURIComponent(hrefSplit[1]);
+
+			if (remainder.match(/\s/)) {
+				$(event.currentTarget).attr("href", protocol + String.fromCharCode(0x3a) + deliberatelyObfusticatedFunction(remainder) + "qualys" + String.fromCharCode(0x2e, 0x63, 0x6f, 0x6d));
+			}
+		});
+	});
+}(jQuery));

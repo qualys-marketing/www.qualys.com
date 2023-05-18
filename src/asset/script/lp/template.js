@@ -1,6 +1,26 @@
-"use strict";/* global jQuery  MktoForms2*/ /*
+/* global jQuery  MktoForms2*/
+/*
  * populate "position" field
- */ /*
+ */
+(function ($,MktoForms2) {
+
+	"use strict";
+
+	MktoForms2.whenReady(function (form) {
+		form.getFormElem().find("[name=formPosition]").val("bottom");
+	});
+
+}(jQuery,MktoForms2));
+
+/*
  * add spacer div
- */(function(a,b){"use strict";b.whenReady(function(a){a.getFormElem().find("[name=formPosition]").val("bottom")})})(jQuery,MktoForms2),function(a,b){"use strict";b.whenReady(function(a){a.getFormElem().find(".mktoButtonRow").before("<div class='spacer'/>")})}(jQuery,MktoForms2);
-//# sourceMappingURL=template.js.map
+ */
+(function ($,MktoForms2) {
+
+	"use strict";
+
+	MktoForms2.whenReady(function (form) {
+		form.getFormElem().find(".mktoButtonRow").before("<div class='spacer'/>");
+	});
+
+}(jQuery,MktoForms2));

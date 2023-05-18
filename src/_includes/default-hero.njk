@@ -1,0 +1,117 @@
+<!-- standard page hero -->
+<div class="q-default-hero q-default-hero--{{params.color}}{% if params.disableAnimation %} q-default-hero--no-animation{% endif %}{% if params.squareBaseline %} q-default-hero--square-baseline{% endif %}">
+	<div class="q-default-hero__container">
+
+		<div class="q-default-hero__content">
+			<h1 class="q-default-hero__heading">{{ params.heroTitle }}</h1>
+			<h2 class="q-default-hero__subheading">{{ params.subheading }}</h2>
+
+			{% if params.video %}
+			<div class="q-default-hero__link">
+				<a class="q-play-button2" data-fancybox href="{{params.video}}">
+					<span class="q-play-button__text q-link2">Watch video</span>
+					<svg class="q-play-button__arrow" width="31" height="31" xmlns="http://www.w3.org/2000/svg">
+						<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+							<circle class="circle" stroke="#9BC0E0" stroke-width="1.8" cx="14.5" cy="14.5" r="14.5" />
+							<path class="triangle" fill="#9BC0E0" d="M22 14.5L11 20V9z" />
+						</g>
+					</svg>
+				</a>
+			</div>
+			{% endif %}
+
+			{% if params.ctaPartial %}
+				{% include params.ctaPartial %}
+			{% endif %}
+		</div>
+
+		<div class="q-default-hero__splash">
+
+			<div class="q-default-hero__box-wrap">
+
+				<!-- square component content -->
+				{% if params.quote %}
+					<div class="q-square q-square--justified">
+						<div class="q-square__inner">
+							<div class="q-square__content">
+								<blockquote class="q-blockquote q-blockquote--active">
+									{% if params.logo %}
+									<div class="q-blockquote__brand">
+										<img loading="lazy"  alt="{{params.logoAlt}}" data-src="{{site.asset}}/image/logo/{{params.logo}}" class="lazyload">
+									</div>
+									{% endif %}
+									{% if params.squareLink %}
+										{{params.squareLink}}
+									{% endif %}
+									<p class="q-blockquote__content">{{params.quote}}</p>
+									<cite class="q-blockquote__cite">
+										{% if params.headshot %}
+										<img loading="lazy"  class="q-blockquote__headshot lazyload" data-src="{{site.asset}}/image/headshots/{{params.headshot}}" width="64" height="64" alt>
+										{% endif %}
+										<span class="q-blockquote__cite-detail">
+											{% if params.citeName %}
+												<span class="q-blockquote__name">
+												{{params.citeName}}
+											</span>
+											{% endif %}
+											{% if params.citeRole %}
+											<span class="q-blockquote__role">
+												{{params.citeRole}}
+											</span>
+											{% endif %}
+										</span>
+									</cite>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+
+				<!-- custom content -->
+				{% if params.squarePartial %}
+					{% include params.squarePartial %}
+				{% endif %}
+			</div>
+
+			<!-- splash image -->
+			<div class="q-default-hero__image" style="background-image: url('{{site.asset}}/image/{{params.background}}')">
+				{% if params.appsOverviewPage %}
+					<div class="row">
+						<!-- set 1 -->
+						<img loading="lazy"  class="app-badge hidden set-1 lazyload" data-src="{{site.asset}}/image/app-icons/white-ai.svg">
+						<img loading="lazy"  class="app-badge hidden set-1 lazyload" data-src="{{site.asset}}/image/app-icons/white-syn.svg">
+						<img loading="lazy"  class="app-badge hidden set-1 lazyload" data-src="{{site.asset}}/image/app-icons/white-vm.svg">
+						<!-- set 2 -->
+						<img loading="lazy"  class="app-badge hidden set-2 lazyload" data-src="{{site.asset}}/image/app-icons/white-tp.svg">
+						<img loading="lazy"  class="app-badge hidden set-2 lazyload" data-src="{{site.asset}}/image/app-icons/white-sca.svg">
+						<img loading="lazy"  class="app-badge hidden set-2 lazyload" data-src="{{site.asset}}/image/app-icons/white-ai.svg">
+						<!-- set 3 -->
+						<img loading="lazy"  class="app-badge hidden set-3 lazyload" data-src="{{site.asset}}/image/app-icons/white-syn.svg">
+						<img loading="lazy"  class="app-badge hidden set-3 lazyload" data-src="{{site.asset}}/image/app-icons/white-vm.svg">
+						<img loading="lazy"  class="app-badge hidden set-3 lazyload" data-src="{{site.asset}}/image/app-icons/white-cm.svg">
+						<!-- set 4 -->
+						<img loading="lazy"  class="app-badge hidden set-4 lazyload" data-src="{{site.asset}}/image/app-icons/white-ioc.svg">
+						<img loading="lazy"  class="app-badge hidden set-4 lazyload" data-src="{{site.asset}}/image/app-icons/white-cs.svg">
+						<img loading="lazy"  class="app-badge hidden set-4 lazyload" data-src="{{site.asset}}/image/app-icons/white-was.svg">
+						<!-- set 5 -->
+						<img loading="lazy"  class="app-badge hidden set-5 lazyload" data-src="{{site.asset}}/image/app-icons/white-waf.svg">
+						<img loading="lazy"  class="app-badge hidden set-5 lazyload" data-src="{{site.asset}}/image/app-icons/white-cm.svg">
+						<img loading="lazy"  class="app-badge hidden set-5 lazyload" data-src="{{site.asset}}/image/app-icons/white-ioc.svg">
+						<!-- set 6 -->
+						<img loading="lazy"  class="app-badge hidden set-6 lazyload" data-src="{{site.asset}}/image/app-icons/white-cs.svg">
+						<img loading="lazy"  class="app-badge hidden set-6 lazyload" data-src="{{site.asset}}/image/app-icons/white-pc.svg">
+						<img loading="lazy"  class="app-badge hidden set-6 lazyload" data-src="{{site.asset}}/image/app-icons/white-pci.svg">
+						<!-- set 7 -->
+						<img loading="lazy"  class="app-badge hidden set-7 lazyload" data-src="{{site.asset}}/image/app-icons/white-fim.svg">
+						<img loading="lazy"  class="app-badge hidden set-7 lazyload" data-src="{{site.asset}}/image/app-icons/white-csa.svg">
+						<img loading="lazy"  class="app-badge hidden set-7 lazyload" data-src="{{site.asset}}/image/app-icons/white-saq.svg">
+						<!-- set 8 -->
+						<img loading="lazy"  class="app-badge hidden set-8 lazyload" data-src="{{site.asset}}/image/app-icons/white-pc.svg">
+						<img loading="lazy"  class="app-badge hidden set-8 lazyload" data-src="{{site.asset}}/image/app-icons/white-pci.svg">
+						<img loading="lazy"  class="app-badge hidden set-8 lazyload" data-src="{{site.asset}}/image/app-icons/white-fim.svg">
+					</div>
+					{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div class="q-company-profile-grid">
+	{% for person in management %}
+
+	<div class="q-company-profile">
+
+		<div class="q-company-profile__image-wrapper">
+			{% if person.image %}
+			<img
+				class="q-company-profile__image"
+				src="{{person.image}}"
+				width="395"
+				alt="Headshot of {{person.name}}"
+			/>
+			{% else %}
+				<img
+				class="q-company-profile__image"
+				src="{{image_dummy}}"
+				width="395"
+				height="440"
+				alt="Headshot of {{person.name}}"
+			/>
+			{% endif %}
+		</div>
+
+		<div class="q-company-profile__content">
+
+			<h2 class="q-company-profile__name">{{person.name}}</h2>
+			<span class="q-company-profile__role">{{person.title}}</span>
+			<p class="q-company-profile__bio">{{person.bioShort}}</p>
+			<ul class="q-company-profile__list">
+				{# <li class="q-company-profile__list-item">
+					<a class="q-company-profile__link" href="mailto:{{email}}">Email</a>
+				</li> #}
+				<li class="q-company-profile__list-item">
+					<a class="q-company-profile__link q-link" href="{{person.linkedin}}"><span>LinkedIn</span></a>
+				</li>
+				<li class="q-company-profile__list-item">
+					<a class="q-company-profile__link q-link" href="/company/management/#{{person.anchor}}">Full <span>bio</span></a>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	{% endfor %}
+</div>

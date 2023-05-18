@@ -1,30 +1,298 @@
-"use strict";/* global jQuery */ // hide register buttons
-// agenda tab functionality
-// session filter functionality
-/*
- * automatically open video and keynote speaker overlay based on hash value
- */ /*
- * expand/collapse training agenda
- */ /*
- * expand/collapse conference agenda
-*/(function(a){"use strict";/**
+/* global jQuery */
+(function ($) {
+
+	"use strict";
+
+	/**
 	 * when accessing an anchored URL, e.g. /2017/qsc/agenda/#training
 	 * Firefox doesn't jump to the correct anchors below the Agenda / Training section because the
 	 * Agenda / Training section uses jQuery Tools Tabs. As a fix, this code waits 1 second and then
 	 * triggers a click event to smooth scroll the page to the correct anchor location
-	 */ /*
+	 */
+	$(document).on("ready", function () {
+		if (window.location.hash) {
+			// get hash value
+			var hash = window.location.hash.substring(1);
+			hash = hash.split("/");
+			// do the following code after a brief pause to ensure smooth scrolling occurs AFTER default browser anchor jump event
+			setTimeout(function(){
+				// trigger click event on link with hash anchor
+				$("a[href="+hash+"]").click();
+			}, 0);
+		}
+	});
+
+
+	/*
 	 * toggle mobile nav on click of hamburger icon
-	 */a(document).on("ready",function(){if(window.location.hash){// get hash value
-var b=window.location.hash.substring(1);// do the following code after a brief pause to ensure smooth scrolling occurs AFTER default browser anchor jump event
-b=b.split("/"),setTimeout(function(){// trigger click event on link with hash anchor
-a("a[href="+b+"]").click()},0)}}),a(document).ready(function(){var b=a(".q-qsc__nav--container");a(".js-qsc__hamburger").on("click",function(){b.hasClass("q-qsc__menu--show")?b.removeClass("q-qsc__menu--show"):b.addClass("q-qsc__menu--show")})})})(jQuery),function(a){"use strict";// sticky sub nav
-// scrollspy
-function b(){var b,c=a(".q-qsc-section");c.each(function(){var c=a(this),d=c.attr("id");a("#"+d).offset().top-80<=a(window).scrollTop()&&(b=d)}),a(".q-qsc-city__subnav a[href='#"+b+"']").addClass("subnav-active"),a(".q-qsc-city__subnav a").not("a[href='#"+b+"']").removeClass("subnav-active")}// scroll to section
-(function(b){if("undefined"!=typeof b&&b.offset()!==void 0){var c=b.offset().top,d=a(window);d.on("scroll",function(){d.scrollTop()>=c?b.addClass("fixed"):b.removeClass("fixed"),document.querySelector(".subnav-active")&&(d.scrollTop()>=c?"":document.querySelector(".subnav-active").classList.remove("subnav-active"))})}})(a(".q-subnav__sticky")),a(".q-qsc__subnav-link").on("click",function(b){if(!a(this).hasClass("no-scroll")){var c=a(this.getAttribute("href"));c.length&&(b.preventDefault(),a("html, body").stop().animate({scrollTop:c.offset().top+20},0))}}),b(),a(window).scroll(function(){b()})}(jQuery),function(a){"use strict";var b=window.location.pathname.replace("/2018/qsc/","").replace("/","");"las-vegas"===b||"london"===b||"berlin"===b||"paris"===b?a("body").addClass("registration-closed"):void 0}(jQuery),function(a){"use strict";// if hash value containing tab ID exists, trigger a click on the tab
-function b(){var b=window.location.hash.replace(/#|\//gi,"");"training"===b&&(b="nov18"),a("[data-tab-id=\""+b+"\"]").trigger("click")}a(".tablink").on("click",function(b){// event.preventDefault();
-var c=a(b.currentTarget).attr("data-tab-id");a(".tablink").parent().removeClass("active-date"),a(b.currentTarget).parent().addClass("active-date"),a(".tab-content").addClass("hidden"),a(".tab-content-wrapper #"+c).removeClass("hidden"),a(".q-qsc__tabs-item").removeClass("tab-active"),a(b.currentTarget).parents(".q-qsc__tabs-item").addClass("tab-active")}),a(".q-qsc__tabs").on("click",function(b){a(b.currentTarget).toggleClass("open")}),window.addEventListener("hashchange",b),document.addEventListener("DOMContentLoaded",b),b()}(jQuery),function(a){"use strict";a(".filter-link").on("click",function(b){a(b.currentTarget).hasClass("active")?a(b.currentTarget).removeClass("active"):a(b.currentTarget).addClass("active");var c=[];// create array of active filters
-// hide all sessions
-// show filtered sessions
-a(".filter-link.active").each(function(b,d){c.push(a(d).attr("data-filter-id"))}),a(".tab-content-wrapper tr").addClass("hidden"),a(".tab-content-wrapper tr").each(function(b,d){var e=a(d).attr("data-filter-id");-1!==a.inArray(e,c)&&a(d).removeClass("hidden")})}),a(".clear-all a").on("click",function(){a(".filter-link").each(function(b,c){a(c).removeClass("active"),a(".tab-content-wrapper tr").removeClass("hidden")})})}(jQuery),function(a){"use strict";function b(){// get hash value
-var b="";window.location.hash&&(b=window.location.hash.substring(1),b=0==b.indexOf("/")?b.substring(1):b),"video"===b?a(".q-qsc-video__icon").trigger("click"):-1===b.indexOf("speaker")?a("[href=\"#"+b+"\"]").trigger("click"):(b=b.replace("speaker-",""),a("[href=\"#"+b+"\"]").trigger("click"))}a(document).ready(b),a(window).on("hashchange",b)}(jQuery),function(a){"use strict";a(".training .agenda").addClass("hidden"),a(".training .title .label").on("click",function(b){a(b.currentTarget).parent().parent().parent().find(".agenda").toggleClass("hidden")})}(jQuery),function(a){"use strict";var b=window.matchMedia("(min-width: 600px)");a(".conference-description").addClass("hidden"),a(".conference-title-wrapper.label").on("click",function(c){b.matches?a(".parallel").addClass("desktop"):a(".parallel").removeClass("desktop"),a(c.currentTarget).parents(".parallel.desktop").length?(a(c.currentTarget).parents(".parallel").find(".conference-description").toggleClass("hidden"),a(c.currentTarget).parents(".parallel").find(".label").toggleClass("opened")):(a(c.currentTarget).parent().find(".conference-description").toggleClass("hidden"),a(c.currentTarget).toggleClass("opened"))})}(jQuery);
-//# sourceMappingURL=qsc.js.map
+	 */
+	$(document).ready(function() {
+		var $nav = $(".q-qsc__nav--container");
+
+		$(".js-qsc__hamburger").on("click", function () {
+			if ($nav.hasClass("q-qsc__menu--show")) {
+				$nav.removeClass("q-qsc__menu--show");
+			} else {
+				$nav.addClass("q-qsc__menu--show");
+			}
+		});
+
+	});
+
+}(jQuery));
+
+(function ($) {
+	"use strict";
+
+	// sticky sub nav
+	createSticky($(".q-subnav__sticky"));
+
+	function createSticky(sticky) {
+		if (typeof sticky !== "undefined" && sticky.offset() !== undefined) {
+
+			var	pos = sticky.offset().top,
+				win = $(window);
+
+			win.on("scroll", function() {
+				win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");
+				//Remove active subMenu status
+				if (document.querySelector(".subnav-active")) {
+					win.scrollTop() >= pos ? "" : document.querySelector(".subnav-active").classList.remove("subnav-active");
+				}
+			});
+		}
+	}
+
+	// scroll to section
+	$(".q-qsc__subnav-link").on("click", function(event) {
+
+		if( !$(this).hasClass("no-scroll") ) {
+			var target = $(this.getAttribute('href'));
+
+			if( target.length ) {
+				event.preventDefault();
+				$("html, body").stop().animate({
+					scrollTop: target.offset().top + 20
+				}, 0);
+			}
+		}
+
+	});
+
+	// scrollspy
+
+	function scrollSpy() {
+		var sections = $(".q-qsc-section");
+		var current;
+
+		sections.each( function(){
+			var ths = $(this);
+			var sectionId = ths.attr("id");
+
+			if ( $("#"+sectionId).offset().top-80 <= $(window).scrollTop() ) {
+				current = sectionId;
+			}
+		});
+		$(".q-qsc-city__subnav a[href='#"+current+"']").addClass("subnav-active");
+		$(".q-qsc-city__subnav a").not("a[href='#"+current+"']").removeClass("subnav-active");
+	}
+
+	scrollSpy();
+
+	$(window).scroll( function() {
+		scrollSpy();
+	});
+
+}(jQuery));
+
+// hide register buttons
+(function ($) {
+	"use strict";
+
+	var location = window.location.pathname.replace("/2018/qsc/", "").replace("/", "");
+
+	switch(location) {
+		case "las-vegas":
+		case "london":
+		case "berlin":
+		case "paris":
+			$("body").addClass("registration-closed");
+			break;
+	}
+
+}(jQuery));
+
+// agenda tab functionality
+(function ($) {
+	"use strict";
+
+	$(".tablink").on("click", function(event){
+		// event.preventDefault();
+		var tabId = $(event.currentTarget).attr("data-tab-id");
+		$(".tablink").parent().removeClass("active-date");
+		$(event.currentTarget).parent().addClass("active-date");
+		$(".tab-content").addClass("hidden");
+		$(".tab-content-wrapper #"+tabId).removeClass("hidden");
+
+		$(".q-qsc__tabs-item").removeClass("tab-active");
+		$(event.currentTarget).parents(".q-qsc__tabs-item").addClass("tab-active");
+	});
+
+	$(".q-qsc__tabs").on("click", function(event){
+		$(event.currentTarget).toggleClass("open");
+	});
+
+	// if hash value containing tab ID exists, trigger a click on the tab
+	function handleHashChange() {
+		var hash = window.location.hash.replace(/#|\//gi, "");
+		if (hash === "training") {
+			hash = "nov18";
+		}
+		$('[data-tab-id="'+hash+'"]').trigger("click");
+	}
+
+	window.addEventListener("hashchange", handleHashChange);
+	document.addEventListener("DOMContentLoaded", handleHashChange);
+	handleHashChange();
+
+}(jQuery));
+
+
+// session filter functionality
+(function ($) {
+	"use strict";
+
+	$(".filter-link").on("click", function(event){
+		// toggle display of filter link
+		if ($(event.currentTarget).hasClass("active")) {
+			$(event.currentTarget).removeClass("active");
+		} else {
+			$(event.currentTarget).addClass("active");
+		}
+
+		var filters =[];
+
+		// create array of active filters
+		$(".filter-link.active").each(function (index, element) {
+			filters.push($(element).attr("data-filter-id"));
+		});
+
+		// hide all sessions
+		$(".tab-content-wrapper tr").addClass("hidden");
+
+		// show filtered sessions
+		$(".tab-content-wrapper tr").each(function (index, element) {
+			var filterId = $(element).attr("data-filter-id");
+
+			if ($.inArray(filterId, filters) !== -1) {
+				$(element).removeClass("hidden");
+			}
+		});
+	});
+
+	$(".clear-all a").on("click", function () {
+		$(".filter-link").each(function (index, element) {
+			$(element).removeClass("active");
+			$(".tab-content-wrapper tr").removeClass("hidden");
+		});
+	});
+
+}(jQuery));
+
+/*
+ * automatically open video and keynote speaker overlay based on hash value
+ */
+(function ($) {
+	"use strict";
+
+	function openVideoOverlay() {
+		// get hash value
+		var hash = "";
+		if (window.location.hash) {
+			/* Puts hash in variable, and removes the # character */
+			hash = window.location.hash.substring(1);
+			/* remove initial slash if it exists */
+			hash = hash.indexOf("/") == 0 ? hash.substring(1) : hash;
+		}
+
+		if (hash === "video") {
+			// trigger the click on hash selectors
+			$(".q-qsc-video__icon").trigger( "click" );
+		} else if (hash.indexOf("speaker") !== -1) {
+			hash = hash.replace("speaker-", "");
+			$('[href="#'+hash+'"]').trigger( "click" );
+		} else {
+			$('[href="#'+hash+'"]').trigger( "click" );
+		}
+	}
+
+	$(document).ready(openVideoOverlay);
+	$(window).on("hashchange", openVideoOverlay);
+}(jQuery));
+
+/*
+ * expand/collapse training agenda
+ */
+(function ($) {
+	"use strict";
+
+	$(".training .agenda").addClass("hidden");
+
+	$(".training .title .label").on("click", function (element) {
+		$(element.currentTarget).parent().parent().parent().find(".agenda").toggleClass("hidden");
+	});}(jQuery));
+
+/*
+ * expand/collapse conference agenda
+*/
+(function ($) {
+	"use strict";
+
+	var x = window.matchMedia("(min-width: 600px)");
+
+	$(".conference-description").addClass("hidden");
+
+	$(".conference-title-wrapper.label").on("click", function (element) {
+		if (x.matches) {
+			$(".parallel").addClass("desktop");
+		} else {
+			$(".parallel").removeClass("desktop");
+		}
+		if ($(element.currentTarget).parents(".parallel.desktop").length) {
+			// clicked on parallel breakout session on desktop
+			$(element.currentTarget).parents(".parallel").find(".conference-description").toggleClass("hidden");
+			$(element.currentTarget).parents(".parallel").find(".label").toggleClass("opened");
+		} else { // clicked on regular session
+			$(element.currentTarget).parent().find(".conference-description").toggleClass("hidden");
+			$(element.currentTarget).toggleClass("opened");
+		}
+	});
+}(jQuery));
+
+/*
+ * handle training registration form
+
+(function ($) {
+	"use strict";
+
+	$(".training-register-form .q-button").on("click", function (event) {
+		var $form = $(event.currentTarget).closest("form");
+
+		var classId = $form.find("input[type=radio]:checked").val();
+
+		if (classId === undefined) {
+			$form.find(".validation-rule").removeClass("hidden");
+		} else {
+			$form.find(".validation-rule").addClass("hidden");
+
+			var classLink = "https://gm1.geolearning.com/geonext/qualys/scheduledclassdetails4enroll.geo?id=" + classId;
+
+			$(event.currentTarget).attr("href", classLink);
+		}
+	});
+
+	$(".training input[type=radio]").on("click", function (event) {
+		$(event.currentTarget).closest("form").find(".validation-rule").addClass("hidden");
+	});
+}(jQuery));
+ */

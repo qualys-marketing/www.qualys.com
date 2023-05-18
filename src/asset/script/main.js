@@ -1,169 +1,1990 @@
-"use strict";/* global jQuery _ */ /**
+/* global jQuery _ */
+
+/**
  * Block all use of document.write
  * log it so we can identify where it is used and fix it
- */ /**
+ */
+(function () {
+	"use strict";
+	window.document.write = window.document.writeln = function () {
+		throw new Error("Blocked unauthorized document write.");
+	};
+}());
+
+/**
  * Remove preload-transition class from body tag on load
- */ /*
+ */
+(function ($) {
+	"use strict";
+	$(window).on("load", function () {
+		$("body").removeClass("preload-transition");
+	});
+}(jQuery));
+
+
+/*
  * make IE recalculate CSS calc() values when the window is resized
  * this is achieved by toggling the zoom property on the elements with calc()
- */ /**
+ */
+(function ($, _) {
+	"use strict";
+
+	if (navigator.userAgent.match(/Trident/i)) {
+		var recalc, derecalc;
+
+		recalc = function () {
+			var zoom;
+
+			zoom = $("div.section").css("zoom");
+
+			if (zoom === "100%") {
+				zoom = "normal";
+			} else {
+				zoom = "100%";
+			}
+
+			$("#footer, #prefooter, div.section").css({ "zoom": zoom });
+		};
+
+		derecalc = _.debounce(recalc, 50);
+
+		$(window).on("resize", derecalc);
+	}
+
+}(jQuery, _));
+
+
+/**
  * add wrapper element to support fixed width, fluid background elements
  * in browsers that do not support calc, a.k.a. IE8
- */ /**
+ */
+(function ($) {
+	"use strict";
+
+	function calcSupport(prefix) {
+		prefix = prefix || "";
+		var el = document.createElement("div");
+		el.style.cssText = prefix + "width: calc(1px);";
+		return !!el.style.length;
+	}
+
+	$(document).on("ready", function () {
+		if (!calcSupport()) {
+			$("#footer, #prefooter, #homepage").wrapAll("<div class=\"sectional\" />");
+		}
+	});
+}(jQuery));
+
+
+/**
  * TODO move this to a "listener" tag in GTM
  * TODO remove jQuery depenancy
  * code for which Google AdWords retargeting code to call
  * refactored with Google Tag Manager
  * https://docs.google.com/a/qualys.com/document/d/11dfrAzkIXdb7BhT31xum4ZCnaYWguXsSi8XWUkpXlRU/edit?usp=sharing
  * https://docs.google.com/a/qualys.com/spreadsheet/ccc?key=0AryvxVKUtJbFdGgwSWcxVDhkcGtmSGJnMm1ZY01jMXc#gid=0
- */ /*
+ */
+(function ($) {
+	"use strict";
+
+	/*
+	 * async function to get the language tag
+	 */
+	function getLanguages(callback) {
+		var isSupported = {
+			"sessionStorage": false
+		};
+		// start by checking for native browser support
+		if (navigator.languages !== undefined && navigator.languages !== null && navigator.languages.length !== undefined && navigator.languages.length !== null && navigator.languages.length > 0) {
+			callback(navigator.languages);
+		} else {
+			// check if session storage is supported and allowed
+			try {
+				if (window.Storage && window.sessionStorage) {
+					isSupported.sessionStorage = true;
+				}
+			} catch (e) {
+				// attempting to access sessionStorage will throw a Security Exception if cookies and website data are always blocked by a client
+				isSupported.sessionStorage = false;
+			}
+			// check local storage for a previous fetched value
+			if (isSupported.sessionStorage && sessionStorage.getItem("navigator-languages")) {
+				navigator.languages = JSON.parse(sessionStorage.getItem("navigator-languages"));
+				callback(navigator.languages);
+			} else {
+				// make ajax call get value from header
+				$.ajax({
+					dataType: "json",
+					url: "/header/accept-language/",
+					success: function (data) {
+						// remove the junk that specifies order since all modern browsers return the string in order
+						data = data.replace(/;q=(0|1)\.\d+/, "");
+						// split the comma separated string into an array
+						navigator.languages = data = data.split(",");
+						// save it to local storage for later
+						if (isSupported.sessionStorage) {
+							sessionStorage.setItem("navigator-languages", JSON.stringify(data));
+						}
+						callback(data);
+					}
+				});
+			}
+		}
+	}
+
+	/*
+	 * callback to pass language to Google Tag Manager
+	 */
+	function passLanguageToGoogleTagManager(languages) {
+		var locale, htmlLang, matches, data;
+
+		data = {
+			"event": "Language Ready"
+		};
+
+		// user preferred language
+		locale = (languages[0] || "en-US");
+
+		// page language overrides user language
+		htmlLang = $("html").attr("lang");
+		if (htmlLang && (!htmlLang.match(/^(en|en-US)$/i))) {
+			locale = htmlLang;
+		}
+
+		// url language overrides page language
+		matches = window.location.pathname.match(/\/([a-z]{2})\//);
+		if (matches) {
+			switch (matches[1]) {
+			case "lp":
+			case "ge":
+				break;
+			case "uk":
+				locale = "en-GB";
+				break;
+			default:
+				locale = matches[1];
+				break;
+			}
+		}
+
+		/*
+		 * Syntax of language tags
+		 * http://en.wikipedia.org/wiki/IETF_language_tag#Syntax_of_language_tags
+		 */
+		locale.split("-").forEach(function (subtag, index) {
+			// a single primary language subtag
+			if (index === 0 && subtag.match(/^([a-z]{2,3}|[a-z]{5,8})$/i)) {
+				data["languageTag.language"] = subtag;
+			}
+			// up to three optional extended language subtags
+			if (index >= 1 && index <= 3 && subtag.match(/^[a-z]{3}$/i)) {
+				data["languageTag.extendedLanguage"] = subtag;
+			}
+			// an optional script subtag
+			if (index >= 1 && index <= 4 && subtag.match(/^[a-z]{4}$/i)) {
+				data["languageTag.script"] = subtag;
+			}
+			// an optional region subtag
+			if (index >= 1 && index <= 5 && subtag.match(/^([a-z]{2}|\d{3})$/i)) {
+				data["languageTag.region"] = subtag;
+			}
+			// optional variant subtags
+			if (index >= 1 && subtag.match(/^(\d[a-z]{3}|[a-z]{5,8})$/i)) {
+				data["languageTag.variant"] = subtag;
+			}
+			// TODO optional extension subtags
+			// TODO an optional private-use subtag
+		});
+		// push this data to the google tag manager data layer
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push(data);
+	}
+
+	getLanguages(passLanguageToGoogleTagManager);
+}(jQuery));
+
+
+/*
  * FreeScan Patch Tuesday / OWASP, SCAP, etc
  * resize images based on viewport size
  * determine position of scrollable arrows based on height of viewport
- */ /*
+ */
+(function ($) {
+	"use strict";
+
+	$(document).ready(function () {
+		if ($("body.forms.freescan, #forms_qualysguard_continuous-monitoring, div.scrollable-overlay").length > 0) {
+			var maxImageWidth, maxImageHeight, viewportHeight, viewportWidth;
+
+			maxImageWidth = 0;
+			maxImageHeight = 0;
+			viewportHeight = $(window).height();
+			viewportWidth = $(window).width();
+
+			$("div.jquery-tools-scrollable img").each(function (index, element) {
+				var imageWidth, imageHeight, imageScale;
+
+				imageWidth = $(element).width();
+				imageHeight = $(element).height();
+				/* scale down element size if element is larger than the browser window */
+				if (imageWidth > viewportWidth) {
+					imageHeight = Math.round(0.8 * viewportWidth * imageHeight / imageWidth);
+					imageWidth = 0.8 * viewportWidth;
+				}
+				if (imageHeight > viewportHeight) {
+					imageWidth = Math.round(0.8 * viewportHeight * imageWidth / imageHeight);
+					imageHeight = 0.8 * viewportHeight;
+				}
+
+				imageScale = imageWidth / $(element).width();
+				$(element).removeAttr("width").removeAttr("height").css("width", imageWidth).css("height", imageHeight);
+
+				$(element).parent("div").css({
+					"width" : imageWidth,
+					"height" : imageHeight,
+					"display" : "inline-block",
+					"font-size" : (66 * imageScale) + "%"
+				});
+
+				// determine max image dimensions
+				maxImageWidth = (imageWidth > maxImageWidth) ? imageWidth : maxImageWidth;
+				maxImageHeight = (imageHeight > maxImageHeight) ? imageHeight : maxImageHeight;
+			});
+
+			// update overlay container to max image dimensions
+			$("#overlay").css("width", maxImageWidth).css("height", maxImageHeight);
+
+			// determine position of scrollable arrows based on height of viewport and arrow
+			$("a.html-overlay").on("click", function () {
+				var arrowHeight, topPosition;
+
+				arrowHeight = 130; // height of arrows
+				topPosition = (maxImageHeight / 2) - (arrowHeight / 2);
+				$("#overlay a.prev, #overlay a.next").css("top", topPosition);
+			});
+		}
+	});
+}(jQuery));
+
+
+/*
  * FreeScan Patch Tuesday / OWASP, SCAP, etc
  * Load screenshots only after clicking
  * overlay link
- */ /*
+ */
+(function ($) {
+	"use strict";
+
+	$(document).on("ready", function () {
+		$(".html-overlay").on("click", function () {
+			$("img[data-src]").each(function (index, item) {
+				item.src = $(item).attr("data-src");
+			});
+		});
+	});
+}(jQuery));
+
+
+/*
  * jQuery Tools tabs
- */ /*
+ */
+(function ($) {
+	"use strict";
+
+	$(document).ready(function () {
+
+		// setup ul.tabs to work as tabs for each div directly under div.panes
+		if (jQuery().tabs !== undefined && jQuery.tabs !== null) {
+			$(".panes h3.year, .panes h3.day").addClass("disabled");
+			$("div.tabs-without-javascript, ul.tabs-without-javascript")
+				.addClass("tabs")
+				.removeClass("tabs-without-javascript");
+
+			// jQuery Tabs doesn"t support history for pages that contain multiple tab groups
+			$("div.tabs, ul.tabs").each(function (index, item) {
+				if (!$(item).hasClass("nested")) {
+					var options, itemData;
+
+					options = {
+						"current": "active",
+						"history": true
+					};
+
+					/* look for config data for each item and merge it into the default config */
+					try {
+						itemData = $.parseJSON($(item).attr("data-tabs-config"));
+						if (itemData !== null) {
+							$.extend(true, options, itemData);
+						}
+					} catch (e) {
+						$.noop();
+					}
+					$(item).tabs("div.panes > div", options);
+				}
+			});
+		}
+	});
+}(jQuery));
+
+
+/*
  * find and initialize scrollable lists with jQuery Tools
- */ /**
+ */
+(function ($) {
+	"use strict";
+	$(document).ready(function () {
+		$("div.jquery-tools-scrollable, form.jquery-tools-scrollable").each(function (index, item) {
+			var total, totalItemWidth, totalItemHeight, maxItemHeight, itemHeight, itemData, firstElement, lastElement, options, windowWidth;
+			/* helper function */
+			function widthPlusMargin(element) {
+				var marginLeft, marginRight;
+				totalItemWidth = $(element).outerWidth();
+				marginLeft = parseInt($(element).css("margin-left"), 10);
+				if (marginLeft > 0) {
+					totalItemWidth += marginLeft;
+				}
+				marginRight = parseInt($(element).css("margin-right"), 10);
+				if (marginRight > 0) {
+					totalItemWidth += marginRight;
+				}
+				return totalItemWidth;
+			}
+
+			options = {
+				"autoScroll": {
+					"autopause": true,
+					"autoplay": true,
+					"interval": 7000,
+					"steps": 1
+				},
+				"circular": false,
+				"clonedClass": "cloned",
+				"disabledClass": "disabled",
+				"easing": "swing",
+				"items": ".items",
+				"keyboard": true,
+				"navigator": {
+					"activeClass": "active",
+					"history": false,
+					"idPrefix": null,
+					"indexed": false,
+					"navi": ".navi",
+					"naviItem": null
+				},
+				"next": ".next",
+				"prev": ".prev",
+				"speed": 400,
+				"touch": false,
+				"vertical": false,
+				"showPageCount": false,
+				"mobile": false
+			};
+
+			/* look for config data for each item and merge it into the default config */
+			try {
+				itemData = $.parseJSON($(item).attr("data-scrollable-config"));
+				if (itemData !== null) {
+					$.extend(true, options, itemData);
+				}
+			} catch (e) {
+				$.noop();
+			}
+
+			// only show scrollable on desktop
+			windowWidth = $(window).width();
+			if (windowWidth > 640 || (windowWidth <= 640 && options.mobile === true)) {
+				/* add elements required by jQuery Tools Scrollable */
+				$(item)
+					.children()
+					.wrapAll("<div class=\"scrollable\" />")
+					.wrapAll("<div class=\"items\" />");
+				if (options.prev !== false) {
+					$(item).prepend("<a class=\"prev\" />");
+				}
+				if (options.next !== false) {
+					$(item).append("<a class=\"next\" />");
+				}
+
+				/* add elements required by jQuery Tools Scrollable Navigation plugin */
+				if (options.navigator !== false) {
+					$(item).append("<div class=\"navi\" />");
+				}
+
+				/* add page count elements */
+				if (options.showPageCount !== false) {
+					total = $(item).find("div.items").children().length;
+					$(item).prepend("<div class=\"page-count\">Page: <span class=\"page-count-index\">1</span>/<span class=\"page-count-total\">" + total + "</span></div>");
+					$(item).find("div.scrollable").on("onSeek", function () {
+						var api = $(this).data("scrollable");
+						if (api !== "undefined" && api !== null) {
+							$(this).siblings("div.page-count").find("span.page-count-index").text(api.getIndex() + 1);
+						}
+					}).on("onAddItem", function () {
+						var api = $(this).data("scrollable");
+						if (api !== "undefined" && api !== null) {
+							$(this).siblings("div.page-count").find("span.page-count-total").text(api.getSize());
+						}
+					});
+				}
+
+				/* calculate the total item width and the maximum item height */
+				totalItemWidth = 0;
+				totalItemHeight = 0;
+				maxItemHeight = 0;
+				$(item).find("div.items").children().each(function (index, child) {
+					itemHeight = $(child).outerHeight();
+					if (itemHeight > maxItemHeight) {
+						maxItemHeight = itemHeight;
+					}
+					if (options.vertical === false) {
+						totalItemWidth += widthPlusMargin(child);
+					} else {
+						totalItemHeight += $(child).outerHeight();
+						totalItemHeight += parseInt($(child).css("margin-top"), 10);
+						totalItemHeight += parseInt($(child).css("margin-bottom"), 10);
+					}
+				});
+
+				/* add little extra space to the total width of the tray */
+				totalItemWidth *= 1.1;
+				$(item).find("div.scrollable").css({
+					"height": maxItemHeight + "px"
+				});
+				if (options.vertical === false) {
+					if (options.circular === true) {
+
+						/* add the width of the first and last elements to the total width to account for the cloned elements */
+						firstElement = $(item).find("div.items").children().first();
+						lastElement = $(item).find("div.items").children().last();
+						totalItemWidth += widthPlusMargin(firstElement);
+						totalItemWidth += widthPlusMargin(lastElement);
+					}
+					$(item).find("div.items").css({
+						"width": totalItemWidth + "px"
+					});
+				}
+
+				/* save total and max item height for later */
+				$(item).find("div.scrollable").data("totalItemHeight", totalItemHeight);
+				$(item).find("div.scrollable").data("maxItemHeight", maxItemHeight);
+
+				/* load jQuery Tools Scrollable */
+				if ($().scrollable !== undefined && $().scrollable !== null) {
+					$(item).find("div.scrollable").scrollable(options);
+					if (options.navigator !== undefined && options.navigator !== null && options.navigator !== false) {
+						$(item).find("div.scrollable").navigator(options.navigator);
+					}
+					if (options.autoScroll !== undefined && options.autoScroll !== null && options.autoScroll !== false) {
+						$(item).find("div.scrollable").autoscroll(options.autoScroll);
+					}
+					$(item).find("div.scrollable").trigger("scrollableLoad");
+				}
+			}
+		});
+	});
+}(jQuery));
+
+
+/**
  * scroll features when page scrolls
- */ /*
+ */
+(function ($) {
+	"use strict";
+	$(document).on("ready", function () {
+		$("div.jquery-tools-scrollable a").on("active", function (event) {
+			var api, targetIndex, speed, $target, scrollableIndex;
+			$target = $(event.currentTarget);
+			api = $target.parents("div.scrollable").data("scrollable");
+			scrollableIndex = api.getIndex();
+			targetIndex = $target.index();
+			speed = 0;
+			if (targetIndex > (scrollableIndex + 6)) {
+				api.move(1, speed);
+			}
+			if (targetIndex < scrollableIndex) {
+				api.move(-1, speed);
+			}
+		});
+	});
+}(jQuery));
+
+
+/*
  * switch the active highlight when the user selects another list item
- */ /*
+ */
+(function ($) {
+	"use strict";
+
+	$(document).on("mousedown", "div.active-tracking a, ul.active-tracking a", function () {
+
+		$(this).closest("div.active-tracking, ul.active-tracking").find("a").removeClass("active");
+		$(this).addClass("active");
+
+	});
+	$(document).on("ready", function () {
+
+		$("div.active-tracking a, ul.active-tracking a").each(function (index, item) {
+
+			var href = $(item).attr("href");
+
+			// match the exact URL
+			if (window.location.pathname === href || window.location.hash === href) {
+
+				$(item).addClass("active");
+
+			}
+
+			// match if the window location starts with the link href
+			var pattern = new RegExp("^" + href);
+			if (pattern.test(window.location.pathname) || pattern.test(window.location.hash)) {
+
+				$(item).addClass("active");
+
+			}
+
+		});
+
+	});
+
+}(jQuery));
+
+
+/*
  * attach a script to print pages when a print page link is clicked
- */ /*
- * print PDF of a page if a link to the PDF version is found
- */ /*
- * Expand and collapse content blocks
- */ /*
- * toggle visibility of list of links in pre footer
- */ /*
- * jQuery Tools Overlay for various overlays
- */ /*
- * stand-alone overlay
- * NOTE only supports creating iframe overlays as of 2014-08-05
- * TODO add support for other types
- * TODO figure out a good way to overlay videos without iframes
- */ /*
- * Dummies eBook Confirmation Page Filtering by Asset ID
- */ /**
- * fancy scrolling for anchors (why don’t browsers do this?)
- */ /**
- * support sticky menus by fixing an element when it is scrolled past
- */ /*
- * show back-to-top button when user has scrolled X pixels down on page
- */ /*
- * adjust width of slideshow for full width slideshows
- */ /*
- * Expand / collapse success story nav on hover
- * TODO refactor with CSS hover and transitions
- */ /*
- * FreeScan Landing Page (OWASP, Patch Tuesday, SCAP, etc)
- */ /*
- * scale viewport for tablets
- */ /*
- * Show/hide global search display
- */ /*
- * helper function for parsing Query strings
- */ /*
- * function to add hidden inputs to a form from cookie values
- * Note, Marketo forms can do this on their onw, so this can be removed once all form use Marketo
- */ /*
- * util - generate UUID from Math.random()
- */ /*
- * show transparent header on select pages only
- */ /*
- * toggle global nav when global menu link is clicked
- */(function(){"use strict";window.document.write=window.document.writeln=function(){throw new Error("Blocked unauthorized document write.")}})(),function(a){"use strict";a(window).on("load",function(){a("body").removeClass("preload-transition")})}(jQuery),function(a,b){"use strict";if(navigator.userAgent.match(/Trident/i)){var c,d;c=function(){var b;b=a("div.section").css("zoom"),b="100%"===b?"normal":"100%",a("#footer, #prefooter, div.section").css({zoom:b})},d=b.debounce(c,50),a(window).on("resize",d)}}(jQuery,_),function(a){"use strict";function b(a){a=a||"";var b=document.createElement("div");return b.style.cssText=a+"width: calc(1px);",!!b.style.length}a(document).on("ready",function(){b()||a("#footer, #prefooter, #homepage").wrapAll("<div class=\"sectional\" />")})}(jQuery),function(a){"use strict";/*
-	 * async function to get the language tag
-	 */ /*
-	 * callback to pass language to Google Tag Manager
-	 */(function(b){var c={sessionStorage:!1};// start by checking for native browser support
-if(navigator.languages!==void 0&&null!==navigator.languages&&navigator.languages.length!==void 0&&null!==navigator.languages.length&&0<navigator.languages.length)b(navigator.languages);else{// check if session storage is supported and allowed
-try{window.Storage&&window.sessionStorage&&(c.sessionStorage=!0)}catch(a){// attempting to access sessionStorage will throw a Security Exception if cookies and website data are always blocked by a client
-c.sessionStorage=!1}// check local storage for a previous fetched value
-c.sessionStorage&&sessionStorage.getItem("navigator-languages")?(navigator.languages=JSON.parse(sessionStorage.getItem("navigator-languages")),b(navigator.languages)):a.ajax({dataType:"json",url:"/header/accept-language/",success:function success(a){// remove the junk that specifies order since all modern browsers return the string in order
-// split the comma separated string into an array
-a=a.replace(/;q=(0|1)\.\d+/,""),navigator.languages=a=a.split(","),c.sessionStorage&&sessionStorage.setItem("navigator-languages",JSON.stringify(a)),b(a)}})}})(function(b){var c,d,e,f;if(f={event:"Language Ready"},c=b[0]||"en-US",d=a("html").attr("lang"),d&&!d.match(/^(en|en-US)$/i)&&(c=d),e=window.location.pathname.match(/\/([a-z]{2})\//),e)switch(e[1]){case"lp":case"ge":break;case"uk":c="en-GB";break;default:c=e[1];}/*
-		 * Syntax of language tags
-		 * http://en.wikipedia.org/wiki/IETF_language_tag#Syntax_of_language_tags
-		 */c.split("-").forEach(function(a,b){0===b&&a.match(/^([a-z]{2,3}|[a-z]{5,8})$/i)&&(f["languageTag.language"]=a),1<=b&&3>=b&&a.match(/^[a-z]{3}$/i)&&(f["languageTag.extendedLanguage"]=a),1<=b&&4>=b&&a.match(/^[a-z]{4}$/i)&&(f["languageTag.script"]=a),1<=b&&5>=b&&a.match(/^([a-z]{2}|\d{3})$/i)&&(f["languageTag.region"]=a),1<=b&&a.match(/^(\d[a-z]{3}|[a-z]{5,8})$/i)&&(f["languageTag.variant"]=a)}),window.dataLayer=window.dataLayer||[],window.dataLayer.push(f)})}(jQuery),function(a){"use strict";a(document).ready(function(){if(0<a("body.forms.freescan, #forms_qualysguard_continuous-monitoring, div.scrollable-overlay").length){var b,c,d,e;// update overlay container to max image dimensions
-// determine position of scrollable arrows based on height of viewport and arrow
-b=0,c=0,d=a(window).height(),e=a(window).width(),a("div.jquery-tools-scrollable img").each(function(f,g){var h,i,j;// determine max image dimensions
-h=a(g).width(),i=a(g).height(),h>e&&(i=Math.round(.8*e*i/h),h=.8*e),i>d&&(h=Math.round(.8*d*h/i),i=.8*d),j=h/a(g).width(),a(g).removeAttr("width").removeAttr("height").css("width",h).css("height",i),a(g).parent("div").css({width:h,height:i,display:"inline-block","font-size":66*j+"%"}),b=h>b?h:b,c=i>c?i:c}),a("#overlay").css("width",b).css("height",c),a("a.html-overlay").on("click",function(){var b,d;// height of arrows
-b=130,d=c/2-b/2,a("#overlay a.prev, #overlay a.next").css("top",d)})}})}(jQuery),function(a){"use strict";a(document).on("ready",function(){a(".html-overlay").on("click",function(){a("img[data-src]").each(function(b,c){c.src=a(c).attr("data-src")})})})}(jQuery),function(a){"use strict";a(document).ready(function(){jQuery().tabs!==void 0&&null!==jQuery.tabs&&(a(".panes h3.year, .panes h3.day").addClass("disabled"),a("div.tabs-without-javascript, ul.tabs-without-javascript").addClass("tabs").removeClass("tabs-without-javascript"),a("div.tabs, ul.tabs").each(function(b,c){if(!a(c).hasClass("nested")){var d,e;d={current:"active",history:!0};/* look for config data for each item and merge it into the default config */try{e=a.parseJSON(a(c).attr("data-tabs-config")),null!==e&&a.extend(!0,d,e)}catch(b){a.noop()}a(c).tabs("div.panes > div",d)}}))})}(jQuery),function(a){"use strict";a(document).ready(function(){a("div.jquery-tools-scrollable, form.jquery-tools-scrollable").each(function(b,c){/* helper function */function d(b){var c,d;return f=a(b).outerWidth(),c=parseInt(a(b).css("margin-left"),10),0<c&&(f+=c),d=parseInt(a(b).css("margin-right"),10),0<d&&(f+=d),f}var e,f,g,h,i,j,k,l,m,n;m={autoScroll:{autopause:!0,autoplay:!0,interval:7e3,steps:1},circular:!1,clonedClass:"cloned",disabledClass:"disabled",easing:"swing",items:".items",keyboard:!0,navigator:{activeClass:"active",history:!1,idPrefix:null,indexed:!1,navi:".navi",naviItem:null},next:".next",prev:".prev",speed:400,touch:!1,vertical:!1,showPageCount:!1,mobile:!1};/* look for config data for each item and merge it into the default config */try{j=a.parseJSON(a(c).attr("data-scrollable-config")),null!==j&&a.extend(!0,m,j)}catch(b){a.noop()}// only show scrollable on desktop
-n=a(window).width(),(640<n||640>=n&&!0===m.mobile)&&(a(c).children().wrapAll("<div class=\"scrollable\" />").wrapAll("<div class=\"items\" />"),!1!==m.prev&&a(c).prepend("<a class=\"prev\" />"),!1!==m.next&&a(c).append("<a class=\"next\" />"),!1!==m.navigator&&a(c).append("<div class=\"navi\" />"),!1!==m.showPageCount&&(e=a(c).find("div.items").children().length,a(c).prepend("<div class=\"page-count\">Page: <span class=\"page-count-index\">1</span>/<span class=\"page-count-total\">"+e+"</span></div>"),a(c).find("div.scrollable").on("onSeek",function(){var b=a(this).data("scrollable");"undefined"!==b&&null!==b&&a(this).siblings("div.page-count").find("span.page-count-index").text(b.getIndex()+1)}).on("onAddItem",function(){var b=a(this).data("scrollable");"undefined"!==b&&null!==b&&a(this).siblings("div.page-count").find("span.page-count-total").text(b.getSize())})),f=0,g=0,h=0,a(c).find("div.items").children().each(function(b,c){i=a(c).outerHeight(),i>h&&(h=i),!1===m.vertical?f+=d(c):(g+=a(c).outerHeight(),g+=parseInt(a(c).css("margin-top"),10),g+=parseInt(a(c).css("margin-bottom"),10))}),f*=1.1,a(c).find("div.scrollable").css({height:h+"px"}),!1===m.vertical&&(!0===m.circular&&(k=a(c).find("div.items").children().first(),l=a(c).find("div.items").children().last(),f+=d(k),f+=d(l)),a(c).find("div.items").css({width:f+"px"})),a(c).find("div.scrollable").data("totalItemHeight",g),a(c).find("div.scrollable").data("maxItemHeight",h),a().scrollable!==void 0&&null!==a().scrollable&&(a(c).find("div.scrollable").scrollable(m),m.navigator!==void 0&&null!==m.navigator&&!1!==m.navigator&&a(c).find("div.scrollable").navigator(m.navigator),m.autoScroll!==void 0&&null!==m.autoScroll&&!1!==m.autoScroll&&a(c).find("div.scrollable").autoscroll(m.autoScroll),a(c).find("div.scrollable").trigger("scrollableLoad")))})})}(jQuery),function(a){"use strict";a(document).on("ready",function(){a("div.jquery-tools-scrollable a").on("active",function(b){var c,d,e,f,g;f=a(b.currentTarget),c=f.parents("div.scrollable").data("scrollable"),g=c.getIndex(),d=f.index(),e=0,d>g+6&&c.move(1,e),d<g&&c.move(-1,e)})})}(jQuery),function(a){"use strict";a(document).on("mousedown","div.active-tracking a, ul.active-tracking a",function(){a(this).closest("div.active-tracking, ul.active-tracking").find("a").removeClass("active"),a(this).addClass("active")}),a(document).on("ready",function(){a("div.active-tracking a, ul.active-tracking a").each(function(b,c){var d=a(c).attr("href");// match the exact URL
-(window.location.pathname===d||window.location.hash===d)&&a(c).addClass("active");// match if the window location starts with the link href
-var e=new RegExp("^"+d);(e.test(window.location.pathname)||e.test(window.location.hash))&&a(c).addClass("active")})})}(jQuery),function(a){"use strict";function b(b){/*
+ */
+(function ($) {
+	"use strict";
+	function replaceSprite(selector) {
+		/*
 		 * helper function to replace sprites with img tags for printing
 		 * inspired by http://quickleft.com/blog/printing-css-sprites
 		 * enhanced to work when the selector matches more than one element
 		 * and to more any text in the element into the alt tag
 		 * and to reset the text indent
 		 * and to pass jslint with use strict
-		 */var c,d,e,f,g,h,i,j,k;a(b).each(function(b,l){var m=a(l);"none"===m.css("background-image")||(!0===a.browser.msie?(c=m.css("background-position-x"),d=m.css("background-position-y"),e=c+" "+d):e=m.css("background-position"),f=m.css("background-image"),g=m.width(),h=m.height(),i=f.indexOf("http"),j=f.indexOf(".png"),k=m.text(),e=e.split(" "),f=f.substring(i,j+4),m.text("").append("<img src=\""+f+"\" alt=\""+k+"\" />").css({"background-image":"none",height:h,"margin-left":e[0],"margin-top":e[1],overflow:"hidden","text-indent":0,width:g}))})}a(window).on("beforeprint",function(){b("#logo")}),a(document).on("mousedown","a.print-page",function(a){(window.onbeforeprint===void 0||null===window.onbeforeprint)&&b("#logo"),a.preventDefault()}).on("mouseup","a.print-page",function(){window.print(),event.preventDefault()})}(jQuery),function(a){"use strict";a(document).on("ready",function(){var b=a("a.print-pdf");if(b.length){var c=b.attr("href");a(window).on("beforeprint",function(){window.location=c})}})}(jQuery),function(a){"use strict";a(document).on("ready",function(){a("div.collapsable, div.expandable").each(function(b,c){var d,e,f,g,h,i;d={animate:{duration:400,easing:"swing",complete:null,step:null,queue:!0,specialEasing:null},toggleClass:"arrow-right",toggleInPrevious:!0,expandText:"Expand",collapseText:"Collapse"};/* look for config data for each item and merge it into the defualt config */try{i=a.parseJSON(a(c).attr("data-collapsable")),null!==i&&a.extend(!0,d,i),i=a.parseJSON(a(c).attr("data-expandable")),null!==i&&a.extend(!0,d,i)}catch(b){a.noop()}/* save the original height and opacity for later */ /* create the html for the toggle link */e=a(c).height()+"px",f=a(c).css("opacity"),h=d.toggleClass,d.toggleInPrevious&&(h+=" toggle-in-previous"),g=a("<a class=\""+h+"\" href=\"#\">"+d.expandText+"</a>"),a(c).css({height:0,opacity:0,overflow:"hidden"}),a(g).on("click",function(b){var c,g,h;c=d.toggleInPrevious?a(b.currentTarget).parent().nextAll("div.collapsable:first, div.expandable:first"):a(b.currentTarget).nextAll("div.collapsable:first, div.expandable:first"),0===a(c).height()?(g=a(c).height()+"px",h=a(c).css("margin-top"),a(c).css({height:"auto","margin-top":"-100%"}),e=a(c).height()+"px",a(c).css({height:g,"margin-top":h}),a(b.currentTarget).text(d.collapseText).toggleClass("open"),a(c).animate({height:e,opacity:f})):(a(b.currentTarget).text(d.expandText).toggleClass("open"),a(c).animate({height:0,opacity:0})),b.preventDefault()}),d.toggleInPrevious?a(c).prevAll(":not(br):first").append(g):a(g).insertBefore(c)})})}(jQuery),function(){"use strict";function a(a){window.matchMedia("(max-width: 640px)").matches&&(a.currentTarget.parentNode.classList.toggle("column-is-closed"),a.preventDefault())}// hide each list of links in the pre footer on page load
-document.addEventListener("DOMContentLoaded",function(){var b,c,d,e,f;for(e=document.querySelectorAll(".prefooter .column"),d=e.length,c=0;c<d;c+=1)f=e[c],b=f.querySelector("h6"),f.classList.toggle("column-is-closed"),b.addEventListener("click",a)})}(),function(a){"use strict";a(document).ready(function(){var b,c;a("a[data-rel]").each(function(){a(this).attr("rel",a(this).data("rel"))}),a().overlay!==void 0&&null!==a().overlay&&0<a("a.image-overlay, a.text-overlay, a.iframe-overlay, a.iframe-presentation, a.html-overlay, a.inline-content-overlay").length&&a("a.image-overlay, a.text-overlay, a.iframe-overlay, a.iframe-presentation, a.html-overlay, a.inline-content-overlay").overlay({effect:"default",mask:"#000",speed:200,top:"center",onBeforeLoad:function onBeforeLoad(){var d,e,f,g,h,i,j,k;d=this.getTrigger(),e={height:d.attr("data-height"),src:d.attr("href"),width:d.attr("data-width"),scrolling:d.attr("data-scrolling")},f={height:Math.round(a(window).height()),width:Math.round(a(window).width())},k=640<Math.round(a(window).width())?.9:1,f={height:f.height*k,width:f.width*k},e.width>f.width&&(e.height=Math.round(f.width*e.height/e.width),e.width=f.width),e.height>f.height&&(e.width=Math.round(f.height*e.width/e.height),e.height=f.height),"no"!==e.scrolling&&(e.scrolling="yes"),b=this.getOverlay(),d.hasClass("inline-content-overlay")?(b.find("[id^=\"overlay_replace\"]").html(a("#detail-"+e.src.substr(1)).clone().attr("id","")),b.find("div.detail").wrap("<div class=\"overlay-content\"></div>"),c=b.find("div.overlay-content"),c.width(e.width),a("body").addClass("body-freeze"),640>=f.width?c.height(f.height).addClass("detail-port"):c.height(e.height)):d.hasClass("image-overlay")&&b.hasClass("image")?b.find("[id^=\"overlay_replace\"]").html("<img width=\""+e.width+"\" height=\""+e.height+"\" src=\""+e.src+"\" />"):d.hasClass("iframe-overlay")&&b.hasClass("iframe")?("/company/privacy/"===e.src&&(e.src+="content/"),(-1!==e.src.indexOf("/forms/browsercheck-business-edition/")||-1!==e.src.indexOf("/forms/trials/web_application_scanning/")||-1!==e.src.indexOf("/forms/trials/pci_compliance/")||-1!==e.src.indexOf("/forms/trials/vulnerability_management/")||b.hasClass("video"))&&(e.scrolling="no"),a("span.video-shadow").addClass("disabled"),b.find("[id^=\"overlay_replace\"]").replaceWith("<iframe width=\""+e.width+"\" height=\""+e.height+"\" src=\""+e.src+"\" scrolling=\""+e.scrolling+"\"/>")):d.hasClass("iframe-presentation")&&b.hasClass("iframe")?(b.addClass("video-presentation-overlay2"),a("#overlay_replace").replaceWith("<iframe id=\"overlay_replace\" class=\"video-presentation-overlay2\" src=\""+this.getTrigger().attr("href")+"\" scrolling=\"no\"/>")):b.hasClass("video")&&(g=b.attr("id"),h=a("[data-rel=#"+g+"]").attr("href"),h=h.replace("-Desktop.m4v",""),h=h.replace("//d1dejaj6dcqv24.cloudfront.net/videos/careers/",""),i="//d1dejaj6dcqv24.cloudfront.net/videos/careers/",j=b.find("video").remove(),j.find("source[type=\"video/mp4\"]:eq(0)").attr("src",i+h+".mov"),j.find("source[type=\"video/mp4\"]:eq(1)").attr("src",i+h+"-Desktop.m4v"),j.find("source[type=\"video/webm\"]").attr("src",i+h+".webm"),b.prepend(j),j.load())},onLoad:function onLoad(){b=this.getOverlay(),c=b.find("div.overlay-content");var d=this.getTrigger();// perform comparison on load instead of on before load because dimension
-d.hasClass("inline-content-overlay")&&640<a(window).width()&&a(window).height()<c.height()&&(b.css({top:Math.round(.05*a(window).height())}),c.css({height:Math.round(.9*a(window).height())}).addClass("detail-port"))},onBeforeClose:function onBeforeClose(){if(b.hasClass("video")){var c=b.find("video");c.find("source").removeAttr("src"),b.find("video").remove(),b.prepend(c),b.hasClass("iframe")&&(b.find("iframe").detach(),b.append("<div id=\"overlay_replace\"></div>"))}else b.hasClass("iframe")&&(/* remove the embedded flash object */a("span.video-shadow").removeClass("disabled"),b.find("iframe").replaceWith("<div id=\"overlay_replace\" />"),a("#overlay object, #overlay iframe").remove(),a("a.close").removeClass("highlighted"));b.removeClass("video-presentation-overlay2"),a("body").removeClass("body-freeze")},onClose:function onClose(){/* re add the place holder div */setTimeout(function(){0>=a("#overlay_replace").length&&a("#overlay").append("<div id=\"overlay_replace\">This video requires the <a href=\"http://www.adobe.com/products/flashplayer.html\">Adobe Flash Player</a>.</div>")},200)}})})}(jQuery),function(a){"use strict";// when ready, find all elements and init
-function b(){a(".js-overlay-new:not([data-overlay-init])").each(function(b,f){// set attribute to mark this element as initialized
-// attach on click callback to create overlay when clicked
-a(f).attr("data-overlay-init","true"),a(f).on("click",function(b){var h,i;// create html to inject in overlay content
-// create overlay with callback to close
-// stop links within the overlay from closing the overlay
-// reveal the overlay on the next rendering
-// attach callbacks to close overlays
-h=a(b.currentTarget),i=document.createElement("iframe"),i.src=h.attr("data-overlay-src")||h.attr("href"),i.width=h.attr("data-overlay-width")||Math.round(.2*window.innerWidth),i.height=h.attr("data-overlay-height")||Math.round(.2*window.innerHeight),i.scrolling=h.attr("data-overlay-scrolling")||"yes",i.className=h.attr("data-overlay-class")||"",a(i).attr("data-native-width",i.width),a(i).attr("data-native-height",i.height),e(i),a("body").append("<div class=\"overlay-new-background overlay-new-background-start\"></div><div class=\"overlay-new-container overlay-new-background-start\"><div class=\"overlay-new-content\">"+i.outerHTML+"<button class=\"overlay-new-close-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><style>.circle-x { fill: none; stroke-miterlimit: 10; stroke-width: 6; stroke: #fff; }</style><circle class=\"circle-x\" cx=\"50\" cy=\"50\" r=\"47\"/><path class=\"circle-x\" d=\"M71.2 71.2l-42.4-42.4m0 42.4l42.4-42.4\"/></svg></button></div></div>"),h.hasClass("js-overlay-with-trial-cta")&&a("div.overlay-new-content").append("<div class=\"overlay-video-cta\"> \t\t\t\t\t\t<div class=\"video-text-container\">\t\t\t\t\t\t\t<a href=\"https://vimeo.com/qualys\" class=\"arrow-right all-videos\">All Qualys Videos</a>\t\t\t\t\t\t\t<div class=\"adopt\">\t\t\t\t\t\t\t\t<p>Adopt the Qualys Cloud Platform Today!</p>\t\t\t\t\t\t\t\t<a href=\"free-tools-trials/#freemium\" class=\"arrow-right free-tools-link\">Or, try a free tool</a>\t\t\t\t\t\t\t\t<a href=\"/forms/trials/suite/\" class=\"button-type1\">Free Trial</a>\t\t\t\t\t\t\t</div> \t\t\t\t\t\t</div> \t\t\t\t\t</div>"),a("div.overlay-new-content a").on("click",function(a){a.stopPropagation()}),setTimeout(function(){a(".overlay-new-background, .overlay-new-container").removeClass("overlay-new-background-start")},0),a(".overlay-new-container, .overlay-new-close-button").on("click",c.bind(null,f)),a(document).on("keyup",d.bind(null,f)),"undefined"!==g&&null!==g&&a(window).on("resize",g),b.preventDefault()})})}var c,d,e,f,g;// export function so it can be called after a Marketo form is rendered
-c=function(b,c){// hide the overlay
-// wait for the CSS transition to complete before removing
-a(".overlay-new-background, .overlay-new-container").addClass("overlay-new-background-start"),setTimeout(function(){a(".overlay-new-background, .overlay-new-container").remove(),a(b).trigger("overlay-closed")},400),a(document).off("keyup",d),a(window).off("resize",g),c.preventDefault()},d=function(a,b){27===b.keyCode&&c(a,b)},e=function(b){var c,d,e;if(c=a(b).attr("data-native-width"),d=a(b).attr("data-native-height"),c&&d)b.width=c,b.height=d,e={width:Math.round(.8*a(window).width()),height:Math.round(.8*a(window).height())},b.width>e.width&&(b.height=e.width*b.height/b.width,b.width=e.width),b.height>e.height&&(b.width=e.height*b.width/b.height,b.height=e.height);else throw new Error("adjustSize() called with an invalid argument.")},f=function(){a(".overlay-new-content *:last-child").each(function(a,b){e(b)})},window._!==void 0&&null!==window._&&(g=_.debounce(f,200)),a(document).on("ready dynamicOverlayLinkLoaded",b),window.qualys=window.qualys||{},window.qualys.overlay=window.qualys.overlay||{},window.qualys.overlay.setup=b}(jQuery),function(a){"use strict";a(window).on("hashchange",function(){if(0<a("body.forms.ebook.confirm").length&&window.location.hash){var b;b=window.location.hash.substring(2),b=b.split("/"),a("div.ebook").each(function(c,d){var e=a(d).attr("id");-1===a.inArray(e,b)&&a(d).addClass("hide")})}}),a(document).on("ready",function(){0<a("body.forms.ebook.confirm").length&&a(window).trigger("hashchange")})}(jQuery),function(a){"use strict";function b(b){var c,d,e,f;// add to the offset if there is a sticky menu
-c=a(b.currentTarget).attr("href"),d=a(c).offset(),a("div.sticky-menu, .js-position-sticky").each(function(b,c){d.top-=a(c).outerHeight()}),f=document.body.scrollTop||document.documentElement.scrollTop,e=Math.round(10*Math.sqrt(Math.abs(f-d.top))),0<d.top&&(a("html, body").animate({scrollTop:d.top},{duration:e,easing:"easeInOutQuad",complete:function complete(){history.replaceState!==void 0&&history.replaceState("",document.title,window.location.pathname+window.location.search+c)}}),b.originalEvent!==void 0&&b.originalEvent.preventDefault?b.preventDefault():b.returnValue=!1)}a(document).on("ready",function(){a("a[href^='#']").each(function(c,d){var e,f,g,h;e=a(d).attr("href"),f=a(e).length,0<f&&(h=!!a(e).parents("#customers_success-stories").length,!g&&!h&&a(d).on("click",b))})})}(jQuery),function(a){"use strict";a(document).on("ready",function(){/**
+		 */
+		var back_x, back_y, back_position, back_image,
+			width, height, index1, index2, alt;
+		$(selector).each(function (index, item) {
+			var $item = $(item);
+			if ($item.css("background-image") === "none") {
+				return;
+			}
+			if ($.browser.msie === true) {
+				back_x = $item.css("background-position-x");
+				back_y = $item.css("background-position-y");
+				back_position = back_x + " " + back_y;
+			} else {
+				back_position = $item.css("background-position");
+			}
+			back_image = $item.css("background-image");
+			width = $item.width();
+			height = $item.height();
+			index1 = back_image.indexOf("http");
+			index2 = back_image.indexOf(".png");
+			alt = $item.text();
+			back_position = back_position.split(" ");
+			back_image = back_image.substring(index1, (index2 + 4));
+			$item.text("").append("<img src=\"" + back_image + "\" alt=\"" + alt + "\" />").css({
+				"background-image": "none",
+				"height": height,
+				"margin-left": back_position[0],
+				"margin-top": back_position[1],
+				"overflow": "hidden",
+				"text-indent": 0,
+				"width": width
+			});
+		});
+	}
+	$(window).on("beforeprint", function () {
+		replaceSprite("#logo");
+	});
+	$(document).on("mousedown", "a.print-page", function (event) {
+		/* show logo on printed pages */
+		if (window.onbeforeprint === undefined || window.onbeforeprint === null) {
+			replaceSprite("#logo");
+		}
+		event.preventDefault();
+	}).on("mouseup", "a.print-page", function () {
+		window.print();
+		event.preventDefault();
+	});
+}(jQuery));
+
+/*
+ * print PDF of a page if a link to the PDF version is found
+ */
+(function ($) {
+	"use strict";
+
+	$(document).on("ready", function () {
+		var $pdfElement = $("a.print-pdf");
+
+		if ($pdfElement.length) {
+			var pdfUrl = $pdfElement.attr("href");
+
+			$(window).on("beforeprint", function () {
+				window.location = pdfUrl;
+			});
+		}
+	});
+
+}(jQuery));
+
+/*
+ * Expand and collapse content blocks
+ */
+(function ($) {
+	"use strict";
+	$(document).on("ready", function () {
+		$("div.collapsable, div.expandable").each(function (index, item) {
+			var options, height, opacity, toggle, toggleClassName, itemData;
+
+			options = {
+				"animate": {
+					"duration": 400,
+					"easing": "swing",
+					"complete": null,
+					"step": null,
+					"queue": true,
+					"specialEasing": null
+				},
+				"toggleClass": "arrow-right",
+				"toggleInPrevious": true,
+				"expandText": "Expand",
+				"collapseText" : "Collapse"
+			};
+
+			/* look for config data for each item and merge it into the defualt config */
+			try {
+				itemData = $.parseJSON($(item).attr("data-collapsable"));
+				if (itemData !== null) {
+					$.extend(true, options, itemData);
+				}
+				itemData = $.parseJSON($(item).attr("data-expandable"));
+				if (itemData !== null) {
+					$.extend(true, options, itemData);
+				}
+			} catch (e) {
+				$.noop();
+			}
+
+			/* save the original height and opacity for later */
+			height = $(item).height() + "px";
+			opacity = $(item).css("opacity");
+
+			/* create the html for the toggle link */
+			toggleClassName = options.toggleClass;
+			if (options.toggleInPrevious) {
+				toggleClassName += " toggle-in-previous";
+			}
+			toggle = $("<a class=\"" + toggleClassName + "\" href=\"#\">" + options.expandText + "</a>");
+			$(item).css({"height": 0, "opacity": 0, "overflow": "hidden"});
+			$(toggle).on("click", function (event) {
+				var div, previousHeight, previousMarginTop;
+				if (options.toggleInPrevious) {
+					div = $(event.currentTarget).parent().nextAll("div.collapsable:first, div.expandable:first");
+				} else {
+					div = $(event.currentTarget).nextAll("div.collapsable:first, div.expandable:first");
+				}
+				if ($(div).height() === 0) {
+
+					/* save previous height and margin top to restore later */
+					previousHeight = $(div).height() + "px";
+					previousMarginTop = $(div).css("margin-top");
+
+					/* set height to auto to calculate native height of element */
+					/* set margin top to -100% to hide content of element and prevent page jumping */
+					$(div).css({"height": "auto", "margin-top": "-100%"});
+					height = $(div).height() + "px";
+
+					/* restore previous values */
+					$(div).css({"height": previousHeight, "margin-top": previousMarginTop});
+					$(event.currentTarget).text(options.collapseText).toggleClass("open");
+					$(div).animate({"height": height, "opacity": opacity});
+				} else {
+					$(event.currentTarget).text(options.expandText).toggleClass("open");
+					$(div).animate({"height": 0, "opacity": 0});
+				}
+				event.preventDefault();
+			});
+
+			/* add toggle element to dom */
+			if (options.toggleInPrevious) {
+				$(item).prevAll(":not(br):first").append(toggle);
+			} else {
+				$(toggle).insertBefore(item);
+			}
+		});
+	});
+}(jQuery));
+
+
+/*
+ * toggle visibility of list of links in pre footer
+ */
+(function toggleMenusInPrefooter () {
+
+	"use strict";
+
+	function handleClickOnHeading (event) {
+
+		if (window.matchMedia("(max-width: 640px)").matches) {
+			event.currentTarget.parentNode.classList.toggle("column-is-closed");
+			event.preventDefault();
+		}
+
+	}
+
+	// hide each list of links in the pre footer on page load
+	document.addEventListener("DOMContentLoaded", function () {
+
+		var heading, index, length, lists, list;
+
+		lists = document.querySelectorAll(".prefooter .column");
+
+		length = lists.length;
+		for (index = 0; index < length; index += 1) {
+
+			list = lists[index];
+			heading = list.querySelector("h6");
+			list.classList.toggle("column-is-closed");
+			heading.addEventListener("click", handleClickOnHeading);
+
+		}
+
+	});
+
+}());
+
+
+/*
+ * jQuery Tools Overlay for various overlays
+ */
+(function ($) {
+	"use strict";
+	$(document).ready(function () {
+		var $overlay,
+			$overlayContent;
+
+		$("a[data-rel]").each(function () {
+			$(this).attr("rel", $(this).data("rel"));
+		});
+		// for scrollables in an overlay, set the width of the scrollable div
+		//$("#overlay div.jquery-tools-scrollable").css("width", )
+		if ($().overlay !== undefined && $().overlay !== null && $("a.image-overlay, a.text-overlay, a.iframe-overlay, a.iframe-presentation, a.html-overlay, a.inline-content-overlay").length > 0) {
+			$("a.image-overlay, a.text-overlay, a.iframe-overlay, a.iframe-presentation, a.html-overlay, a.inline-content-overlay").overlay({
+				effect: "default",
+				mask: "#000",
+				speed: 200,
+				top: "center",
+				onBeforeLoad: function () {
+					var trigger, element, viewport, rel, filename, basepath, $video, scaleFactor;
+
+					trigger = this.getTrigger();
+					element = {
+						height: trigger.attr("data-height"),
+						src: trigger.attr("href"),
+						width: trigger.attr("data-width"),
+						scrolling: trigger.attr("data-scrolling")
+					};
+
+					viewport = {
+						height: Math.round($(window).height()),
+						width: Math.round($(window).width())
+					};
+
+					// if viewport is greater than 640 (desktop)
+					if (Math.round($(window).width()) > 640) {
+						scaleFactor = 0.9;
+					} else { // otherwise, for mobile
+						scaleFactor = 1;
+					}
+
+					viewport = {
+						height: viewport.height * scaleFactor,
+						width: viewport.width * scaleFactor
+					};
+
+					/* scale down element size if element is larger than the browser window */
+					if (element.width > viewport.width) {
+						element.height = Math.round(viewport.width * element.height / element.width);
+						element.width = viewport.width;
+					}
+					if (element.height > viewport.height) {
+						element.width = Math.round(viewport.height * element.width / element.height);
+						element.height = viewport.height;
+					}
+
+					if (element.scrolling !== "no") {
+						element.scrolling = "yes";
+					}
+					$overlay = this.getOverlay();
+					if (trigger.hasClass("inline-content-overlay")) {
+						$overlay.find("[id^=\"overlay_replace\"]").html($("#detail-" + element.src.substr(1)).clone().attr("id", ""));
+						$overlay.find("div.detail").wrap("<div class=\"overlay-content\"></div>");
+						$overlayContent = $overlay.find("div.overlay-content");
+						$overlayContent.width(element.width);
+						$("body").addClass("body-freeze");
+						if (viewport.width <= 640) {
+							$overlayContent.height(viewport.height).addClass("detail-port");
+						} else {
+							$overlayContent.height(element.height);
+						}
+					} else if (trigger.hasClass("image-overlay") && $overlay.hasClass("image")) {
+						/* set image source url along with width and height */
+						$overlay.find("[id^=\"overlay_replace\"]").html("<img width=\"" + element.width + "\" height=\"" + element.height + "\" src=\"" + element.src + "\" />");
+					} else if (trigger.hasClass("iframe-overlay") && $overlay.hasClass("iframe")) {
+						/* special logic for privacy content */
+						if (element.src === "/company/privacy/") {
+							element.src += "content/";
+						}
+						/* special logic for BrowserCheck Business Edition signup and PPC landing page forms in iframe overlay */
+						// from pay per click landing page
+						if (element.src.indexOf("/forms/browsercheck-business-edition/") !== -1 || element.src.indexOf("/forms/trials/web_application_scanning/") !== -1 || element.src.indexOf("/forms/trials/pci_compliance/") !== -1 || element.src.indexOf("/forms/trials/vulnerability_management/") !== -1 || $overlay.hasClass("video")) {
+							element.scrolling = "no";
+						}
+						/* set iframe source url along with width and height */
+						$("span.video-shadow").addClass("disabled");
+						$overlay.find("[id^=\"overlay_replace\"]").replaceWith("<iframe width=\"" + element.width + "\" height=\"" + element.height + "\" src=\"" + element.src + "\" scrolling=\"" + element.scrolling + "\"/>");
+					} else if (trigger.hasClass("iframe-presentation") && $overlay.hasClass("iframe")) {
+						// replace overlay with HTML 5 video from Amazon S3
+						$overlay.addClass("video-presentation-overlay2");
+						$("#overlay_replace").replaceWith("<iframe id=\"overlay_replace\" class=\"video-presentation-overlay2\" src=\"" + this.getTrigger().attr("href") + "\" scrolling=\"no\"/>");
+					} else if ($overlay.hasClass("video")) {
+						rel = $overlay.attr("id");
+						filename = $("[data-rel=#" + rel + "]").attr("href");
+						filename = filename.replace("-Desktop.m4v", "");
+						filename = filename.replace("//d1dejaj6dcqv24.cloudfront.net/videos/careers/", "");
+						basepath = "//d1dejaj6dcqv24.cloudfront.net/videos/careers/";
+						$video = $overlay.find("video").remove();
+						$video.find("source[type=\"video/mp4\"]:eq(0)").attr("src", basepath + filename + ".mov");
+						$video.find("source[type=\"video/mp4\"]:eq(1)").attr("src", basepath + filename + "-Desktop.m4v");
+						$video.find("source[type=\"video/webm\"]").attr("src", basepath + filename + ".webm");
+						$overlay.prepend($video);
+						$video.load();
+					}
+				},
+				onLoad: function() {
+					$overlay = this.getOverlay();
+					$overlayContent = $overlay.find("div.overlay-content");
+					var trigger = this.getTrigger();
+					// perform comparison on load instead of on before load because dimension
+					if (trigger.hasClass("inline-content-overlay") && $(window).width() > 640 && $(window).height() < $overlayContent.height()) {
+						$overlay.css({
+							top: Math.round($(window).height() * 0.05)
+						});
+						$overlayContent.css({
+							height: Math.round($(window).height() * 0.9)
+						}).addClass("detail-port");
+					}
+				},
+				onBeforeClose: function () {
+					if ($overlay.hasClass("video")) {
+						var $video = $overlay.find("video");
+						$video.find("source").removeAttr("src");
+						$overlay.find("video").remove();
+						$overlay.prepend($video);
+						if ($overlay.hasClass("iframe")) {
+							$overlay.find("iframe").detach();
+							$overlay.append("<div id=\"overlay_replace\"></div>");
+						}
+					} else if ($overlay.hasClass("iframe")) {
+						$("span.video-shadow").removeClass("disabled");
+						$overlay.find("iframe").replaceWith("<div id=\"overlay_replace\" />");
+						/* remove the embedded flash object */
+						$("#overlay object, #overlay iframe").remove();
+						$("a.close").removeClass("highlighted");
+					}
+					$overlay.removeClass("video-presentation-overlay2");
+					$("body").removeClass("body-freeze");
+
+				},
+				onClose: function () {
+
+					/* re add the place holder div */
+					setTimeout(function () {
+						if ($("#overlay_replace").length <= 0) {
+							$("#overlay").append("<div id=\"overlay_replace\">This video requires the <a href=\"http://www.adobe.com/products/flashplayer.html\">Adobe Flash Player</a>.</div>");
+						}
+					}, 200);
+				}
+			});
+		}
+	});
+}(jQuery));
+
+
+/*
+ * stand-alone overlay
+ * NOTE only supports creating iframe overlays as of 2014-08-05
+ * TODO add support for other types
+ * TODO figure out a good way to overlay videos without iframes
+ */
+(function ($) {
+	"use strict";
+
+	var closeOverlays, escapeOverlays, adjustSize, resizeOverlay, deboucedResizeOverlay;
+
+	closeOverlays = function (element, event) {
+		// hide the overlay
+		$(".overlay-new-background, .overlay-new-container").addClass("overlay-new-background-start");
+
+		// wait for the CSS transition to complete before removing
+		setTimeout(function () {
+			$(".overlay-new-background, .overlay-new-container").remove();
+			$(element).trigger("overlay-closed");
+		}, 400);
+
+		$(document).off("keyup", escapeOverlays);
+		$(window).off("resize", deboucedResizeOverlay);
+		event.preventDefault();
+	};
+
+	escapeOverlays = function (element, event) {
+		if (event.keyCode === 27) {
+			closeOverlays(element, event);
+		}
+	};
+
+	adjustSize = function (object) {
+		var width, height, max;
+
+		width = $(object).attr("data-native-width");
+		height = $(object).attr("data-native-height");
+
+		if (width && height) {
+
+			// reset size to native size
+			object.width = width;
+			object.height = height;
+
+			// restrict overlay to 80% of the available space
+			max = {
+				width: Math.round($(window).width() * 0.8),
+				height: Math.round($(window).height() * 0.8)
+			};
+
+			if (object.width > max.width) {
+				object.height = max.width * object.height / object.width;
+				object.width = max.width;
+			}
+
+			if (object.height > max.height) {
+				object.width = max.height * object.width / object.height;
+				object.height = max.height;
+			}
+
+		} else {
+			throw new Error("adjustSize() called with an invalid argument.");
+		}
+	};
+
+	resizeOverlay = function () {
+		$(".overlay-new-content *:last-child").each(function (index, element) {
+
+			adjustSize(element);
+
+		});
+	};
+
+	if (window._ !== undefined && window._ !== null) {
+		deboucedResizeOverlay = _.debounce(resizeOverlay, 200);
+	}
+
+	// when ready, find all elements and init
+	function setupOverlays () {
+		$(".js-overlay-new:not([data-overlay-init])").each(function (index, element) {
+
+			// set attribute to mark this element as initialized
+			$(element).attr("data-overlay-init", "true");
+
+			// attach on click callback to create overlay when clicked
+			$(element).on("click", function (event) {
+				var $target, tag;
+
+				// create html to inject in overlay content
+				$target = $(event.currentTarget);
+				tag = document.createElement("iframe");
+				tag.src = $target.attr("data-overlay-src") || $target.attr("href");
+				tag.width = $target.attr("data-overlay-width") || Math.round(0.2 * window.innerWidth);
+				tag.height = $target.attr("data-overlay-height") || Math.round(0.2 * window.innerHeight);
+				tag.scrolling = $target.attr("data-overlay-scrolling") || "yes";
+				tag.className = $target.attr("data-overlay-class") || "";
+
+				$(tag).attr("data-native-width", tag.width);
+				$(tag).attr("data-native-height", tag.height);
+
+				adjustSize(tag);
+
+				// create overlay with callback to close
+				$("body").append("<div class=\"overlay-new-background overlay-new-background-start\"></div><div class=\"overlay-new-container overlay-new-background-start\"><div class=\"overlay-new-content\">" + tag.outerHTML + "<button class=\"overlay-new-close-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><style>.circle-x { fill: none; stroke-miterlimit: 10; stroke-width: 6; stroke: #fff; }</style><circle class=\"circle-x\" cx=\"50\" cy=\"50\" r=\"47\"/><path class=\"circle-x\" d=\"M71.2 71.2l-42.4-42.4m0 42.4l42.4-42.4\"/></svg></button></div></div>");
+
+				// append Free Trial CTA if specified
+				if ($target.hasClass("js-overlay-with-trial-cta")) {
+					$("div.overlay-new-content").append("<div class=\"overlay-video-cta\"> \
+						<div class=\"video-text-container\">\
+							<a href=\"https://vimeo.com/qualys\" class=\"arrow-right all-videos\">All Qualys Videos</a>\
+							<div class=\"adopt\">\
+								<p>Adopt the Qualys Cloud Platform Today!</p>\
+								<a href=\"free-tools-trials/#freemium\" class=\"arrow-right free-tools-link\">Or, try a free tool</a>\
+								<a href=\"/forms/trials/suite/\" class=\"button-type1\">Free Trial</a>\
+							</div> \
+						</div> \
+					</div>");
+				}
+
+				// stop links within the overlay from closing the overlay
+				$("div.overlay-new-content a").on("click", function (event) {
+					event.stopPropagation();
+				});
+
+				// reveal the overlay on the next rendering
+				setTimeout(function () {
+					$(".overlay-new-background, .overlay-new-container").removeClass("overlay-new-background-start");
+				}, 0);
+
+				// attach callbacks to close overlays
+				$(".overlay-new-container, .overlay-new-close-button").on("click", closeOverlays.bind(null, element));
+				$(document).on("keyup", escapeOverlays.bind(null, element));
+
+				// attach callback to resize overlay when window is resized
+				if (deboucedResizeOverlay !== "undefined" && deboucedResizeOverlay !== null) {
+					$(window).on("resize", deboucedResizeOverlay);
+				}
+
+				event.preventDefault();
+			});
+		});
+
+	}
+
+	$(document).on("ready dynamicOverlayLinkLoaded", setupOverlays);
+
+	// export function so it can be called after a Marketo form is rendered
+	window.qualys = window.qualys || {};
+	window.qualys.overlay = window.qualys.overlay || {};
+	window.qualys.overlay.setup = setupOverlays;
+}(jQuery));
+
+
+/*
+ * Dummies eBook Confirmation Page Filtering by Asset ID
+ */
+(function ($) {
+	"use strict";
+
+	$(window).on("hashchange", function () {
+		if ($("body.forms.ebook.confirm").length > 0) {
+			if (window.location.hash) {
+				var hash;
+				hash = window.location.hash.substring(2);
+				hash = hash.split("/");
+				$("div.ebook").each(function (index, element) {
+					var assetId = ($(element).attr("id"));
+					if ($.inArray(assetId, hash) === -1) {
+						$(element).addClass("hide");
+					}
+				});
+			}
+		}
+	});
+
+	$(document).on("ready", function () {
+		// trigger hash change on page load
+		if ($("body.forms.ebook.confirm").length > 0) {
+			$(window).trigger("hashchange");
+		}
+	});
+}(jQuery));
+
+
+/**
+ * fancy scrolling for anchors (why don’t browsers do this?)
+ */
+(function ($) {
+	"use strict";
+
+	function scrollToAnchor(event) {
+		var hash, offset, duration, scrollTop;
+
+		hash = $(event.currentTarget).attr("href");
+		offset = $(hash).offset();
+
+		// add to the offset if there is a sticky menu
+		$("div.sticky-menu, .js-position-sticky").each(function (index, item) {
+			offset.top -= $(item).outerHeight();
+		});
+
+		scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+		duration = Math.round(Math.sqrt(Math.abs(scrollTop - offset.top)) * 10);
+
+		if (offset.top > 0) {
+			$("html, body").animate({
+				"scrollTop": offset.top
+			}, {
+				"duration": duration,
+				"easing": "easeInOutQuad",
+				complete: function () {
+					// use replaceState in history object when available
+					if (history.replaceState !== undefined) {
+						history.replaceState("", document.title, window.location.pathname + window.location.search + hash);
+					}
+					// no else statement here because it causes IE9 to jump to the location of the hash
+				}
+			});
+
+			if (event.originalEvent !== undefined && event.originalEvent.preventDefault) {
+				event.preventDefault();
+			} else {
+				event.returnValue = false; // IE8 alternative to event.preventDefault()
+			}
+		}
+	}
+
+	$(document).on("ready", function () {
+		$("a[href^='#']").each(function (index, item) {
+			var hash, size, isOnHomepage, isOnSuccessStoriesPage;
+
+			hash = $(item).attr("href");
+			size = $(hash).length;
+			if (size > 0) {
+				// exception for homepage
+				isOnSuccessStoriesPage = $(hash).parents("#customers_success-stories").length ? true : false;
+				if (!isOnHomepage && !isOnSuccessStoriesPage) {
+					$(item).on("click", scrollToAnchor);
+				}
+			}
+		});
+	});
+}(jQuery));
+
+
+/**
+ * support sticky menus by fixing an element when it is scrolled past
+ */
+(function ($) {
+	"use strict";
+
+	$(document).on("ready", function () {
+		$("div.sticky-menu").each(function (index, item) {
+			var menuOffset, stickySubMenuHeight, debug;
+
+			debug = false;
+
+			// get the offset to 
+			menuOffset = $(item).offset();
+			// make an exception index the WAS Features and Learn pages
+			if ($(item).hasClass("section-navigation")) {
+				stickySubMenuHeight = $("div.sticky-menu div.submenu").outerHeight();
+				menuOffset.top -= stickySubMenuHeight;
+			} else if ($(item).parent("div.resource-menu").length) {
+				// exception for mobile resources page
+				$(window).on("load", function () {
+					if (window.pageYOffset > 0) {
+						// use original location of sticky menu if page has been scrolled
+						menuOffset = $(item).parent("div.resource-menu").offset();
+					} else {
+						menuOffset = $(item).offset();
+					}
+					if ($(item).parent("div.resource-menu").width() <= 640) {
+						menuOffset.top -= 71;
+					} 
+				});
+				
+				$(window).on("resize", function () {
+					menuOffset = $(item).offset();
+					if ($(item).parent("div.resource-menu").width() <= 640) {
+						menuOffset.top -= 71;
+					} 
+				});
+			}
+			function compareFunctions(iterations, functionA, functionB) {
+				var start, end, i, result;
+
+				// test function A
+				start = (new Date()).getTime();
+				for (i = 0; i < iterations; i += 1) {
+					functionA();
+				}
+				end = (new Date()).getTime();
+				result = {
+					functionA: {
+						start: start,
+						end: end,
+						duration: end - start
+					}
+				};
+				// console.log("A: " + (end - start) + "ms");
+
+				// test function B
+				start = (new Date()).getTime();
+				for (i = 0; i < iterations; i += 1) {
+					functionB();
+				}
+				end = (new Date()).getTime();
+				result.functionB = {
+					start: start,
+					end: end,
+					duration: end - start
+				};
+				// console.log("B: " + (end - start) + "ms");
+
+				return result;
+			}
+			function toggleMenuStickinessA() {
+				if (document.body.scrollTop > menuOffset.top || document.documentElement.scrollTop > menuOffset.top) {
+					$(item).addClass("stuck");
+				} else {
+					$(item).removeClass("stuck");
+				}
+			}
+			function toggleMenuStickinessB() {
+				if (document.body.scrollTop > menuOffset.top || document.documentElement.scrollTop > menuOffset.top) {
+					if (item.className.indexOf("stuck") < 0) {
+						item.className += " stuck";
+					}
+				} else {
+					if (item.className.indexOf("stuck") >= 0) {
+						item.className = item.className.replace(" stuck", "");
+					}
+				}
+			}
+			$(window).on("scroll", toggleMenuStickinessB);
+			/* DEBUG code to compare function performance */
+			if (debug && window.console !== undefined && window.console.log !== undefined) {
+				$(window).on("keydown", function () {
+					console.log(event.which);
+					if (event.which === 84) {
+						compareFunctions(10000, toggleMenuStickinessA, toggleMenuStickinessB);
+					}
+				});
+			}
+		});
+
+		/**
 		 * mark anchor links active when the viewport is scrolled into their position
-		 */a("div.sticky-menu").each(function(b,c){function d(a,b,c){var d,e,f,g;// test function A
-for(d=new Date().getTime(),f=0;f<a;f+=1)b();for(e=new Date().getTime(),g={functionA:{start:d,end:e,duration:e-d}},d=new Date().getTime(),f=0;f<a;f+=1)c();// console.log("B: " + (end - start) + "ms");
-return e=new Date().getTime(),g.functionB={start:d,end:e,duration:e-d},g}function e(){document.body.scrollTop>g.top||document.documentElement.scrollTop>g.top?a(c).addClass("stuck"):a(c).removeClass("stuck")}function f(){document.body.scrollTop>g.top||document.documentElement.scrollTop>g.top?0>c.className.indexOf("stuck")&&(c.className+=" stuck"):0<=c.className.indexOf("stuck")&&(c.className=c.className.replace(" stuck",""))}var g,h,i;// get the offset to 
-i=!1,g=a(c).offset(),a(c).hasClass("section-navigation")?(h=a("div.sticky-menu div.submenu").outerHeight(),g.top-=h):a(c).parent("div.resource-menu").length&&(a(window).on("load",function(){g=0<window.pageYOffset?a(c).parent("div.resource-menu").offset():a(c).offset(),640>=a(c).parent("div.resource-menu").width()&&(g.top-=71)}),a(window).on("resize",function(){g=a(c).offset(),640>=a(c).parent("div.resource-menu").width()&&(g.top-=71)})),a(window).on("scroll",f),i&&window.console!==void 0&&window.console.log!==void 0&&a(window).on("keydown",function(){console.log(event.which),84===event.which&&d(1e4,e,f)})}),a("div.sticky-menu a[href^='#']").each(function(b,c){function d(){var b=document.body.scrollTop||document.documentElement.scrollTop;b>=h&&b<i?0>c.className.indexOf("active")&&(c.className+=" active",a(c).trigger("active")):0<=c.className.indexOf("active")&&(c.className=c.className.replace(" active",""))}var e,f,g,h,i,j,k,l;// workaround bug in Firefox and Chrome
-j=a(c).parents("div.sticky-menu").outerHeight(),e=a(a(c).attr("href")),f=e.offset(),g=e.outerHeight(),f!==void 0&&(h=f.top,i=f.top+g),a(c).parents("div.sticky-menu").children("div.floater").length?(k=a(c).parents("div.sticky-menu").children("div.floater").outerHeight(),h-=j+k,i-=j+k):a(c).parents("div.web-application-firewall").length?(l=a("div.web-application-firewall > div.sticky-menu:first").outerHeight(),h-=j+l,i-=j+l):a(c).parents("div.continuous-monitoring").length?(l=a("div.continuous-monitoring > div.sticky-menu:first").outerHeight(),h-=j+l,i-=j+l):a(c).parents("#enterprises_qualysguard_web-application-scanning").length?(l=a("div.sticky-menu.product-nav").outerHeight(),h-=j+l,i-=j+l):a(c).parents("div.policy-compliance").length?(l=a("div.policy-compliance > div.sticky-menu:first").outerHeight(),h-=j+l,i-=j+l):a(c).parents("#enterprises_qualysguard_features").length||a(c).parents("#smb_qualysguard_express_features").length?(l=a("div.product-nav.sticky-menu").outerHeight(),h-=j+l,i-=j+l):a(c).parents("#shellshock").length?(l=a("div.button-container.sticky-menu").outerHeight(),h-=j+l,i-=j+l):(h-=j,i-=j),h-=1,i-=1,a(c).is(":first-child")&&(h=-Infinity),a(c).is(":last-child")&&(i=1/0),a(window).on("scroll",d)})})}(jQuery),function(a){"use strict";a(document).on("ready",function(){/* function to show or hide the Back to Top button */function b(){var b,d,e,f,g,h,i,j,k;// JSON object to hold mapping of language code to Back to Top message
-for(e in b={de:"Zur\xFCck nach oben",en:"Back to top",es:"Volver arriba",fr:"Retour vers le haut",ru:"\u041D\u0430\u0432\u0435\u0440\u0445"},d=[],b)b.hasOwnProperty(e)&&d.push(e);// set the language to the first valid language
-a.each(c,function(b,c){if(-1!==a.inArray(c,d))return f=c,!1}),g="<div id=\"back-to-top\" style=\"opacity: 0; visibility: hidden;\"><a href=\"#header\">"+b[f]+"</a></div>",h=a(window).height(),i=a(document).height(),i>3*h&&0===a("#back-to-top").length&&a("body").prepend(g),a("#back-to-top a").click(function(b){b.preventDefault(),a(window).scrollTop(0)}),j=k=!1,a(window).scroll(function(){j=a(window).scrollTop()>1.5*h,j&&!k?(k=!0,a("#back-to-top").css({opacity:1,visibility:"visible"})):k&&!j&&(k=!1,a("#back-to-top").css({opacity:0,visibility:"hidden"}))})}/* when document is ready, call the showHideBackToTopButton() function
-		   this is used for most pages where the height of the document doesn’t change much */ // get language code from URL by getting array of all 2-letters between a . or / character
-var c=window.location.href.match(/[.\/]([a-z]{2})[.\/]/g);/* for the customer case study pages, the Read More/Less button causes the document height to change.
+		 */
+		$("div.sticky-menu a[href^='#']").each(function (index, item) {
+			var anchor, offset, outerHeight, top, bottom, menuHeight, floaterHeight, firstHeight;
+
+			menuHeight = $(item).parents("div.sticky-menu").outerHeight();
+			anchor = $($(item).attr("href"));
+			offset = anchor.offset();
+			outerHeight = anchor.outerHeight();
+			if (offset !== undefined) {
+				top = offset.top;
+				bottom = offset.top + outerHeight;
+			}
+			// account for sticky menu height
+			// exception for vm features
+			if ($(item).parents("div.sticky-menu").children("div.floater").length) {
+				floaterHeight = $(item).parents("div.sticky-menu").children("div.floater").outerHeight();
+				top -= menuHeight + floaterHeight;
+				bottom -= menuHeight + floaterHeight;
+			} else if ($(item).parents("div.web-application-firewall").length) {
+				// exception for waf features
+				firstHeight = $("div.web-application-firewall > div.sticky-menu:first").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else if ($(item).parents("div.continuous-monitoring").length) {
+				// exception for cm features
+				firstHeight = $("div.continuous-monitoring > div.sticky-menu:first").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else if ($(item).parents("#enterprises_qualysguard_web-application-scanning").length) {
+				// exception for WAS features
+				firstHeight = $("div.sticky-menu.product-nav").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else if ($(item).parents("div.policy-compliance").length) {
+				// exception for pc features
+				firstHeight = $("div.policy-compliance > div.sticky-menu:first").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else if ($(item).parents("#enterprises_qualysguard_features").length || $(item).parents("#smb_qualysguard_express_features").length) {
+				// exception for enterprise features
+				firstHeight = $("div.product-nav.sticky-menu").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else if ($(item).parents("#shellshock").length) {
+				// exception for shellshock page
+				firstHeight = $("div.button-container.sticky-menu").outerHeight();
+				top -= menuHeight + firstHeight;
+				bottom -= menuHeight + firstHeight;
+			} else {
+				top -= menuHeight;
+				bottom -= menuHeight;
+			}
+			// workaround bug in Firefox and Chrome
+			top -= 1;
+			bottom -= 1;
+			// account first and last items
+			if ($(item).is(":first-child")) {
+				top = -Infinity;
+			}
+			if ($(item).is(":last-child")) {
+				bottom = Infinity;
+			}
+
+			function toggleActiveAnchorLinks() {
+				var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+				if (scrollTop >= top && scrollTop < bottom) {
+					if (item.className.indexOf("active") < 0) {
+						item.className += " active";
+						$(item).trigger("active");
+					}
+				} else {
+					if (item.className.indexOf("active") >= 0) {
+						item.className = item.className.replace(" active", "");
+					}
+				}
+			}
+			$(window).on("scroll", toggleActiveAnchorLinks);
+		});
+	});
+
+}(jQuery));
+
+
+/*
+ * show back-to-top button when user has scrolled X pixels down on page
+ */
+(function ($) {
+	"use strict";
+	$(document).on("ready", function () {
+		// get language code from URL by getting array of all 2-letters between a . or / character
+		var languages = window.location.href.match(/[.\/]([a-z]{2})[.\/]/g);
+
+		if (languages !== null) {
+			// if 2-letter matches are found, remove . and / characters
+			$.each(languages, function (index, value) {
+				languages[index] = value.replace(/[.\/]/g, "");
+			});
+			// add the default English 2-letter code to the array of language matches
+			languages.push("en");
+		} else {
+			// if no 2-letter matches are found, set the language to English
+			languages = ["en"];
+		}
+
+		/* function to show or hide the Back to Top button */
+		function showHideBackToTopButton() {
+			var backToTopByLanguage, validLanguages, lang, language, backToTopHtml, windowHeight, documentHeight, shouldBeVisible, isVisible;
+			// JSON object to hold mapping of language code to Back to Top message
+			backToTopByLanguage = {
+				"de": "Zurück nach oben",
+				"en": "Back to top",
+				"es": "Volver arriba",
+				"fr": "Retour vers le haut",
+				"ru": "Наверх"
+			};
+
+			// get array of valid languages
+			validLanguages = [];
+			for (lang in backToTopByLanguage) {
+				if (backToTopByLanguage.hasOwnProperty(lang)) {
+					validLanguages.push(lang);
+				}
+			}
+
+			// set the language to the first valid language
+			$.each(languages, function (index, value) {
+				if ($.inArray(value, validLanguages) !== -1) {
+					language = value;
+					return false;
+				}
+			});
+
+			// build the Back to Top button HTML
+			backToTopHtml = "<div id=\"back-to-top\" style=\"opacity: 0; visibility: hidden;\"><a href=\"#header\">" + backToTopByLanguage[language] + "</a></div>";
+
+			windowHeight = $(window).height();
+			documentHeight = $(document).height();
+
+			// inject back-to-top button HTML into page only if document height is greater than 3 times the windows height
+			if ((documentHeight > (3 * windowHeight)) && ($("#back-to-top").length === 0)) {
+				$("body").prepend(backToTopHtml);
+			}
+
+			// when user clicks back-to-top button, jump them back to the top without showing hash tag in URL bar
+			$("#back-to-top a").click(function (event) {
+				event.preventDefault();
+				$(window).scrollTop(0);
+			});
+
+			// only show back-to-top button when user has scrolled more than half way down the page
+			shouldBeVisible = isVisible = false;
+			$(window).scroll(function () {
+				shouldBeVisible = $(window).scrollTop() > (1.5 * windowHeight);
+				if (shouldBeVisible && !isVisible) {
+					isVisible = true;
+					$("#back-to-top").css({
+						"opacity": 1,
+						"visibility": "visible"
+					});
+				} else if (isVisible && !shouldBeVisible) {
+					isVisible = false;
+					$("#back-to-top").css({
+						"opacity": 0,
+						"visibility": "hidden"
+					});
+				}
+			});
+		}
+
+		/* when document is ready, call the showHideBackToTopButton() function
+		   this is used for most pages where the height of the document doesn’t change much */
+		showHideBackToTopButton();
+
+		/* for the customer case study pages, the Read More/Less button causes the document height to change.
 		   a custom event called "animationComplete which is attached to the Read More/Less button will get triggered 
 		   when the animation is complete. the following event listener which catch that custom event to dynamically 
-		   call the showHideBackToTopButton() */null===c?c=["en"]:(a.each(c,function(a,b){c[a]=b.replace(/[.\/]/g,"")}),c.push("en")),b(),a("div.rest-of-content").on("animationComplete",b)})}(jQuery),function(a){"use strict";/*
+		   call the showHideBackToTopButton() */
+		$("div.rest-of-content").on("animationComplete", showHideBackToTopButton);
+	});
+}(jQuery));
+
+
+/*
+ * adjust width of slideshow for full width slideshows
+ */
+(function ($) {
+	"use strict";
+
+	/*
 	 * Adjust width of slides and slide wrapper. Note: div.items element 
 	 * is dynamically inserted by the scroller.
-	 */function b(){var b,c,d,e;// update slide width based on viewport width
-// updated tray width
-/* add 2 to the number of slides for first and last
+	 */
+	function slideAdjust() {
+		var slide_width, numSlides, tray_width, scrollable_width;
+
+		// update slide width based on viewport width
+		slide_width = $("div.scrollable").width();
+		$("div.slideshow.full-width div.slide").css("width", slide_width);
+
+		// updated tray width
+		numSlides = $("div.slide").length;
+
+		/* add 2 to the number of slides for first and last
 		 * dynamically-generated slides and multiply total width by 1.5 for
-		 * extra space */ // update tray position
-b=a("div.scrollable").width(),a("div.slideshow.full-width div.slide").css("width",b),c=a("div.slide").length,d=1.5*((c+2)*b),a("div.slideshow.full-width div.items").css("width",d),e=a("div.slideshow div.scrollable").width(),a("div.slideshow.full-width div.items").css("left",-1*e)}/**
+		 * extra space */
+		tray_width = (numSlides + 2) * slide_width * 1.5;
+		$("div.slideshow.full-width div.items").css("width", tray_width);
+
+		// update tray position
+		scrollable_width = $("div.slideshow div.scrollable").width();
+		$("div.slideshow.full-width div.items").css("left", scrollable_width * -1);
+	}
+
+	/**
 	 * adjust width of slideshow with every window resize for "full bleed" scroller
-	 */a(document).on("ready",function(){b()}),a(window).on("resize",function(){b()})}(jQuery),function(a){"use strict";a(document).on("ready",function(){var b=a("body.customers-success-stories div.section.nav div.expand");b.slideUp(),a("body.customers-success-stories div.section.nav").mouseenter(function(){b.stop(!0,!1).slideDown(),a("div.logo-container img.double-down-arrow").stop(!0,!1).fadeOut()}).mouseleave(function(){b.stop(!0,!1).slideUp(),a("div.logo-container img.double-down-arrow").stop(!0,!1).fadeIn()})})}(jQuery),function(a){"use strict";a(document).ready(function(){0<a("body.security-at-your-fingertips").length&&(a("div.card.flip").hover(function(){a(this).find("div.card-wrapper").addClass("flipIt");var b=a(this).find("div a div").attr("class").replace(" icon","");a("h2").addClass("hide"),a("h2."+b+"-msg").removeClass("hide")},function(){a(this).find("div.card-wrapper").removeClass("flipIt")}),a("div.card-wrapper a.front").each(function(b,c){var d=a(c).attr("href");a(c).parent("div.card-wrapper").attr("data-link",d)}),a(document).on("click","div.card-wrapper",function(b){var c=a(b.currentTarget).attr("data-link");window.location.href=c}))})}(jQuery),function(a){"use strict";function b(){var b,c,d,e,f;// calculate non-scaled window width
-// by getting the current scaled window width and
-// the current scale factor
-// only for pages with viewport meta tags
-if(c=window.innerWidth,e=a("meta[name=viewport]").attr("content"),e){// condition for when initial scale is/is not found
-if(f=e.match(/\binitial-scale=(\d*\.?\d*)(,|$)/),!f)throw new Error("Initial scale value not found in viewport meta tag.");else if(d=parseFloat(f[1]),isNaN(d))throw new Error("Initial scale value in viewport meta tag is not a number.");b=Math.round(c/d),d=640<b&&1004>b?b/1004:1,a("meta[name=viewport]").attr("content","width=device-width, initial-scale="+d)}}var c;a(document).on("ready",b),window.matchMedia!==void 0&&null!==window.matchMedia&&(c=window.matchMedia("screen and (orientation:portrait)"),c.addListener(b))}(jQuery),function(a){"use strict";/**
+	 */
+	$(document).on("ready", function () {
+		slideAdjust();
+	});
+	$(window).on("resize", function () {
+		slideAdjust();
+	});
+}(jQuery));
+
+
+/*
+ * Expand / collapse success story nav on hover
+ * TODO refactor with CSS hover and transitions
+ */
+
+(function ($) {
+	"use strict";
+
+	$(document).on("ready", function () {
+		var logoContainer = $("body.customers-success-stories div.section.nav div.expand");
+		logoContainer.slideUp();
+		$("body.customers-success-stories div.section.nav").mouseenter(
+			function () {
+				logoContainer.stop(true, false).slideDown();
+				$("div.logo-container img.double-down-arrow").stop(true, false).fadeOut();
+			}
+		).mouseleave(
+			function () {
+				logoContainer.stop(true, false).slideUp();
+				$("div.logo-container img.double-down-arrow").stop(true, false).fadeIn();
+			}
+		);
+	});
+}(jQuery));
+
+/*
+ * FreeScan Landing Page (OWASP, Patch Tuesday, SCAP, etc)
+ */
+(function($) {
+	"use strict";
+
+	$(document).ready(function () {
+		// only run the following on the security-at-your-fingertips page
+		if ($("body.security-at-your-fingertips").length > 0) {
+			// flip cards on hover
+			$("div.card.flip").hover(
+				function () {
+					$(this).find("div.card-wrapper").addClass("flipIt");
+					var badge = $(this).find("div a div").attr("class").replace(" icon", "");
+					$("h2").addClass("hide");
+					$("h2." + badge + "-msg").removeClass("hide");
+				},
+				function () {
+					$(this).find("div.card-wrapper").removeClass("flipIt");
+				}
+			);
+
+
+			// get URLs of each card and make wrapper div clickable to fix bug in certain browsers
+			$("div.card-wrapper a.front").each(function (index, element) {
+				var cardHref = $(element).attr("href");
+				$(element).parent("div.card-wrapper").attr("data-link", cardHref);
+			});
+
+			$(document).on("click", "div.card-wrapper", function (event) {
+				var link = $(event.currentTarget).attr("data-link");
+				window.location.href = link;
+			});
+		}
+	});
+}(jQuery));
+
+
+/*
+ * scale viewport for tablets
+ */
+(function ($) {
+	"use strict";
+
+	var mql;
+
+	function scaleTabletViewportToDesktop() {
+		var nonScaledWidth, scaledWidth, scale, content, matches;
+
+		// calculate non-scaled window width
+		// by getting the current scaled window width and
+		// the current scale factor
+		scaledWidth = window.innerWidth;
+
+		// extract current scale from viewport meta tag
+		content = $("meta[name=viewport]").attr("content");
+
+		// only for pages with viewport meta tags
+		if (content) {
+			matches = content.match(/\binitial-scale=(\d*\.?\d*)(,|$)/);
+
+			// condition for when initial scale is/is not found
+			if (matches) {
+				scale = parseFloat(matches[1]);
+				if (isNaN(scale)) {
+					throw new Error("Initial scale value in viewport meta tag is not a number.");
+				}
+			} else {
+				throw new Error("Initial scale value not found in viewport meta tag.");
+			}
+
+			nonScaledWidth = Math.round(scaledWidth / scale);
+
+			// only adjust scale for tablets
+			// currently we define tablets between 640 and 1004 pixels wide
+			if (nonScaledWidth > 640 && nonScaledWidth < 1004) {
+				scale = nonScaledWidth / 1004;
+			} else {
+				scale = 1;
+			}
+
+			$("meta[name=viewport]").attr(
+				"content",
+				"width=device-width, initial-scale=" + scale
+			);
+		}
+	}
+
+	$(document).on("ready", scaleTabletViewportToDesktop);
+
+	if (window.matchMedia !== undefined && window.matchMedia !== null) {
+		mql = window.matchMedia("screen and (orientation:portrait)");
+		mql.addListener(scaleTabletViewportToDesktop);
+	}
+
+}(jQuery));
+
+
+(function ($) {
+	"use strict";
+	/**
 	 * show/hide mobile nav sections
-	 */a(document).ready(function(){function b(b){if(!b.matches){/* The viewport is > 640px wide */var c,d;c=a("#content"),d=a("div.mobile-nav"),"none"===c.css("display")&&c.removeAttr("style"),"block"===d.css("display")&&(d.removeAttr("style"),a("div.hamburger-menu").removeClass("on"),a("div.patty-container").removeClass("hidden"),a("div.preprefooter, div.prefooter, div.footer").removeClass("hidden"),a("div.x-container").addClass("hidden"),d.find("div.menu").removeClass("expanded").find("div.container").addClass("hidden"))}}if(a("div.hamburger-menu").on("click",function(){a("#content, div.mobile-nav").toggle();var b=a("div.mobile-nav").css("display");"block"===b?(a("div.mobile-header").addClass("solid-bg"),a("div.hamburger-menu").addClass("on"),a("div.patty-container").addClass("hidden"),a("div.x-container").removeClass("hidden"),a("div.preprefooter, div.prefooter, div.footer").addClass("hidden")):(a("div.mobile-header").removeClass("solid-bg"),a("div.hamburger-menu").removeClass("on"),a("div.patty-container").removeClass("hidden"),a("div.x-container").addClass("hidden"),a("div.preprefooter, div.prefooter, div.footer").removeClass("hidden"))}),a("div.mobile-nav div.search a").on("click",function(b){b.preventDefault(),a("div.hamburger-menu").trigger("click"),a("div.search-panel-wrapper, div.search-panel-overlay").addClass("search-active")}),a("div.menu.has-sub-menu").on("click",function(b){var c=a(b.currentTarget);c.hasClass("expanded")?(c.removeClass("expanded"),c.find("div.container").addClass("hidden")):(c.addClass("expanded"),c.find("div.container").removeClass("hidden"))}),void 0!==window.matchMedia&&null!==window.matchMedia){var c=window.matchMedia("(max-width: 640px)");c.addListener(b),b(c)}})}(jQuery),function(a){"use strict";function b(b){b.preventDefault(),a("div.search-panel-wrapper, div.search-panel-overlay").removeClass("search-active")}a(document).on("ready",function(){// toggle search overlay when visitor clicks search icon
-// search icon is a submit button
-a("a.toolbar-item.search").on("click",function(b){b.preventDefault(),a("div.search-panel-wrapper, div.search-panel-overlay").toggleClass("search-active")}),a("div.search-panel-wrapper a.close").on("click",b),a("div.search-panel-overlay").on("click",b),a(document).on("keyup",function(a){27===a.keyCode&&b(a)})})}(jQuery),function(){"use strict";/*
+	 */
+	$(document).ready(function () {
+		$("div.hamburger-menu").on("click", function() {
+			$("#content, div.mobile-nav").toggle();
+			var navDisplay = $("div.mobile-nav").css("display");
+			if (navDisplay === "block") {
+				$("div.mobile-header").addClass("solid-bg");
+				$("div.hamburger-menu").addClass("on");
+				$("div.patty-container").addClass("hidden");
+				$("div.x-container").removeClass("hidden");
+				$("div.preprefooter, div.prefooter, div.footer").addClass("hidden");
+			} else {
+				$("div.mobile-header").removeClass("solid-bg");
+				$("div.hamburger-menu").removeClass("on");
+				$("div.patty-container").removeClass("hidden");
+				$("div.x-container").addClass("hidden");
+				$("div.preprefooter, div.prefooter, div.footer").removeClass("hidden");
+			}
+		});
+		//show/hide global search display
+		$("div.mobile-nav div.search a").on("click", function (event) {
+			event.preventDefault();
+			$("div.hamburger-menu").trigger("click");
+			$("div.search-panel-wrapper, div.search-panel-overlay").addClass("search-active");
+		});
+		$("div.menu.has-sub-menu").on("click", function(event) {
+			var target = $(event.currentTarget);
+			if (target.hasClass("expanded")) {
+				target.removeClass("expanded");
+				target.find("div.container").addClass("hidden");
+			} else {
+				target.addClass("expanded");
+				target.find("div.container").removeClass("hidden");
+			}
+		});
+
+		function handleViewportWidthChange(mql) {
+			if (!mql.matches) {
+				/* The viewport is > 640px wide */
+				var $content, $mobileNav;
+
+				$content = $("#content");
+				$mobileNav = $("div.mobile-nav");
+
+				if ($content.css("display") === "none") {
+					$content.removeAttr("style");
+				}
+				if ($mobileNav.css("display") === "block") {
+					$mobileNav.removeAttr("style");
+					$("div.hamburger-menu").removeClass("on");
+					$("div.patty-container").removeClass("hidden");
+					$("div.preprefooter, div.prefooter, div.footer").removeClass("hidden");
+					$("div.x-container").addClass("hidden");
+					$mobileNav.find("div.menu").removeClass("expanded").find("div.container").addClass("hidden");
+				}
+			}
+		}
+
+		if (window.matchMedia !== undefined && window.matchMedia !== null) {
+			var mql = window.matchMedia("(max-width: 640px)");
+			mql.addListener(handleViewportWidthChange);
+			handleViewportWidthChange(mql);
+		}
+	});
+}(jQuery));
+
+
+/*
+ * Show/hide global search display
+ */
+(function ($) {
+	"use strict";
+
+	function closeSearchOverlay(event) {
+		event.preventDefault();
+		$("div.search-panel-wrapper, div.search-panel-overlay").removeClass("search-active");
+	}
+
+	$(document).on("ready", function () {
+
+		// toggle search overlay when visitor clicks search icon
+		// search icon is a submit button
+		$("a.toolbar-item.search").on("click", function (event) {
+			event.preventDefault();
+			$("div.search-panel-wrapper, div.search-panel-overlay").toggleClass("search-active");
+		});
+
+		$("div.search-panel-wrapper a.close").on("click", closeSearchOverlay);
+
+		$("div.search-panel-overlay").on("click", closeSearchOverlay);
+
+		$(document).on("keyup", function (event) {
+			if (event.keyCode === 27) {
+				closeSearchOverlay(event);
+			}
+		});
+	});
+}(jQuery));
+
+
+/*
+ * helper function for parsing Query strings
+ */
+(function () {
+	"use strict";
+
+	/*
 	 * return object with param names and values
-	 */ /*
+	 */
+	function parseQueryString(queryString) {
+		var params, readKey, key, value, characters, c, i, l, decoded;
+
+		queryString = queryString || "";
+		readKey = true;
+		key = value = "";
+		params = {};
+		characters = queryString.split("");
+
+		for (i = 0, l = characters.length; i < l; i += 1) {
+			c = characters[i];
+
+			if ((c === "?" && i === 0) || c === "&" || c === ";") {
+				readKey = true;
+			} else {
+
+				if (c === "=") {
+					readKey = false;
+				} else {
+
+					if (readKey) {
+						key += c;
+					} else {
+						value += c;
+					}
+				}
+			}
+
+			if (c === "&" || c === ";" || i === (l - 1)) {
+				decoded = {
+					"key": decodeURIComponent(key.replace(/\+/g, " ")),
+					"value": decodeURIComponent(value.replace(/\+/g, " "))
+				};
+
+				// put multiple values for the same key into an array
+				if (params.hasOwnProperty(decoded.key)) {
+					if (params[decoded.key] instanceof Array) {
+						params[decoded.key] = params[decoded.key].concat(decoded.value);
+					} else {
+						params[decoded.key] = [params[decoded.key]].concat(decoded.value);
+					}
+				} else {
+					params[decoded.key] = decoded.value;
+				}
+
+				key = value = "";
+			}
+		}
+
+		return params;
+	}
+	window.qualys = window.qualys || {};
+	window.qualys.parseQueryString = parseQueryString;
+
+
+	/*
 	 * return array of objects with cookie names and values
-	 */window.qualys=window.qualys||{},window.qualys.parseQueryString=function(a){var b,d,e,f,g,h,j,k,m;for(a=a||"",d=!0,e=f="",b={},g=a.split(""),(j=0,k=g.length);j<k;j+=1)h=g[j],"?"===h&&0===j||"&"===h||";"===h?d=!0:"="===h?d=!1:d?e+=h:f+=h,("&"===h||";"===h||j===k-1)&&(m={key:decodeURIComponent(e.replace(/\+/g," ")),value:decodeURIComponent(f.replace(/\+/g," "))},b[m.key]=b.hasOwnProperty(m.key)?b[m.key]instanceof Array?b[m.key].concat(m.value):[b[m.key]].concat(m.value):m.value,e=f="");return b},window.qualys=window.qualys||{},window.qualys.parseCookieString=function(a){var b;// basic DoS preventation
-if(81920<a.length)throw new Error("Cookie string too long. length = "+a.length);return b=a.split(/;\s*/).map(function(a){// basic DoS preventation
-if(4096<a.length)throw new Error("Cookie too big. length = "+a.length);return{name:a.slice(0,a.indexOf("=")),value:a.slice(a.indexOf("=")+1)}}),b}}(),function(){"use strict";window.qualys=window.qualys||{},window.qualys.createInputsFromCookies=function(a){var b,c,d,e;return a=a||["gclid","invite","kw","leadsource","link","_mkto_trk","referrer"],b=window.qualys.parseCookieString(document.cookie),c=b.filter(function(b){return 0<=a.indexOf(b.name)}),d=c.map(function(a){var b=document.createElement("input");// convert cookie names to input names
-switch(b.type="hidden",a.name){case"_mkto_trk":b.name="marketoTrackingCookie";break;default:b.name=decodeURIComponent(a.name);}return b.value=decodeURIComponent(a.value),b}),e=d.reduce(function(a,b){return a.appendChild(b),a},document.createDocumentFragment()),e}}(),function(){"use strict";/**
+	 */
+	function parseCookieString(cookieString) {
+		var cookies;
+
+		// basic DoS preventation
+		if (cookieString.length > (20 * 4096)) {
+			throw new Error("Cookie string too long. length = " + cookieString.length);
+		}
+
+		cookies = cookieString.split(/;\s*/).map(function (cs) {
+
+			// basic DoS preventation
+			if (cs.length > 4096) {
+				throw new Error("Cookie too big. length = " + cs.length);
+			}
+
+			return {
+				"name": cs.slice(0, cs.indexOf("=")),
+				"value": cs.slice(cs.indexOf("=") + 1)
+			};
+		});
+
+		return cookies;
+	}
+
+	window.qualys = window.qualys || {};
+	window.qualys.parseCookieString = parseCookieString;
+}());
+
+
+/*
+ * function to add hidden inputs to a form from cookie values
+ * Note, Marketo forms can do this on their onw, so this can be removed once all form use Marketo
+ */
+(function () {
+	"use strict";
+
+	function createInputsFromCookies(cookieNames) {
+		var cookies, filteredCookies, inputs, fragment;
+
+		cookieNames = cookieNames || ["gclid", "invite", "kw", "leadsource", "link", "_mkto_trk", "referrer"];
+
+		// get cookies
+		cookies = window.qualys.parseCookieString(document.cookie);
+
+		// filter cookies to only the ones we want
+		filteredCookies = cookies.filter(function (cookie) {
+			return (cookieNames.indexOf(cookie.name) >= 0);
+		});
+
+		// create input elements for each filtered cookie
+		inputs = filteredCookies.map(function (cookie) {
+			var input = document.createElement("input");
+			input.type = "hidden";
+
+			// convert cookie names to input names
+			switch (cookie.name) {
+			case "_mkto_trk":
+				input.name = "marketoTrackingCookie";
+				break;
+			default:
+				input.name = decodeURIComponent(cookie.name);
+				break;
+			}
+
+			input.value = decodeURIComponent(cookie.value);
+			return input;
+		});
+
+		// append inputs to form
+		fragment = inputs.reduce(function (p, c) {
+			p.appendChild(c);
+			return p;
+		}, document.createDocumentFragment());
+
+		return fragment;
+	}
+
+	window.qualys = window.qualys || {};
+	window.qualys.createInputsFromCookies = createInputsFromCookies;
+}());
+
+
+/*
+ * util - generate UUID from Math.random()
+ */
+(function registerQualysUtils () {
+
+	"use strict";
+
+	/**
 	 * generateUUID - create a random UUID string
 	 * @returns {String} uuid
-	 */window.qualys=window.qualys||{},window.qualys.utils=window.qualys.utils||{},window.qualys.utils.generateUUID=function(){var a,b;return a="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",b=a.replace(/[xy]/g,function(a){var b,c;return b=0|16*Math.random(),c="x"===a?b:8|3&b,c.toString(16)}),b}}(),function(a){"use strict";// pages on which to show transparent header
-var b=["/solutions/azure/","/asset-discovery/","/subscriptions/","/compliance-monitoring/","/web-application-security/","/threat-protection/","/network-security/","/public-clouds/","/public-clouds/amazon-web-services/","/public-clouds/microsoft-azure/","/public-clouds/google-cloud-platform/","/security-compliance-cloud-platform/","/2017/rsac/","/2017/infosec/","/subscriptions/consultant/"// e.g. /company/
-],c=["investor.qualys.com","lps.qualys.com"];// hosts on which to exclude executing code below
-a(document).on("ready",function(){var d,e,f,g=document.location.host;// only execute code if host is not in the excludedHosts list
-if(-1===a.inArray(g,c)){d=window.location.pathname,f=!1,"/"===d&&(f=!0);// For all other pages in the "pages" array above
-for(var h=0;h<b.length;h++)e=new RegExp("^"+b[h]+"$","g"),null!==d.match(e)&&(f=!0);f&&setTimeout(function(){a("div.header-wrapper, div.mobile-header").addClass("transparent fixed")},0)}})}(jQuery),function(a){"use strict";a(document).on("ready",function(){a("#header a.global-link").on("click",function(b){a(b.currentTarget).addClass("hidden"),a("#header div.local-nav").addClass("hidden"),a("#nav, #header div.toolbar").removeClass("hidden")})})}(jQuery);
-//# sourceMappingURL=main.js.map
+	 */
+	function generateUUID () {
+
+		var template, uuid;
+
+		template = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+		uuid = template.replace(/[xy]/g, function generateRandomChar (match) {
+
+			var number, value;
+
+			number = Math.random() * 16 | 0;
+			if (match === "x") {
+
+				value = number;
+
+			} else {
+
+				value = number & 0x3 | 0x8;
+
+			}
+
+			return value.toString(16);
+
+		});
+
+		return uuid;
+
+	}
+
+	window.qualys = window.qualys || {};
+	window.qualys.utils = window.qualys.utils || {};
+	window.qualys.utils.generateUUID = generateUUID;
+
+}());
+
+
+/*
+ * show transparent header on select pages only
+ */
+(function ($) {
+	"use strict";
+
+	// pages on which to show transparent header
+	var pages = [
+		"/solutions/azure/",
+		"/asset-discovery/",
+		"/subscriptions/",
+		"/compliance-monitoring/",
+		"/web-application-security/",
+		"/threat-protection/",
+		"/network-security/",
+		"/public-clouds/",
+		"/public-clouds/amazon-web-services/",
+		"/public-clouds/microsoft-azure/",
+		"/public-clouds/google-cloud-platform/",
+		"/security-compliance-cloud-platform/",
+		"/2017/rsac/",
+		"/2017/infosec/",
+		"/subscriptions/consultant/" // e.g. /company/
+	];
+
+	// hosts on which to exclude executing code below
+	var excludedHosts = [
+		"investor.qualys.com",
+		"lps.qualys.com"
+	];
+
+	$(document).on("ready", function () {
+		var host = document.location.host;
+		var pathname, regex, isMatch;
+
+		// only execute code if host is not in the excludedHosts list
+		if ($.inArray(host, excludedHosts) === -1) {
+			pathname = window.location.pathname;
+			isMatch = false;
+
+			// check which page user is on to determine whether to show transparent header
+			// SPECIAL CASE: if this is the HOME PAGE
+			if (pathname === "/") {
+				isMatch = true;
+			}
+
+			// For all other pages in the "pages" array above
+			for (var i = 0; i < pages.length; i++) {
+				regex = new RegExp("^" + pages[i] + "$", "g");
+				if (pathname.match(regex) !== null) {
+					isMatch = true;
+				}
+			}
+
+			if (isMatch) {
+				setTimeout(function(){
+					$("div.header-wrapper, div.mobile-header").addClass("transparent fixed");
+				}, 0);
+			}
+		}
+	});
+}(jQuery));
+
+/*
+ * toggle global nav when global menu link is clicked
+ */
+(function ($) {
+	"use strict";
+
+	$(document).on("ready", function () {
+		$("#header a.global-link").on("click", function (event) {
+			$(event.currentTarget).addClass("hidden");
+			$("#header div.local-nav").addClass("hidden");
+			$("#nav, #header div.toolbar").removeClass("hidden");
+		});
+	});
+}(jQuery));

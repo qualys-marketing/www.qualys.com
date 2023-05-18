@@ -1,0 +1,86 @@
+[
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/sumedh-thakar-880.jpg",
+		"name": "Sumedh Thakar",
+		"anchor": "sumedh-thakar",
+		"title": "President and CEO",
+		"email": "",
+		"expandable": "expandable",
+		"interview": "https://vimeo.com/664438164",
+		"linkedin": "https://www.linkedin.com/in/sumedhthakar/",
+		"bioLong": "As CEO, Sumedh leads the company’s vision and strategic direction. He joined Qualys in 2003 in engineering and grew within the company, taking various leadership roles focused on helping Qualys deliver on its platform vision. Since 2014, he has served as Chief Product Officer at Qualys, where he oversaw all things product, including engineering, development, product management, cloud operations, DevOps, and customer support. A product fanatic and engineer at heart, he is a driving force behind expanding the platform from Vulnerability Management into broader areas of security and compliance, helping customers consolidate their security stack. This includes the rollout of the game-changing VMDR (Vulnerability Management, Detection and Response) that continually detects and prevents risk to their systems, Multi-Vector EDR, which focuses on protecting endpoints as well as Container Security, Compliance and Web Application Security solutions. Sumedh was also instrumental in the build-up of multiple Qualys sites resulting in a global 24x7 follow-the-sun product team. \n\nSumedh is a long-time proponent of SaaS and cloud computing. He previously worked at Intacct, a cloud-based financial and accounting software provider. He also worked at Northwest Airlines developing complex algorithms for its yield and revenue management reservation system. Sumedh has a bachelor’s degree in computer engineering with distinction from the University of Pune.",
+		"bioShort": "As CEO, Sumedh leads the company’s vision and strategic direction. He joined Qualys in 2003 in engineering and grew within the company, taking various leadership roles focused on helping Qualys deliver on its platform vision."
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/joo-mi-kim-880.jpg",
+		"name": "Joo Mi Kim",
+		"anchor": "joo-mi-kim",
+		"title": "Chief Financial Officer",
+		"email": "",
+		"expandable": "expandable",
+		"linkedin": "https://www.linkedin.com/in/joomikim",
+		"bioLong": "As Chief Financial Officer of Qualys, Joo Mi has worldwide responsibility for all elements of the company’s finance organization, including finance, accounting, investor relations, treasury and tax. A strategic and operational finance executive, Joo Mi brings more than 15 years of combined experience in financial planning and operations, investor relations, investment banking, and economic consulting. \n\n Joo Mi previously served as the CFO of Impact, a leader in partnership automation, and prior to that was the CFO of Aera Technology, an enterprise SaaS company. From 2016 to 2018, she served as the Vice President of FP&A and Investor Relations at Qualys. Earlier in her career, Joo Mi was an investment banker at J.P. Morgan and an economic consultant at Ernst & Young. She received a bachelor’s degree in economics from the University of Chicago and an MBA from The Wharton School of the University of Pennsylvania.",
+		"bioShort": "As Chief Financial Officer of Qualys, Joo Mi has worldwide responsibility for all elements of the company’s finance organization, including finance, accounting, investor relations, treasury and tax."
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/pinkesh-shah-440-2x.jpg",
+		"name": "Pinkesh Shah",
+		"anchor": "pinkesh-shah",
+		"title": "Chief Product Officer",
+		"email": "",
+		"expandable": "expandable",
+		"linkedin": "https://www.linkedin.com/in/pinkesh/",
+		"bioLong": "As Chief Product Officer of Qualys, Pinkesh has global responsibility for all Product Management, Product & UX Design, Product Marketing, Demand Generation, Branding, Analyst Relations, and other Marketing functions. An entrepreneurial product leader, Pinkesh brings more than 18 years of experience in building and launching category-defining technology products designed to deliver delight. Pinkesh has deep cybersecurity expertise and has led product, engineering, and marketing teams at companies including McAfee, BeyondTrust, Exabeam, netIQ, IBM, among others. \n\n Pinkesh is a Professor of Practice at the Institute of Product Leadership and other leading Business schools, where he mentors and coaches at the Executive Education programs on Product Strategy & Digital Marketing. He has received his master's in Computer Science with a cybersecurity specialization from Purdue University.",
+		"bioShort": "As Chief Product Officer of Qualys, Pinkesh has global responsibility for all Product Management, Product & UX Design, Product Marketing, Demand Generation, Branding, Analyst Relations, and other Marketing functions."
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/rima-touma-bruno-880.jpg",
+		"name": "Rima Touma Bruno",
+		"anchor": "rima-touma-bruno",
+		"title": "Chief Human Resources Officer",
+		"email": "",
+		"linkedin": "https://www.linkedin.com/in/rimatoumabruno/",
+		"bioLong": "As Chief Human Resources Officer, Rima helps the Qualys workforce maintain a high level of performance by serving as an employee champion and cultivating the corporate community. She brings more than 15 years of domestic and international human resources experience to the company. Prior to joining Qualys, Rima was in HR at VeriSign as part of the mergers and acquisitions group where she was responsible for investigating potential acquisitions, focusing on talent assessment, management style, cost analysis of benefits, and stock plan transfers.\n\nRima joined VeriSign as part of its acquisition of Signio, where she served as Director of Human Resources, spearheading employee practices and all other aspects of HR. She also led the Human Resources departments at NetObjects, Inc. and Verity, Inc. where she played an integral role in taking both companies through a public offering. Rima holds a bachelor’s degree in business administration from San Jose State University.",
+		"bioShort": "As Chief Human Resources Officer, Rima helps the Qualys workforce maintain a high level of performance by serving as an employee champion and cultivating the corporate community. "
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/headshot-bruce-posey.jpg",
+		"name": "Bruce Posey",
+		"anchor": "bruce-posey",
+		"title": "Chief Legal Officer",
+		"email": "",
+		"linkedin": "https://www.linkedin.com/in/bruce-posey-33a12a50/",
+		"bioLong": "Bruce leads the Qualys legal team and oversees vital regulatory and governmental relations efforts. Bruce previously served as general counsel and corporate secretary at IntelePeer, Inc.; Openwave Systems, Inc.; iPass, Inc.; and AuraServ Communications. Also, he was senior vice president of federal relations and regulatory law for US WEST Communications, and vice president of public policy and external affairs for MediaOne. Further, former Colorado Governor Roy Romer appointed Bruce to serve in a cabinet postion as executive director of the state's Department of Administration. Bruce holds a bachelor's degree in political science from the University of Oregon and earned his Juris Doctor degree from the University of Michigan Law School. He is also a member of the California (registered in-house counsel), Colorado and Oregon State Bars.",
+		"bioShort": "Bruce leads the Qualys legal team and oversees vital regulatory and governmental relations efforts. Bruce previously served as general counsel and corporate secretary at IntelePeer, Inc.; Openwave Systems, Inc.; iPass, Inc.; and AuraServ Communications. "
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/ishpreet-singh-880.jpg",
+		"name": "Ishpreet Singh",
+		"anchor": "ishpreet-singh",
+		"title": "Chief Information Officer",
+		"email": "",
+		"linkedin": "https://www.linkedin.com/in/ishpreet-s-37371816/",
+		"bioLong": "As Chief Information Officer at Qualys, Ishpreet Singh has global responsibility for corporate IT infrastructure and operations, enterprise applications and architecture, data integration, and IT security. A strategic and operational IT executive, he brings more than 16 years of combined experience in leading digital transformation initiatives including streamlining internal operations and optimizing strategic benefits across various industries. \n\nPrior to joining Qualys, Ishpreet was SVP of IT Applications at Pluralsight, a technology workforce development company, responsible for leading its technology transformation. He has held executive leadership positions in various business operations and IT roles at Imperva, App Annie, Splunk, and Deloitte. Ishpreet holds a bachelor’s degree in computer science and engineering from the University of Kalyani, India and has multiple certifications in finance, strategy and operations.",
+		"bioShort": "As Chief Information Officer at Qualys, Ishpreet Singh has global responsibility for corporate IT infrastructure and operations, enterprise applications and architecture, data integration, and IT security. "
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/headshot-dilip-bachwani.jpg",
+		"name": "Dilip Bachwani",
+		"anchor": "dilip-bachwani",
+		"title": "CTO and SVP, Qualys Cloud Platform",
+		"email": "",
+		"linkedin": "https://www.linkedin.com/in/dilipbachwani/",
+		"bioLong": "As the Chief Technology Officer and Senior Vice President of the Qualys Cloud Platform, Dilip is responsible for leading global product development, data and platform engineering, DevOps, site reliability engineering, cloud operations and customer support across Qualys’ broad security product portfolio. Dilip joined Qualys in 2016 to drive Qualys’ own internal digital transformation efforts and has been instrumental in helping scale the technology and organization in support of the company’s accelerated product growth and transformation into a unified security platform. \n\nPrior to joining Qualys, Dilip served in multiple engineering leadership roles at various mid-sized and large organizations to build and deliver complex, scalable, distributed enterprise SaaS products and big data cloud platforms. Dilip has a bachelor’s degree in electronics engineering from the University of Mumbai and a master’s degree in computer science from Ball State University.",
+		"bioShort": "As the Chief Technology Officer and Senior Vice President of the Qualys Cloud Platform, Dilip is responsible for leading global product development, data and platform engineering, DevOps, site reliability engineering, cloud operations and customer support across Qualys’ broad security product portfolio. "
+	},
+	{
+		"image": "https://ik.imagekit.io/qualys/image/company/management/headshot-jonathan-trull-880.jpg",
+		"name": "Jonathan Trull",
+		"anchor": "jonathan-trull",
+		"title": "CISO & SVP Security Solution Architecture",
+		"email": "",
+		"linkedin": "https://www.linkedin.com/in/jonathantrull/",
+		"bioLong": "Jonathan is the Chief Information Security Officer and Senior Vice President for Security Solution Architecture at Qualys. He has more than 20 years of experience in the cybersecurity industry, and his career spans operational CISO and infosec roles with the State of Colorado, Qualys, Optiv, and Microsoft. At Microsoft, Jonathan led the Detection and Response Team (DART), whose members responded to cyber security incidents around the globe ranging from cyber espionage initiated by nation-state actors to ransomware attacks. \n\nJonathan also serves as an advisor to several security startups and venture capital firms and supports the broader security community through his work with IANS. He is also an adjunct faculty member at Carnegie Mellon University, where he mentors and coaches those attending the CISO Executive Education Program.  Jonathan is a frequent speaker at industry conferences such as Black Hat, RSA, and SANS and holds several industry certifications including the CISSP, OSCP, CCSP, and GCFA.",
+		"bioShort": "Jonathan is the Chief Information Security Officer and Senior Vice President for Security Solution Architecture at Qualys. He has more than 20 years of experience in the cybersecurity industry, and his career spans operational CISO and infosec roles with the State of Colorado, Qualys, Optiv, and Microsoft."
+	}
+]
