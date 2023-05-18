@@ -1,11 +1,11 @@
-require('dotenv').config();
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 /*
  * site wide data
  * available in all templates under the global `site` object
  */
-
-console.log("process.env.ENVIRONMENT="+process.env.ENVIRONMENT);
 
 let envIsProd = process.env.ENVIRONMENT === "production";
 
