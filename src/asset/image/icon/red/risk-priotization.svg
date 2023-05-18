@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FEFEFE;}
+	.st1{fill:none;stroke:#B5D0E7;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:#ED2E26;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill:#B5D0E7;}
+</style>
+<g>
+	<g>
+		<path id="Fill-5_22_" class="st0" d="M62.2,32C62.2,15.3,48.7,1.8,32,1.8C15.3,1.8,1.8,15.3,1.8,32S15.3,62.2,32,62.2
+			C48.7,62.2,62.2,48.7,62.2,32"/>
+		<path id="Stroke-7_83_" class="st1" d="M10.7,10.6c-5.5,5.5-8.9,13-8.9,21.4c0,16.7,13.5,30.2,30.2,30.2
+			c16.7,0,30.2-13.5,30.2-30.2S48.7,1.8,32,1.8"/>
+		<path id="Fill-17_17_" class="st0" d="M36.1,31.1c0-2.3-1.9-4.1-4.1-4.1c-2.3,0-4.1,1.9-4.1,4.1s1.9,4.1,4.1,4.1
+			C34.3,35.3,36.1,33.4,36.1,31.1"/>
+	</g>
+	<path id="Fill-5_21_" class="st0" d="M54.5,32C54.5,19.6,44.4,9.5,32,9.5C19.6,9.5,9.5,19.6,9.5,32S19.6,54.5,32,54.5
+		C44.4,54.5,54.5,44.4,54.5,32"/>
+	<path id="Stroke-7_82_" class="st1" d="M54.5,32C54.5,19.6,44.4,9.5,32,9.5C19.6,9.5,9.5,19.6,9.5,32S19.6,54.5,32,54.5
+		C44.4,54.5,54.5,44.4,54.5,32z"/>
+	<path id="Fill-17_9_" class="st0" d="M35.1,31.3c0-1.7-1.4-3.1-3.1-3.1c-1.7,0-3.1,1.4-3.1,3.1s1.4,3.1,3.1,3.1
+		C33.7,34.4,35.1,33,35.1,31.3"/>
+	<path id="Stroke-19_9_" class="st1" d="M35.1,31.3c0-1.7-1.4-3.1-3.1-3.1c-1.7,0-3.1,1.4-3.1,3.1s1.4,3.1,3.1,3.1
+		C33.7,34.4,35.1,33,35.1,31.3z"/>
+	<g>
+		<g>
+			<line class="st1" x1="32" y1="9.5" x2="32" y2="12.5"/>
+			<line class="st1" x1="32" y1="51.5" x2="32" y2="54.5"/>
+		</g>
+		<g>
+			<line class="st1" x1="54.5" y1="32" x2="51.5" y2="32"/>
+			<line class="st1" x1="12.5" y1="32" x2="9.5" y2="32"/>
+		</g>
+		<g>
+			<line class="st1" x1="47.9" y1="16.1" x2="45.8" y2="18.2"/>
+			<line class="st1" x1="18.2" y1="45.8" x2="16.1" y2="47.9"/>
+		</g>
+		<g>
+			<line class="st1" x1="47.9" y1="47.9" x2="45.8" y2="45.8"/>
+			<line class="st1" x1="18.2" y1="18.2" x2="16.1" y2="16.1"/>
+		</g>
+	</g>
+	<g>
+		<path id="Fill-3_85_" class="st2" d="M31.3,20.4c6.8,0,10.2,3.6,10.2,3.6s0.4,2.7,0.1,8.1c-0.4,8.2-10.3,13.1-10.3,13.1
+			c0,0-9.9-4.9-10.3-13.1c-0.2-5.4,0.1-8.1,0.1-8.1S24.6,20.4,31.3,20.4"/>
+		<polyline id="Stroke-31_12_" class="st3" points="25.5,32.1 30.4,37.2 38.4,27 		"/>
+	</g>
+	<path class="st4" d="M13.1,13.4L15,6.9c0.1-0.3-0.2-0.6-0.5-0.5L8,8.2C7.7,8.3,7.6,8.7,7.8,8.9l4.6,4.7
+		C12.6,13.8,13,13.7,13.1,13.4z"/>
+</g>
+</svg>

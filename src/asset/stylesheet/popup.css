@@ -1,0 +1,25 @@
+body {
+	padding: 0;
+}
+#content {
+	border: 0 none ;
+	font-size: 13px ;
+	margin: 20px ;
+	width: auto ;
+	box-shadow: none ;
+}
+
+#container {
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	font-size: 20px;
+}
+h2, h4 {
+	font-size: inherit;
+	padding: 0;
+	line-height: inherit;
+}
+
+/*# sourceMappingURL=popup.css.map */

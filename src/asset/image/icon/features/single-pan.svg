@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="57" viewBox="0 0 68 57">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <g stroke="#B5D0E7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <polygon points="0 7.857 66 7.857 66 0 0 0"/>
+      <polygon points="0 55 13.424 55 13.424 12.347 0 12.347"/>
+    </g>
+    <polygon stroke="#B5D0E7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="17.898 31.429 40.271 31.429 40.271 12.347 17.898 12.347"/>
+    <g stroke="#B5D0E7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(17.898 12.347)">
+      <polygon points="26.847 19.082 48.102 19.082 48.102 0 26.847 0"/>
+      <polygon points="0 42.653 22.373 42.653 22.373 23.571 0 23.571"/>
+    </g>
+    <polygon fill="#ED2E26" points="44.746 55 66 55 66 35.918 44.746 35.918"/>
+    <polygon stroke="#ED2E26" stroke-width="2" points="44.746 55 66 55 66 35.918 44.746 35.918"/>
+  </g>
+</svg>

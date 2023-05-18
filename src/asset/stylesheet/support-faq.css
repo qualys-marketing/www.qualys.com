@@ -1,0 +1,121 @@
+
+.q-content-hero__subheading {
+	min-height: 0.65em;
+}
+@media (max-width: 960px) {
+	.q-content-hero__subheading {
+		display: none;
+		min-height: 0;
+	}
+}
+.q-supports-faq-hero___list h1 {
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	color: #262626;
+}
+.q-supports-faq-hero___list li a {
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	line-height: 1.65;
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	color: #30405B;
+	margin-bottom: 0.8em;
+}
+.q-supports-faq-hero___list li a:focus {
+	outline: none;
+}
+@media (min-width: 375px) {
+	.q-supports-faq-hero___list li a {
+		font-size: 14px;
+		font-size: calc(0.00109 * 100vw + (13.59016px));
+	}
+}
+@media (min-width: 1290px) {
+	.q-supports-faq-hero___list li a {
+		font-size: 18px;
+		margin-bottom: 0.8em;
+	}
+}
+h2 + p {
+	margin-top: 0;
+}
+.q-grid__row .q-bullet-list {
+	padding-left: 2em;
+}
+.q-bullet-list__item {
+	padding-bottom: 0.941em;
+	list-style-type: disc;
+	line-height: 1.412em;
+	background: none;
+	padding: 0 0 0.5em;
+}
+.heading--2 {
+	margin-top: 1.2em;
+}
+.heading--3 {
+	margin-top: 2em;
+}
+.paragraph--1 b {
+	color: #30405B;
+}
+.q-supports-faq-hero__content {
+	padding-bottom: 60px;
+}
+
+@media (min-width: 960px) {
+	.q-supports-faq-hero__content {
+		padding: 0 30px 0 0;
+		margin-top: 60px;
+		margin-left: 9.09091%;
+	}
+}
+
+@media (min-width: 1080px) {
+	.q-supports-faq-hero__content {
+		margin-top: 110px;
+		margin-left: 16.66667%;
+	}
+}
+.q-square__list {
+	list-style: none;
+	padding-left: 0;
+}
+.q-square__list li {
+	margin-bottom: 10px;
+}
+@media (max-width: 959px) {
+	.q-content-hero__content-inner {
+		order: 2;
+	}
+	.q-content-hero__box-wrap {
+		margin-left: 0;
+		margin-bottom: 60px;
+	}
+	.q-content-hero__content  {
+		padding-bottom: 0;
+	}
+}
+.q-support-faq__container {
+	padding-bottom: 60px;
+}
+@media (min-width: 720px) {
+	.q-support-faq__container {
+		padding-top: 45px;
+		padding-bottom: 95px;
+	}
+}
+.ipv4-range {
+	display: flex;
+}
+.ipv4-range b + span {
+	margin: 0 0.35em;
+}
+.ipv4-range .range {
+	flex: 1;
+}
+
+/*# sourceMappingURL=support-faq.css.map */

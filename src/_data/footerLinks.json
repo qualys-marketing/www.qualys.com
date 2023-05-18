@@ -1,0 +1,278 @@
+[
+	{
+		"title": "Cloud Platform",
+		"items": [{
+				"title": "Qualys Cloud Platform",
+				"url": "/cloud-platform/"
+			},
+			{
+				"title": "Private Cloud Platform",
+				"url": "/private-cloud/"
+			},
+			{
+				"title": "Private Cloud Platform Appliance",
+				"url": "/docs/pcp-private-cloud-appliance-datasheet.pdf"
+			},
+			{
+				"title": "Public Cloud Integrations",
+				"url": "/public-cloud/"
+			},
+			{
+				"title": "Cloud Agent",
+				"url": "/cloud-agent/"
+			}
+		]
+	},
+	{
+		"title": "Cloud Apps",
+		"items": [{
+				"title": "Overview",
+				"url": "/apps/"
+			},
+			{
+				"title": "Global AssetView – It's Free!",
+				"url": "/apps/global-assetview/"
+			},
+			{
+				"title": "CyberSecurity Asset Management",
+				"url": "/apps/cybersecurity-asset-management/"
+			},
+			{
+				"title": "Certificate Inventory",
+				"url": "/apps/certificate-inventory/"
+			},
+			{
+				"title": "Vulnerability Management, Detection and Response",
+				"url": "/apps/vulnerability-management-detection-response/"
+			},
+			{
+				"title": "Threat Protection",
+				"url": "/apps/threat-protection/"
+			},
+			{
+				"title": "Continuous Monitoring",
+				"url": "/apps/continuous-monitoring/"
+			},
+			{
+				"title": "Multi-Vector EDR",
+				"url": "/apps/endpoint-detection-response/"
+			},
+			{
+				"title": "Patch Management",
+				"url": "/apps/patch-management/"
+			},
+			{
+				"title": "Custom Assessment and Remediation",
+				"url": "/apps/custom-assessment-remediation/"
+			},
+			{
+				"title": "Certificate Assessment",
+				"url": "/apps/certificate-assessment/"
+			},
+			{
+				"title": "SaaS Detection & Response",
+				"url": "/apps/saas-detection-response/"
+			},
+			{
+				"title": "Context XDR",
+				"url": "/apps/extended-detection-response/"
+			},
+			{
+				"title": "TotalCloud",
+				"url": "/apps/totalcloud/"
+			},
+			{
+				"title": "Cloud Inventory",
+				"url": "/apps/cloud-inventory/"
+			},
+			{
+				"title": "Cloud Security Assessment",
+				"url": "/apps/cloud-security-assessment/"
+			},
+			{
+				"title": "Container Security",
+				"url": "/apps/container-security/"
+			},
+			{
+				"title": "Cloud Detection & Response",
+				"url": "/apps/cloud-detection-response/"
+			},
+			{
+				"title": "Web App Scanning",
+				"url": "/apps/web-app-scanning/"
+			},
+			{
+				"title": "Web App Firewall",
+				"url": "/apps/web-app-firewall/"
+			},
+			{
+				"title": "Policy Compliance",
+				"url": "/apps/policy-compliance/"
+			},
+			{
+				"title": "Security Configuration Assessment",
+				"url": "/apps/security-configuration-assessment/"
+			},
+			{
+				"title": "PCI ASV Compliance",
+				"url": "/apps/pci-asv-compliance/"
+			},
+			{
+				"title": "File Integrity Monitoring",
+				"url": "/apps/file-integrity-monitoring/",
+				"beta": true
+			},
+			{
+				"title": "Security Assessment Questionnaire",
+				"url": "/apps/security-assessment-questionnaire/"
+			},
+			{
+				"title": "Out-of-Band Configuration Assessment",
+				"url": "/apps/out-of-band-configuration-assessment/"
+			}
+		]
+	},
+	{
+		"title": "Subscriptions",
+		"items": [{
+			"title": "Cloud Apps “a la carte”",
+			"url": "/subscriptions/"
+		}]
+	},
+	{
+		"title": "Free Trials & Apps",
+		"items": [{
+				"title": "Qualys VMDR",
+				"url": "/apps/vulnerability-management-detection-response/"
+			},
+			{
+				"title": "60-Day Remote Endpoint Protection",
+				"url": "/forms/remote-endpoint/"
+			},
+			{
+				"title": "Global AssetView – It's Free!",
+				"url": "/apps/global-assetview/"
+			}
+		]
+	},
+	{
+		"title": "Partners",
+		"items": [{
+				"title": "Overview",
+				"url": "/partners/"
+			},
+			{
+				"title": "Partner program",
+				"url": "/partners/program/"
+			},
+			{
+				"title": "VAD partners",
+				"url": "/partners/vad/"
+			},
+			{
+				"title": "VAR resellers",
+				"url": "/partners/var/"
+			},
+			{
+				"title": "MSP/MSSP partners",
+				"url": "/partners/mssp/"
+			},
+			{
+				"title": "Consultants and MSPs",
+				"url": "/subscriptions/consultants/"
+			},
+			{
+				"title": "Integration partners",
+				"url": "/partners/integration/"
+			},
+			{
+				"title": "Partner FAQs",
+				"url": "/partners/faq/"
+			},
+			{
+				"title": "Find a partner",
+				"url": "/partners/find/"
+			}
+		]
+	},
+	{
+		"title": "Solutions",
+		"items": [{
+				"title": "Overview",
+				"url": "/solutions/"
+			},
+			{
+				"title": "Infrastructure security",
+				"url": "/solutions/infrastructure/"
+			},
+			{
+				"title": "Cloud Security",
+				"url": "/solutions/cloud/"
+			},
+			{
+				"title": "Endpoint security",
+				"url": "/solutions/endpoint/"
+			},
+			{
+				"title": "DevOps",
+				"url": "/solutions/devops/"
+			},
+			{
+				"title": "Compliance",
+				"url": "/solutions/compliance/"
+			},
+			{
+				"title": "PCI Compliance",
+				"url": "/solutions/pci-compliance/"
+			},
+			{
+				"title": "Web App Security",
+				"url": "/solutions/web-app/"
+			},
+			{
+				"title": "Government",
+				"url": "/subscriptions/government/"
+			},
+			{
+				"title": "Small business",
+				"url": "/apps/vulnerability-management-detection-response/trurisk/"
+			}
+		]
+	},
+	{
+		"title": "Company",
+		"items": [{
+				"title": "About us",
+				"url": "/company/"
+			},
+			{
+				"title": "Careers",
+				"url": "/careers/"
+			},
+			{
+				"title": "Investor relations",
+				"url": "https://investor.qualys.com/"
+			},
+			{
+				"title": "Our team",
+				"url": "/company/management/"
+			},
+			{
+				"title": "News",
+				"url": "/company/newsroom/"
+			},
+			{
+				"title": "Events",
+				"url": "/company/events/"
+			},
+			{
+				"title": "Contact",
+				"url": "/company/contacts/"
+			},
+			{
+				"title": "Qualys Merchandise Store",
+				"url": "https://store.qualys.com"
+			}
+		]
+	}
+]

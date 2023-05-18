@@ -1,0 +1,33 @@
+
+<svg width="67px" height="77px" viewBox="0 0 67 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="12.1-13-App-detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12.8-App-Detail---PCI" transform="translate(-185.000000, -1762.000000)">
+            <g id="---Features-overview" transform="translate(185.000000, 1290.000000)">
+                <g id="::-03" transform="translate(0.000000, 473.000000)">
+                    <g id="icon" transform="translate(1.000000, 0.000000)">
+                        <polyline id="Stroke-1" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="35.88375 61.5115344 61.73625 53.3010426 64.7825 59.1243869 33.28125 75.0993377 19.61375 69.0018951 8.93125 69.0018951"></polyline>
+                        <polyline id="Stroke-3" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="8.75 51.5284984 25.86875 51.5284984 39.23 64.8446951 35.06 69.001023 26.0825 60.0542033"></polyline>
+                        <polygon id="Stroke-4" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0 72.041023 8.13 72.041023 8.13 48.4909902 0 48.4909902"></polygon>
+                        <polygon id="Fill-6" fill="#FFFFFF" points="11.735875 0 61.115875 0.0672786885 61.054625 46.1419672 11.674625 46.0734426"></polygon>
+                        <polygon id="Stroke-7" stroke="#B5CFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="11.735875 0 61.115875 0.0672786885 61.054625 46.1419672 11.674625 46.0734426"></polygon>
+                        <path d="M61.11575,11.9966623 L11.67575,11.9966623" id="Stroke-9" stroke="#B5CFE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <g id="Group-28" transform="translate(16.250000, 4.083318)">
+                            <path d="M0.369875,1.91258361 C0.371125,1.1476 1.034875,0.529632787 1.854875,0.530878689 C2.674875,0.530878689 3.337375,1.1513377 3.336125,1.91632131 C3.334875,2.68130492 2.671125,3.29927213 1.851125,3.29802623 C1.031125,3.29678033 0.368625,2.67756721 0.369875,1.91258361" id="Fill-10" fill="#B5CFE5"></path>
+                            <path d="M7.29125,1.91258361 C7.2925,1.1476 7.95625,0.529632787 8.77625,0.530878689 C9.5975,0.530878689 10.25875,1.1513377 10.25875,1.91632131 C10.25625,2.68130492 9.5925,3.29927213 8.7725,3.29802623 C7.9525,3.29678033 7.29,2.67756721 7.29125,1.91258361" id="Fill-12" fill="#B5CFE5"></path>
+                            <path d="M14.213875,1.91258361 C14.213875,1.1476 14.877625,0.529632787 15.697625,0.530878689 C16.518875,0.530878689 17.180125,1.1513377 17.180125,1.91632131 C17.177625,2.68130492 16.513875,3.29927213 15.695125,3.29802623 C14.875125,3.29678033 14.211375,2.67756721 14.213875,1.91258361" id="Fill-14" fill="#B5CFE5"></path>
+                            <path d="M11.8555,15.7513115 L37.1705,15.7513115" id="Stroke-16" stroke="#EC3027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M11.8555,24.472623 L37.1705,24.472623" id="Stroke-18" stroke="#EC3027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M11.8555,33.1939344 L37.1705,33.1939344" id="Stroke-20" stroke="#EC3027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3.75,13.2595082 C5.13,13.2595082 6.25,14.3758361 6.25,15.7513115 C6.25,17.1267869 5.13,18.2431148 3.75,18.2431148 C2.37,18.2431148 1.25,17.1267869 1.25,15.7513115 C1.25,14.3758361 2.37,13.2595082 3.75,13.2595082" id="Fill-22" fill="#EC3027"></path>
+                            <path d="M3.75,21.9808197 C5.13,21.9808197 6.25,23.0971475 6.25,24.472623 C6.25,25.8480984 5.13,26.9644262 3.75,26.9644262 C2.37,26.9644262 1.25,25.8480984 1.25,24.472623 C1.25,23.0971475 2.37,21.9808197 3.75,21.9808197" id="Fill-24" fill="#EC3027"></path>
+                            <path d="M3.75,30.7021311 C5.13,30.7021311 6.25,31.818459 6.25,33.1939344 C6.25,34.5694098 5.13,35.6857377 3.75,35.6857377 C2.37,35.6857377 1.25,34.5694098 1.25,33.1939344 C1.25,31.818459 2.37,30.7021311 3.75,30.7021311" id="Fill-26" fill="#EC3027"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

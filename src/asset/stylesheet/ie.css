@@ -1,0 +1,49 @@
+/**
+ * styles specific to IE
+ */
+
+/* for IE6 */
+ * html . clear {
+	height: 1%;
+}
+
+/* for IE7 */
+ *: first-child+html .clear {
+	min-height: 1px;
+}
+
+form.type1 input[type=text],
+form.type1 input[type=email],
+form.type1 input[type=tel] {
+	height: 1.33em;
+}
+
+/* added to browsers that do not support calc */
+/* primarily IE8 */
+div.sectional {
+	width: 964px;
+	margin: auto;
+}
+div.sectional div.section,
+div.sectional #footer,
+div.sectional #prefooter {
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+div.sectional #prefooter {
+	padding-bottom: 42px;
+	padding-top: 42px;
+}
+div.sectional #footer {
+	padding-bottom: 86px;
+	padding-top: 42px;
+}
+/* hide the glow under the globe on the homepage */
+div.glow1,
+div.glow2 {
+	display: none;
+	visibility: hidden;
+}
+/*# sourceMappingURL=ie.css.map */

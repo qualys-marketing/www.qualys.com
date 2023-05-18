@@ -1,0 +1,40 @@
+/* hide a bunch of stuff */
+.q-header__hamburger,
+.q-header__navigation,
+.q-header__actions,
+.q-footer-mobile,
+.q-footer__column--nav,
+.q-footer__column--desktop,
+.footer-social {
+	display: none;
+	visibility: hidden;
+}
+.q-header__logo {
+	margin: 0;
+}
+.q-footer {
+	background: transparent;
+	border: 0 none;
+}
+
+
+/* adjust spacing between header and the container */
+.q-header__container,
+.q-grid__container {
+	margin: 0;
+	padding: 0;
+}
+.q-grid__container {
+	margin-top: 26pt;
+}
+
+
+/* set document margins */
+@page {
+	margin: 1in;
+}
+body {
+	color: black !important;
+}
+
+/*# sourceMappingURL=shared.print.css.map */

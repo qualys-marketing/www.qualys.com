@@ -1,0 +1,27 @@
+{% if site.env.production %}
+
+{% layoutblock 'appendHints' %}
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://cdn.bizible.com">
+	<link rel="preconnect" href="https://geoip-js.com">
+	<link rel="preconnect" href="https://js.maxmind.com">
+	<link rel="preconnect" href="https://munchkin.marketo.net">
+	<link rel="preconnect" href="https://snap.licdn.com">
+	<link rel="preconnect" href="https://www.google-analytics.com">
+{% endlayoutblock %}
+
+<!-- Google Tag Manager -->
+<script>
+    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{% if gtm.id %}{{ gtm.id }}{% else %}{{ site.google.gtm.id }}{% endif %}');
+
+    }
+</script>
+<!-- End Google Tag Manager -->
+
+{% endif %}

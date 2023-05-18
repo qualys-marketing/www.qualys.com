@@ -1,0 +1,226 @@
+/* stylelint-disable */
+
+/* These are specific jobvite styles that are only used and
+	 referenced by the jobvite iframe career page
+
+	 TODO: to be safe, make sure these paths are absolute to eventual location
+*/
+
+
+
+/* ===== GLOBAL ELEMENTS =================== */
+body {
+	background-color: #F7FAFC;
+}
+
+a {
+	font-family: Gotham,sans-serif;
+	color: #2E8BE0;
+	letter-spacing: 0.013em;
+}
+
+hr {
+	border-top: 1px solid #EDEEF0;
+}
+
+
+/* ===== TYPOGRAPHY =================== */
+
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff) format("woff");
+}
+
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff) format("woff");
+}
+
+
+/* ===== SITE LAYOUT =================== */
+.jv-page-container 	{ }
+.jv-page 			{ }
+.jv-page-content 	{ }
+.jv-page-header 	{ }
+.jv-page-body 		{ }
+.jv-wrapper 		{ }
+.jv-footer 			{ }
+
+/* ===== JOB LISTINGS PAGE	=================== */
+
+.jv-page-error 		{ }
+.jv-page-body h2 	{ }
+
+
+h3.h2		 			{ }
+.jv-job-list			{ }
+.jv-job-list th		{ }
+.jv-job-list td		{
+	padding: 30px 0;
+	border-bottom: 1px solid #EDEEF0;
+}
+.jv-job-list .jv-job-list-name			{ }
+.jv-job-list .jv-job-list-name a {
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	color: #30405B;
+}
+
+.jv-job-list .jv-job-list-location {
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #627281;
+	letter-spacing: -0.013em;
+}
+
+/* ========== JOB DETAILS PAGE =============== */
+
+h2.jv-header 	{}
+
+.jv-job-detail-meta,
+.jv-apply-meta				{}
+.jv-button { }
+
+.jv-current-openings 	{ }
+.jv-share-widget 		{ }
+
+.jv-job-detail-bottom-actions,
+.jv-apply-form-actions 	{ }
+
+
+
+/* ========== APPLY PAGE ====================== */
+
+.jv-form 				{}
+.jv-apply-form 			{}
+.jv-search-form 		{}
+
+.jv-apply-step 			{}
+.jv-apply-section 		{}
+.jv-step-header 		{} 		/* Section Title */
+.jv-required-label 		{}
+
+
+/* ======== SEARCH FORM ====================== */
+
+.jv-search-form {
+	display: flex;
+}
+.jv-search-form .jv-form-field{ }
+.jv-search-form .jv-form-buttons	a { display: none; }
+
+.jv-search-field .jv-search-input[type="search"] {
+	padding: 0 0 0 2.9em;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: -0.03em;
+	height: 53px;
+	background-color: #F7FAFC;
+	color: #1D2737;
+	border-radius: 2px;
+	border: 1px solid #9BC0E0;
+}
+.jv-search-icon {
+	left: 1em;
+	font-size: 20px;
+	color: #9BC0E1;
+}
+
+.jv-search-form .jv-form-buttons .jv-button {
+	margin-bottom: 15px;
+	height: 53px;
+	width: 80px;
+	line-height: 53px;
+	text-indent: -9999px;
+	background: #1D2737 url(https://ik.imagekit.io/qualys/image/icon/search-mag.svg) center center no-repeat;
+	border-radius: 2px;
+	border: none;
+	border-color: #1D2737;
+}
+
+.jv-search-form select{
+	padding: 0 40px 0 20px;
+	height: 53px;
+	line-height: 53px;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: -0.03em;
+	color: #1D2737;
+	background: #F7FAFC url(https://ik.imagekit.io/qualys/image/icon/chevron-selectbox.svg) right 15px center no-repeat;
+	border: 1px solid #9BC0E0;
+	border-radius: 2px;
+	outline: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+.tools h3 { /* element without class */
+	display: none;
+}
+.tools a {
+	padding: 10px 0;
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+	color: #30405B;
+	letter-spacing: -0.013em;
+	line-height: 23px;
+}
+
+.tools a i {
+	margin-right: 8px;
+	top: 8px;
+}
+
+/* icons */
+.icon-add-document:before {
+	content: "";
+	display:inline-block;
+	height: 30px;
+	width: 30px;
+	background: url(https://ik.imagekit.io/qualys/image/icon/job-application.svg) center center no-repeat;
+}
+
+.icon-checkbox-checked:before {
+	content: "";
+	display:inline-block;
+	height: 30px;
+	width: 30px;
+	background: url(https://ik.imagekit.io/qualys/image/icon//job-checkmark.svg) center center no-repeat;
+}
+
+.icon-src-email:before {
+	content: "";
+	display:inline-block;
+	height: 30px;
+	width: 30px;
+	background: url(https://ik.imagekit.io/qualys/image/icon//job-alert.svg) center center no-repeat;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #1D2737;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: #1D2737;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: #1D2737;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: #1D2737;
+}
+
+/*# sourceMappingURL=jobvite.css.map */

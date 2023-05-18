@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+# 301: page has permanently moved to a new location
+# 302: page has temporarily moved to a new location
+/home               /               301
+/foo                /about          302

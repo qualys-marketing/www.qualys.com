@@ -1,0 +1,870 @@
+/*
+* Styles for WAS product pages
+*/
+body.web-application-scanning h6,
+body.web-application-scanning #content,
+body.web-application-scanning #content_addendum,
+#enterprises_qualysguard_web-application-scanning h1 {
+	font-size: 11pt;
+}
+body.web-application-scanning h1 {
+	font-size: 28pt;
+	margin-bottom: 14px;
+	text-align: left;
+}
+body.web-application-scanning ul.type3 li:before,
+body.web-application-scanning a.arrow-right:before {
+	background: none;
+	content: "";
+	content: none;
+	display: none;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	transition: none 0;
+	vertical-align: baseline;
+	width: auto;
+}
+body.web-application-scanning ul.type3 li:after,
+body.web-application-scanning a.arrow-right:after,
+body.web-application-scanning p.arrow-right:after,
+body.web-application-scanning span.arrow-right:after {
+	content: "»";
+	padding-left: 0.25em;
+	text-decoration: none;
+}
+body.web-application-scanning #container {
+	position: relative;
+	overflow: hidden;
+}
+div.corner-gradient2 {
+	position: absolute;
+	width: 394px;
+	height: 365px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: 0 -1400px;
+	text-indent: -9999px;
+	z-index: 50;
+	left: 0;
+	top: -36px;
+}
+#enterprises_qualysguard_web-application-scanning div.section.type1 div.text {
+	position: relative;
+	z-index: 50;
+}
+#enterprises_qualysguard_web-application-scanning #container,
+#enterprises_qualysguard_web-application-scanning_learn #container,
+#enterprises_qualysguard_web-application-scanning_features #container {
+	padding-left: 0;
+	padding-right: 0;
+}
+#enterprises_qualysguard_web-application-scanning_features #container {
+	padding-top: 0;
+}
+#enterprises_qualysguard_web-application-scanning_features #container h1 {
+	padding-top: 36px;
+}
+#enterprises_qualysguard_web-application-scanning h2.headline {
+	font-family: "tablet-gothic-compressed", "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 38pt;
+	letter-spacing: 1px;
+	line-height: 0.95;
+	margin-bottom: 28px;
+	width: 291px;
+}
+span.all {
+	color: #EB0000;
+	text-transform: uppercase;
+}
+#enterprises_qualysguard_web-application-scanning a.was-video {
+	width: 513px;
+	height: 328px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: 0 0;
+	margin: 18px 0 0;
+	float: right;
+	text-indent: -9999px;
+}
+body.web-application-scanning a.button-type1,
+body.web-application-scanning a.button-type3 {
+	text-align: center;
+	line-height: 30px;
+	padding: 9px 27px 11px;
+	font-size: 19pt;
+	font-weight: bold;
+}
+body.web-application-scanning a.button-type3.learn-more {
+	padding: 9px 69px 11px 68px;
+}
+a.microsoft-case-study {
+	width: 960px;
+	height: 318px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: 0 -400px;
+	margin-top: 34px;
+	text-indent: -9999px;
+	color: #FFF;
+	display: block;
+}
+a.microsoft-case-study p.read {
+	font-size: 14pt;
+	float: right;
+	margin-top: 28px;
+	margin-right: 42px;
+	text-indent: 0;
+	color: #FFF;
+}
+a.microsoft-case-study blockquote {
+	font-size: 22pt;
+	float: right;
+	margin-top: 79px;
+	margin-right: -166px;
+	text-indent: 0;
+	font-style: italic;
+	width: 520px;
+}
+a.microsoft-case-study p {
+	float: right;
+	margin-top: 220px;
+	margin-right: -516px;
+	text-indent: 0;
+	color: #688CA4;
+	font-weight: bold;
+}
+div.videos {
+	min-height: 184px;
+}
+div.section.type2,
+div.section.type5 {
+	background-color: #E0E8ED;
+	border-bottom: 1px solid #D0D8DD;
+	border-top: 1px solid #D4D5D8;
+	box-shadow: inset 0 2px 5px 3px rgba(0, 0, 0, 0.05);
+	padding-bottom: 49px;
+	padding-top: 49px;
+}
+div.section.type5 {
+	background-color: #F5F8FA;
+}
+div.section-headline {
+	padding-top: 39px;
+}
+div.section-headline h2 {
+	line-height: 2;
+	padding: 0;
+}
+div.section.type3 h4,
+div.section.type4 h4 {
+	font-size: 18pt;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+div.section.type4 h4 {
+	width: 500px;
+}
+body.web-application-scanning div.section h2 {
+	font-size: 20pt;
+}
+div.section h3 {
+	font-weight: normal;
+	margin-bottom: 12px;
+}
+#see-for-yourself {
+	background: #FFF;
+	border: 0 none;
+	box-shadow: none;
+}
+div.see-for-yourself-trial {
+	float: right;
+	padding: 66px 0;
+	text-align: center;
+}
+div.section:nth-child(even) a.image,
+div.section:nth-child(even) div.image {
+	float: right;
+	margin: 0 0 0 49px;
+}
+a.resource-box p {
+	color: #333;
+	font-size: 10pt;
+	text-align: center;
+}
+div.section.type4 {
+	background: #E3E8EC;
+	background: linear-gradient(to bottom, #E3E8EC 0%,#FFF 100%);
+}
+#carousel {
+	padding: 52px 48px;
+}
+#enterprises_qualysguard_web-application-scanning a.prev,
+#enterprises_qualysguard_web-application-scanning a.next {
+	bottom: 98px;
+}
+#enterprises_qualysguard_web-application-scanning a.prev {
+	left: 21px;
+}
+#enterprises_qualysguard_web-application-scanning a.next {
+	right: 21px;
+}
+#enterprises_qualysguard_web-application-scanning a.prev:after,
+#enterprises_qualysguard_web-application-scanning a.next:before {
+	content: "";
+	content: none;
+}
+div.carousel-container {
+	height: 121px;
+}
+a.carousel-block {
+	background-color: #CCC;
+	border-radius: 10px;
+	width: 251px;
+	height: 121px;
+	display: inline-block;
+	margin: 0 17px;
+	vertical-align: top;
+}
+a.carousel-block.was-dummies-ebook {
+	background-color: #FCDB27;
+	position: relative;
+	text-decoration: none;
+}
+a.carousel-block:hover {
+	text-decoration: none;
+}
+a.carousel-block.was-dummies-ebook h3 {
+	color: #000;
+	text-indent: 0;
+	font-weight: bold;
+	font-size: 16pt;
+	width: 175px;
+	line-height: 1.1;
+	margin: 9px 0 0 12px;
+}
+a.carousel-block.was-dummies-ebook p {
+	margin-left: 12px;
+	font-weight: bold;
+	color: #06C;
+}
+a.carousel-block div.dummy {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-was.png) no-repeat scroll -1200px -750px;
+	height: 99px;
+	overflow: hidden;
+	position: absolute;
+	right: 18px;
+	bottom: 0;
+	width: 75px;
+	bottom: -10px;
+	text-indent: -9999px;
+}
+#was-learning-center-promo span.icon {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite.png) no-repeat scroll -650px -1000px;
+	float: left;
+	height: 49px;
+	margin: 9px 1em 62px 12px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 36px;
+}
+#was-learning-center-promo strong {
+	display: block;
+	font-size: 1.4em;
+	line-height: 1.3;
+	margin: 9px 0 0;
+}
+a.was-intro-video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: -400px -1400px;
+	text-indent: -9999px;
+}
+a.was-best-practices {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: -400px -1550px;
+	text-indent: -9999px;
+}
+a.was-best-practices p {
+	color: #C8C8C9;
+	text-indent: 0;
+	font-weight: bold;
+	font-size: 13pt;
+	text-align: center;
+	margin-top: 85px;
+	text-shadow: -4px 3px 5px rgba(0, 0, 0, 0.75);
+}
+
+/*
+* Styles for WAS product features page
+*/
+#enterprises_qualysguard_web-application-scanning_learn #container {
+	margin-top: 0;
+	padding-top: 134px;
+}
+div.section.type4 {
+	position: relative;
+}
+#enterprises_qualysguard_web-application-scanning_features div.section.type4 {
+	height: 367px;
+	margin-bottom: 289px;
+}
+div.section.type4 ul {
+	font-size: 13pt;
+	margin: 0 0 0 10px;
+}
+div.section.type4 div.button-container {
+	margin: 1.125em 0 0 1.688em;
+	font-weight: normal;
+}
+div.tablet-apps {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-was.png) no-repeat scroll 0 -740px;
+	border-top-right-radius: 10px;
+	height: 460px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-indent: -9999px;
+	top: 0;
+	width: 483px;
+	z-index: 1;
+}
+div.tablet-apps-overlay {
+	position: relative;
+	z-index: 2;
+}
+div.feature-box-container a.feature-box,
+div.feature-box-container div.feature-box,
+div.resource-box-container a.resource-box {
+	display: table-cell;
+	width: 160px;
+	background-color: #F3F3F3;
+	padding: 20px 0;
+	border-right: 1px solid #B4B4B4;
+}
+div.feature-box-container a.feature-box:last-child,
+div.feature-box-container div.feature-box:last-child {
+	border-right: none;
+}
+div.feature-box-container div.feature-box {
+	background-color: #FFF;
+	box-shadow: 3px 3px 3px 0 #E2E2E2 inset;
+	font-size: 9pt;
+	line-height: 1;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+div.feature-box-container div.feature-box h4 {
+	padding: 3px 0;
+}
+div.feature-box-container div.feature-box a {
+	display: block;
+	padding: 5px 0 4px;
+}
+div.section-navigation {
+	box-shadow: 0 9px 25px 7px rgba(0, 0, 0, 0.1);
+	display: table;
+	left: 0;
+	position: absolute;
+	top: 406px;
+	z-index: 50;
+}
+div.section-navigation.stuck {
+	box-shadow: none;
+	left: auto;
+	position: fixed;
+	top: 56px !important;
+	width: 958px;
+}
+div.section-navigation.stuck:after {
+	background: linear-gradient(to bottom, rgba(225,225,225,1) 0%,rgba(255,255,255,0) 100%);
+	content: "after";
+	display: table;
+	position: fixed;
+	height: 42px;
+	text-indent: -9999px;
+	width: 958px;
+}
+#enterprises_qualysguard_web-application-scanning_learn div.section-navigation {
+	top: -1px;
+}
+#enterprises_qualysguard_web-application-scanning_learn #container > div.section:first-child {
+	margin-bottom: 170px;
+}
+
+/*
+* Styles for WAS product learn page
+*/
+#enterprises_qualysguard_web-application-scanning_learn div.section,
+#enterprises_qualysguard_web-application-scanning div.section {
+	position: relative;
+}
+div.corner-gradient {
+	position: absolute;
+	width: 600px;
+	height: 140px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-was.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-position: -300px -1200px;
+	text-indent: -9999px;
+	z-index: -1;
+	left: 0;
+	border-top-left-radius: 10px;
+}
+div.resource-box-container a.resource-box {
+	width: 191px;
+}
+div.resource-box-container a.resource-box:last-child {
+	border-right: none;
+}
+a.resource-box div.resource-box-icon-wrapper {
+	text-align: center;
+}
+a.resource-box div.resource-box-icon-wrapper h2 {
+	display: inline-block;
+	font-size: 20pt;
+	color: #333;
+	margin-left: 10px;
+	vertical-align: middle;
+	padding: 0 0 2px;
+}
+a.resource-box span.icon {
+	display: inline-block;
+	margin: 0 auto;
+}
+a.resource-box.blog span.icon {
+	width: 22px;
+	height: 23px;
+	background-position: -300px -999px;
+}
+a.resource-box.watch span.icon {
+	width: 30px;
+	height: 20px;
+	background-position: -550px -998px;
+}
+a.resource-box.read span.icon {
+	width: 24px;
+	height: 21px;
+	background-position: -400px -999px;
+}
+a.resource-box.hear span.icon {
+	width: 16px;
+	height: 22px;
+	background-position: -450px -1000px;
+}
+a.resource-box.insight span.icon {
+	width: 26px;
+	height: 21px;
+	background-position: -500px -994px;
+}
+a.watch-video:before {
+	content: "Icon of a video camera";
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite.png) no-repeat scroll -450px -1050px;
+	display: inline-block;
+	height: 12px;
+	margin-right: 0.25em;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 20px;
+}
+div.end-of-page-buttons {
+	text-align: center;
+}
+
+
+/**
+ * style for active buttons on learn page
+ */
+div.resource-box-container a.resource-box:active,
+div.resource-box-container a.resource-box.active {
+	background: #123B6B;
+	background: linear-gradient(to right, #123B6B 0%,#1A569C 10%,#1A569C 90%,#123B6B 100%);
+}
+a.resource-box:active div.resource-box-icon-wrapper h2,
+a.resource-box.active div.resource-box-icon-wrapper h2,
+a.resource-box:active p,
+a.resource-box.active p {
+	color: #FFF;
+	text-shadow: 0 -1px 0 #000;
+}
+a.resource-box.blog:active span.icon,
+a.resource-box.blog.active span.icon {
+	background-position: -500px -1050px;
+}
+a.resource-box.watch:active span.icon,
+a.resource-box.watch.active span.icon {
+	background-position: -350px -1000px;
+}
+a.resource-box.read:active span.icon,
+a.resource-box.read.active span.icon {
+	background-position: -550px -1050px;
+}
+a.resource-box.hear:active span.icon,
+a.resource-box.hear.active span.icon {
+	background-position: -600px -1000px;
+}
+a.resource-box.insight:active span.icon,
+a.resource-box.insight.active span.icon {
+	background-position: -600px -1046px;
+}
+
+
+/**
+ * Learn
+ */
+ul.blog-author-links span.icon,
+div.case-study-summary-logo,
+div.analyst-report-logo {
+	/* was sprite for graphics */
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-was-learn.png) no-repeat scroll 0 0;
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+div.blog-author-photo,
+span.blog-post-avatar,
+div.case-study-summary-cover,
+div.analyst-report-cover,
+span.tutorial-webcast-thumbnail,
+span.reading-material-thumbnail,
+span.other-analyst-report-logo {
+	/* was sprite for photos */
+	background: #FFF url(https://ik.imagekit.io/qualys/image/sprite-was-learn-photo.jpg) no-repeat scroll 0 0;
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+/**
+ * Blog with Mike Shema
+ */
+#content #mike-shema-blog #main {
+	width: 600px;
+}
+#mike-shema-blog div.column2 {
+	background: #EDEDED;
+	background: linear-gradient(to right, #EDEDED 0%,#FFF 4%);
+	margin: 0 0 20px;
+	padding: 0 0 39px 39px;
+	width: 202px;
+}
+#mike-shema-blog div.column2 h3 {
+	font-size: 16pt;
+	font-weight: 500;
+	line-height: 2.136;
+	margin: 0;
+	padding: 18px 0 0;
+}
+div.blog-author-photo {
+	background-position: -900px 0;
+	height: 266px;
+	margin: 1em 0 1.5em;
+	width: 200px;
+}
+div.blog-author-name {
+	font-weight: 500;
+}
+div.blog-author-name,
+div.blog-author-title,
+ul.blog-author-links {
+	font-size: 10pt;
+}
+div.blog-author-title {
+	margin: 0 0 1.5em;
+}
+ul.blog-author-links li,
+ul.blog-author-links a {
+	line-height: 25px;
+}
+ul.blog-author-links span.icon {
+	display: block;
+	float: left;
+	height: 25px;
+	margin: 0;
+	width: 25px;
+}
+ul.blog-author-links li.blog-author-links-blog span.icon {
+	background-position: -300px 0;
+}
+ul.blog-author-links li.blog-author-links-email span.icon {
+	background-position: -300px -25px;
+}
+ul.blog-author-links li.blog-author-links-linkedin span.icon {
+	background-position: -300px -50px;
+}
+ul.blog-author-links li.blog-author-links-twitter span.icon {
+	background-position: -300px -75px;
+}
+ul.blog-author-links li.blog-author-links-book span.icon {
+	background-position: -300px -100px;
+}
+div.blog-post {
+	margin: 0 0 3em;
+}
+div.blog-post h3 {
+	font-size: 18pt;
+	font-weight: 500;
+	line-height: 1.3;
+	margin: 0.15em 0 0;
+}
+div.blog-post-avatar {
+	float: left;
+	margin: 0 0.8em 0.8em 0;
+}
+span.blog-post-avatar {
+	height: 57px;
+	width: 59px;
+}
+span.blog-post-avatar-mike-shema {
+	background-position: -900px -300px;
+}
+span.blog-post-avatar-will-bechtel {
+	background-position: -1000px -300px;
+}
+div.blog-post-by-line {
+	color: #777;
+	font-size: 0.75em;
+	line-height: 1.5;
+}
+div.blog-post-intro {
+	clear: left;
+	margin: 1em 0 1.5em;
+}
+
+/**
+ * Watch tutorials and webcasts
+ */
+#tutorials-webcasts h6 {
+	clear: both;
+	margin: 1em 0 1em 16px;
+}
+div.tutorial-webcast-title a,
+div.reading-material-title a {
+	color: #333;
+	text-decoration: none;
+}
+div.tutorial-webcast-more {
+	font-weight: 500;
+	margin: 1em 0 0;
+}
+
+/**
+ * Analyst Insights
+ */
+div.blog-author-photo,
+span.tutorial-webcast-thumbnail,
+span.reading-material-thumbnail,
+div.case-study-summary-cover,
+div.analyst-report-cover,
+span.other-analyst-report-logo {
+	border: 1px solid #C4C4C4;
+	border-radius: 1px;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+div.case-study-summary-cover,
+div.analyst-report-cover {
+	height: 220px;
+	width: 384px;
+}
+div.analyst-report-cover-dbir {
+	background-position: 0 0;
+}
+div.analyst-report-cover-istr {
+	background-position: 0 -225px;
+}
+div.case-study-summary-cover-microsoft {
+	background-position: 0 -450px;
+}
+div.case-study-summary-cover-city-miami-beach {
+	background-position: 0 -900px;
+}
+div.case-study-summary-cover-vit {
+	background-position: 0 -675px;
+}
+div.case-study-summary-logo,
+div.analyst-report-logo {
+	margin: 0 0 0.625em;
+}
+div.case-study-summary-read-button,
+div.analyst-report-download-button {
+	margin: 0.625em 0 0;
+}
+div.analyst-report-logo-verizon {
+	background-position: 0 0;
+	height: 74px;
+	width: 131px;
+}
+div.analyst-report-logo-symantec {
+	background-position: 0 -100px;
+	height: 61px;
+	margin-top: 1em;
+	width: 233px;
+}
+div.case-study-summary-logo-microsoft {
+	background-position: 0 -200px;
+	height: 47px;
+	width: 222px;
+}
+div.case-study-summary-logo-vit {
+	background-position: 0 -300px;
+	height: 86px;
+	width: 114px;
+}
+div.case-study-summary-logo-city-miami-beach {
+	background-position: 0 -400px;
+	height: 32px;
+	width: 250px;
+}
+div.section h3.analyst-report-title {
+	font-weight: bold;
+	margin: 0;
+}
+div.section h3.analyst-report-title {
+	color: #DE1D0B;
+}
+ul.case-study-summary-quotes blockquote,
+ul.analyst-report-quotes blockquote {
+	clear: both;
+	font-size: 16pt;
+	font-style: italic;
+	font-weight: 500; /* semi bold */
+	margin: 33px 0; /* 33 = 22 * 1.5 */
+	padding: 0 1ex;
+}
+ul.case-study-summary-quotes blockquote:before,
+ul.case-study-summary-quotes blockquote:after,
+ul.analyst-report-quotes blockquote:before,
+ul.analyst-report-quotes blockquote:after {
+}
+ul.case-study-summary-quotes blockquote:before,
+ul.analyst-report-quotes blockquote:before {
+	content: "\"";
+	margin: 0 0 0 -1ex;
+}
+ul.case-study-summary-quotes blockquote:after,
+ul.analyst-report-quotes blockquote:after {
+	content: "\"";
+	margin: 0 -1ex 0 0;
+}
+div.case-study-summary-why,
+div.case-study-summary-why li {
+	line-height: 1.688;
+}
+
+
+/**
+ * case study summaries
+ */
+div.case-study-summary-industry label,
+div.case-study-summary-business-description label {
+	font-weight: 500;
+	text-transform: uppercase;
+	width: auto;
+}
+div.case-study-summary-industry label:after,
+div.case-study-summary-business-description label:after {
+	content: ":";
+}
+
+/**
+ * reading material and other analyst reports
+ */
+div.other-analyst-report-container h6 {
+	margin: 0 0 0.625em 15px;
+}
+div.tutorial-webcast,
+div.reading-material,
+div.other-analyst-report {
+	float: left;
+	height: auto;
+	margin: 0 15px 15px;
+	padding: 0 0 0 1px;
+	width: 262px;
+}
+div.tutorial-webcast-category,
+div.reading-material-category {
+	font-weight: 500;
+}
+span.tutorial-webcast-thumbnail,
+span.reading-material-thumbnail,
+span.other-analyst-report-logo {
+	height: 145px;
+	margin: 0 0 0.625em -1px;
+	width: 250px;
+}
+span.tutorial-webcast-thumbnail-was-overview {
+	background-position: -650px 0;
+}
+span.tutorial-webcast-thumbnail-best-practice {
+	background-position: -650px -150px;
+}
+span.tutorial-webcast-thumbnail- {
+	background-position: -650px -300px;
+}
+span.tutorial-webcast-thumbnail-app-security {
+	background-position: -650px -450px;
+}
+span.tutorial-webcast-thumbnail-cost-effective {
+	background-position: -650px -600px;
+}
+span.tutorial-webcast-thumbnail-smb-webcast {
+	background-position: -650px -750px;
+}
+span.tutorial-webcast-thumbnail-testimonial-inttra {
+	background-position: -650px -900px;
+}
+span.tutorial-webcast-thumbnail-testimonial-heartland {
+	background-position: -650px -1050px;
+}
+span.tutorial-webcast-thumbnail-testimonial-fujitsu {
+	background-position: -650px -1200px;
+}
+span.other-analyst-report-logo-gartner {
+	background-position: -400px 0;
+}
+span.other-analyst-report-logo-451-research {
+	background-position: -400px -150px;
+}
+span.reading-material-thumbnail-was-for-dummies {
+	background-position: -400px -300px;
+}
+span.reading-material-thumbnail-corporate-brochure {
+	background-position: -400px -450px;
+}
+span.reading-material-thumbnail-was-data-sheet {
+	background-position: -400px -600px;
+}
+span.reading-material-thumbnail-was-intro-guide {
+	background-position: -400px -750px;
+}
+span.reading-material-thumbnail-was-api-guide {
+	background-position: -400px -900px;
+}
+span.reading-material-thumbnail-was-white-paper {
+	background-position: -400px -1050px;
+}
+span.reading-material-thumbnail-microsoft {
+	background-position: -400px -1200px;
+}
+span.reading-material-thumbnail-vit {
+	background-position: -400px -1350px;
+}
+span.reading-material-thumbnail-city-miami-beach {
+	background-position: -700px -1350px;
+}
+div.section div.tablet-apps-overlay div.text {
+	margin-top: 0;
+}
+
+/*# sourceMappingURL=was.css.map */

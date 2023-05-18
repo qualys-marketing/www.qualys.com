@@ -1,0 +1,1292 @@
+a.image-overlay {
+	text-indent: 0;
+}
+#content
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width:1004px;
+	border-top: 1px solid #E0E0E0;
+	box-shadow: none;
+}
+div.screen-with-text li:before,
+ul.clients li:before,
+div.section.intro ul li:before
+{
+	content: "";
+	content: none;
+	margin: 0;
+	padding: 0;
+}
+div.menu-slot
+{
+	height: 136px;
+	padding: 0;
+	margin: 0;
+	clear: both;
+	background: #FFF;
+	border: 0;
+}
+body div.image-overlay
+{
+	position: relative;
+	display: none;
+}
+div.sticky-menu.section-navigation {
+	height: 136px;
+	width: 100%;
+	background: rgb(247, 246, 246);
+	background: linear-gradient(180deg, rgb(247, 246, 246) 0%, rgb(232, 232, 232) 100%);
+	box-shadow: 0 6px 10px 0 rgba(59, 59, 59, 0.33);
+	position: relative;
+	text-align: center;
+	line-height: auto;
+}
+div.sticky-menu.section-navigation a
+{
+	display: inline-block;
+	width: 210px;
+	font-size: 13pt;
+	text-decoration: none;
+	font-weight: 500;
+	color: #BBB;
+}
+div.sticky-menu.section-navigation a.active,
+div.sticky-menu.section-navigation a:hover
+{
+	color: #666;
+}
+div.sticky-menu.section-navigation.stuck
+{
+	position: fixed;
+	top: 57px;
+	z-index: 2;
+}
+div.sticky-menu.section-navigation a span.icon
+{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background: url(https://ik.imagekit.io/qualys/image/enterprises/qualysguard/continuous-monitoring/sprite-continuous-monitoring.png) top center no-repeat;
+}
+div.sticky-menu.section-navigation a.platform span.icon
+{
+	width: 71px;
+	height: 30px;
+	background-position: 0 0;
+	margin-bottom: 14px;
+	margin-top: 44px;
+}
+div.sticky-menu.section-navigation a.global-monitoring span.icon
+{
+	width: 69px;
+	height: 66px;
+	background-position: 0 -50px;
+	margin-bottom: 4px;
+	margin-top: 0;
+}
+div.sticky-menu.section-navigation a.targeted-alerts span.icon
+{
+	width: 60px;
+	height: 60px;
+	background-position: 0 -150px;
+	margin: 16px 0 6px 77px;
+}
+div.sticky-menu.section-navigation a.insights span.icon
+{
+	width: 69px;
+	height: 37px;
+	background-position: 0 -250px;
+	margin-bottom: 13px;
+	margin-top: 0;
+}
+div.sticky-menu.section-navigation a.platform.active span.icon,
+div.sticky-menu.section-navigation a.platform:hover span.icon
+{
+	background-position: -100px 0;
+}
+div.sticky-menu.section-navigation a.global-monitoring.active span.icon,
+div.sticky-menu.section-navigation a.global-monitoring:hover span.icon
+{
+	background-position: -100px -50px;
+}
+div.sticky-menu.section-navigation a.targeted-alerts.active span.icon,
+div.sticky-menu.section-navigation a.targeted-alerts:hover span.icon
+{
+	background-position: -100px -150px;
+}
+div.sticky-menu.section-navigation a.insights.active span.icon,
+div.sticky-menu.section-navigation a.insights:hover span.icon
+{
+	background-position: -100px -250px;
+}
+div.section h2
+{
+	font-size: 29pt;
+	margin: 0 0 30pt;
+	padding: 0;
+}
+
+div.section h3
+{
+	font-size: 17pt;
+	line-height: 22pt;
+}
+div.section div.block
+{
+	text-align: left;
+}
+div.section div.col1,
+div.section div.col2
+{
+	float: left;
+	width: 445px;
+	font-size: 12pt;
+	line-height: 18pt;
+}
+div.section div.col1
+{
+	margin: 0 28px 0 0;
+}
+div.section.global-monitoring div.col1
+{
+	margin-right: 12px;
+}
+div.section.global-monitoring div.col2
+{
+	width: 461px;
+}
+div.section.insights div.col1
+{
+	width: 405px;
+	margin-right: 0;
+}
+div.section.insights div.col2
+{
+	width: 513px;
+}
+
+div.section p,
+div.section li
+{
+	font-size: 12pt;
+	line-height: 18pt;
+}
+
+div.section ul li
+{
+	font-size: 12pt;
+	line-height: 16pt;
+}
+
+div.section
+{
+	padding-left: calc(50% - 502px);
+	padding-right: calc(50% - 502px);
+	padding-top: 60px;
+	padding-bottom: 60px;
+	clear: both;
+	position: relative;
+	min-width: 1004;
+	border-bottom: 2px solid #D9D9D9;
+	overflow: hidden;
+}
+div.section.intro,
+div.section.cm-banner,
+div.section.insights,
+div.section.cloud-platform,
+div.section.testimonial
+{
+	border: 0;
+}
+div.section.platform,
+div.section.global-monitoring,
+div.section.targeted-alerts,
+div.section.insights
+{
+	padding-left: 0;
+	padding-right: 0;
+	width: 1004px;
+	margin: 0 auto;
+}
+
+div.section div.block
+{
+	width: 918px;
+	margin: 0 auto;
+}
+div.section.intro p
+{
+	font-size: 14pt;
+	line-height: 23pt;
+}
+div.section.cm-banner div.banner-top
+{
+	text-align: center;
+	position: relative;
+	height: 414px;
+	background-color: #FFF;
+}
+div.section.cm-banner div.banner-middle
+{
+	text-align: center;
+	background: #E4EBF1;
+	padding: 65px 0 30px;
+}
+div.section.cm-banner div.banner-middle-collapsed
+{
+	padding: 65px 0 60px;
+}
+div.section.cm-banner div.banner-middle h2
+{
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 43px;
+	margin: 0;
+	padding: 0 0 52px;
+	text-align:center;
+}
+div.section.cm-banner div.banner-middle h2 em
+{
+	font-weight: 800;
+}
+div.section.cm-banner div.banner-bottom
+{
+	text-align: center;
+	background: #0167BB url(https://ik.imagekit.io/qualys/image/enterprises/qualysguard/continuous-monitoring/banner-bg-bottom.jpg) top center repeat-x;
+	position: relative;
+	min-height: 404px;
+	overflow: hidden;
+}
+div.section.cm-banner div.banner-bottom div.detail
+{
+	text-align: left;
+	padding: 15px 26px 0;
+	color: #FFF;
+	display: none;
+}
+div.section.cm-banner div.banner-bottom div.wrap h1
+{
+	font-size: 32pt;
+	line-height: 48pt;
+	text-align: center !important;
+	padding-top: 0;
+	color: #FFF;
+}
+div.section.cm-banner div.banner-bottom div.wrap h2
+{
+	font-size: 25pt;
+	text-align: center;
+	color: #FFF;
+}
+div.section.cm-banner div.banner-bottom div.rollover-disabled div.detail
+{
+	display: block;
+}
+div.section.cm-banner div.banner-bottom div.rollover-disabled div.active div.arrow,
+div.section.cm-banner div.banner-bottom div.rollover-disabled div.arrow
+{
+	display: none;
+}
+div.section.cm-banner div.banner-bottom div.detail h3
+{
+	font-size: 16pt;
+	line-height: 22pt;
+}
+div.section.cm-banner div.banner-bottom div.detail p,
+div.section.cm-banner div.banner-bottom div.detail li
+{
+	font-size: 12pt;
+	line-height: 15pt;
+	margin-top: 20px;
+}
+div.section.cm-banner div.banner-bottom div.outer
+{
+	margin: 0 0 24px;
+}
+div.section.cm-banner div.banner-bottom div.outer p
+{
+	font-weight: 500;
+	font-size: 15pt;
+}
+div.section.cm-banner div.banner-bottom div.bubbles,
+div.section.cm-banner div.banner-bottom div.content
+{
+	float: left;
+}
+div.section.cm-banner div.banner-bottom div.wrap
+{
+	width: 918px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 40px 0 16px;
+	position: relative;
+}
+div.section.cm-banner div.banner-bottom div.content
+{
+	width: 318px;
+	min-height: 300px;
+}
+div.section.cm-banner div.banner-bottom div.content div.detail.active
+{
+	display: block;
+}
+div.section.cm-banner div.banner-bottom div.content div.detail
+{
+
+}
+div.section.cm-banner div.banner-bottom div.outer
+{
+	width: 288px;
+	height: 150px;
+	padding: 0;
+	position: relative;
+}
+div.section.cm-banner div.banner-bottom div.outer div.arrow
+{
+	position: absolute;
+	display: none;
+}
+div.section.cm-banner div.banner-bottom div.outer.active div.arrow
+{
+	display: block;
+}
+div.section.cm-banner div.outer.achieve-compliance div.bubble,
+div.section.cm-banner div.outer.save-time-money div.bubble
+{
+	right: 0;
+}
+div.section.cm-banner div.outer.prevent-breaches div.bubble,
+div.section.cm-banner div.outer.maintain-uptime div.bubble
+{
+	left: 0;
+}
+div.section.cm-banner div.outer.achieve-compliance div.arrow,
+div.section.cm-banner div.outer.save-time-money div.arrow
+{
+	left: 0;
+	top: 30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 13px 12px 0;
+	border-color: transparent #F2F4F6 transparent transparent;
+
+}
+div.section.cm-banner div.outer.prevent-breaches div.arrow,
+div.section.cm-banner div.outer.maintain-uptime div.arrow
+{
+	right: 0;
+	top: 30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 0 12px 13px;
+	border-color: transparent transparent transparent #F2F4F6;
+}
+
+div.section.cm-banner div.outer.prevent-breaches.active p
+{
+	color: #DE1D0B;
+}
+div.section.cm-banner div.outer.maintain-uptime.active p
+{
+	color: #005CCF;
+}
+div.section.cm-banner div.outer.achieve-compliance.active p
+{
+	color: #50A33C;
+}
+div.section.cm-banner div.outer.save-time-money.active p
+{
+	color: #164F96;
+}
+
+div.section.cm-banner div.banner-bottom div.bubble
+{
+	width: 275px;
+	height: 150px;
+	background: #5F9CD1;
+	border-radius: 12px;
+	box-shadow: none;
+	border: none;
+	text-align: left;
+	color: #DFEBF6;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: absolute;
+	font-size: 15pt;
+	text-transform: uppercase;
+}
+div.section.cm-banner div.banner-bottom div.outer.active div.bubble
+{
+	background: #F2F4F6;
+
+}
+div.section.cm-banner div.banner-bottom div.bubble div.icon
+{
+	float: left;
+}
+div.section.cm-banner div.outer div.icon
+{
+	background-image: url(https://ik.imagekit.io/qualys/image/enterprises/qualysguard/continuous-monitoring/sprite-continuous-monitoring.png);
+	background-repeat: no-repeat;
+}
+div.section.cm-banner div.outer.prevent-breaches div.icon
+{
+	margin-top: 28px;
+	margin-left: 26px;
+	width: 88px;
+	height: 76px;
+	background-position: 0 -300px;
+}
+div.section.cm-banner div.outer.maintain-uptime div.icon
+{
+	margin-top: 28px;
+	margin-left: 33px;
+	width: 78px;
+	height: 77px;
+	background-position: 0 -400px;
+}
+div.section.cm-banner div.outer.achieve-compliance div.icon
+{
+	margin-top: 40px;
+	margin-left: 16px;
+	width: 88px;
+	height: 59px;
+	background-position: 0 -500px;
+}
+div.section.cm-banner div.outer.save-time-money div.icon
+{
+	margin-top: 42px;
+	margin-left: 24px;
+	width: 73px;
+	height: 61px;
+	background-position: 0 -600px;
+}
+div.section.cm-banner div.outer.prevent-breaches.active div.icon
+{
+	background-position: -100px -300px !important;
+}
+div.section.cm-banner div.outer.maintain-uptime.active div.icon
+{
+	background-position: -100px -400px !important;
+}
+div.section.cm-banner div.outer.achieve-compliance.active div.icon
+{
+	background-position: -100px -500px !important;
+}
+div.section.cm-banner div.outer.save-time-money.active div.icon
+{
+	background-position: -100px -600px !important;
+}
+div.section.cm-banner div.banner-bottom div.bubble p
+{
+	width: 150px;
+	padding-top: 45px;
+	line-height: 18pt;
+	margin: 0;
+	float: right;
+}
+div.section.cm-banner div.outer.achieve-compliance div.bubble p
+{
+	padding-top: 28px;
+}
+div.section.cm-banner
+{
+	padding: 0;
+	clear: both;
+	position: relative;
+	min-width: 918px;
+}
+
+div.section.cm-banner div.banner-top p.caption
+{
+	margin-top: 20px;
+}
+
+div.section.cm-banner span.line
+{
+	border-bottom: 2px solid #87CBE8;
+}
+
+div.section.intro
+{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+div.section.intro h2
+{
+	font-size: 40pt;
+	font-weight: 400;
+	line-height: 46pt;
+	margin: 0;
+}
+div.section.intro h3
+{
+	font-size: 22pt;
+	font-weight: 500;
+	margin: 0 0 20px;
+	line-height: 38pt;
+}
+div.section.intro h4
+{
+	font-size: 14pt;
+	font-weight: 500;
+	margin: 0 0 20px;
+	line-height: 38pt;
+	text-align:center;
+}
+div.section.intro p
+{
+	margin-bottom: 30px;
+	clear: both;
+}
+div.section.intro ul,
+div.section.intro ul li
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+div.section.intro ul
+{
+	margin: 0 auto 70px;
+	width: 880px;
+}
+div.section.intro ul li
+{
+	float: left;
+	width: 176px;
+	font-size: 14pt;
+	text-align: center;
+	line-height: 18pt;
+}
+div.section.intro ul li div.icon
+{
+	margin: 0 0 20px;
+	position: relative;
+	width: 176px;
+	height: 176px;
+}
+
+div.section.intro div.icon img.outline
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+
+	/*
+	animation-name: rotator-ccw;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-name: rotator-ccw;
+	-webkit-animation-duration: 15s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+*/	
+}
+div.section.intro li.even div.icon img.outline
+{
+	transform: rotate(-2deg);
+
+	/*
+	animation-name: rotator-cw;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-name: rotator-cw;
+	-webkit-animation-duration: 15s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+*/
+}
+
+@keyframes rotator-cw
+{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+@-webkit-keyframes rotator-ccw
+{
+	from {
+		transform: rotate(-2deg);
+	}
+	to {
+		transform: rotate(357deg);
+	}
+}
+@keyframes rotator-ccw
+{
+	from {
+		transform: rotate(-2deg);
+	}
+	to {
+		transform: rotate(357deg);
+	}
+}
+@-webkit-keyframes rotator-cw
+{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-359deg);
+	}
+}
+@keyframes rotator-cw
+{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-359deg);
+
+	}
+}
+div.section.intro div.icon img.mask
+{
+	position: absolute;
+	left: 3px;
+	top: 1px;
+}
+div.section.intro li.even div.icon img.mask
+{
+	top: 5px;
+}
+div.section.intro ul li div.icon img.core
+{
+	position: absolute;
+	top: 33px;
+	left: 33px;
+}
+div.section.intro img.screen-cm
+{
+	display: block;
+	margin: 0 auto 40px;
+}
+div.section.platform div.col1 ul li
+{
+	margin-bottom: 10px;
+}
+div.section.platform img.integrated-security
+{
+	float:right;
+	margin-right: -30px;
+}
+
+div.section.targeted-alerts div.screen-with-text
+{
+	width: 890px;
+	height: 600px;
+	position: relative;
+	margin: 45px auto 35px;
+}
+div.section.targeted-alerts div.screen-with-text img
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+div.section.targeted-alerts div.screen-with-text ul
+{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	left: 230px;
+	top: 70px;
+}
+div.section.targeted-alerts div.screen-with-text li
+{
+	height: 99px;
+	width: 550px;
+	margin: 0;
+	padding: 0;
+}
+div.section.targeted-alerts div.screen-with-text li p
+{
+	padding: 18px 0 0;
+	margin: 0;
+}
+div.section.insights 
+{
+	padding-bottom: 90px;
+}
+div.section.insights div.insights-1
+{
+	width: 373px;
+	height: 221px;
+	border-radius: 5px;
+	box-shadow:         0 0 8px 0 rgba(0, 0, 0, 0.4);
+	position: relative;
+}
+div.section.insights div.insights-1 img
+{
+	margin: 3px 0 0 3px;
+}
+div.section.insights div.insights-1 img.magnify
+{
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+}
+div.section.cloud-platform
+{
+	text-align: center;
+	padding: 100px 0 0;
+}
+div.section.cloud-platform h2
+{
+	font-size: 35pt;
+	padding-bottom: 0;
+	margin: 0;
+}
+div.section.cloud-platform h3
+{
+	font-size: 22pt;
+	font-weight: 400;
+	line-height: 34pt;
+}
+div.section.cloud-platform p
+{
+	font-size: 14pt;
+	padding: 0 0 25px;
+	margin: 0;
+}
+div.section.cloud-platform img.splash
+{
+	position: absolute;
+	bottom: 206px;
+	left: 50%;
+	margin-left: -501px;
+	z-index: 1;
+}
+div.section.cloud-platform div.free-trial a.button-type5
+{
+	margin: 95px 0 14px;
+	padding: 8px 70px;
+}
+div.section.cloud-platform div.free-trial
+{
+	height: 278px;
+	position: relative;
+	margin: 140px 0 0;
+	padding: 0;
+	text-align: center;
+	background: rgb(19, 97, 163);
+	background: linear-gradient(180deg, rgb(19, 97, 163) 30%, rgb(2, 77, 132) 100%);
+}
+div.section.cloud-platform p.subscribe
+{
+	text-align:center;
+}
+div.section.cloud-platform p.subscribe a
+{
+	color: #FFF;
+	font-weight: 400;
+	font-size: 11pt;
+}
+
+div.section.testimonial
+{
+	text-align: center;
+	padding: 70px 0 75px;
+	background: #EDEDED;
+}
+div.section.testimonial p
+{
+	font-size: 14pt;
+	color: #81919B;
+	margin: 0;
+	line-height: 22pt;
+}
+div.section.testimonial p.testimonials
+{
+	font-size: 13pt;
+}
+div.section.testimonial ul.clients
+{
+	clear: both;
+	margin: 0 auto;
+	height: 100px;
+}
+div.section.testimonial ul.clients li
+{
+	height: 86px;
+	line-height: 86px;
+}
+div.section.testimonial ul.clients li img
+{
+	vertical-align:middle;
+}
+div.section.testimonial ul.clients.row1
+{
+	margin-top: 40px;
+	width: 740px;
+}
+div.section.testimonial ul.clients.row1 li.logo1
+{
+	margin-right:65px;
+}
+div.section.testimonial ul.clients.row1 li.logo2
+{
+	margin-right:60px;
+}
+div.section.testimonial ul.clients.row1 li.logo3
+{
+	margin-right:48px;
+}
+div.section.testimonial ul.clients.row1 li.logo4
+{
+	margin-right:36px;
+}
+div.section.testimonial ul.clients.row2
+{
+	width: 825px;
+}
+div.section.testimonial ul.clients.row2 li.logo1
+{
+	margin-right:29px;
+}
+div.section.testimonial ul.clients.row2 li.logo2
+{
+	margin-right:44px;
+}
+div.section.testimonial ul.clients.row2 li.logo3
+{
+	margin-right:46px;
+}
+div.section.testimonial ul.clients.row2 li.logo4
+{
+	margin-right:56px;
+}
+div.section.testimonial ul.clients.row3
+{
+	width: 660px;
+	margin-bottom: 15px;
+}
+div.section.testimonial ul.clients.row3 li.logo1
+{
+	margin-right:63px;
+}
+div.section.testimonial ul.clients.row3 li.logo2
+{
+	margin-right:68px;
+}
+div.section.testimonial ul.clients.row3 li.logo3
+{
+	margin-right:46px;
+}
+div.section.testimonial ul.clients li
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+span.marker,
+span.marker.inline1
+{
+	display: inline-block;
+	border: 0;
+	border-radius: 2px;
+	text-transform: uppercase;
+	padding: 0 10px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 7pt;
+	line-height: 10pt;
+	background: rgb(0, 162, 213);
+	background: linear-gradient(180deg, rgb(0, 162, 213) 14%, rgb(0, 135, 180) 100%);
+}
+
+/**
+ * style for submenu
+ */
+div.submenu {
+	background: #FFF;
+	background: linear-gradient(to bottom,  #FFF 0%,#FFF 19%,#F5F5F5 100%);
+	border-bottom: 1px solid #B1B0B0;
+	padding: 0 0 0 32px;
+	position: absolute;
+	width: 926px;
+	height: 56px;
+	line-height: 1;
+	top: 0;
+	z-index: 100;
+}
+body div.submenu {
+	padding-left: 21px;
+	width: 937px;
+}
+div.stuck div.submenu {
+	position: fixed;
+	top: 0 !important;
+	z-index: 300;
+}
+
+div.submenu h1 {
+	letter-spacing: -0.033em;
+}
+div.submenu h1,
+div.submenu h1 div.qualysguard b {
+	font-size: 14pt;
+	text-align: left;
+	font-weight: normal;
+	display: inline-block;
+	line-height: 1;
+	margin: 19px 0 0;
+}
+div.sticky-menu div.submenu h1,
+div.sticky-menu div.submenu h1 div.qualysguard b {
+	font-size: 13pt;
+	white-space: nowrap;
+}
+div.submenu h1 div.qualysguard b {
+	margin-top: 0;
+	font-weight: 500;
+	position: relative;
+}
+div.submenu h1 div.qualysguard > b {
+	cursor: pointer;
+	text-decoration: underline;
+}
+div.submenu ul {
+	float: right;
+	display: inline-block;
+	margin: 22px 2.5em 0 0;
+}
+div.submenu li {
+	display: inline-block;
+	line-height: 1;
+	margin-left: 2.5em;
+}
+div.submenu li:first-child {
+	margin-left: 0;
+}
+div.submenu,
+div.submenu a {
+	color: #333;
+	font-size: 10pt;
+}
+div.submenu li a.trial-link,
+div.stuck div.submenu li a.trial-link
+{
+	font-weight: 500;
+	
+}
+div.stuck div.submenu li a.trial-link span.trial-link-text,
+div.submenu li a.trial-link span.trial-link-text
+ {
+	font-weight: normal;
+	
+}
+div.submenu a.active {
+	font-weight: 500;
+	color: #000;
+}
+div.stuck div.submenu li:last-child a,
+div.stuck div.submenu li.last a
+ {
+	background: #DE1D0B;
+	border-radius: 7px;
+	color: #FFF !important;
+	display: inline-block;
+	font-weight: 500;
+	margin: -0.667em -1em;
+	padding: 0.52em 1em;
+}
+div.stuck div.submenu li:last-child a:active,
+div.stuck div.submenu li.last a:active {
+	background: #B5000B;
+}
+div.submenu h1 div.qualysguard {
+	display: inline;
+	padding-bottom: 20px;
+}
+
+div.product-subnav {
+	display: none;
+	position: absolute;
+	white-space: nowrap;
+	font-weight: normal;
+	padding: 20px;
+	background: #FFF;
+	border-color: rgba(0, 0, 0, 0) #BBB #BBB rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 3px 8px 1px rgba(12, 12, 12, 0.21);
+	top: 56px;
+	left: 0;
+	line-height: 48px;
+	padding-top: 5px;
+}
+div.product-subnav a {
+	font-size: 13pt;
+}
+div.product-subnav div.triangle {
+	left: 131px;
+}
+div.product-subnav a:before,
+div.submenu h1 div.cm-badge {
+	content: "";
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-qualysguard.png) no-repeat scroll;
+	height: 43px;
+	width: 62px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: none;
+	text-indent: -9999px;
+	display: inline-block;
+	margin-right: 10px;
+}
+div.submenu h1 div.cm-badge {
+	margin-top: -12px;
+	vertical-align: top;
+}
+div.product-subnav a.cm:before,
+div.submenu h1 div.cm-badge {
+	background-position: 0 -400px;
+}
+div.submenu h1 div.qualysguard:hover > b {
+	text-decoration: underline;
+}
+
+div.sticky-menu.product-nav {
+	height: 57px;
+}
+
+div.submenu a.product-name {
+	font-size: 13pt;
+}
+
+/* new pages */
+div.sticky-menu div.submenu div.product-subnav
+{
+	left: -20px;
+}
+div.sticky-menu
+{
+	margin: 0;
+	height:57px;
+}
+div.sticky-menu div.submenu
+{
+	margin: 0;
+	padding: 0;
+	background: #E4EBF1;
+	background-image: none;
+	border-top: 0;
+	border-bottom: 1px solid #D4D8DC;
+	width: 100%;
+}
+div.sticky-menu.stuck div.submenu ul.type1
+{
+	margin-right:14px;
+}
+div.sticky-menu div.submenu div.subwrap
+{
+	width: 918px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.sticky-menu div.submenu ul.type1,
+{
+	margin-right: 0;
+}
+div.type2.cm-package {
+	padding: 0;
+}
+
+div.type2.cm-package b {
+	color: #333;
+	font-weight: 500;
+}
+
+div.type2.cm-package div.text {
+	display: inline-block;
+	padding: 0 0 0;
+	position: relative;
+	width: 530px;
+	z-index: 100;
+}
+div.type2.cm-package div.text div.container {
+	margin: 0 0 30px;
+	display: block;
+	padding-bottom:15px;
+
+} 
+
+div.type2.cm-package div.text div.container div.bullet-1 {
+	background: transparent url(https://lps.qualys.com/rs/qualysinc/images/sprite-cm-ppc.png) no-repeat scroll;
+	height: 63px;
+	width: 63px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	text-indent: -9999px;
+	display: inline-block;
+	margin-right: 15px;
+	background-position: -1px -2px;
+}
+div.type2.cm-package div.text div.container div.bullet-2 {
+	background: transparent url(https://lps.qualys.com/rs/qualysinc/images/sprite-cm-ppc.png) no-repeat scroll;
+	height: 63px;
+	width: 63px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	text-indent: -9999px;
+	display: inline-block;
+	margin-right: 15px;
+	background-position: -1px -102px;
+}
+div.type2.cm-package div.text div.container div.bullet-3 {
+	background: transparent url(https://lps.qualys.com/rs/qualysinc/images/sprite-cm-ppc.png) no-repeat scroll;
+	height: 63px;
+	width: 63px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	text-indent: -9999px;
+	display: inline-block;
+	margin-right: 15px;
+	background-position: -1px -197px;
+}
+
+div.type2.cm-package div.text div.container p {
+	position: relative;
+	top: 5px;
+}
+div.type2.cm-package div.form {
+	width: 300px;
+	display: block;
+	position: relative;
+	right: 0;
+	z-index:100;
+	float: right;
+	top: 0;
+}
+
+div.form b {
+	font-size: 21px;
+	font-weight: 700;
+	margin-left: 5px;
+}
+form.type1 input[type="text"],  form.type1 input[type="email"],  form.type1 input[type="tel"] {
+	margin-bottom: 5px;
+	width:265px;
+}
+.all-fields-required, .private-info {
+	margin: 0;
+	font-size: 12px !important;
+	font-weight: normal !important;
+}
+.all-fields-required {
+	margin-left: 9px;
+}
+div.type2.cm-package div.form h3 {
+	font-size: 24px;
+	line-height: 22pt;
+	font-weight: 700;
+	color: #717171;
+	padding-bottom: 18px;
+}
+html.js legend {
+	display: none;
+	visibility: hidden;
+}
+div.have-account {
+	border: 1px solid transparent;
+	font-size: 1.067em;
+	font-size: 10pt;
+	line-height: 1.3125;
+	margin-bottom: 0;
+	padding: 5px 5px 0;
+}
+div.have-account input[type=checkbox],
+div.have-account input[type=radio],
+div.have-account label {
+	display: inline-block;
+}
+div.have-account input[type=checkbox],
+div.have-account input[type=radio] {
+	float: none;
+	margin: 0;
+}
+div.have-account label {
+	width: auto;
+}
+div.have-account input[type=checkbox]#haveAccountNo,
+div.have-account input[type=radio]#haveAccountNo {
+	float: none;
+	margin: 0 0.25ex 0 2.75ex;
+}
+div.error p {
+	margin-top: 0;
+	font-size: 13px;
+	line-height: 1.5;
+}
+div.learn-more-collapsed {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 0;
+	top: -60px;
+	width: 100%;
+}
+
+div.learn-more-collapsed div.circle
+{
+	border-radius: 50%;
+	width: 105px;
+	height: 105px;
+	background-color: #A1A1A1;
+	margin: 0 auto;
+	
+
+}
+
+div.learn-more-collapsed div.circle-hover
+{
+	background-color: #C7C7C7;
+}
+
+div.learn-more-collapsed div.circle p 
+{
+	color: #FFF;
+	font-size: 14pt;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: 500;
+}
+div.learn-more-collapsed div.circle div.arrow-down 
+{
+	background: transparent url(https://lps.qualys.com/rs/qualysinc/images/sprite-cm-ppc.png) no-repeat scroll;
+	height: 19px;
+	width: 37px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background-position: -8px -308px;
+	margin: 5px auto;
+	border: none;
+}
+
+a.show-more {
+	text-decoration: none;
+	color: #FFF;
+	  
+}
+
+/*# sourceMappingURL=cm.css.map */

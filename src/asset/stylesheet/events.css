@@ -1,0 +1,422 @@
+/* allow popups to be visible outside of the middle */
+#middle {
+	overflow: visible;
+}
+#company_events #container {
+	margin: 0;
+	padding: 0;
+}
+
+/* add grey gradient to calendar header */
+thead th {
+	background: rgb(138,139,138);
+	background: linear-gradient(to bottom, rgba(138,139,138,1) 0%,rgba(111,112,111,1) 100%);
+	color: #FFF;
+	font-size: 0.9em;
+	line-height: 2;
+}
+
+/* align weekday labels to the left */
+.fc-grid th {
+	padding-left: 0.25em;
+	text-align: left;
+}
+
+/* align day labels to the left */
+.fc-grid .fc-day-number {
+	float: left;
+	padding-left: 0.25em;
+}
+
+/* styles for today label */
+.fc-grid .fc-today .fc-day-number:after {
+	content: "TODAY";
+	font-size: 0.8em;
+	font-weight: bold;
+	padding-left: 0.5em;
+}
+
+/* remove bottom margin from fullcalendar header elements */
+.fc-header-title h2,
+.fc-header .fc-button {
+	margin-bottom: 0;
+}
+.fc-header-title h2 {
+	padding: 0.2em 0 0;
+}
+.fc-header .fc-button {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif; /* the back arrow in Lucida Grande is bad */
+}
+
+/* let the popups overflow the fullcalendar element */
+.fc-view {
+	overflow: visible;
+}
+
+/* make events grey with colored tabs */
+.fc-view-basicDay .fc-event,
+.fc-view-basicWeek .fc-event,
+.fc-view-month .fc-event {
+	background-color: transparent;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 0 0 0 6px;
+	margin: 0 2px 3px;
+	padding-right: 6px;
+}
+.fc-view-basicDay .fc-event-inner,
+.fc-view-basicWeek .fc-event-inner,
+.fc-view-month .fc-event-inner {
+	background-color: #F5F5F5;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px 1px 1px 0;
+	color: #4B4B4B;
+	padding: 0 3px;
+}
+
+/* set the background color for local events */
+.fc-view-basicDay .qualys-le-events,
+.fc-view-basicWeek .qualys-le-events,
+.fc-view-month .qualys-le-events,
+.fc-view-list .qualys-le-events .event-details-inline h6,
+.fc-view-list .qualys-le-events .event-details-inline table {
+	/* #EF0020 -20% saturation and brightness */
+	border-color: #2042BA;
+}
+.event-details-popup a.qualys-le-events,
+.qualys-le-events .event-details-inline a {
+	color: #2042BA;
+}
+
+/* set the background color for customer events */
+.fc-view-basicDay .qualys-ce-events,
+.fc-view-basicWeek .qualys-ce-events,
+.fc-view-month .qualys-ce-events,
+.fc-view-list .qualys-ce-events .event-details-inline h6,
+.fc-view-list .qualys-ce-events .event-details-inline table {
+	/* #EF0020 -20% saturation and brightness */
+	border-color: #AE7381;
+}
+.event-details-popup a.qualys-ce-events,
+.qualys-ce-events .event-details-inline a {
+	color: #AE7381;
+}
+
+/* set the background color for qualys speaking engagement events */
+.fc-view-basicDay .qualys-se-events,
+.fc-view-basicWeek .qualys-se-events,
+.fc-view-month .qualys-se-events,
+.fc-view-list .qualys-se-events .event-details-inline h6,
+.fc-view-list .qualys-se-events .event-details-inline table {
+	/* #005DCF -20% saturation, -10% brightness */
+	border-color: #02AAD8;
+}
+.event-details-popup a.qualys-se-events,
+.fc-view-list .qualys-se-events .event-details-inline a {
+	color: #02AAD8;
+}
+
+/* set the background color for webcasts */
+.fc-view-basicDay .qualys-webcast-events,
+.fc-view-basicWeek .qualys-webcast-events,
+.fc-view-month .qualys-webcast-events,
+.fc-view-list .qualys-webcast-events .event-details-inline h6,
+.fc-view-list .qualys-webcast-events .event-details-inline table {
+	/* my original color: #008E1D */
+
+	/* or #2DAA4A -10% brightness */
+	border-color: #E06229;
+}
+.event-details-popup a.qualys-webcast-events,
+.fc-view-list .qualys-webcast-events .event-details-inline a {
+	color: #E06229;
+}
+
+/* set the background color for training events */
+.fc-view-basicDay .qualys-training-events,
+.fc-view-basicWeek .qualys-training-events,
+.fc-view-month .qualys-training-events,
+.fc-view-list .qualys-training-events .event-details-inline h6,
+.fc-view-list .qualys-training-events .event-details-inline table {
+	/* my original color: #005DCF -180 hue */
+	border-color: #FAA71A;
+}
+.event-details-popup a.qualys-training-events,
+.fc-view-list .qualys-training-events .event-details-inline a {
+	color: #FAA71A;
+}
+
+/* style the calendar list of event sources */
+#event-sources {
+	background-color: #F5F5F5;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	font-size: 0.8em;
+	height: 24px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 15px 10px 7px;
+}
+.event-source-label {
+	display: block;
+	float: left;
+	padding-right: 3ex;
+	padding-bottom: 12px;
+	padding-top: 2px;
+}
+.event-source-item {
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding-right: 4ex;
+	line-height: 1.3;
+	white-space: nowrap;
+}
+.event-source-item input {
+	display: inline-block;
+	float: left;
+	height: 1.3em;
+	margin: 0.1em 1ex 0 0;
+	width: 1.3em;
+}
+.event-source-item label {
+	border-left: 6px solid #CCC;
+	color: #4B4B4B;
+	display: inline-block;
+	width: auto;
+}
+.event-source-item label .event-source-item-inner {
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px 1px 1px 0;
+	display: inline-block;
+	padding: 0 9px 0 3px;
+}
+.event-source-item label.qualys-le-events {
+	border-left-color: #2042BA;
+}
+.event-source-item label.qualys-ce-events {
+	border-left-color: #AE7381;
+}
+.event-source-item label.qualys-se-events {
+	border-left-color: #02AAD8;
+}
+.event-source-item label.qualys-webcast-events {
+	border-left-color: #E06229;
+}
+.event-source-item label.qualys-training-events {
+	border-left-color: #FAA71A;
+}
+.event-source-item * {
+	cursor: pointer;
+}
+.fc-event-past {
+	/* opacity: 0.5; */
+}
+
+/* style the event details popup and it's contenet */
+.event-details-popup {
+	background: white;
+	border: 1px solid #CCC;
+	border-radius: 0.3em;
+	box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+	display: block;
+	font-size: 0.9em;
+	margin: 4px 0 0;
+	padding: 0.9em 1.9em;
+	width: 20em;
+	z-index: 9;
+}
+.event-details-popup h6 {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-bottom: 0;
+}
+.event-details-date {
+	margin: 1em 0;
+}
+.event-details-popup th {
+	font-weight: bold;
+	padding-left: 0;
+	padding-right: 0.8em;
+	text-align: left;
+	min-width: 3.2em;
+}
+.event-details-popup th,
+.event-details-popup td {
+	padding-bottom: 0.4em;
+}
+.event-details-more {
+	clear: left;
+	margin-top: 0.75em;
+}
+.event-details-more:before {
+	color: #005DCF;
+	content: "▸ ";
+}
+.no-class-description .event-details-class-description,
+.no-course-description .event-details-course-description,
+.no-topic .event-details-topic,
+.no-speaker .event-details-speaker,
+.no-extra .event-details-extra {
+	display: none;
+}
+.event-details-course-description td div.course-description-wrapper {
+	display: block;
+	height: 4.5em; /* 1.5 * 3 */
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.fc-view-list .event-details-course-description td div.course-description-wrapper {
+	height: 2.8em;
+}
+.event-details-course-description td span.read-more,
+.event-details-classXYZ-description td span.read-more {
+	display: block;
+	vertical-align: bottom;
+	position: absolute;
+	height: 1.5em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: left;
+	background-color: #FFF;
+}
+.event-details-course-description td span.read-more a,
+.event-details-classXYZ-description td span.read-more a {
+	background-color: #FFF;
+	vertical-align: bottom;
+	display: block;
+	float: left;
+}
+.fc-view-list .event-details-course-description td span.read-more a {
+	/* padding-left: 16px; */
+}
+.event-details-course-description td span.read-more a:after {
+	padding-left: 0.3em;
+	content: "▾";
+	text-decoration: none !important;
+}
+.event-details-course-description td span.read-more a.see-less:after {
+	padding-left: 0.3em;
+	content: "▴";
+	text-decoration: none !important;
+}
+
+/* styles for agenda view */
+.fc-event-date em {
+	color: #000;
+	font-style: normal;
+}
+.fc-view-list .top-prong,
+.fc-view-list .bottom-prong {
+	display: none;
+}
+.fc-view-list .event-details-inline {
+	border-top: 1px dotted #CCC;
+	margin-left: 17px;
+	margin-top: -0.5em;
+	padding-top: 0.5em;
+}
+.fc-view-list .fc-event:first-child .event-details-inline {
+	border-top: 0 none;
+}
+.fc-view-list .fc-first-event-of-the-day .event-details-inline {
+	border-top: 0 none;
+}
+.fc-view-list .fc-event {
+	line-height: 1.2;
+}
+.fc-view-list .event-details-inline h6 {
+	border-left: 5px solid #005DCF;
+	margin-left: -17px;
+	padding-left: 12px;
+}
+.fc-view-list .event-details-inline table {
+	border-left: 1px solid #005DCF;
+	margin-left: -17px;
+}
+.fc-view-list .event-details-inline td {
+	padding-left: 16px;
+}
+.fc-list-event .fc-datecell,
+.fc-list-event .fc-timecell {
+	padding-top: 2px;
+}
+.event-details-inline {
+	float: left;
+	font-size: 0.9em;
+	display: block;
+	max-width: 520px;
+}
+.event-details-inline h6 {
+	font-size: 1.1em;
+}
+.event-details-inline table {
+	margin-bottom: 0;
+}
+.event-details-inline th {
+	display: none;
+}
+.event-details-inline th,
+.event-details-inline td {
+	padding-top: 0.2em;
+}
+
+.event-details-inline .event-details-date,
+.event-details-inline .event-details-more,
+.event-details-inline .bottom-prong {
+	display: none;
+}
+.fc-view-list .fc-event-header {
+	padding-left: 17px;
+}
+
+/* styles to better integrate the header */
+.fc table.fc-header {
+	border-collapse: separate;
+}
+.fc-header {
+	background-color: #F5F5F5;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	margin-bottom: 0;
+	margin-top: -1px;
+}
+.fc-content {
+	margin-bottom: -1px;
+}
+td.fc-header-left {
+	padding: 20px 0 20px 20px;
+}
+td.fc-header-center {
+	padding: 20px 0;
+}
+td.fc-header-right {
+	padding: 20px 20px 20px 0;
+}
+.fc-view-list tfoot td {
+	background-color: white;
+	color: white;
+	height: 607px;
+}
+.fc-no-events-found {
+	background-color: #F5F5F5;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+	left: 50%;
+	margin: -1em 0 0 -8.5em;
+	padding: 0.5em 1.5em;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 14em;
+}
+
+/*# sourceMappingURL=events.css.map */

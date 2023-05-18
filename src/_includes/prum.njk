@@ -1,0 +1,26 @@
+{% if site.env.production %}
+
+{% layoutblock 'appendHints' %}
+    <link rel="preconnect" href="https://rum-static.pingdom.net">
+{% endlayoutblock %}
+
+<!-- Pingdom Real User Monitoring -->
+<script>
+    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+
+        var _prum = [['id', '51c3aa0fabe53d2109000000'],
+                     ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+              , p = document.createElement('script');
+            p.async = 'async';
+            p.src = 'https://rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+
+    }
+</script>
+<!-- SHA 256 Digest 7H2Pgm/9d1VFPIlhvmHOIhKCrotE4ilnq5ZRxC2wam8= -->
+<!-- End Pingdom Real User Monitoring -->
+
+{% endif %}

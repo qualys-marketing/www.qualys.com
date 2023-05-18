@@ -1,0 +1,83 @@
+{%- from "component.njk" import component -%}
+
+<footer class="q-footer">
+	<div class="q-footer__container">
+		<div class="q-footer__row">
+
+			<div class="q-footer__column--wide q-footer__column--desktop">
+				{% include "footer-promo.njk" %}
+				<div class="q-footer__social">
+					{% include "social-list.njk" %}
+				</div>
+			</div>
+
+			<div class="q-footer__column q-footer__column--nav">
+				{% for category in footerLinks %}
+					<div class="q-footer__group">
+						<h3 class="q-footer__subheading">{{category.title}}</h3>
+						<ul class="q-footer__list">
+							{% for link in category.items %}
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="{{link.url}}">{{link.title}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+
+				<div class="q-footer__group">
+					<h3 class="q-footer__subheading">Resources</h3>
+					<ul class="q-footer__list">
+						<li class="q-footer__list-item">
+									<a class="q-footer__link" href="https://community.qualys.com/">Community</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="/documentation/">Docs</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="{{@root.site.salesforce.csp.url}}">Support</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="/training/">Free training</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="https://blog.qualys.com/">Blog</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="/resources/">Resources</a>
+						</li>
+						<li class="q-footer__list-item">
+							<a class="q-footer__link" href="/company/sitemap/">Sitemap</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="q-footer-mobile">
+				<ul class="q-footer-mobile__list">
+					<li class="q-footer-mobile__item">
+						<a class="q-button q-button--block q-button--secondary" href="/free-trial/">Free trial</a>
+					</li>
+					<li class="q-footer-mobile__item">
+						<a class="q-button q-button--block q-button--secondary" href="tel:+18007454355">Sales +1 800 745 4355</a>
+					</li>
+					<li class="q-footer-mobile__item">
+						<a href="/forms/schedule-demo/" class="q-button q-button--block q-button--secondary">Schedule a demo</a>
+					</li>
+				</ul>
+
+				<div class="q-footer__social">
+					{{ component('social-list', {
+						centered: 'true'
+					}) }}
+				</div>
+
+			</div>
+			{% include "footer-copyright.njk" %}
+		</div>
+	</div>
+</footer>
+
+<h1>For Debugging</h1>
+<h2>All variables available on this page </h2>
+<pre><code>{{ datum | debug }}</code></pre>

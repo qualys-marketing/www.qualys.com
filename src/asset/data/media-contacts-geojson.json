@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0rmdh2",
+        "title": "France",
+        "description": "V\u00e9ronique Loquet <br>AL'X COMMUNICATION <br> tel: +33 (0) 6 68 42 79 68 <br>email: <a href=\"mailto:vloquet@alx-communication.com\">vloquet@alx-communication.com<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          2.24264,
+          48.89348
+        ],
+        "type": "Point"
+      },
+      "id": "30df6169bfe0d8a590ffc4127dbc46de"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0mqv20",
+        "title": "USA (Main Contact)",
+        "description": "David Conner <br>Global PR Director <br>tel: (650) 801-6196 <br>email: <a href=\"mailto:dconner@qualys.com\">dconner@qualys.com<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -122.258391,
+          37.536521
+        ],
+        "type": "Point"
+      },
+      "id": "78b6670642533178c06029045e797f4f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0rwlm3",
+        "title": "Germany",
+        "description": "Ursula Kafka <br>Kafka Kommunikation <br> tel: +49 (0) 89 74747058-0 <br>email: <a href=\"mailto:ukafka@kafka-kommunikation.de\">ukafka@kafka-kommunikation.de<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          11.787261,
+          48.353934
+        ],
+        "type": "Point"
+      },
+      "id": "80b8cd63dbd7454ee595fd6d4de8405f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0s5p34",
+        "title": "United Kingdom",
+        "description": "Rebecca Hougham <br>OneBite PR <br>tel: +44 (0)1635 887 697 <br>email: <a href=\"mailto:qualys@onebite.co.uk\">qualys@onebite.co.uk<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -0.982035,
+          51.425561
+        ],
+        "type": "Point"
+      },
+      "id": "88af14b2770f222eae6c09049ea0942e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0r9wq1",
+        "title": "Netherlands",
+        "description": "Gijs van Beek <br>LVTPR <br>tel: +31 (0) 30 65 65 070 <br>email: <a href=\"mailto:qualys@lvtpr.nl\">qualys@lvtpr.nl<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          5.449218,
+          52.160454
+        ],
+        "type": "Point"
+      },
+      "id": "b163675dd58499cdc6887a3984c6ca6d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ime0soft5",
+        "title": "UAE",
+        "description": "Ibrahim Ahmed <br>Edelman <br>tel: +971 56 401 5339 <br>email: <a href=\"mailto:qualysme@edelman.com\">qualysme@edelman.com<\/a>",
+        "marker-size": "large",
+        "marker-color": "db1f21",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "coordinates": [
+          55.370737,
+          25.124254
+        ],
+        "type": "Point"
+      },
+      "id": "da06115340a06b4f2e8861c9dc1d0aa6"
+    }
+  ],
+  "id": "ayahya.phnjbe82"
+}

@@ -1,0 +1,366 @@
+/*
+ * minimum Coveo stlyles required for standalone search box 
+ * source: https://static.cloud.coveo.com/searchui/v2.10084/css/CoveoFullSearch.css
+ */
+.CoveoSearchInterface {
+	min-width: 300px
+}
+
+.CoveoSearchInterface > * {
+	display: none;
+	visibility: hidden;
+}
+
+.coveo-after-initialization > * {
+	display: inherit;
+	visibility: inherit;
+}
+
+.coveo-after-initialization meter,
+.coveo-after-initialization progress,
+.coveo-after-initialization input,
+.coveo-after-initialization textarea,
+.coveo-after-initialization keygen,
+.coveo-after-initialization select,
+.coveo-after-initialization button {
+	display: inline-block;
+}
+
+.CoveoSearchButton {
+	color: white;
+	border: 1px solid #7e8c9a;
+	border-left: none;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	height: 50px;
+	width: 60px;
+	cursor: pointer;
+	line-height: 0;
+}
+
+.CoveoSearchButton:before {
+	content: '';
+	vertical-align: middle;
+	height: 100%;
+	display: inline-block;
+}
+
+.CoveoSearchButton .coveo-search-button,
+.CoveoSearchButton .coveo-search-button-loading {
+	vertical-align: middle;
+	-webkit-animation: none;
+	        animation: none;
+	display: inline-block;
+}
+
+.CoveoSearchButton .coveo-search-button-loading-svg {
+	display: none;
+}
+
+.coveo-search-button-svg {
+	width: 18px;
+	height: 18px;
+	color: #1d4f76;
+}
+
+.CoveoSearchInterface {
+	min-height: 100%;
+	position: relative;
+	margin: 0;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+	font-size: 15px;
+	color: #313a45;
+}
+
+.CoveoSearchInterface .highlight {
+	font-weight: bold;
+}
+
+.CoveoSearchInterface input[type='text']::-ms-clear {
+	width: 0;
+	height: 0;
+}
+
+.CoveoSearchInterface input[type='text'],
+.CoveoSearchInterface textarea {
+	color: #67768b;
+}
+
+.CoveoSearchInterface * {
+	box-sizing: border-box;
+}
+
+.coveo-visible-to-screen-reader-only {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.magic-box {
+	flex-grow: 1;
+	position: relative;
+	text-align: left;
+	color: #212121;
+}
+
+.magic-box .magic-box-input {
+	background: #fff;
+	height: 48px;
+	overflow: hidden;
+	position: relative;
+}
+
+.magic-box .magic-box-input .magic-box-underlay,
+.magic-box .magic-box-input > input {
+	color: #212121;
+	text-align: left;
+	padding: 12px 49px 12px 12px;
+	text-indent: 0;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	white-space: pre;
+	overflow: auto;
+	box-sizing: border-box;
+	display: block;
+}
+
+.magic-box .magic-box-input input {
+	background: none;
+	border: none;
+	resize: none;
+	outline: 0;
+}
+
+.magic-box .magic-box-input input::-ms-clear {
+	width: 0;
+	height: 0;
+}
+
+.magic-box .magic-box-input .magic-box-underlay {
+	color: transparent;
+	overflow: hidden;
+}
+
+.magic-box .magic-box-input .magic-box-underlay > span {
+	text-indent: 0;
+}
+
+.magic-box .magic-box-input .magic-box-underlay span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.magic-box .magic-box-input .magic-box-underlay span[data-value=''] {
+	height: 24px;
+}
+
+.magic-box .magic-box-input .magic-box-underlay .magic-box-ghost-text {
+	visibility: hidden;
+	color: #bdbdbd;
+}
+
+.magic-box .magic-box-input .magic-box-underlay .magic-box-error {
+	border-bottom: solid #f44336 2px;
+}
+
+.magic-box .magic-box-input .magic-box-underlay .magic-box-error.magic-box-error-empty {
+	position: relative;
+}
+
+.magic-box .magic-box-input .magic-box-underlay .magic-box-error.magic-box-error-empty:before {
+	content: ' ';
+	border-bottom: solid #f44336 2px;
+	position: absolute;
+}
+
+.magic-box .magic-box-input .magic-box-underlay:after {
+	content: '';
+	display: inline-block;
+}
+
+.magic-box .magic-box-clear {
+	position: relative;
+	float: right;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	font-size: 24px;
+	transition: visibility 0.3s, width 0.3s;
+	cursor: pointer;
+	background: #fff;
+	width: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.magic-box .magic-box-clear .magic-box-icon:before {
+	color: #9e9e9e;
+	font-family: arial, sans-serif;
+	content: 'X';
+	font-size: 24px;
+}
+
+.magic-box .magic-box-clear:before {
+	content: '';
+	border-left: #e0e0e0 1px solid;
+	position: absolute;
+	top: 15%;
+	bottom: 15%;
+	left: 0;
+}
+
+.magic-box.magic-box-notEmpty .magic-box-clear {
+	width: 48px;
+	visibility: visible;
+}
+
+.magic-box.magic-box-hasFocus .magic-box-underlay .magic-box-ghost-text {
+	visibility: visible;
+}
+
+.magic-box.magic-box-hasFocus .magic-box-suggestions.magic-box-hasSuggestion {
+	display: block;
+}
+
+.magic-box.magic-box-hasFocus .magic-box-suggestions.magic-box-hasSuggestion .coveo-magicbox-suggestions {
+	border: thin solid #7e8c9a;
+}
+
+.magic-box.magic-box-hasFocus .magic-box-suggestions.magic-box-hasSuggestion .coveo-suggestion-container {
+	border: thin solid #7e8c9a;
+}
+
+.magic-box.magic-box-hasFocus .magic-box-suggestions.magic-box-hasSuggestion .coveo-suggestion-container .coveo-magicbox-suggestions {
+	border: none;
+}
+
+.magic-box .magic-box-suggestions {
+	clear: both;
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	right: -1px;
+	overflow: visible;
+	background: #fff;
+	z-index: 1;
+	display: none;
+	font-family: arial, sans-serif;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator,
+.magic-box .magic-box-suggestions .magic-box-suggestion {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+.magic-box .magic-box-suggestions.magic-box-suggestions-loading .magic-box-suggestion-seperator,
+.magic-box .magic-box-suggestions.magic-box-suggestions-loading .magic-box-suggestion {
+	opacity: 0;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator {
+	padding: 12px 12px 0;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background: #fff;
+	overflow: hidden;
+	height: 36px;
+	border-top: 1px solid #e0e0e0;
+	color: #9e9e9e;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator:first-child {
+	border-top: none;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator .magic-box-suggestion-seperator-label {
+	float: left;
+	margin-right: 12px;
+	max-width: 75%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator:after {
+	content: '';
+	display: block;
+	position: relative;
+	top: 50%;
+	height: 1px;
+	overflow: hidden;
+	background-color: #e0e0e0;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion-seperator + .magic-box-suggestion {
+	border-top: none;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion {
+	cursor: pointer;
+	line-height: 24px;
+	padding: 12px;
+	font-size: 16px;
+	background: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-top: 1px solid #fafafa;
+	color: #212121;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion .magic-box-hightlight {
+	font-weight: bold;
+	color: #000;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion:first-child {
+	border-top: none;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion.magic-box-selected {
+	background: #e0f7fa !important;
+}
+
+.magic-box .magic-box-suggestions .magic-box-suggestion:hover {
+	background: #f5f5f5;
+}
+
+.magic-box.magic-box-inline {
+	overflow: hidden;
+}
+
+.magic-box.magic-box-inline .magic-box-suggestions.magic-box-hasSuggestion {
+	position: relative;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.magic-box.magic-box-inline .magic-box-suggestions.magic-box-hasSuggestion .coveo-magicbox-suggestions {
+	border: none;
+	border-top: thin solid #7e8c9a;
+}
+
+.magic-box.magic-box-inline .magic-box-suggestions.magic-box-hasSuggestion .coveo-suggestion-container {
+	border: none;
+	border-top: thin solid #7e8c9a;
+}
+
+.magic-box.magic-box-inline .magic-box-suggestions.magic-box-hasSuggestion .coveo-suggestion-container .coveo-magicbox-suggestions {
+	border-top: none;
+}
+
+/*# sourceMappingURL=coveo.css.map */

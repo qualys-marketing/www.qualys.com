@@ -1,0 +1,123 @@
+.q-browsercheck__footer-separator {
+	border-bottom: 1px solid #E4E4E4;
+	margin-top: 57px;
+	margin-bottom: 77px;
+}
+.q-trial__content {
+	max-width: 67em;
+}
+.q-trial__copy {
+	max-width: 32em;
+	margin: 0 auto;
+	line-height: 1.65;
+	letter-spacing: -0.6px;
+}
+.q-browsercheck__footer-shield {
+	margin: 0 auto 20px;
+}
+.q-browsercheck__footer-row {
+	display: flex;
+	flex-direction: column;
+}
+.q-browsercheck__footer-column:first-child {
+	margin-bottom: 70px;
+}
+@media screen and (min-width: 720px) {
+	.q-browsercheck__footer-row {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.q-browsercheck__footer-column {
+		width: 47%;
+		padding: 0 1em;
+	}
+	.q-browsercheck__footer-column:first-child {
+		margin-bottom: 0;
+	}
+}
+.q-browsercheck__footer-column .q-trial__heading {
+	margin-bottom: 0;
+}
+@media (min-width: 1430px) {
+	.q-trial__content {
+		padding-top: 111px;
+	}
+}
+@media (min-width: 1290px) {
+	.q-trial__heading {
+		font-size: 40.5px;
+		line-height: 1;
+	}
+}
+.q-trial__heading {
+	margin: 0 0 33px;
+}
+.q-trial__textblock--2 {
+	margin-top: 6px;
+	letter-spacing: -0.35px;
+}
+.q-trial__textblock--2 sup {
+	vertical-align: baseline;
+}
+.q-browsercheck__footer-learn {
+	font-size: 1.313em;
+	letter-spacing: -0.29px;
+	font-family: Gotham, sans-serif;
+	color: #6A778B;
+	text-decoration: none;
+	line-height: 1;
+	position: relative;
+	padding-bottom: 4px;
+	display: inline-block;
+	margin-top: 11px;
+	margin-bottom: 27px;
+}
+.q-browsercheck__footer-learn::after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #6A778B;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.q-browsercheck__footer-learn:hover {
+	color: #262626;
+}
+.q-browsercheck__footer-learn:hover::after {
+	background: #262626;
+}
+.q-browsercheck__footer__cta > span {
+	font-family: Gotham, sans-serif;
+	color: #ED2E26;
+	font-size: 15px;
+	letter-spacing: -0.2px;
+	font-weight: 500;
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 1;
+}
+.q-browsercheck__footer__cta > span a {
+	text-decoration: none;
+	margin-left: 15px;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.q-browsercheck__footer__cta > span a:hover {
+	color: #E3241C;
+}
+.q-browsercheck__footer__cta > span a::after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #ED2E26;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+/*# sourceMappingURL=browsercheck.css.map */

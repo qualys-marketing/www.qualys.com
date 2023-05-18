@@ -1,0 +1,92 @@
+.q-lp__container {
+	padding-top: 45px;
+	margin-bottom: 7%;
+}
+@media (min-width: 1430px) {
+	.q-lp__container {
+		padding-top: 100px;
+	}
+}
+@media (min-width: 720px) {
+	.q-lp__container {
+		padding-top: 6.99301%;
+	}
+}
+.q-lp-form__label {
+	font-weight: 400;
+	margin: 0 0 0.3em;
+	font-family: Gotham, sans-serif;
+}
+.q-lp-form__heading {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	font-size: 34px;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	line-height: 1.15;
+	color: #262626;
+	margin-bottom: 0.34091em;
+	max-width: 19.09091em;
+	font-weight: 500;
+}
+@media (min-width: 375px) {
+	.q-lp-form__heading {
+		font-size: 34px;
+		font-size: calc(0.01093 * 100vw + (29.90164px));
+	}
+}
+@media (min-width: 1290px) {
+	.q-lp-form__heading {
+		font-size: 44px;
+	}
+}
+.q-ebook-limited-edition {
+	display: none;
+}
+.q-ebook-limited-edition img {
+	max-width: 375px;
+	margin: 0 auto;
+	width: 100%;
+}
+.q-ebooks-list {
+	margin: 0 0 2rem;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+.q-ebooks-list li {
+	display: inline-block;
+	width: auto;
+	font-size: 1rem;
+	padding: 0 1.5em 0 0;
+	max-width: 33%;
+}
+.q-ebooks-list li img,
+.q-dummies-ebook-icon {
+	max-width: 115px;
+	width: 100%;
+	height: auto;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.q-dummies-ebook-download {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+@media (min-width: 720px) {
+	.q-ebook-limited-edition {
+		display: block;
+	}
+	.q-ebooks-list {
+		margin-bottom: 0;
+	}
+}
+
+/*# sourceMappingURL=ebook-confirm.css.map */

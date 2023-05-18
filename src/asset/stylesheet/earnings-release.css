@@ -1,0 +1,1412 @@
+div[class^="WordSection"] table.MsoNormalTable {
+	margin-left: 0 !important;
+	width: 100% !important;
+	margin-bottom: 50px;
+	max-width: 692px;
+}
+div[class^="WordSection"] {
+	max-width: 100%;
+	margin: 0 auto !important;
+}
+div[class^="WordSection"] #logo img {
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+}
+div[class^="WordSection"] iframe {
+	margin-top: 50px;
+	border: none;
+}
+div[class^="WordSection"] table tr:hover td {
+	background-color: #CDEEFF;
+}
+div[class^="WordSection"] tr,
+div[class^="WordSection"] td {
+	height: 0 !important;
+	padding-bottom: 0 !important;
+}
+div[class^="WordSection"] p {
+	line-height: 1.2em !important;
+	margin-bottom: 0 !important;
+	max-width: 692px;
+}
+div[class^="WordSection"] table p {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+@media screen and (max-width: 640px) {
+	div[class^="WordSection"] body {
+		padding: 0 5%;
+		width: auto;
+	}
+	div[class^="WordSection"] {
+		width: auto;
+	}
+	p.MsoNormal,
+	li.MsoNormal,
+	div.MsoNormal,
+	p[class^="MsoListParagraph"] {
+		font-size: 12pt !important;
+		word-wrap: break-word;
+	}
+}
+@media print {
+	div.news-release div[class^="WordSection"] h2,
+	div.news-release div[class^="WordSection"] h3,
+	div.news-release div[class^="WordSection"] h4,
+	div.news-release div[class^="WordSection"] h5,
+	div.news-release div[class^="WordSection"] h6,
+	div.news-release div[class^="WordSection"] p,
+	div.news-release div[class^="WordSection"] ul {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	div.news-release p.pdf {
+		display: none;
+	}
+	p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst, p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle, p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast, p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph {
+		margin-left: 0.5in !important;
+	}
+}
+
+/* Font Definitions */
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	line-height:115%;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	font-size:12pt;
+	font-family:"Palatino Linotype";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+span.MsoFootnoteReference
+	{
+	vertical-align:super;}
+span.MsoCommentReference
+	{}
+div[class^="WordSection"] a:link, span.MsoHyperlink
+	{
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+div[class^="WordSection"] a:visited, span.MsoHyperlinkFollowed
+	{
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	font-size:10pt;
+	font-family:"Palatino Linotype";
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	font-size:8pt;
+	font-family:Tahoma;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{
+	margin:0;
+	margin-bottom:0.0001pt;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0.5in;
+	margin-bottom:0.0001pt;
+	line-height:115%;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0.5in;
+	margin-bottom:0.0001pt;
+	line-height:115%;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0.5in;
+	margin-bottom:0.0001pt;
+	line-height:115%;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0.5in;
+	margin-bottom:0.0001pt;
+	line-height:115%;
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+span.MsoSubtleEmphasis
+	{
+	color:#404040;
+	font-style:italic;}
+span.HeaderChar
+	{}
+span.FooterChar
+	{}
+span.BalloonTextChar
+	{
+	font-family:Tahoma;}
+span.FootnoteTextChar
+	{}
+span.CommentTextChar
+	{}
+span.CommentSubjectChar
+	{
+	font-weight:bold;}
+span.apple-converted-space
+	{}
+span.m5881772500270700733m-7595402103211408793m6247414607207443581m1041886137914016273gmail-ccbntxt
+	{}
+span.GramE
+	{}
+.MsoChpDefault
+	{
+	font-size:10pt;
+	font-family:"Palatino Linotype";}
+.MsoPapDefault
+	{
+	line-height:115%;}
+
+/* Page Definitions */
+@page
+	{}
+@page WordSection1
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection4
+	{page:WordSection4;}
+@page WordSection5
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection5
+	{page:WordSection5;}
+@page WordSection6
+	{size:8.5in 11in;
+	margin:43pt 27pt 43pt 50pt;}
+div.WordSection6
+	{page:WordSection6;}
+@page WordSection7
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection7
+	{page:WordSection7;}
+@page WordSection8
+	{size:8.5in 11in;
+	margin:43pt 50pt;}
+div.WordSection8
+	{page:WordSection8;}
+
+/* List Definitions */
+@list l0
+	{}
+@list l0:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l1
+	{}
+@list l1:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l2
+	{}
+@list l2:level1
+	{
+	margin-left:0.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l2:level3
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l2:level4
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l2:level5
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l2:level6
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l2:level7
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l2:level8
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l2:level9
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l3
+	{}
+@list l3:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l3:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l3:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l3:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l3:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l3:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l3:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l3:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l4
+	{}
+@list l4:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l4:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l4:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l4:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l4:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l4:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l4:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l4:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l4:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l5
+	{}
+@list l5:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l5:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l5:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l5:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l5:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l5:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l5:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l5:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l5:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l6
+	{}
+@list l6:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l6:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l6:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l6:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l6:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l6:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l6:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l6:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l6:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l7
+	{}
+@list l7:level1
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l7:level3
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l7:level4
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l7:level5
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l7:level6
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l7:level7
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l7:level8
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l7:level9
+	{
+	margin-left:4.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l8
+	{}
+@list l8:level1
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l8:level2
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l8:level3
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l8:level4
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l8:level5
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l8:level6
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l8:level7
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l8:level8
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l8:level9
+	{
+	margin-left:4.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l9
+	{}
+@list l9:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l9:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l9:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l9:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l9:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l9:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l9:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l9:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l10
+	{}
+@list l10:level1
+	{
+	margin-left:0.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l10:level3
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l10:level4
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l10:level5
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l10:level6
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l10:level7
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l10:level8
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l10:level9
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l11
+	{}
+@list l11:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l11:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l11:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l11:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l11:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l11:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l11:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l11:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l12
+	{}
+@list l12:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l12:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l12:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l12:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l12:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l12:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l12:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l12:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l12:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l13
+	{}
+@list l13:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l13:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l13:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l13:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l13:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l13:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l13:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l13:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l13:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l14
+	{}
+@list l14:level1
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l14:level2
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l14:level3
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l14:level4
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l14:level5
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l14:level6
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l14:level7
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l14:level8
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l14:level9
+	{
+	margin-left:4.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l15
+	{}
+@list l15:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l15:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l15:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l15:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l15:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l15:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l15:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l15:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l15:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l16
+	{}
+@list l16:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l16:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l16:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l16:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l16:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l16:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l16:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l16:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l16:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l17
+	{}
+@list l17:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l17:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l17:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l17:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l17:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l17:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l17:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l17:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l17:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l18
+	{}
+@list l18:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l18:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l18:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l18:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l18:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l18:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l18:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l18:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l18:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l19
+	{}
+@list l19:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l19:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l19:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l19:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l19:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l19:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l19:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l19:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l19:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l20
+	{}
+@list l20:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l20:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l20:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l20:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l20:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l20:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l20:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l20:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l20:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l21
+	{}
+@list l21:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l21:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l21:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l21:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l21:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l21:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l21:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l21:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l21:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l22
+	{}
+@list l22:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l22:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l22:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l22:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l22:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l22:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l22:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l22:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l22:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l23
+	{}
+@list l23:level1
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l23:level2
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l23:level3
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l23:level4
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l23:level5
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l23:level6
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l23:level7
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l23:level8
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l23:level9
+	{
+	margin-left:4.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l24
+	{}
+@list l24:level1
+	{
+	margin-left:0.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l24:level2
+	{
+	margin-left:1.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l24:level3
+	{
+	margin-left:1.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l24:level4
+	{
+	margin-left:2.25in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l24:level5
+	{
+	margin-left:2.75in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l24:level6
+	{
+	margin-left:3.25in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l24:level7
+	{
+	margin-left:3.75in;
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l24:level8
+	{
+	margin-left:4.25in;
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l24:level9
+	{
+	margin-left:4.75in;
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l25
+	{}
+@list l25:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l25:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l25:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l25:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l25:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l25:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l25:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l25:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l25:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l26
+	{}
+@list l26:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l26:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l26:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l26:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l26:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l26:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l26:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l26:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l26:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l27
+	{}
+@list l27:level1
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l27:level2
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l27:level3
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l27:level4
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l27:level5
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l27:level6
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+@list l27:level7
+	{
+	text-indent:-0.25in;
+	font-family:Symbol;}
+@list l27:level8
+	{
+	text-indent:-0.25in;
+	font-family:"Courier New";}
+@list l27:level9
+	{
+	text-indent:-0.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0;}
+ul
+	{margin-bottom:0;}
+
+/*# sourceMappingURL=earnings-release.css.map */

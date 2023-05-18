@@ -1,0 +1,32 @@
+img.success-story-homepage {
+	height: auto;
+}
+@media screen and (max-width:1052px) {
+	#content .column2 {
+		float: none;
+		margin: 0 auto;
+		order: 2;
+	}
+	#content, #content_addendum {
+		font-size: 100%;
+	}
+	#content #container div.company-info {
+		margin-right: auto;
+	}
+	#container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.rest-of-content div.side-column, .customers-success-stories div.side-column {
+		margin-right: 0;
+	}
+	.rest-of-content div.side-column, .customers-success-stories div.side-column,
+	#content div.side-column div.content img {
+		float: none;
+	}
+}
+@media screen and (min-width: 641px) {
+	body {
+		min-width: 0;
+	}
+}

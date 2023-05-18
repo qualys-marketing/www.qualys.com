@@ -1,0 +1,49 @@
+body,
+html {
+	background: transparent !important;
+	padding: 0 !important;
+}
+.q-form.mktoForm {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.mktoFormRow,
+.mktoButtonRow {
+	width: calc(50% - 15px);
+}
+.mktoFormRow.formPosition,
+.mktoFormRow.communicationConsentDateTime {
+	display: none;
+}
+.mktoFormRow.communicationConsent {
+	width: 100%;
+	padding: 1em 0;
+}
+.mktoForm .mktoLabel.qmktoLabelEmpty {
+	margin: 0;
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin-top: 0;
+}
+input[type=text].mktoField.mktoInvalid,
+input[type=email].mktoField.mktoInvalid {
+	border-color: #ED2E26;
+}
+.q-footer-copy {
+	text-align: left;
+	margin-top: 4em;
+}
+.q-link {
+	font-weight: 400;
+}
+.q-link::after {
+	background: none;
+	width: 0;
+	margin: 0;
+}
+.spacer {
+	width: 100%;
+}
+/*# sourceMappingURL=template-iframe.css.map */

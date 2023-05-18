@@ -1,0 +1,241 @@
+div.qsc-header {
+	position: fixed;
+	height: 110px;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.32);
+	width: 100%;
+}
+div.logo {
+	margin: 20px 27px 20px 30px;
+	display: inline-block;}
+img.qualys-shield {
+	vertical-align: middle;
+	margin-right: 6px;
+}
+a.register {
+	background-color: #F12633;
+	color: #FFF;
+	padding: 12px 26px;
+	position: absolute;
+	top: 36px;
+	right: 30px;
+	display: inline-block;
+	border-radius: 7px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12.52pt;
+	line-height: 1;
+}
+a.register:hover {
+	background: #C70505;
+	text-decoration: none;
+}
+h1 {
+	font-size: 24.78pt;
+	color: #FFF;
+	font-weight: 300;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -7px;
+}
+h1 span.year {
+	font-size: 26.96pt;
+	font-weight: 600;
+}
+ul.nav {
+	color: #FFF;
+	display: inline-block;
+}
+ul.nav li:before {
+	content: "";
+	content: none;
+}
+ul.nav li {
+	display: inline-block;
+	font-size: 11pt;
+	margin-right: 11px;
+}
+ul.nav li.vegas {
+	position: relative;
+	font-size: 13.5pt;
+	text-transform: uppercase;
+}
+ul.nav div.other {
+	position: absolute;
+	font-size: 11.25pt;
+	left: 10px;
+	text-transform: none;
+	top: 22px;
+}
+ul.nav span.location {
+	font-weight: 600;
+}
+ul.other-locations li {
+	display: block;
+	font-size: 11.25pt;
+	white-space: nowrap;
+}
+ul.other-locations li.las-vegas a {
+	color: #7F7F7F;
+}
+span.down-triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 4.5px 0;
+	border-color: #FFF transparent transparent;
+	position: absolute;
+	right: 63px;
+	left: auto;
+	top: 33px;
+}
+ul.nav li a {
+	color: #FFF;
+}
+ul.other-locations {
+	display: none;
+}
+div.label:hover {
+	cursor: pointer;
+}
+div.label:hover ul.other-locations {
+	display: block;
+}
+div.label:hover span.down-triangle {
+	top: 14px;
+	left: 7px;
+}
+
+/* BEGIN HEADER FOR REGISTRATION PAGES */
+body.qsc div.header > div {
+	width: 1004px;
+	margin: 0 auto;
+}
+body.qsc.register div.qsc-header {
+	display: none;
+}
+div.header img.logo {
+	margin-left: 45px;
+	margin-top: 9px;
+}
+div.header div.locations {
+	display: inline-block;
+	float: right;
+	margin-top: 25px;
+	margin-right: 42px;
+}
+div.header div.locations a {
+	line-height: 21px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 13px;
+	color: #333;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+div.header div.locations b {
+	color: #333;
+	font-weight: 700;
+}
+div.header div.locations a:hover,
+div.header div.locations a.active {
+	text-decoration: none;
+	border-bottom: 2px solid #1672B4;
+}
+p.back a {
+	position: absolute;
+	color: #FFF;
+	font-size: 7pt;
+	top: 70px;
+	left: 90px;
+}
+p.back a:hover {
+	color: #FFF;
+	cursor: pointer;
+}
+div.html-overlay {
+	width: 500px;
+	padding-top: 13px;
+}
+div.html-overlay h2 {
+	overflow: hidden;
+}
+div.html-overlay h3 {
+	line-height: 1.3;
+	margin-bottom: 0.5em;
+	font-size: 14pt;
+}
+a.html-overlay {
+	cursor: pointer;
+}
+img.headshot {
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+	margin-top: 5px;
+}
+
+/* END HEADER FOR REGISTRATION PAGES */
+@media screen and (max-width: 640px) {
+	div.html-overlay {
+		width: 100vw;
+		box-sizing: border-box;
+		max-height: 70vh;
+		overflow-y: scroll;
+	}
+	div.html-overlay p {
+		font-size: 1.2rem;
+	}
+	div.qsc-header {
+		position: relative;
+		height: auto;
+		padding-bottom: 3rem;
+		text-align: center;
+	}
+	span.down-triangle,
+	p.back {
+		display: none;
+	}
+	ul.nav li.vegas,
+	ul.other-locations {
+		display: block;
+	}
+	ul.nav {
+		text-align: center;
+		display: block;
+	}
+	ul.nav div.other {
+		position: static;
+	}
+	a.register {
+		position: static;
+	}
+}
+
+
+img.hamburger {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+}
+div.nav-container {
+	display: inline;
+}
+@media screen and (max-width: 640px) {
+	img.hamburger {
+		display: block;
+	}
+	div.nav-container {
+		display: none;
+		padding-bottom: 3rem;
+	}
+	div.qsc-header {
+		padding-bottom: 0;
+	}
+}
+
+
+
+/*# sourceMappingURL=qsc.css.map */

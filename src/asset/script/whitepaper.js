@@ -1,0 +1,2 @@
+"use strict";/* global Swiper:false */(function(){"use strict";new Swiper(".swiper-container",{autoHeight:!0,effect:"fade",fadeEffect:{crossFade:!0},navigation:{nextEl:".q-lp__screenshot--next",prevEl:".q-lp__screenshot--prev",disabledClass:"q-lp__screenshot--nav-disabled"}})})();
+//# sourceMappingURL=whitepaper.js.map

@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 335.62 335.62">
+  <defs>
+    <linearGradient id="linear-gradient" x1="173.64" y1="340.09" x2="173.64" y2="4.47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4282f"/>
+      <stop offset="1" stop-color="#f4282f"/>
+    </linearGradient>
+  </defs>
+  <title>expand-image-icon</title>
+  <rect x="26.17" y="23.53" width="277" height="266" style="fill: #fff"/>
+  <path d="M341.45,319.12V25.45a21,21,0,0,0-21-21H26.8a21,21,0,0,0-21,20.77V319.12a21.12,21.12,0,0,0,21,21H320.48A21.12,21.12,0,0,0,341.45,319.12ZM215.59,109.35l-42-42H278.52V172.28l-42-42-42,42-21-21ZM68.76,277.16V172.28l42,42,42-42,21,21-42,42,42,42Z" transform="translate(-5.83 -4.47)" style="fill: url(#linear-gradient)"/>
+</svg>

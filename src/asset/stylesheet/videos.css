@@ -1,0 +1,61 @@
+body {
+	background: #303030;
+	color: #909090;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 12pt;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+a {
+	color: #909090;
+}
+a:visited,
+a:active {
+	color: #808080;
+}
+a:hover {
+	color: #A0A0A0;
+	text-decoration: none;
+}
+#container {
+	-ms-box-shadow: 0 0 90px #000;
+	-o-box-shadow: 0 0 90px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+	        box-shadow: 0 0 90px #000;
+	height: auto;
+	margin: 0 auto;
+	max-width: 100%;
+	overflow: hidden;
+	/* width must be defined in page to be specific to each video */
+}
+#container video {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+#chapters {
+	color: #909090;
+	margin: 0 auto;
+	padding: 20px;
+	width: 480px;
+}
+#chapters ol {
+	font-size: 12pt;
+	line-height: 1.5;
+}
+#transcription {
+	color: #999;
+	font-size: 14pt;
+	line-height: 1.6;
+	margin: 0 auto;
+	padding: 2.0em 5%;
+	width: 36.0em;
+	max-width: 90%;
+}
+iframe {
+	max-width: 100%;
+}
+
+/*# sourceMappingURL=videos.css.map */

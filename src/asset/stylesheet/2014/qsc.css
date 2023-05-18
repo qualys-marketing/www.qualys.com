@@ -1,0 +1,445 @@
+#content.full-width div.section {
+	padding-left: calc(50% - 502px);
+	padding-right: calc(50% - 502px);
+	min-width: 1004px;
+}
+body {
+	background: none;
+}
+div.header {
+	height: 73px;
+	width: 1004px;
+	margin: 0 auto;
+}
+img.logo {
+	margin-left: 45px;
+	margin-top: 17px;
+}
+div.locations {
+	display: inline-block;
+	float: right;
+	margin-top: 25px;
+	margin-right: 42px;
+}
+div.locations a {
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 13px;
+	color: #333;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+div.locations a:hover,
+div.locations a.active {
+	text-decoration: none;
+	border-bottom: 2px solid #1672B4;
+}
+div.locations a.last {
+	margin-right: 0;
+}
+div.locations b {
+	color: #333;
+	font-weight: 700;
+}
+div.nav-bar {
+	background-color: #D4DDE5;
+	height: 55px;
+}
+div.nav {
+	width: 1004px;
+	margin: 0 auto;
+	text-align: right;
+	padding-top: 15px;
+}
+div.nav a {
+	font-size: 11pt;
+	color: #333;
+	margin-right: 38px;
+}
+div.nav a.sponsors {
+	margin-right: 20px;
+}
+div.nav a.register {
+	padding: 5px 10px;
+	background: #DE1D0B;
+	background: linear-gradient(to bottom,  #DE1D0B 0%,#AE1408 100%);
+	color: #FFF;
+	border-radius: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+div.nav a.register:hover {
+	background: #C31909;
+	background: linear-gradient(to bottom,  #C31909 0%,#9C241C 100%);
+	text-decoration: none;
+}
+#content.full-width div.section.banner,
+#content.full-width div.section.venue,
+#content.full-width div.section.dinner {
+	padding: 0;
+	background-color: #1E3479;
+	margin: 0 auto;
+	text-align: center;
+}
+#content.full-width div.section.banner {
+	height: 513px;
+}
+div.banner-container ,
+div.venue-container,
+div.dinner-container {
+	background-image: url(https://ik.imagekit.io/qualys/image/2014/qsc/banner.jpg);
+	background-color: #1E3479;
+	width: 100%;
+	height: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+h1 {
+	text-indent: -9999px;
+}
+div.banner-container h2 {
+	color: #FFF;
+	font-size: 21pt;
+	font-weight: 400;
+	margin-top: 290px;
+	margin-bottom: 11px;
+}
+div.banner-container a.register {
+	font-size: 15pt;
+	text-shadow: 1px 1px 0 rgba(26, 135, 45, 1);
+	padding: 11px 18px 15px;
+}
+div.banner-container a.register p.no-cost {
+	font-size: 10pt;
+	text-shadow: none;
+	font-weight: 400;
+	line-height: 1.3;
+}
+div.section.platform {
+	padding-top: 45px;
+	text-align: center;
+}
+div.section.platform h2 {
+	font-size: 32pt;
+	font-weight: 400;
+	margin-bottom: 20px;
+	line-height: 1.3;
+}
+div.section.platform p.join-us {
+	font-size: 14pt;
+	width: 906px;
+	margin: 0 auto 40px;
+	color: #686868;
+}
+div.section.platform div.container1 {
+	display: inline-block;
+	width: 454px;
+	margin: 0 10px 60px;
+}
+div.section.platform div.container2 {
+	width: 47px;
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 8px;
+}
+div.section.platform div.container1 p {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13pt;
+	color: #1A77B9;
+	font-weight: 600;
+	text-align: left;
+	width: 340px;
+	margin-top: -5px;
+}
+div.section.platform div.container3 {
+	margin: -22px 5px 44px;
+	text-align: center;
+	display: inline-block;
+}
+div.section.platform div.container3 a {
+	color: #FFF;
+	font-size: 13pt;
+	font-weight: 600;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+}
+div.section.platform div.container3 a:hover {
+	text-decoration: none;
+}
+div.section.platform div.container3 h5 {
+	position: relative;
+	top: 38px;
+}
+div.section.agenda {
+	background-color: #E4EBF0;
+	padding-top: 60px;
+	text-align: center;
+}
+div.section.agenda h2 {
+	font-size: 32pt;
+	font-weight: 400;
+	margin-bottom: 23px;
+}
+div.section.agenda p {
+	font-size: 14pt;
+	margin-bottom: 11px;
+}
+#content ul.tabs {
+	display: inline-block;
+	width: auto;
+	margin-bottom: 29px;
+}
+#content ul.tabs li {
+	border: none;
+	display: inline-block;
+	margin: 0;
+}
+#content ul.tabs a.active {
+	background: #D3DDE5;
+	border: 0;
+	box-shadow: inset 0 0 11px 0 #B5B3B3;
+	color: #4396F4;
+	padding-top: 9px;
+	padding-bottom: 13px;
+	width: 235px;
+}
+#content ul.tabs a.active:hover {
+	border-bottom: none;
+}
+#content ul.tabs a {
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 2px solid #DDE0E3;
+	display: inline-block;
+	font-size: 15pt;
+	font-weight: 600;
+	color: #333;
+	width: 231px;
+	text-align: center;
+	padding: 6px 0 12px;
+	margin: 0 10px;
+}
+ul.tabs a.active p.type {
+	color: #4396F4;
+}
+ul.tabs p.type {
+	font-size: 11pt;
+	color: #333;
+	margin-bottom: -4px;
+}
+#content ul.tabs li:before {
+	padding: 0;
+}
+#content ul.tabs a.first {
+	margin-left: 0;
+}
+#content ul.tabs a.last {
+	margin-right: 0;
+}
+div.pane {
+	background-color: #FFF;
+	border-radius: 10px;
+	min-height: 500px;
+	padding: 48px 44px;
+	text-align: left;
+}
+table.agenda {
+	font-size: 15pt;
+	color: #000;
+	line-height: 1.2;
+	border-spacing: 17px;
+	border-spacing: calc(17 / 20 * 1em);
+	border-collapse: separate;
+	display: inline-block;
+	vertical-align: top;
+	margin: -17px;
+	margin: calc(17 / 20 * -1em);
+	padding-bottom: 23px;
+}
+table.agenda h3 {
+	border-top: 1px solid #005EA1;
+	color: #1672B4;
+	line-height: 1;
+	margin: 9px 0 0;
+	padding: 23px 0 0;
+}
+span.end {
+	color: #97999C;
+}
+td.time {
+	font-size: 12pt;
+	padding-right: 14px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+td.item {
+	text-align: left;
+	padding-left: 10px;
+	width: 100%;
+	font-weight: 600;
+}
+span.speaker {
+	color: #6D6E71;
+	font-size: 11pt;
+}
+td.location {
+	font-size: 11pt;
+	font-weight: 600;
+	white-space: nowrap;
+}
+div.section.agenda p.day {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 15pt;
+	width: 83px;
+	text-align: left;
+	margin-top: 7px;
+}
+div.section.speakers {
+	padding-top: 73px;
+	text-align: center;
+}
+div.section.speakers h2 {
+	font-size: 32pt;
+	font-weight: 400;
+	margin-bottom: 60px;
+}
+div.speaker {
+	display: inline-block;
+	width: 186px;
+	text-align: left;
+	margin-right: 41px;
+	margin-left: 41px;
+	margin-bottom: 84px;
+	vertical-align: top;
+}
+div.speaker img {
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+div.speaker h3 {
+	font-size: 17pt;
+	font-weight: 400;
+}
+div.speaker p {
+	font-size: 12pt;
+	line-height: 18pt;
+}
+div.speaker p.company {
+	font-size: 14pt;
+	font-weight: 600;
+}
+div.speaker.left {
+	margin-left: 0;
+}
+div.speaker.right {
+	margin-right: 0;
+}
+#content.full-width div.section.venue {
+	height: 770px;
+}
+div.venue-container {
+	background-image: url(https://ik.imagekit.io/qualys/image/2014/qsc/aria.jpg);
+	position: relative;
+}
+#content.full-width div.section.dinner {
+	height: 828px;
+}
+div.dinner-container {
+	background-image: url(https://ik.imagekit.io/qualys/image/2014/qsc/keep-memorial-alive-event-center.jpg);
+}
+div.venue-container div.container {
+	width: 1004px;
+	margin: 0 auto;
+	position: relative;
+}
+div.room-rsvp {
+	background-color: #FFF;
+	opacity: 0.83;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 298px;
+	border-radius: 10px;
+	opacity: 0.83;
+	text-align: left;
+	padding: 27px 33px 74px;
+	max-width: 448px;
+}
+div.room-rsvp h2 {
+	font-size: 27pt;
+	font-weight: 600;
+}
+div.room-rsvp p {
+	font-size: 14pt;
+}
+div.room-rsvp a {
+	font-weight: 600;
+}
+div.aria {
+	color: #FFF;
+	position: relative;
+	top: 247px;
+	left: 296px;
+	display: inline-block;
+}
+div.aria h2 {
+	font-size: 32pt;
+	margin-bottom: 22px;
+}
+div.aria p {
+	font-size: 14pt;
+	line-height: 21pt;
+}
+div.aria a.register {
+	margin-top: 27px;
+}
+div.section.dinner {
+	color: #FFF;
+}
+div.section.dinner h2 {
+	font-size: 32pt;
+	font-weight: 400;
+	padding-top: 80px;
+	line-height: 41pt;
+	margin-bottom: 28px;
+}
+div.section.dinner h3 {
+	font-size: 25pt;
+	font-weight: 600;
+	line-height: 34pt;
+	margin-bottom: 7px;
+}
+div.section.dinner h4 {
+	font-size: 19pt;
+	font-weight: 400;
+	margin-bottom: 13px;
+}
+a.directions {
+	margin-top: 40px;
+}
+div.section.sponsors {
+	text-align: center;
+}
+div.section.sponsors h2 {
+	font-size: 17pt;
+	padding-top: 74px;
+}
+div.section.sponsors div.container {
+	width: 770px;
+	display: inline-block;
+}
+div.section.sponsors img {
+	vertical-align: middle;
+}
+div.sponsor {
+	display: inline-block;
+	width: 227px;
+	margin: 14px 10px;
+}
+a.aria-link {
+	color: #FFF;
+}
+
+/*# sourceMappingURL=qsc.css.map */

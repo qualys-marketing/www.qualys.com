@@ -1,0 +1,66 @@
+#player_outer {
+	font-family: Gotham, sans-serif;
+	height: 660px;
+	margin: 5rem auto;
+	position: relative;
+	text-align: left;
+	width: 1000px;
+}
+
+#player_outer h1 {
+	color: #262626;
+	font-size: 2.75rem;
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	line-height: calc(46 / 44);
+	margin: 0 0 calc(1 / 3 * 1em);
+}
+
+#player_outer h2 {
+	color: #6A778B;
+	font-size: 2.25rem;
+	font-weight: 300;
+	letter-spacing: -0.5px;
+	line-height: calc(42 / 36);
+	margin: 0 0 1em;
+}
+
+.player_left_normal {
+	position: absolute;
+	height: 425px;
+	width: 400px;
+	left: 0;
+}
+
+#chapters {
+	border: 1px solid #707070;
+	height: 10.67rem;
+	line-height: 1.618;
+	margin: 0.25rem 0 0;
+	overflow: scroll;
+	padding: 3px 7px 0;
+}
+
+#overview,
+#presenters {
+	display: none;
+	visibility: hidden;
+}
+
+.player_right_normal {
+	position: absolute;
+	height: 425px;
+	width: 566px;
+	right: 0;
+	text-align: right;
+}
+
+#slide_container {
+	border: 1px solid #707070;
+}
+
+#player_outer.expanded {
+	height: calc(660px + 120px);
+}
+
+/*# sourceMappingURL=presentation.css.map */

@@ -1,0 +1,39 @@
+
+<svg width="50px" height="64px" viewBox="0 0 50 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="22.41995 0.25 44.436 0.25 44.436 58.596 0.4039 58.596 0.4039 0.25"></polygon>
+    </defs>
+    <g id="12.1-13-App-detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12.6-App-Detail---Policy-Compliance" transform="translate(-735.000000, -1411.000000)">
+            <g id="---Features-overview" transform="translate(185.000000, 1290.000000)">
+                <g id="::-02" transform="translate(550.000000, 120.000000)">
+                    <g id="icon" transform="translate(1.000000, 0.000000)">
+                        <polygon id="Stroke-1" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0 7.6064 0 63.7504 41.83 63.7504 41.83 21.0214 35.941 14.0564 29.969 7.6064"></polygon>
+                        <g id="Group-5" transform="translate(4.000000, 0.750000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-4"></g>
+                            <path d="M1.5049,0.25 L31.4739,0.25 C31.7809,0.25 32.0689,0.377 32.2809,0.604 L38.2539,7.054 C38.2689,7.065 38.2779,7.079 38.2879,7.09 L44.1779,14.058 C44.3469,14.256 44.4369,14.507 44.4369,14.768 L44.4369,57.495 C44.4369,58.104 43.9439,58.596 43.3349,58.596 L1.5049,58.596 C0.8969,58.596 0.4039,58.104 0.4039,57.495 L0.4039,1.351 C0.4039,0.743 0.8969,0.25 1.5049,0.25" id="Fill-3" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                        </g>
+                        <polygon id="Stroke-6" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="5.5049 2.1011 5.5049 58.2451 47.3349 58.2451 47.3349 15.5181 41.4459 8.5511 35.4739 2.1011"></polygon>
+                        <polyline id="Stroke-8" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="46.6406 14.8423 36.3296 14.8423 36.3296 3.2023"></polyline>
+                        <path d="M15.8496,23.0186 L36.9866,23.0186 C38.4466,23.0186 39.6326,24.2006 39.6326,25.6606 L39.6326,46.7936 C39.6326,48.2546 38.4466,49.4366 36.9866,49.4366 L15.8496,49.4366 C14.3936,49.4366 13.2076,48.2546 13.2076,46.7936 L13.2076,25.6606 C13.2076,24.2006 14.3936,23.0186 15.8496,23.0186 Z" id="Stroke-10" stroke="#EC3027" stroke-width="2"></path>
+                        <path d="M26.4199,23.8677 L26.4199,48.6197" id="Stroke-12" stroke="#EC3027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M38.4736,36.2285 L13.7206,36.2285" id="Stroke-14" stroke="#EC3027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19.5224,26.9897 L19.5224,32.1947" id="Stroke-16" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16.9228,29.5483 L22.1268,29.6393" id="Stroke-18" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M30.3252,29.6777 L35.5292,29.7687" id="Stroke-20" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.0527,42.6855 L22.2557,42.7795" id="Stroke-22" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19.6572,39.3926 C20.2042,39.3926 20.6522,39.8396 20.6522,40.3916 C20.6522,40.9456 20.2042,41.3926 19.6572,41.3926 C19.1042,41.3926 18.6562,40.9456 18.6562,40.3916 C18.6562,39.8396 19.1042,39.3926 19.6572,39.3926" id="Fill-24" fill="#EC3027"></path>
+                        <path d="M19.6572,43.6855 C20.2042,43.6855 20.6522,44.1315 20.6522,44.6855 C20.6522,45.2385 20.2042,45.6855 19.6572,45.6855 C19.1042,45.6855 18.6562,45.2385 18.6562,44.6855 C18.6562,44.1315 19.1042,43.6855 19.6572,43.6855" id="Fill-26" fill="#EC3027"></path>
+                        <path d="M34.8125,40.9404 L31.1315,44.6214" id="Stroke-28" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M31.1611,40.9062 L34.7771,44.6492" id="Stroke-30" stroke="#EC3027" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

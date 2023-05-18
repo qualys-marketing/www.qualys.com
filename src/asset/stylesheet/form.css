@@ -1,0 +1,1654 @@
+/*
+ * styles common to all forms
+ */
+
+/*
+ * make legacy forms use Gotham
+ */
+form {
+	font-family: Gotham, sans-serif;
+}
+
+/* 
+ * make legacy form input placeholder text legible
+ */
+::-webkit-input-placeholder {
+	color: #AAA;
+}
+::-moz-placeholder {
+	color: #AAA;
+}
+
+/* firefox 19+ */
+:-ms-input-placeholder {
+	color: #AAA;
+}
+
+/* ie */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #AAA;
+}
+
+/* individual: webkit */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #AAA;
+}
+
+/* individual: mozilla */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #AAA;
+}
+
+
+/*
+ * CSS for jquery scrollable to work
+ * override the root element to enable scrolling
+ */
+form.type1 .scrollable {
+	background-color: transparent;
+	clear: both;
+	margin-bottom: 7px;
+	overflow: visible; /* to show validation errors */
+	width: 290px;
+}
+
+/* override single pane */
+form.type1 .scrollable fieldset {
+	background-color: transparent;
+	display: block;
+}
+
+/* our additional wrapper element for the items */
+form.type1 .scrollable .items {
+	border: 0;
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+/* CSS for form */
+form.type1 {
+	margin-top: 7px;
+	position: relative;
+}
+body.forms form.type1 {
+	width: 290px;
+}
+body.trials form.type1,
+body.continuous-monitoring form.type1,
+body.pci-compliance form.type1 {
+	width: 535px;
+}
+form.type1 fieldset {
+	border: none;
+	margin: 0;
+	padding: 5px;
+}
+form.type1 label {
+	width: 10em;
+}
+form.type1 div.label {
+	font-size: 0.7em;
+	margin: 1.5em 0;
+	text-align: right;
+}
+form.type1 label[for=agreement],
+form.type1 label[for=extension],
+form.type1 label[for=freeapps_tc],
+form.type1 label[for^=solutionsInterested],
+form.type1 label[for^=assets],
+div.checkbox-wrapper label {
+	width: auto;
+}
+form.type1 input[type=text],
+form.type1 input[type=email],
+form.marketo input[type=text],
+form.marketo input[type=email] {
+	width: 20em;
+}
+div.full_name,
+div.email_address {
+	display: none;
+}
+div.error,
+div.note,
+span.mktFormMsg {
+	background: #FFDCDC;
+	border-radius: 10px 0 0 10px;
+	border: 1px solid #C60000;
+	box-shadow: 0 0 8px rgba(198, 0, 0, 0.6);
+	color: #C60000;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: bold;
+	padding: 7px 12px 7px 15px;
+	position: absolute !important;
+	right: 315px;
+	top: 0;
+	white-space: nowrap;
+	width: auto;
+	z-index: 99;
+}
+div.side-column div.error,
+div.side-column div.note,
+div.side-column span.mktFormMsg,
+div.column div.error {
+	left: auto !important;
+	right: 313px !important;
+	top: 0 !important;
+}
+div.main-column div.error,
+div.main-column div.note,
+div.main-column span.mktFormMsg {
+	left: 559px !important;
+	right: auto !important;
+	top: 0 !important;
+}
+div.note {
+	background: #ECFCE4;
+	border: 1px solid #390;
+	box-shadow: 0 0 8px rgba(51, 153, 0, 0.6);
+	color: #390;
+}
+form.layout2 div.error,
+form.layout2 span.mktFormMsg {
+	border-radius: 0 10px 10px 0;
+	left: 559px;
+	right: auto;
+}
+form.layout2 div.error-state {
+	left: 285px !important;
+}
+fieldset div,
+div.assets {
+	position: relative;
+}
+.error-freeapps_tc {
+	top: -8px !important;
+}
+.error2 {
+	background-color: #FBFBDC;
+	border-radius: 0.3em;
+	border: 1px solid #F4D8A0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(238, 183, 106, 0.6);
+	font-size: 13px;
+	line-height: 1;
+	padding: 0.6em;
+}
+.ui-menu .ui-menu-item a {
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid transparent;
+	margin: 0;
+	padding: 0.4em !important;
+}
+.ui-menu .ui-menu-item a:hover {
+	color: #000;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-hover:hover,
+.ui-menu .ui-menu-item a.ui-state-active:hover {
+	border-bottom: 1px solid #999;
+	border-radius: 0;
+	border-top: 1px solid #999;
+	margin: 0;
+}
+.ui-selectmenu {
+	height: 33px;
+	width: 276px !important;
+}
+form.layout2 .ui-selectmenu {
+	display: inline-block;
+	max-width: 100%;
+	width: 256px;
+}
+.layout2 #Country {
+	margin-right: 13px;
+}
+form.layout2 .ui-selectmenu.full-width {
+	width: 523px !important;
+}
+li.ui-menu-item::before {
+	content: none;
+}
+div.ui-selectmenu-menu,
+ul.ui-autocomplete {
+	z-index: 100 !important;
+}
+div.ui-selectmenu-menu li,
+div.ui-selectmenu-menu li a,
+.ui-menu .ui-menu-item a {
+	font-size: 16px;
+	color: #545454;
+}
+div.ui-selectmenu-menu li a {
+	padding: 0.4em;
+}
+.ui-selectmenu-menu,
+.ui-selectmenu-group,
+.ui-selectmenu-group-label {
+	font-weight: normal !important;
+	padding-top: 0 !important;
+}
+.ui-selectmenu-group-label {
+	padding-left: 0.4em !important;
+}
+span.ui-selectmenu-group-label + ul li a {
+	padding-left: 20px;
+}
+span.ui-selectmenu-status {
+	font-size: 16px;
+	line-height: 2.125;
+	padding: 0 0.5em;
+}
+div.ui-selectmenu-menu li::before {
+	content: none;
+}
+a.ui-selectmenu {
+	border: 1px solid #CCC;
+	margin-bottom: 12px;
+}
+a.ui-selectmenu:hover {
+	border: 1px solid #CCC;
+	text-decoration: none;
+}
+.ui-state-active .ui-icon,
+.ui-state-default .ui-icon {
+	background: linear-gradient(to bottom,  #C8DCF2 0%,#A7C5E3 49%,#9EB8D4 50%,#8AAED3 100%);
+	height: 34px;
+	margin-top: 0;
+	right: 0;
+	top: 0;
+	width: 30px;
+}
+.arrow-down {
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #454A51;
+	height: 0;
+	margin: 13px auto 0;
+	text-align: center;
+	width: 0;
+}
+form.type1 div.navi a {
+	background-color: #959595;
+	color: #959595;
+	height: 0.9em;
+	width: 0.9em;
+}
+form.type1 div.navi a.complete {
+	background-color: #59B150;
+	color: #59B150;
+	opacity: 0.85;
+}
+
+
+/*
+ * styles for form type1 used by FreeScan
+ */
+form.type1 label,
+form.marketo label {
+	display: none;
+}
+form.onDarkBackground input,
+form.onDarkBackground label {
+	color: #FFF;
+	font-size: 12pt;
+	font-weight: 400;
+}
+.mktoForm label.qmktoRadioListLabel,
+.mktoForm label.qmktoCheckboxListLabel {
+	margin-right: 1ex;
+}
+
+/* align radio button lists and checkbox lists with text inside text boxes */
+.mktoForm label.qmktoRadioListLabel,
+.mktoForm label.qmktoCheckboxListLabel,
+.mktoForm .mktoRadioList,
+.mktoForm .mktoCheckboxList {
+	margin-left: 7.4px;
+}
+.mktoRadioList,
+.mktoCheckboxList {
+	display: inline-block;
+}
+div.mktoFormRow.formTrialPackageType div.trial-container {
+	background: #FFF;
+	border-radius: 4px;
+	border: 1px solid #BFBFBF;
+	box-shadow: inset 0 7px 5px 0 rgba(0, 0, 0, 0.05);
+	color: #666;
+	display: block;
+	float: left;
+	font-size: 12pt;
+	font-weight: 700;
+	margin: 0.5em 0 0 9px;
+	min-height: 6.5em;
+	padding: 0;
+	text-align: center;
+	width: 165px;
+}
+div.mktoFormRow.formTrialPackageType div.trial-container:first-child {
+	margin-left: -7.4px;
+}
+div.mktoFormRow.formTrialPackageType div.trial-container > label {
+	padding: 0 1ex;
+	display: inline-block;
+	width: auto;
+	font-size: 10pt !important;
+	font-weight: 400;
+	font-style: italic;
+	color: #666;
+	text-align: center;
+	margin: 0;
+}
+div.mktoFormRow.formTrialPackageType div.trial-container > label b {
+	color: #666;
+	font-style: normal;
+	font-size: 15pt;
+}
+form.type1 div.freeapps_tc label,
+form.type1 div.assets label,
+form.type1 div.qualys_tc label,
+div.checkbox-wrapper label {
+	display: table-cell;
+	line-height: 1;
+	padding-left: 7px;
+	vertical-align: middle;
+}
+form.type1 div.qualys_tc label {
+	font-size: 12px;
+	line-height: 1.4;
+	width: auto;
+}
+form.type1 div.assets label,
+div.checkbox-wrapper label {
+	font-size: 12px;
+}
+form.type1 div.input {
+	margin: 0 0 1em;
+}
+form.type1 input[type=text],
+form.type1 input[type=email],
+form.type1 input[type=tel],
+form.type1 input[type=search],
+form.type1 textarea,
+form.marketo input[type=text],
+form.marketo input[type=email],
+form.marketo input[type=tel],
+.mktoForm input[type=text],
+.mktoForm input[type=email],
+.mktoForm input[type=tel],
+.mktoForm select,
+.mktoForm textarea {
+	background: white;
+	border-radius: 0.125em;
+	border: 1px solid #CCC;
+	box-shadow: inset 0 1px 0.3em rgba(0, 0, 0, 0.05),0 1px 0 rgba(255, 255, 255, 0.075);
+	color: #545454;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1.333;
+	margin: 0;
+	outline: none;
+	padding: 0.4em !important;
+	transition: 0.2s linear background;
+}
+form.type1 input[type=text]:focus,
+form.type1 input[type=email]:focus,
+form.type1 input[type=tel]:focus,
+form.type1 textarea:focus,
+.mktoForm textarea:focus,
+.mktoForm input:focus {
+	border-color: #06C;
+	outline: 0;
+}
+form.type1 input[type=text].invalid,
+form.type1 input[type=email].invalid,
+form.type1 input[type=tel].invalid,
+form.type1 textarea.invalid,
+form.type1 .invalid,
+.mktoForm textarea.mktoInvalid,
+.mktoForm input.mktoInvalid,
+.mktoForm select.mktoInvalid {
+	border-color: #C60000;
+	outline: 0;
+}
+form.type1 input[type=text].valid,
+form.type1 input[type=email].valid,
+form.type1 input[type=tel].valid,
+form.type1 textarea.valid,
+form.type1 .valid,
+.mktoForm textarea.mktoValid,
+.mktoForm input.mktoValid,
+.mktoForm select.mktoValid {
+	border-color: #390;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(51, 153, 0, 0.6);
+	outline: 0;
+}
+form.type1 input[type=checkbox],
+form.type1 input[type=radio] {
+	display: table-cell;
+	float: left;
+	height: 15px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	width: 15px;
+}
+form.type1 a.button-type1,
+form.marketo input.button-type1,
+form.type1 a.button-type2 {
+	margin-bottom: 10px;
+	margin-top: 8px;
+	min-width: 258px;
+	padding: 10px;
+	text-align: center;
+}
+button.mktoButton {
+	padding: 0 calc(5 / 3 * 1em);
+	line-height: 3;
+	text-align: center;
+}
+.column .mktoButton {
+	width: 100%;
+}
+form.type1 a.button-type1 span.arrow-right-negative-space,
+form.type1 a.button-type2 span.arrow-right-negative-space {
+	margin-left: 0;
+}
+form.type1 div.navi {
+	left: 0;
+	margin-bottom: 20px;
+	margin-left: 0;
+	position: relative;
+	top: 0;
+	width: auto;
+}
+form.type1 input[type=text],
+form.type1 input[type=email],
+form.type1 input[type=tel],
+form.type1 textarea,
+form.marketo textarea,
+form.marketo input[type=text],
+form.marketo input[type=email],
+form.marketo input[type=tel] {
+	margin-bottom: 12px;
+	width: 264px;
+}
+form.type1 div.freeapps_tc,
+form.type1 div.qualys_tc {
+	margin-bottom: 7px;
+	margin-top: 3px;
+}
+form.type1 select,
+form.marketo select {
+	height: 35px;
+	margin-bottom: 12px;
+	width: 282px;
+}
+form.type1.layout2 select.full-width {
+	width: 523px;
+}
+form.type1 #companySizeRange {
+	width: 250px;
+}
+form.marketo select {
+	background-color: #EFEFEF;
+	border-radius: 0.3em;
+	border: 1px solid #CCC;
+	color: #999;
+	font-size: 13pt;
+	font-weight: normal;
+	width: 526px;
+}
+form.type1 select > option:first-child,
+form.marketo select > option:first-child {
+	color: #999;
+}
+.all-fields-required {
+	color: #555;
+	font-size: 12px;
+	margin-left: 9px;
+	margin-top: 12px;
+	text-align: left;
+}
+
+/* right prong */
+.right-triangle {
+	height: 0;
+	position: absolute;
+	right: 0;
+	top: -1px;
+	width: 0;
+}
+.right-triangle .triangle-dk {
+	border-bottom: 17px solid transparent;
+	border-left: 18px solid #C60000;
+	border-top: 18px solid transparent;
+	position: absolute;
+}
+div.note .right-triangle .triangle-dk {
+	border-left: 18px solid #390;
+}
+.right-triangle .triangle-lt {
+	border-bottom: 16px solid transparent;
+	border-left: 17px solid #FFDCDC;
+	border-top: 17px solid transparent;
+	position: absolute;
+	top: 1px;
+}
+div.note .right-triangle .triangle-lt {
+	border-left: 17px solid #ECFCE4;
+}
+
+/* left prong */
+.left-triangle {
+	height: 0;
+	left: -18px;
+	position: absolute;
+	top: -1px;
+	width: 0;
+}
+.left-triangle .triangle-dk {
+	border-bottom: 17px solid transparent;
+	border-right: 18px solid #C60000;
+	border-top: 18px solid transparent;
+	position: absolute;
+}
+.left-triangle .triangle-lt {
+	border-bottom: 16px solid transparent;
+	border-right: 17px solid #FFDCDC;
+	border-top: 17px solid transparent;
+	left: 1px;
+	position: absolute;
+	top: 1px;
+}
+.private-info {
+	font-size: 12px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+ul.ui-autocomplete,
+ul.ui-autocomplete:hover {
+	padding: 0;
+	text-align: left;
+}
+.ui-autocomplete li a:hover {
+	border-radius: 0;
+	border: none;
+}
+.assets > p {
+	color: #545454;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+p.checkbox-heading {
+	margin-bottom: 10px;
+}
+div.assets,
+div.freeapps_tc,
+div.qualys_tc {
+	padding-left: 9px;
+}
+div.checkbox-block {
+	padding-bottom: 9px;
+	padding-left: 9px;
+}
+div.assets .asset,
+div.checkbox-wrapper {
+	margin-bottom: 8px;
+}
+form.type1 label.type1 {
+	display: block;
+	margin-bottom: 9px;
+	padding-left: 9px;
+	width: auto;
+}
+.mktoForm input[type=text],
+.mktoForm input[type=email],
+.mktoForm input[type=tel] {
+	width: 100%;
+}
+form.layout2 textarea {
+	width: 511px !important;
+}
+form.layout2 input[type=text],
+form.layout2 input[type=email],
+form.layout2 input[type=tel] {
+	width: 511px;
+}
+form.layout2 textarea {
+	width: 511px !important;
+}
+form.layout2 fieldset {
+	padding: 0;
+}
+form.layout2 p.private-info {
+	text-align: left;
+}
+.mktoForm.layout2 ~ p.private-info {
+	text-align: left;
+}
+form.layout2 div.assets {
+	display: inline-block;
+	margin-bottom: 18px;
+	margin-top: 10px;
+	vertical-align: top;
+	width: 238px;
+}
+html.js body.marketing-communication-subscription-preference div.subscriber-new,
+html.js body.marketing-communication-subscription-preference div.subscriptions-check {
+	overflow: hidden;
+	transition: height 400ms, opacity 400ms;
+}
+html.js body.marketing-communication-subscription-preference div.subscriptions {
+	height: 0;
+	opacity: 0;
+}
+html.js body.marketing-communication-subscription-preference div.subscriber-new.email-found,
+html.js body.marketing-communication-subscription-preference div.subscriptions-check.email-found {
+	height: 0 !important;
+	opacity: 0;
+}
+html.js body.marketing-communication-subscription-preference div.subscriptions.email-found {
+	height: auto !important;
+	opacity: 1;
+}
+
+/* use smaller text for buttons on marketing communications page */
+body.marketing-communication-subscription-preference a.button-type1,
+body.marketing-communication-subscription-preference a.button-type2 {
+	font-size: 19px;
+}
+body.marketing-communication-subscription-preference div.column4 {
+	text-align: center;
+}
+
+
+/*
+ * form.type determines to look of a form's fields, etc
+ * e.g. form.type1, form.type2
+ *
+ * form.layout determines the layout of a form
+ * e.g. form.layout1, form.layout2
+ */
+form.layout2 {
+	margin: 0;
+	width: 535px;
+}
+html.js legend {
+	display: none;
+	visibility: hidden;
+}
+div.have-account,
+fieldset.solutions-interested > p {
+	border: 1px solid transparent;
+	font-size: 1.067em;
+	font-size: calc(16/15 * 1em);
+	line-height: 1.5;
+	padding: 0.4em;
+}
+fieldset.solutions-interested p {
+	padding-bottom: 0;
+}
+div.have-account input[type=checkbox],
+div.have-account input[type=radio],
+div.have-account label {
+	display: inline-block;
+}
+div.have-account input[type=checkbox],
+div.have-account input[type=radio] {
+	float: none;
+	margin: 0 0.25ex 0 2.75ex;
+}
+div.have-account label {
+	width: auto;
+}
+
+
+/* set the width of the narrow and wide form */
+.mktoForm.layout2 {
+	width: 535px;
+}
+
+/* correct the position of the Marketo error messages */
+.mktoError {
+	left: 0;
+	right: auto !important;
+}
+.mktoFormRow.Email .mktoError {
+	bottom: inherit !important;
+}
+
+/* correct the position of the Marketo error message next to checkboxes */
+.mktoRadioList ~ .mktoError,
+.mktoCheckboxList ~ .mktoError {
+	left: 14px;
+}
+.mktoButton {
+	margin-top: 8px;
+	border: none;
+	background: #FA2D2D;
+	font-size: 19pt;
+	font-weight: 500;
+	color: #FFF;
+	font-family: Gotham, sans-serif;
+	box-shadow: none;
+	height: auto;
+	padding: 0 !important;
+}
+.legacy .mktoErrorMsg {
+	margin-left: 0;
+}
+.legacy .q-form__input,
+.legacy input[type=text].mktoField,
+.legacy input[type=email].mktoField,
+.legacy input[type=tel].mktoField {
+	height: auto;
+}
+.legacy .q-form__select,
+.legacy select.mktoField {
+	margin-bottom: 0;
+	height: auto;
+}
+.legacy .q-form__button-group,
+.legacy .mktoButtonRow .mktoButtonWrap {
+	margin: 0;
+}
+.legacy .q-form__button,
+.legacy .mktoButton {
+	height: auto;
+}
+.mktoButton:hover,
+.mktoButton:active {
+	background-color: #C21212;
+}
+.mktoRadioList label,
+.mktoCheckboxList label {
+	margin-right: 1.5ex;
+}
+
+/* reveal lablels for list of checkboxes and list of radio buttons */
+.mktoForm label.qmktoRadioListLabel,
+.mktoForm label.qmktoCheckboxListLabel {
+	display: inline-block;
+}
+
+/* unless the label is empty */
+.mktoForm label.qmktoRadioListLabel.qmktoLabelEmpty,
+.mktoForm label.qmktoCheckboxListLabel.qmktoLabelEmpty {
+	display: none;
+	visibility: hidden;
+}
+.mktoForm.layout2 select {
+	width: 256px;
+}
+
+
+/*
+ * life after removing Marketo CSS
+ */
+.mktoGutter,
+.mktoAsterix,
+.qmktoLabelEmpty {
+	display: none;
+	visibility: hidden;
+}
+.mktoLabel {
+	display: none;
+}
+.mktoForm label {
+	width: initial;
+}
+
+/* align Country and State next to each other */
+.mktoForm .mktoFormRow {
+	display: flex;
+}
+.mktoForm .mktoFormCol {
+	flex: 1;
+	margin: 0 0 0.5em;
+}
+
+
+/*
+ * bring back the Marketo error styles
+ */
+.mktoForm .mktoFormCol {
+	position: relative;
+}
+.mktoForm .mktoError {
+	color: #BF0000;
+	font-size: 9pt;
+	position: absolute;
+	z-index: 99;
+}
+.mktoForm .mktoError .mktoErrorArrowWrap {
+	height: 8px;
+	left: 5px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 16px;
+	z-index: 100;
+}
+.mktoForm.ie7 .mktoError .mktoErrorArrowWrap {
+	top: -8px;
+}
+.mktoForm .mktoError .mktoErrorArrow {
+	background-color: #E51B00;
+	border-bottom: none;
+	border-right: none;
+	border: 1px solid #9F1300;
+	display: inline-block;
+	height: 16px;
+	margin-top: 5px;
+	transform: rotate(45deg);
+	width: 16px;
+}
+.mktoForm .mktoError .mktoErrorMsg {
+	background-color: #E51B00;
+	background-image: linear-gradient(#E51B00 43%, #BA1600 100%);
+	border-radius: 6px;
+	border: 1px solid #9F1300;
+	box-shadow: rgba(0,0,0,0.65) 0 2px 7px, inset #FF3C3C 0 1px 0;
+	color: #F3F3F3;
+	display: block;
+	font-size: 1em;
+	line-height: 1.2em;
+	margin-top: 7px;
+	max-width: 16em;
+	padding: 0.4em 0.6em;
+	text-shadow: #901100 0 -1px 0;
+}
+.mktoFormRow.Email .mktoError .mktoErrorMsg {
+	max-width: none;
+}
+.mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail {
+	display: block;
+}
+.mktoForm .mktoError.warning .mktoErrorMsg {
+	max-width: inherit;
+	text-shadow: none;
+	color: #FFF;
+	background-color: #47A042;
+	background-image: linear-gradient(#47A042 43%, #33742F 100%);
+	border: 1px solid #337B30;
+	box-shadow: rgba(0,0,0,0.65) 0 2px 7px, inset #70AD6C 0 1px 0;
+}
+.mktoForm .mktoError.warning .mktoErrorArrow {
+	background-color: #47A042;
+	border: 1px solid #33742F;
+}
+.mktoError.email button {
+	height: 1.2em;
+	vertical-align: bottom;
+	width: 1.2em;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.mktoError.warning button:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+.mktoError.warning img.close-button {
+	width: 1.2em;
+	height: 1.2em;
+}
+
+/* testing */
+.mktoForm label {
+	padding-left: 1.1em;
+	text-indent: -1.1em;
+}
+.mktoForm input[type=checkbox],
+.mktoForm input[type=radio] {
+	bottom: 1px;
+	margin: 0 0.5ex 0 0;
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+}
+.mktoForm input[type=radio] {
+	bottom: 2px;
+}
+
+/* style the trial package options (narrow and wide) */
+label[for="formTrialPackageType"] ~ .mktoRadioList label {
+	font-size: 9pt;
+	font-style: italic;
+}
+label[for="formTrialPackageType"] ~ .mktoRadioList label b {
+	font-size: 12pt;
+	font-style: normal;
+}
+
+/* wide layout */
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList {
+	margin: 0;
+	position: relative;
+	left: 33px;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList,
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList * {
+	box-sizing: border-box;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label {
+	border: 1px solid #BFBFBF;
+	border-radius: 0.3em;
+	background: #FFF;
+	color: #666;
+	font-size: 10pt;
+	line-height: 1.3;
+	margin: 0.65em 0;
+	height: 100px;
+	padding: 0.05em 1em;
+	text-indent: 0;
+	width: 225px;
+	vertical-align: top;
+	margin-right: 24px;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label:nth-child(2n) {
+	margin-left: 18px;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label b {
+	color: #666;
+	font-size: 15pt;
+	font-style: normal;
+	font-weight: 700;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label:first-child {
+	margin-left: 0;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label:last-child {
+	margin-right: 0;
+}
+.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList input {
+	bottom: auto;
+	display: block;
+	font-size: 15pt;
+	margin: 0 auto;
+	position: relative;
+	vertical-align: baseline;
+	margin-left: -40px;
+	top: 20px;
+}
+
+
+/* styles for the solutions interested options */
+label[for="solutionInterested"] ~ .mktoCheckboxList label {
+	width: calc(100% - 1.1em - 1.5ex);
+}
+
+div.mktoError.warning span.circle {
+	border-radius: 50%;
+	padding: 0 4px;
+	background-color: #000;
+	display: inline-block;
+	color: #F5D22D;
+	text-align: center;
+}
+div.mktoError.warning span.circle:hover {
+	cursor: pointer;
+}
+
+/* styles for new whitepapers LP */
+#content .form-content.whitepapers #main {
+	width: 567px;
+}
+#content .form-content.whitepapers .column {
+	box-shadow: none;
+}
+
+@media screen and (max-width: 640px) {
+	.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList {
+		position: static;
+	}
+	.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label {
+		margin-right: 0;
+	}
+	.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label:nth-child(2n) {
+		margin-left: 0;
+	}
+	.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList label {
+		padding: 1rem 3rem;
+	}
+	.layout2 label[for="formTrialPackageType"] ~ .mktoRadioList input {
+		margin: 7px 1px 0 0;
+		position: absolute;
+		left: 9px;
+		top: 9px;
+	}
+
+	/* mobile styles for new whitepapers LP */
+	#content .form-content.whitepapers #main {
+		width: 90%;
+		padding-right: 0;
+		display: inline-block;
+	}
+	#content .form-content.whitepapers #main .free-whitepaper {
+		font-size: 1.73rem;
+	}
+	#content .form-content.whitepapers #main h1 {
+		font-size: 2.2rem;
+	}
+	#content .form-content.whitepapers #main h2 {
+		font-size: 1.8rem;
+	}
+	#content .form-content.whitepapers .column {
+		border-left: none;
+		width: auto;
+		padding-left: 0;
+		display: block;
+	}
+}
+
+
+/*
+ * form specific styles found in main.css
+ */
+body.confirm h1 {
+	text-align: left;
+}
+
+
+body.forms.whitepapers #content div.section #main {
+	width: 567px;
+}
+body.forms.analyst-report #content .form-content .column,
+body.forms.briefs #content .form-content .column,
+body.forms.ebook #content .form-content .column,
+body.forms.guides #content .form-content .column,
+body.forms.reports #content .form-content .column,
+body.forms.whitepapers #content .form-content .column {
+	box-shadow: none;
+}
+body.forms .column h3 {
+	margin-bottom: 0.75em;
+	font-size: 15pt;
+	margin-left: 0;
+}
+
+body.forms.freescan.confirm p.message {
+	font-size: 16pt;
+	line-height: 1.35;
+}
+body.forms.freescan div.confirmation-email {
+	background-image: url(https://ik.imagekit.io/qualys/image/freescan-confirm-408-1x.png);
+	overflow: hidden;
+	float: right;
+	margin-left: 20px;
+	height: 436px;
+	width: 408px;
+}
+body.forms.freescan img.freescan-welcome {
+	float: right;
+	margin-left: 20px;
+}
+body.forms.freescan div.more-tools div.badge {
+	height: 54px;
+	width: 53px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+body.forms.freescan div.browsercheck div.badge {
+	height: 54px;
+	width: 53px;
+	background-image: url(https://ik.imagekit.io/qualys/image/icon/browsercheck-53-1x.png);
+	overflow: hidden;
+}
+body.forms.freescan div.ssl-audit div.badge {
+	height: 54px;
+	width: 53px;
+	background-image: url(https://ik.imagekit.io/qualys/image/icon/ssl-audit-53-1x.png);
+	overflow: hidden;
+}
+body.forms.freescan #content div.more-tools div.description {
+	text-align: left;
+	display: inline-block;
+	width: 365px;
+}
+body.forms.freescan div.browsercheck,
+body.forms.freescan div.ssl-audit {
+	margin-bottom: 20px;
+}
+body.forms.freescan #content hr {
+	border-top: 1px solid #999;
+	border-bottom: none;
+	margin: 35px 0;
+}
+
+
+body.forms.secure-seal div.screenshot,
+body.forms.dasient div.screenshot,
+body.forms.briefs div.screenshot,
+body.forms.analyst-report div.screenshot,
+body.forms.ebook div.screenshot,
+body.forms.whitepapers div.screenshot,
+body.forms.reports div.screenshot,
+body.forms.webcasts div.screenshot,
+body.forms.guides div.screenshot,
+body.forms.whitepapers img.screenshot {
+	height: 427px;
+	overflow: hidden;
+	width: 516px;
+	float: left;
+	margin: 0 7px;
+}
+body.forms.secure-seal.confirm div.screenshot,
+body.forms.dasient.confirm div.screenshot,
+body.forms.briefs.confirm div.screenshot,
+body.forms.analyst-report.confirm div.screenshot,
+body.forms.ebook.confirm div.screenshot,
+body.forms.whitepapers.confirm div.screenshot,
+body.forms.guides.confirm div.screenshot,
+body.forms.reports.confirm div.screenshot {
+	height: 388px;
+	overflow: hidden;
+	width: 276px;
+	text-indent: -9999px;
+	margin: 0;
+	background-position: 0 -1350px;
+}
+body.forms.secure-seal.confirm div.side-block,
+body.forms.dasient.confirm div.side-block,
+body.forms.briefs.confirm div.side-block,
+body.forms.analyst-report.confirm div.side-block,
+body.forms.ebook.confirm div.side-block,
+body.forms.whitepapers.confirm div.side-block,
+body.forms.guides.confirm div.side-block,
+body.forms.reports.confirm div.side-block {
+	float: right;
+	margin: 0 7px 25px;
+}
+
+
+/*
+ * Styles for Patch Tuesday, OWASP FreeScan form
+ */
+body.forms.freescan #container {
+	margin: 0;
+	padding: 0;
+}
+body.forms.freescan.confirm #container,
+body.forms.freescan.exists #container {
+	margin: 53px 0 31px;
+}
+body.forms.freescan div.form-content div.column,
+#forms_pci-dss-v3 div.form-content div.column {
+	padding: 53px 39px 0 30px;
+}
+body.quatre-controles-securite-majeurs #breadcrumbs,
+body.top-4-sicherheitskontrollen #breadcrumbs,
+body.forms.freescan #breadcrumbs,
+#forms_top-4-security-controls #breadcrumbs,
+#forms_pci-dss-v3 #breadcrumbs {
+	padding: 0 0 31px 39px;
+}
+body.forms.freescan.confirm #breadcrumbs,
+body.forms.freescan.exists #breadcrumbs {
+	padding: 0;
+}
+body.forms.freescan h1 {
+	color: #000;
+	font-size: 30pt;
+}
+body.forms.freescan.confirm h1 ,
+body.forms.freescan.exists h1 {
+	color: #333;
+	font-size: 23pt;
+}
+body.forms.freescan #content h2 {
+	font-size: 20pt;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	font-weight: normal;
+}
+body.forms.freescan div.message-box h2 {
+	font-size: 3.7em; /* 37px; */
+}
+body.forms.freescan #main h3,
+#forms_pci-dss-v3 #main h3 {
+	font-weight: normal;
+}
+body.freescan div.badge,
+#forms_pci-dss-v3 div.badge {
+	background-color: transparent;
+	width: 130px;
+	height: 132px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 17px;
+	margin-bottom: 26px;
+	text-indent: -9999px
+}
+body.freescan .close-button path {
+	stroke: #FFF;
+}
+body.freescan .close-button {
+	width: 13px;
+	height: 13px;
+}
+div.patch-tuesday {
+	background-image: url(https://ik.imagekit.io/qualys/image/patch-tuesday-130-2x.png);
+	background-size: 100%;
+}
+div.owasp {
+	background-image: url(https://ik.imagekit.io/qualys/image/owasp-130-2x.png);
+	background-size: 100%;
+}
+div.scap {
+	background-image: url(https://ik.imagekit.io/qualys/image/scap-130-2x.png);
+	background-size: 100%;
+}
+div.website-scan {
+	background-image: url(https://ik.imagekit.io/qualys/image/website-scan-130-2x.png);
+	background-size: 100%;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.patch-tuesday {
+		background-image: url(https://ik.imagekit.io/qualys/image/patch-tuesday-130-1x.png);
+		background-size: 100%;
+	}
+	div.owasp {
+		background-image: url(https://ik.imagekit.io/qualys/image/owasp-130-1x.png);
+		background-size: 100%;
+	}
+	div.scap {
+		background-image: url(https://ik.imagekit.io/qualys/image/scap-130-1x.png);
+		background-size: 100%;
+	}
+	div.website-scan {
+		background-image: url(https://ik.imagekit.io/qualys/image/website-scan-130-1x.png);
+		background-size: 100%;
+	}
+}
+div.title-container {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+body.forms.freescan #content #main,
+#forms_pci-dss-v3 #content #main {
+	padding-right: 0;
+	width: 600px;
+}
+body.forms.freescan div.gradient-container,
+#forms_pci-dss-v3 div.gradient-container {
+	padding: 53px 24px 0 39px;
+}
+div.rest-of-the-content {
+	padding: 10px 24px 0 39px;
+}
+body.forms.freescan #overlay {
+	background: none;
+	padding: 0;
+	box-shadow: none;
+}
+body.forms.freescan #overlay a.close {
+	position: fixed;
+	right: 25px;
+	top: 18px;
+}
+body.forms.freescan #overlay div.navi {
+	top: -2.4em;
+}
+body.forms.freescan #exposeMask {
+	background-color: #000 !important;
+}
+body.forms.freescan #overlay a.next {
+	width: 55px;
+	height: 130px;
+	border: none;
+	box-shadow: none;
+	background-image: url(https://ik.imagekit.io/qualys/image/overlay-right-arrow-55-2x.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-size: 55px 130px;
+	display: block;
+	position: absolute;
+	top: 290px;
+	right: -52px;
+}
+body.forms.freescan #overlay a.prev {
+	width: 55px;
+	height: 130px;
+	border: none;
+	box-shadow: none;
+	background-image: url(https://ik.imagekit.io/qualys/image/overlay-left-arrow-55-2x.png);
+	background-color: transparent;
+	overflow: hidden;
+	background-size: 55px 130px;
+	display: block;
+	position: absolute;
+	top: 290px;
+	left: -60px;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	body.forms.freescan #overlay a.next {
+		width: 55px;
+		height: 130px;
+		border: none;
+		box-shadow: none;
+		background-image: url(https://ik.imagekit.io/qualys/image/overlay-right-arrow-55-1x.png);
+		background-color: transparent;
+		overflow: hidden;
+		background-size: 55px 130px;
+		display: block;
+		position: absolute;
+		top: 290px;
+		right: -52px;
+	}
+	body.forms.freescan #overlay a.prev {
+		width: 55px;
+		height: 130px;
+		border: none;
+		box-shadow: none;
+		background-image: url(https://ik.imagekit.io/qualys/image/overlay-left-arrow-55-1x.png);
+		background-color: transparent;
+		overflow: hidden;
+		background-size: 55px 130px ;
+		display: block;
+		position: absolute;
+		top: 290px;
+		left: -60px;
+	}
+}
+body.forms.freescan #overlay div.jquery-tools-scrollable div.items div.screenshot {
+	position: relative;
+	font-size: 66%; /* = 10px */
+}
+body.forms.freescan div.jquery-tools-scrollable div.container {
+	position: absolute;
+	box-shadow: 0 0 21px rgba(0, 0, 0, 0.67);
+	border-radius: 5px;
+	display: inline-block;
+	max-width: 42.5em; /* = 425px */
+}
+body.forms.freescan div.jquery-tools-scrollable div.message-box {
+	border-radius: 5px;
+	color: #FFF;
+	background: #3D90E7;
+	background: linear-gradient(to bottom, #3D90E7 0%,#0F66D2 100%);
+	padding: 2em; /* = 20px */
+	border: 1px solid #0559D9;
+	box-shadow: inset 1px 1px 1px 0 #C5DEF2;
+	padding-top: 1.5em; /* 15px */
+}
+body.forms.freescan div.jquery-tools-scrollable div.message-box p {
+	font-size: 2.2em; /* 22px */
+}
+div.message-box h2 {
+	color: #FFF !important;
+	padding-top: 0 !important;
+}
+body.forms.ebook .column > a {
+	display: inline-block;
+	margin: 0 0.1em 0.4em 0;
+}
+
+
+/* Mobile CSS for Whitepaper Forms */
+@media screen and (max-width: 640px) {
+	body.forms.analyst-report #content.full-width h1,
+	body.forms.briefs #content.full-width h1,
+	body.forms.ebook #content.full-width h1,
+	body.forms.guides #content.full-width h1,
+	body.forms.reports #content.full-width h1,
+	body.forms.whitepapers #content.full-width h1 {
+		font-size: 2.2rem;
+	}
+	body.forms.analyst-report #content.full-width h2,
+	body.forms.briefs #content.full-width h2,
+	body.forms.ebook #content.full-width h2,
+	body.forms.guides #content.full-width h2,
+	body.forms.reports #content.full-width h2,
+	body.forms.whitepapers #content.full-width h2 {
+		font-size: 1.8rem;
+	}
+
+	body.forms.analyst-report #content.full-width,
+	body.forms.briefs #content.full-width,
+	body.forms.ebook #content.full-width,
+	body.forms.guides #content.full-width,
+	body.forms.reports #content.full-width,
+	body.forms.whitepapers #content.full-width {
+		padding-top: 94px;
+		padding-bottom: 60px;
+		min-width: 100%;
+	}
+	body.forms.analyst-report #content.full-width div.section,
+	body.forms.briefs #content.full-width div.section,
+	body.forms.ebook #content.full-width div.section,
+	body.forms.guides #content.full-width div.section,
+	body.forms.reports #content.full-width div.section,
+	body.forms.whitepapers #content.full-width div.section {
+		min-width: initial;
+		padding: 0 5%;
+	}
+	body.forms.analyst-report #content.full-width div.section #main,
+	body.forms.briefs #content.full-width div.section #main,
+	body.forms.ebook #content.full-width div.section #main,
+	body.forms.guides #content.full-width div.section #main,
+	body.forms.reports #content.full-width div.section #main,
+	body.forms.whitepapers #content.full-width div.section #main {
+		width: 90%;
+		padding-right: 0;
+	}
+	body.forms.analyst-report #content.full-width .form-content #main,
+	body.forms.briefs #content.full-width .form-content #main,
+	body.forms.ebook #content.full-width .form-content #main,
+	body.forms.guides #content.full-width .form-content #main,
+	body.forms.reports #content.full-width .form-content #main,
+	body.forms.whitepapers #content.full-width .form-content #main {
+		display: inline-block;
+	}
+	body.forms.ebook #content.full-width .dummy,
+	body.forms.whitepapers #content.full-width img.whitepaper,
+	body.forms.analyst-report #content.full-width div.screenshot,
+	body.forms.analyst-report #content.full-width div.screenshots,
+	body.forms.analyst-report.confirm #content.full-width h6,
+	body.forms.analyst-report.confirm div.side-block,
+	body.forms.briefs #content.full-width div.screenshot,
+	body.forms.briefs #content.full-width div.screenshots,
+	body.forms.briefs.confirm #content.full-width h6,
+	body.forms.briefs.confirm div.side-block,
+	body.forms.ebook #content.full-width div.screenshot,
+	body.forms.ebook #content.full-width div.screenshots,
+	body.forms.ebook.confirm #content.full-width h6,
+	body.forms.ebook.confirm div.side-block,
+	body.forms.guides #content.full-width div.screenshot,
+	body.forms.guides #content.full-width div.screenshots,
+	body.forms.guides.confirm #content.full-width h6,
+	body.forms.guides.confirm div.side-block,
+	body.forms.reports #content.full-width div.screenshot,
+	body.forms.reports #content.full-width div.screenshots,
+	body.forms.reports.confirm #content.full-width h6,
+	body.forms.reports.confirm div.side-block,
+	body.forms.whitepapers #content.full-width div.screenshot,
+	body.forms.whitepapers #content.full-width div.screenshots,
+	body.forms.whitepapers.confirm #content.full-width h6,
+	body.forms.whitepapers.confirm div.side-block {
+		display: none;
+	}
+	body.forms.analyst-report #content.full-width .form-content .column,
+	body.forms.briefs #content.full-width .form-content .column,
+	body.forms.ebook #content.full-width .form-content .column,
+	body.forms.guides #content.full-width .form-content .column,
+	body.forms.reports #content.full-width .form-content .column,
+	body.forms.whitepapers #content.full-width .form-content .column {
+		border-left: none;
+	}
+	body.forms.analyst-report #content.full-width .free-trial,
+	body.forms.analyst-report #content.full-width .free-ebook,
+	body.forms.analyst-report #content.full-width .free-whitepaper,
+	body.forms.analyst-report #content.full-width .free-report,
+	body.forms.analyst-report #content.full-width .free-trial,
+	body.forms.analyst-report #content.full-width .free-guide,
+	body.forms.briefs #content.full-width .free-trial,
+	body.forms.briefs #content.full-width .free-ebook,
+	body.forms.briefs #content.full-width .free-whitepaper,
+	body.forms.briefs #content.full-width .free-report,
+	body.forms.briefs #content.full-width .free-trial,
+	body.forms.briefs #content.full-width .free-guide,
+	body.forms.ebook #content.full-width .free-trial,
+	body.forms.ebook #content.full-width .free-ebook,
+	body.forms.ebook #content.full-width .free-whitepaper,
+	body.forms.ebook #content.full-width .free-report,
+	body.forms.ebook #content.full-width .free-trial,
+	body.forms.ebook #content.full-width .free-guide,
+	body.forms.guides #content.full-width .free-trial,
+	body.forms.guides #content.full-width .free-ebook,
+	body.forms.guides #content.full-width .free-whitepaper,
+	body.forms.guides #content.full-width .free-report,
+	body.forms.guides #content.full-width .free-trial,
+	body.forms.guides #content.full-width .free-guide,
+	body.forms.reports #content.full-width .free-trial,
+	body.forms.reports #content.full-width .free-ebook,
+	body.forms.reports #content.full-width .free-whitepaper,
+	body.forms.reports #content.full-width .free-report,
+	body.forms.reports #content.full-width .free-trial,
+	body.forms.reports #content.full-width .free-guide,
+	body.forms.whitepapers #content.full-width .free-trial,
+	body.forms.whitepapers #content.full-width .free-ebook,
+	body.forms.whitepapers #content.full-width .free-whitepaper,
+	body.forms.whitepapers #content.full-width .free-report,
+	body.forms.whitepapers #content.full-width .free-trial,
+	body.forms.whitepapers #content.full-width .free-guide {
+		font-size: 1.73rem;
+	}
+	body.forms.analyst-report #content.full-width ul.breadcrumbs li,
+	body.forms.analyst-report #content.full-width #breadcrumbs li,
+	body.forms.briefs #content.full-width ul.breadcrumbs li,
+	body.forms.briefs #content.full-width #breadcrumbs li,
+	body.forms.ebook #content.full-width ul.breadcrumbs li,
+	body.forms.ebook #content.full-width #breadcrumbs li,
+	body.forms.guides #content.full-width ul.breadcrumbs li,
+	body.forms.guides #content.full-width #breadcrumbs li,
+	body.forms.reports #content.full-width ul.breadcrumbs li,
+	body.forms.reports #content.full-width #breadcrumbs li,
+	body.forms.whitepapers #content.full-width ul.breadcrumbs li,
+	body.forms.whitepapers #content.full-width #breadcrumbs li {
+		white-space: normal;
+		display: inline;
+	}
+	body.forms.analyst-report #content.full-width .form-content .column,
+	body.forms.briefs #content.full-width .form-content .column,
+	body.forms.ebook #content.full-width .form-content .column,
+	body.forms.guides #content.full-width .form-content .column,
+	body.forms.reports #content.full-width .form-content .column,
+	body.forms.whitepapers #content.full-width .form-content .column {
+		width: auto;
+		padding-left: 0;
+		display: block;
+	}
+	body.forms.analyst-report #content.full-width .column h3,
+	body.forms.briefs #content.full-width .column h3,
+	body.forms.ebook #content.full-width .column h3,
+	body.forms.guides #content.full-width .column h3,
+	body.forms.reports #content.full-width .column h3,
+	body.forms.whitepapers #content.full-width .column h3 {
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+		margin-top: 2rem;
+	}
+	body.forms.analyst-report #content.full-width .private-info,
+	body.forms.briefs #content.full-width .private-info,
+	body.forms.ebook #content.full-width .private-info,
+	body.forms.guides #content.full-width .private-info,
+	body.forms.reports #content.full-width .private-info,
+	body.forms.whitepapers #content.full-width .private-info {
+		font-size: 1.2rem;
+	}
+	body.forms.analyst-report #content.full-width #breadcrumbs,
+	body.forms.briefs #content.full-width #breadcrumbs,
+	body.forms.ebook #content.full-width #breadcrumbs,
+	body.forms.guides #content.full-width #breadcrumbs,
+	body.forms.reports #content.full-width #breadcrumbs,
+	body.forms.whitepapers #content.full-width #breadcrumbs {
+		font-size: 1rem;
+		padding-top: 5rem;
+	}
+}
+
+
+/* Mobile CSS for FreeScan Forms */
+@media screen and (max-width: 640px) {
+	body.forms.freescan #content,
+	body.forms.freescan #content .form-content #main,
+	body.forms.freescan #content .form-content .column {
+		width: auto;
+		display: inline-block;
+	}
+	body.forms.freescan #content .form-content .column {
+		padding: 3rem 5%;
+		display: block;
+	}
+	body.forms.freescan #content {
+		padding-top: 70px;
+	}
+	a.freescan-screenshot img, a.owasp-screenshot img, a.patch-tuesday-screenshot img, a.scap-screenshot img, a.website-scan-screenshot1 img {
+		width: 95%;
+		height: 95%;
+	}
+	body.forms.freescan div.gradient-container,
+	#forms_pci-dss-v3 div.gradient-container {
+		padding: 3rem 5%;
+	}
+	body.freescan div.badge,
+	#forms_pci-dss-v3 div.badge {
+		display: block;
+		margin: 0 auto 1rem;
+	}
+	body.forms.freescan h1 {
+		font-size: 3.5rem;
+		margin-top: 1rem;
+	}
+	body.forms.freescan h2 {
+		font-size: 2.2rem;
+	}
+	body.forms.freescan #main h3,
+	#forms_pci-dss-v3 #main h3 {
+		font-size: 2rem;
+	}
+	body.freescan.exists #content.full-width,
+	body.freescan.exists #content.full-width div.section,
+	body.freescan.confirm #content.full-width,
+	body.freescan.confirm #content.full-width div.section {
+		padding: 3rem 5%;
+		min-width: initial;
+	}
+	body.forms.freescan img.freescan-welcome {
+		width: 90%;
+		height: 90%;
+		margin: 0 auto 3rem;
+		display: block;
+		float: none;
+	}
+	body.forms.freescan #content div.more-tools div.description {
+		width: auto;
+	}
+	body.forms.freescan div.more-tools div.badge {
+		float: left;
+	}
+}
+.mktoForm label[for="qualysAccount"] {
+	padding-left: 0.4em;
+	text-indent: 0;
+}
+.mktoRadioList.qualysAccount.qualysAccount {
+	white-space: normal;
+}
+.qualysAccount .mktoFieldWrap.mktoFieldWrap {
+	margin-top: 1em;
+}
+
+/*# sourceMappingURL=form.css.map */

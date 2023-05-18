@@ -1,0 +1,46 @@
+div.color1 {
+	background-color: #144A8D;
+}
+div.color2 {
+	background-color: #0177CA;
+}
+div.color3 {
+	background-color: #00A2E2;
+}
+div.color4 {
+	background-color: #063;
+}
+div.color5 {
+	background-color: #70AF44;
+}
+div.color6 {
+	background-color: #7CBA4F;
+}
+div.color7 {
+	background-color: #A90114;
+}
+div.note {
+	margin-bottom: 5px;
+	padding: 0 30px 30px;
+	font-size: 13.33px;
+}
+div.color1 {
+	color: #A9D9FB;
+}
+div.color2,
+div.color3,
+div.color5 {
+	color: #FFF;
+}
+div.color4 {
+	color: #A7FAD1;
+}
+div.note p {
+	margin-top: 0;
+}
+div.box-features h2 {
+	margin: 0;
+	padding: 6px 0 10px;
+}
+
+/*# sourceMappingURL=pricing.css.map */

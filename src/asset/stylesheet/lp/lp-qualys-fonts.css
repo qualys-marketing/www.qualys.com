@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* stylelint-disable selector-no-type */
+/* stylelint-disable font-family-name-quotes */
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Gotham Light"), local("Gotham-Light"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-light.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-light.woff) format("woff");
+}
+
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Gotham Book"), local("Gotham-Book"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff) format("woff");
+}
+
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 500;
+	src: local("Gotham Medium"), local("Gotham-Medium"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff) format("woff");
+}
+
+@font-face {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Gotham Bold"), local("Gotham-Bold"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-bold.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-bold.woff) format("woff");
+}
+
+@font-face {
+	font-family: Caecilia;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Caecilia LT Pro 55 Roman"), local("CaeciliaLTPro-55Roman"),
+		local("PMN Caecilia Com 55 Roman"), local("CaeciliaCom-55Roman"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-55-roman.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-55-roman.woff) format("woff");
+}
+
+@font-face {
+	font-family: Caecilia;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Caecilia LT Pro 75 Bold"), local("CaeciliaLTPro-75Bold"),
+		local("PMN Caecilia Com 75 Bold"), local("CaeciliaCom-75Bold"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-75-bold.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-75-bold.woff) format("woff");
+}
+
+@font-face {
+	font-family: Caecilia;
+	font-style: italic;
+	font-weight: 400;
+	src: local("Caecilia LT Pro 56 Italic"), local("CaeciliaLTPro-56Italic"),
+		local("PMN Caecilia Com 56 Italic"), local("CaeciliaCom-56Italic"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-56-italic.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-56-italic.woff) format("woff");
+}
+
+@font-face {
+	font-family: Caecilia;
+	font-style: italic;
+	font-weight: 700;
+	src: local("Caecilia LT Pro 76 Bold Italic"), local("CaeciliaLTPro-76BoldItalic"),
+		local("PMN Caecilia Com 76 Bold Italic"), local("CaeciliaCom-76BoldItalic"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-76-bold-italic.woff2) format("woff2"),
+		url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-76-bold-italic.woff) format("woff");
+}
+
+/*# sourceMappingURL=lp-qualys-fonts.css.map */

@@ -1,0 +1,499 @@
+div.ppc div.toolbar {
+	top:22px;
+}
+
+#banner-ppc {
+	background-image: url(https://ik.imagekit.io/qualys/image/banner-background.jpg);
+	width: 958px;
+	height: 250px;
+	left: -39px;
+	overflow: hidden;
+	position: relative;
+}
+
+#banner-ppc-vm-text {
+	left: 500px;
+	height: 320px; 
+	top: 40px;
+	width: 460px;
+	color:#FFF;
+	position: absolute;
+}
+
+#banner-ppc-pci-text {
+	left: 500px;
+	height: 320px; 
+	top: 40px;
+	width: 400px;
+	color:#FFF;
+	position: absolute;
+}
+
+#banner-ppc-was-text {
+	left: 500px;
+	height: 320px; 
+	top: 60px;
+	width: 400px;
+	color:#FFF;
+	position: absolute;
+}
+
+#banner-ppc h1 {
+	font-size: 34px;
+	font-weight:normal;
+	line-height: 1.3;
+	text-align: left;
+	text-shadow: -2px 3px 1px rgba(19, 100, 206, 0.75);
+}
+
+#banner-ppc h1 strong {
+	color:#FFF;
+	font-weight: bold;
+}
+
+div.ppc div.ppc-pci-screenshot {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -1px -293px;
+	height: 257px;
+	width: 436px;
+	margin: 20px 20px 0
+}
+
+div.ppc div.ppc-vm-screenshot {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -1px -6px;
+	height: 257px;
+	width: 436px;
+	margin: 20px 20px 0
+}
+
+div.ppc div.ppc-was-screenshot {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -1px -648px;
+	height: 257px;
+	width: 436px;
+	margin: 20px 20px 0
+}
+
+div.ppc div.middle {
+	border-radius: 0 !important;
+	padding-right:10px !important;
+}
+
+div.ppc div.column2 div.content.last {
+	border-radius: 0 0 10px 10px !important;
+	text-align:center !important;
+	padding-top:10px !important;
+	padding-right:20px !important;
+}
+
+div.ppc div.column2 div.content.last a.email {
+	color: #333;
+}
+
+div.ppc #container {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+div.ppc div.column2 p {
+	line-height: 1.6;
+	padding: 3px 0 0;
+}
+div.ppc div.column2 div.section {
+	padding: 0 0 20px;
+}
+
+div.ppc div.column2 span.icon-ppc {
+	float: left;
+	height: 35px;
+	margin: 0 10px 0 0;
+	text-indent: -9999px;
+	width: 35px;
+}
+
+#icon_ppc-vm_1{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -504px -17px;
+}
+
+#icon_ppc-vm_2{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -500px -61px;
+}
+
+#icon_ppc-vm_3{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -500px -111px;
+}
+
+#icon_ppc-vm_4{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -501px -155px;
+}
+
+#icon_ppc-vm_5{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -506px -196px;
+}
+
+#icon_ppc-vm_6{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -507px -242px;
+}
+
+#icon_ppc-vm_7{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -506px -288px;
+}
+
+#icon_ppc-vm_8{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -506px -336px;
+}
+
+#icon_ppc-pci_1{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -592px -18px;
+}
+
+#icon_ppc-pci_2{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -592px -59px;
+}
+
+#icon_ppc-pci_3{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -587px -107px;
+}
+
+#icon_ppc-pci_4{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -592px -148px;
+}
+
+#icon_ppc-pci_5{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -593px -194px;
+}
+
+#icon_ppc-pci_6{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -592px -237px;
+}
+
+#icon_ppc-was_1{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -663px -17px;
+}
+
+#icon_ppc-was_2{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -669px -61px;
+}
+
+#icon_ppc-was_3{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -675px -108px;
+}
+
+#icon_ppc-was_4{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -667px -148px;
+}
+
+#icon_ppc-was_5{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -666px -196px;
+}
+
+#icon_ppc-was_6{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -668px -235px;
+}
+
+#icon_ppc-phone{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -763px -18px;
+}
+
+#icon_ppc-email{
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -823px -22px;
+}
+
+div.ppc a.button-type1 {
+	margin: 10px 0 !important;
+	padding: 9px 22px !important;
+	font-weight:bold !important;	
+	font-size:18px !important;
+}
+
+div.ppc div.column2 div.contact {
+	padding:15px 10px 20px;
+}
+
+div.ppc div.column2 div.contact div.phone p {
+	float:left;
+}
+
+div.ppc div.column2 div.contact div.email {
+	float:right;
+}
+
+div.ppc div.column2 div.contact div.email p {
+	display:inline;
+}
+
+div.ppc div.column2 span.icon-ppc-contact {
+	float: left;
+	height: 25px;
+	margin: auto 5px;
+	text-indent: -9999px;
+	width: 25px;
+}
+
+.ppc-customers-quote {
+	background-color: #EBEBEB;
+	border-radius: 10px;
+	font-size: 15px;
+	margin-top: 5px;
+	padding: 20px;
+}
+
+.ppc-customers-quote em {
+	font-style:italic;
+}
+
+.ppc-customers-quote a {
+	float:right;
+}
+
+div.ppc div.three-column div.column1 div.heading {
+	height: 92px !important; 
+
+	/* 4 rounded corners */
+	border-radius: 10px !important;
+	text-align: left !important;
+}
+
+div.ppc .ppc-video {
+	background-position: -583px -283px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png);
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 7px 10px 7px 0;
+	float: left;
+}
+
+div.ppc .ppc-resources  {
+	background-position: -686px -282px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png);
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 7px 10px 7px 0;
+	float: left;
+}
+
+div.ppc .ppc-dummies {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -789px -251px;
+	overflow: hidden;
+	width: 92px;
+	height: 108px;
+	margin: 4px 10px 7px 0;
+	float: left;
+}
+
+div.ppc .ppc-owasp {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -488px -388px;
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 7px 10px 7px 0;
+	float: left;
+}
+
+div.ppc .ppc-freescan {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -592px -388px;
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 7px 10px 7px 0;
+	float: left;
+}
+
+div.ppc .ppc-whitepaper {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-landing-pages.png) no-repeat scroll -706px -388px;
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 7px 10px 7px 0;
+	float: left;
+}
+
+div.ppc div.three-column div.content {
+	text-align:center;
+	padding:10px;
+}
+
+div.ppc div.three-column div.content a{
+	font-size:15px;
+}
+
+div.ppc div.qualys-scrollable-filtering a.next, div.qualys-scrollable-filtering a.prev{
+	bottom:45px;	
+}
+
+div.ppc div.qualys-scrollable-filtering div.navi {
+	display: none;	
+}
+
+div.ppc div.qualys-scrollable-filtering a.next:before {
+	content: "";
+	left: -144px;
+}
+
+div.ppc div.qualys-scrollable-filtering a.prev:after {
+	content: "";
+	right:20px;
+}
+
+div.ppc div.qualys-scrollable-filtering a.prev {
+	left: 0;
+	padding-left:0;
+}
+
+div.ppc div.qualys-scrollable-filtering a.next, .slideshow a.forward {
+	background-position: -352px -56px;
+	height:35px;
+	width:10px;
+}
+
+div.ppc div.qualys-scrollable-filtering a.prev, .slideshow a.backward {
+	background-position: -336px -56px;
+	height:35px;
+	width:10px;
+}
+
+div#ppc-logos {
+	padding: 20px 45px 30px 40px;
+}
+
+div.ppc-logo-container {
+	float: left;
+	width: 880px;
+}
+
+div.ppc-logos-thumbnails {
+	color: #333;
+	border: 2px solid #EBEBEB;
+	padding: 3px 0;
+	height:60px;
+	width:140px;
+	vertical-align: middle;
+
+	/* 4 rounded corners */
+	border-radius: 10px;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+div.ppc-logos-thumbnails span.thumbnail, {
+	display: block;
+	height: 60px;
+	text-indent: -9999px;
+	width: 140px;
+}
+
+div.ppc-logos-thumbnails span.thumbnail {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-ppc-customers-landing-pages.png) no-repeat scroll 0 0;
+	text-indent: -9999px;
+	display:block;
+	position: relative;
+	top: 30px;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-microsoft {
+	background-position: -4px -32px;
+	height:26px;
+	width:121px;
+	margin: -13px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-ofgem {
+	background-position: -181px -25px;
+	height:40px;
+	width:105px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-adobe {
+	background-position: -342px -33px;
+	height:23px;
+	width:94px;
+	margin: -10px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-dupont {
+	background-position: -492px -23px;
+	height:43px;
+	width:112px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-ebay {
+	background-position: -660px -23px;
+	height:44px;
+	width:102px;
+	margin: -20px auto;
+
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-verisign {
+	background-position: -4px -115px;
+	height:40px;
+	width:97px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-oracle {
+	background-position: -167px -128px;
+	height:14px;
+	width:113px;
+	margin: -5px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-societe {
+	background-position: -346px -123px;
+	height:24px;
+	width:121px;
+	margin: -10px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-cisco {
+	background-position: -533px -113px;
+	height:43px;
+	width:79px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-fujitsu {
+	background-position: -679px -115px;
+	height:40px;
+	width:83px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-brinks {
+	background-position: -4px -202px;
+	height:21px;
+	width:121px;
+	margin: -10px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-pdx {
+	background-position: -215px -179px;
+	height:66px;
+	width:55px;
+	margin: -33px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-sony {
+	background-position: -360px -203px;
+	height:19px;
+	width:112px;
+	margin: -10px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-vgz {
+	background-position: -562px -191px;
+	height:42px;
+	width:55px;
+	margin: -20px auto;
+}
+
+div.ppc-logos-thumbnails span.logo-thumb-cigna {
+	background-position: -708px -184px;
+	height:57px;
+	width:54px;
+	margin: -28px auto;
+}
+
+/*# sourceMappingURL=ppc.css.map */

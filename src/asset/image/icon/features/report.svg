@@ -1,0 +1,34 @@
+
+<svg width="55px" height="70px" viewBox="0 0 55 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="24.8242408 0 49.1829796 0 49.1829796 64.1568571 0.465502041 64.1568571 0.465502041 0 24.8242408 0"></polygon>
+    </defs>
+    <g id="12.1-13-App-detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12.7-App-Detail---Security-Assessment-Questionnaire" transform="translate(-735.000000, -1769.000000)">
+            <g id="---Features-overview" transform="translate(185.000000, 1290.000000)">
+                <g id="::-04" transform="translate(549.000000, 479.000000)">
+                    <g id="icon" transform="translate(2.000000, 0.000000)">
+                        <polygon id="Stroke-1" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0 7.26449524 0 68.999781 46.2813061 68.999781 46.2813061 22.0151619 39.7660408 14.3561619 33.1582041 7.26449524"></polygon>
+                        <g id="Group-5" transform="translate(4.408163, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-4"></g>
+                            <path d="M1.68325714,0 L34.8414612,0 C35.1808898,0 35.5004816,0.140190476 35.7341143,0.388809524 L42.3430531,7.48157143 C42.3595837,7.49361905 42.3706041,7.50895238 42.3816245,7.52209524 L48.8968898,15.1832857 C49.0842367,15.4012381 49.1834204,15.6761429 49.1834204,15.9641905 L49.1834204,62.946619 C49.1834204,63.6158095 48.6379102,64.1568571 47.9645633,64.1568571 L1.68325714,64.1568571 C1.0099102,64.1568571 0.465502041,63.6158095 0.465502041,62.946619 L0.465502041,1.2102381 C0.465502041,0.542142857 1.0099102,0 1.68325714,0" id="Fill-3" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                        </g>
+                        <polygon id="Stroke-6" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6.09142041 1.21078571 6.09142041 62.9460714 52.3727265 62.9460714 52.3727265 15.9647381 45.8574612 8.30245238 39.2496245 1.21078571"></polygon>
+                        <polyline id="Stroke-8" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="51.6043837 15.2210714 40.1960571 15.2210714 40.1960571 2.42102381"></polyline>
+                        <path d="M27.8879143,44.7934857 C27.8074653,44.7825333 27.773302,41.1551048 27.8008531,33.9122952 C21.7936286,34.0163429 17.0129755,38.9394381 17.1154653,44.9052 C17.2223633,50.8753429 22.1749347,55.6319619 28.177751,55.5257238 C34.1849755,55.4183905 38.9722408,50.4952952 38.8642408,44.5306286" id="Fill-10" fill="#EC3027"></path>
+                        <path d="M29.3203469,43.1699048 C29.3335714,43.0822857 32.9835306,43.1195238 40.2724286,43.2684762 C40.2724286,37.3027143 35.4014082,32.4595714 29.3919796,32.4595714" id="Fill-12" fill="#B5D0E7"></path>
+                        <path d="M11.4444735,6.75060952 L29.8948408,6.75060952" id="Stroke-14" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.4444735,12.804319 L34.7680653,12.804319" id="Stroke-16" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.4444735,18.8581381 L34.7680653,18.8581381" id="Stroke-18" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.4444735,24.9086714 L46.9445143,24.9086714" id="Stroke-20" stroke="#B5D0E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

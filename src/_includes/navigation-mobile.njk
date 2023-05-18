@@ -1,0 +1,595 @@
+<div class="q-navigation-mobile">
+	<div class="q-navigation-mobile__panel q-navigation-mobile__panel--first">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button js-menu">Close</button>
+		</div>
+		<div class="q-navigation-mobile-wrapper">
+			<img class="q-hide-search" src="{{@root.site.asset}}/image/icon/chevron-selectbox.svg">
+			<ul class="q-navigation-mobile__list">
+				<div class="q-navigation-mobile__link-container">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/cloud-platform/">Cloud Platform</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Cloud platform apps">Cloud Platform Apps</span>
+					</li>
+					{#  <li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Subscriptions">Subscriptions</span>
+					</li>  #} 
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Solutions">Solutions</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Customers">Customers</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Partners">Partners</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Community">Community</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Support">Support</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Company">Company</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Login">Login</span>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Contactus">Contact us</span>
+					</li>
+				</div>
+				<div class="q-search-mobile">
+					<div class="q-click-helper"></div>
+					<li class="q-navigation-mobile__item ">
+						<form name="q-site-search-form" class="q-site-search" action="/company/search/" method="get">
+							<button class="q-nav-actions__link q-nav-actions__item--search-btn" type="submit" title="Submit"><img src="/asset/image/icon/search-magnifying-glass.svg"></button>
+							<input class="q-site-search-form__field-input" type="text" name="q" placeholder="Search qualys.com">
+						</form>
+					</li>
+
+					<div class="q-search-links-mobile">
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link q-search-link--heading">Quick Links</span>
+						</li>
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link"><a href="/resources/">Resources (guides, whitepapers, etc.)</a></span>
+						</li>
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link"><a href="/apps/">Qualys Cloud Apps</a></span>
+						</li>
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link"><a href="/company/newsroom/">News</a></span>
+						</li>
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link"><a href="/company/events/">Events calendar</a></span>
+						</li>
+						<li class="q-navigation-mobile__item">
+							<span class="q-navigation-mobile__link"><a href="https://community.qualys.com">Qualys Community</a></span>
+						</li>
+					</div>
+				</div>
+				<li class="q-navigation-mobile__item free-trial">
+					<span class="q-button" href="/free-trial/" data-target="try-it">Try it</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Cloud Platform">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Cloud Platform
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/cloud-platform/">Cloud Platform</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel q-navigation-mobile__panel--solutions" data-title="Solutions">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Solutions
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--spacer" href="/solutions/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/infrastructure/">
+					<span><img src="{{site.asset}}/image/icon/nav/infra-sec.svg" width="28" height="31" /></span>
+					Infrastructure security
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/threat-protection/">
+					<span><img src="{{site.asset}}/image/icon/nav/threat-protection.svg" width="28" height="31" /></span>
+					Threat protection
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/cloud/">
+					<span><img src="{{site.asset}}/image/icon/nav/cloud-infra-sec.svg" width="27" height="27" /></span>
+					Cloud infrastructure security
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/endpoint/">
+					<span><img src="{{site.asset}}/image/icon/nav/endpoint.svg" width="28" height="26" /></span>
+					Endpoint security
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/devops/">
+					<span><img src="{{site.asset}}/image/icon/nav/decsecop.svg" width="27" height="29" /></span>
+					DevOps
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/compliance/">
+					<span><img src="{{site.asset}}/image/icon/nav/compliance-2.svg" width="27" height="31" /></span>
+					Compliance
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/pci-compliance/">
+					<span><img src="{{site.asset}}/image/icon/nav/compliance-2.svg" width="27" height="31" /></span>
+					PCI compliance
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/solutions/web-app/">
+					<span><img src="{{site.asset}}/image/icon/nav/web-app-sec-2.svg" width="27" height="26" /></span>
+					Web app security
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/subscriptions/government/">
+					<span><img src="{{site.asset}}/image/icon/nav/government.svg" width="27" height="26" /></span>
+					Government
+				</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link q-sub-nav-list--icon" href="/apps/vulnerability-management-detection-response/trurisk/">
+				    <span><img src="{{site.asset}}/image/icon/nav/q-icon-trurisk-2.svg" width="27" height="26" /></span>
+					Small business
+				</a>
+			</li>
+		</ul>
+	</div>
+	{#  <div class="q-navigation-mobile__panel" data-title="Subscriptions">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Subscriptions
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/">Subscription packages</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/smb/">Small businesses</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/sme/">Mid-sized businesses</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/enterprise/">Enterprise</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/government/">Government</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/consultants/">Consultants and MSPs</a>
+			</li>
+		</ul>
+	</div>  #} 
+	<div class="q-navigation-mobile__panel q-navigation-mobile__panel--apps" data-title="Cloud platform apps">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Cloud Platform Apps
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/global-it-assets.svg" width="30" height="30" /></span>
+					Asset Management
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/global-assetview/">Global AssetView – <br><span class="q-nav__link--highlight">It’s Free! Unlimited Assets</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/">CyberSecurity Asset Management – <span class="q-nav__link--highlight">New</span></a>
+			</li>
+			<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+				<a class="q-navigation-mobile__link" href="/apps/certificate-inventory/">Certificate Inventory</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/it-security.svg" width="31" height="28" /></span>
+					IT Security
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/vulnerability-management-detection-response/">Vulnerability Management, Detection & Response – <span class="q-nav__link--highlight">Most Popular</span></a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/threat-protection/">Threat Protection</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/continuous-monitoring/">Continuous Monitoring</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/patch-management/">Patch Management</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/custom-assessment-remediation/">Custom Assessment and Remediation</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/endpoint-detection-response/">Multi-Vector EDR</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/certificate-assessment/">Certificate Assessment</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/secure-access-control/">Secure Access Control</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/saas-detection-response/">SaaS Detection & Response</a>
+			</li>
+			<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+				<a class="q-navigation-mobile__link" href="/apps/extended-detection-response/">Context XDR</a>
+			</li>
+
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/compliance.svg" width="30" height="34" /></span>
+					Compliance
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/policy-compliance/">Policy Compliance</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/security-configuration-assessment/">Security Configuration Assessment</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/pci-asv-compliance/">PCI ASV Compliance</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/file-integrity-monitoring/">File Integrity Monitoring</a>
+			</li>
+			<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+				<a class="q-navigation-mobile__link" href="/apps/security-assessment-questionnaire/">Security Assessment Questionnaire</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/cloud-container-sec.svg" width="32" height="26" /></span>
+					Cloud-Native Security
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/totalcloud/">TotalCloud - <span class="q-nav__link--highlight">New</span></a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/cloud-inventory/">Cloud Inventory</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/cloud-security-assessment/">Cloud Security Assessment</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/container-security/">Container Security</a>
+			</li>
+			<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+				<a class="q-navigation-mobile__link" href="/apps/cloud-detection-response/">Cloud Detection &amp; Response - <span class="q-nav__link--highlight">New</span></a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/web-app-sec.svg" width="32" height="31" /></span>
+					Web App Security
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/web-app-scanning/">Web App Scanning</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/web-app-firewall/">Web App Firewall</a>
+			</li>
+		</ul>
+
+		{#  <div class="q-nav__apps-vmdr-banner">
+			<div class="q-nav__apps-vmdr-banner-content">
+				<div class="q-nav__apps-vmd-subscriptions">
+					<a href="/subscriptions/" class="options">Subscription options</a>
+				</div>
+				<div class="q-nav__apps-vmd-content">
+					<h3>
+						<a href="/apps/vulnerability-management-detection-response/" class="q-vmdr-banner-link">Qualys <span class="nowrap">VMDR <img class="link-arrow" src="/asset/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+					</h3>
+					<p>
+						Combines Global AssetView, Vulnerability Management, Security Configuration Assessment, Threat Protection and Patch Management into a single cloud-based app and workflow, drastically reducing cost.
+					</p>
+				</div>
+				<h3>
+					<a href="/subscriptions/" class="q-vmdr-banner-link">Cloud Apps “a la <span class="nowrap">carte” <img class="link-arrow" src="/asset/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+				</h3>
+			</div>
+		</div>  #} 
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Customers">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Customers
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/customers/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/customers/#best-practices">Best practices</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/customers/#success-stories">Success stories</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/customers/#testimonials">Testimonials</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Partners">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Partners
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/program/">Partner program</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/vad/">VAD partners</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/var/">VAR resellers</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/mssp/">MSP/MSSP partners</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/subscriptions/consultants/">Consultants and MSPs</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/integration/">Integration partners</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/faq/">Partner FAQs</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/partners/find/">Find a partner</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Community">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Community
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://community.qualys.com/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="{{site.salesforce.discuss.url}}/">Discuss</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/documentation/">Docs</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://blog.qualys.com/">Blog</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/resources/">Resources</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Support">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Support
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="{{site.salesforce.csp.url}}/">Overview</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://www.qualys.com/training/">Free training</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Company">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Company
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/company/">About us</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/company/management/">Our team</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://investor.qualys.com/">Investor relations</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/company/newsroom/">News</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/customers/awards/">Awards</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/company/events/">Events</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/careers/">Careers</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Login">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Login
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qualys.com/">US Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg2.apps.qualys.com/">US Platform 2</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg3.apps.qualys.com/">US Platform 3</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg4.apps.qualys.com/">US Platform 4</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.ca/">CA Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://pci.qualys.com/">PCI Platform</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qualys.eu/">EU Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg2.apps.qualys.eu/">EU Platform 2</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.in/">IN Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.ae/">AE Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.co.uk/">UK Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.com.au/">AU Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualysksa.com">KSA Platform 1</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://www.qualys.com/platform-identification/">What's my platform?</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="Contactus">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Contact us
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<p class="contact-intro">Contact us below to request a quote, or for any product-related questions</p>
+			</li>
+			 <li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link drift-open-chat">Chat with us</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/forms/schedule-demo/">Schedule a demo</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="tel:1-800-745-4355">+1 800 745 4355</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/forms/request-a-call/">Request a call or email</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/company/contacts/#headquarters">Global offices and contacts</a>
+			</li>
+		</ul>
+	</div>
+	<div class="q-navigation-mobile__panel" data-title="try-it">
+		<div class="q-navigation-mobile__header">
+			<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+			<div class="q-navigation-mobile__title">
+				Try it
+			</div>
+		</div>
+		<ul class="q-navigation-mobile__list">
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/platform.svg" width="30" height="30" /></span>
+					Qualys Cloud Platform
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/free-trial/">Cloud Platform - Free Trial</a>
+			</li>
+			{#  <li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/forms/vmdr/">Qualys VMDR - Free Trial</a>
+			</li>  #} 
+			<li class="q-navigation-mobile__item">
+				<h3 class="q-navigation-mobile__appheading">
+					<span class="q-app-nav--icon"><img src="{{site.asset}}/image/icon/nav/free-services.svg" width="24" height="27" /></span>
+					Free Services
+				</h3>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/forms/remote-endpoint/">60-Day Remote Endpoint Protection</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/apps/global-assetview/">Global AssetView</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/community-edition/">Community Edition</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://www.ssllabs.com/">SSL Labs</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/certview/">CertView</a>
+			</li>
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/cloudview/">CloudView</a>
+			</li>
+			{#  <li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="https://qualysguard.qg3.apps.qualys.com/apisec-api/register.html">API Security Assessment</a>
+			</li>  #} 
+			<li class="q-navigation-mobile__item">
+				<a class="q-navigation-mobile__link" href="/free-tools-trials/browsercheck/">BrowserCheck</a>
+			</li>
+		</ul>
+	</div>
+</div>

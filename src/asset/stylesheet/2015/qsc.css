@@ -1,0 +1,667 @@
+/* BEGIN HEADER */
+body.qsc div.header
+{
+	overflow: hidden;
+	background: #FFF;
+	width: 100%;
+	margin: 0;
+	font-size: 10pt;
+	height: 73px;
+}
+div.locations {
+	display: inline-block;
+	float: right;
+	margin-top: 25px;
+	margin-right: 42px;
+}
+div.locations b {
+	color: #333;
+	font-weight: 700;
+}
+img.logo {
+	margin-left: 45px;
+	margin-top: 9px;
+}
+body.qsc div.header > div
+{
+	width: 1004px;
+	margin: 0 auto;
+}
+div.sticky-menu
+{
+	position: relative;
+}
+div.sticky-menu.product-nav
+{
+	height: 128px;
+}
+body.qsc div.submenu
+{
+	background: #D4DDE5;
+	border: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 128px;
+}
+div.submenu div.subwrap a
+{
+	font-size: 11pt;
+	color: #333;
+}
+body.qsc div.submenu a.active
+{
+	font-weight: 400;
+}
+body.qsc div.submenu div.subwrap
+{
+	width: 1004px;
+	margin: 0 auto;
+	height: 55px;
+	background: #D4DDE5;
+}
+body.qsc div.submenu div.subwrap ul
+{
+	margin-right:38px;
+}
+body.qsc div.submenu ul
+{
+	margin-top: 0;
+}
+body.qsc div.submenu li
+{
+	line-height: 53px;
+}
+body.qsc div.stuck div.submenu a.register,
+body.qsc div.submenu a.register {
+	padding: 5px 10px;
+	margin: 0;
+	background: #DE1D0B;
+	background: linear-gradient(to bottom, #DE1D0B 0%,#AE1408 100%);
+	color: #FFF;
+	border-radius: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: inline;
+}
+body.qsc div.stuck div.submenu a.register:hover,
+div.submenu a.register:hover {
+	background: #C31909;
+	background: linear-gradient(to bottom, #C31909 0%,#9C241C 100%);
+	text-decoration: none;
+}
+body.qsc div.locations a
+{
+	line-height: 21px;
+}
+div.locations a:hover, div.locations a.active {
+	text-decoration: none;
+	border-bottom: 2px solid #1672B4;
+}
+div.locations a {
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 13px;
+	color: #333;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+
+/* END HEADER */
+#content.full-width div.section {
+	padding-left: calc(50% - 457px);
+	padding-right: calc(50% - 457px);
+}
+#content.full-width div.section.banner {
+	text-align: center;
+	background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/aria-banner-2558-2x.jpg);
+	background-color: #0E7ED2;
+	min-height: 602px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding: 0;
+	color: #FFF;
+	background-size: 2558px 602px;
+}
+div.qsc15 {
+	background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/qsc15-globe-291-2x.png);
+	background-size: 291px 295px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	margin-top: 53px;
+	display: inline-block;
+	width: 291px;
+	height: 295px;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.qsc15 {
+		background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/qsc15-globe-291-1x.png);
+	}
+}
+div.section.banner div.qsc16 {
+	background-image: url(https://ik.imagekit.io/qualys/image/2016/qsc/qsc16-logo-vertical-291-2x.png);
+	background-size: 291px 303px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	margin-top: 53px;
+	display: inline-block;
+	width: 291px;
+	height: 303px;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.section.banner div.qsc16 {
+		background-image: url(https://ik.imagekit.io/qualys/image/2016/qsc/qsc16-logo-vertical-291-2x.png);
+	}
+}
+div.banner h1 {
+	font-size: 36pt;
+	font-weight: 400;
+	margin-top: -20px;
+	display: none;
+}
+div.banner h2 {
+	font-size: 21pt;
+	color: #B4E6FD;
+	font-weight: 400;
+	margin-top: -4px;
+}
+div.banner a.register,
+div.attend a.agenda {
+	font-size: 15.75pt;
+	margin-top: 22px;
+	padding: 10px 26px;
+}
+#content.full-width div.section.attend {
+	padding-top: 47px;
+	padding-bottom: 47px;
+	background-color: #F9F9F9;
+}
+div.attend p,
+div.attend li {
+	font-size: 14pt;
+}
+div.attend ul {
+	margin-bottom: 13px;
+}
+div.attend li {
+	margin-left: 16px;
+	margin-bottom: 2px;
+}
+div.attend h2 {
+	margin-bottom: 10px;
+	font-size: 24pt;
+	font-weight: 400;
+	margin-top: 16px;
+}
+#content.full-width div.section.videos {
+	background-color: #2E4E94;
+	color: #FFF;
+	padding-top: 44px;
+	padding-bottom: 59px;
+	text-align: center;
+}
+div.videos h3 {
+	font-weight: 400;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 18pt;
+}
+div.videos div.container {
+	display: inline-block;
+	margin: 0 16px;
+}
+#content.full-width div.section.agenda,
+#content.full-width div.section.register {
+	padding-top: 45px;
+}
+div.agenda h2,
+div.register h2 {
+	font-size: 36pt;
+	font-weight: 400;
+	text-align: center;
+	color: #153970;
+	padding-bottom: 4px;
+}
+#content div.agenda ul.tabs a,
+#content div.agenda ul.tabs a:hover {
+	line-height: 1.2;
+	border: 1px solid #2E4E94;
+	text-align: center;
+	font-size: 14pt;
+	padding: 13px 0 15px;
+	width: 220px;
+}
+#content div.agenda ul.tabs li {
+	border: none;
+}
+div.agenda li p {
+	color: #2E4E94;
+}
+div.agenda p.date {
+	font-weight: 600;
+}
+div.agenda a.active {
+	background-color: #2E4E94;
+	color: #FFF;
+}
+div.agenda a.active p {
+	color: #FFF;
+}
+#content div.agenda ul.tabs li:before,
+.print,
+div.attend a.agenda {
+	display: none;
+}
+div.print {
+	text-align: center;
+}
+div.print h2 {
+	font-size: 30pt;
+	margin-top: 25px;
+}
+div.print h3,
+h2.print.agenda {
+	font-size: 25pt;
+}
+h2.print.agenda {
+	margin-bottom: 20px;
+}
+#content td.description {
+	text-align: left;
+	line-height: 1.2;
+}
+div.panes {
+	margin-top: 52px;
+	font-size: 14pt;
+}
+div.panes table table {
+	margin-bottom: 15px;
+}
+td.time {
+	min-width: 208px;
+	line-height: 1.2;
+	vertical-align: top;
+}
+div.panes p.speaker {
+	font-size: 12pt;
+	margin-top: 3px;
+	font-weight: 300;
+}
+h4 {
+	font-weight: 300;
+}
+b {
+	color: inherit;
+}
+table h4 {
+	font-size: 14pt;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 19px;
+	margin-top: 8px;
+}
+#content.full-width div.section.speakers {
+	padding-top: 53px;
+	background-color: #D4DDE5;
+	padding-bottom: 92px;
+}
+div.speaker {
+	display: inline-block;
+	margin-right: 29px;
+	max-width: 200px;
+	vertical-align: top;
+	margin-bottom: 40px;
+}
+div.speaker.right {
+	margin-right: 0;
+}
+div.speakers h2,
+h2.print.abstract-bio {
+	font-size: 36pt;
+	font-weight: 400;
+	margin-bottom: 27px;
+	letter-spacing: -0.6px;
+}
+h2.print.abstract-bio {
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+div.speaker h5 {
+	font-size: 13.5pt;
+	font-weight: 700;
+}
+div.speaker p {
+	font-size: 12.75pt;
+	line-height: 1.2;
+}
+div.speaker p.company {
+	font-weight: 600;
+}
+div.speaker img {
+	padding: 10px;
+	background-color: #FFF;
+}
+div.pic {
+	position: relative;
+	margin-bottom: 7px;
+}
+div.pic div.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 55px 55px 0 0;
+	border-color: #FFF transparent transparent;
+	position: absolute;
+	margin-top: 24px;
+	margin-left: 10px;
+}
+.bio {
+	margin-right: auto;
+}
+#content.full-width div.section.event {
+	padding-top: 45px;
+	background-color: #2E4E94;
+	color: #FFF;
+	padding-bottom: 84px;
+}
+div.event p {
+	font-size: 12pt;
+}
+div.event h2 {
+	font-size: 36pt;
+	font-weight: 400;
+	color: #9CD4EE;
+	margin-bottom: 20px;
+}
+div.event h3 {
+	font-size: 20pt;
+	font-weight: 400;
+	margin-bottom: 12px;
+}
+div.event h3.travel {
+	margin-top: 16px;
+}
+div.address {
+	display: inline-block;
+	margin-left: 40px;
+	vertical-align: middle;
+}
+div.aria,
+div.aureole {
+	margin-top: 46px;
+}
+#content.full-width div.section.dinner {
+	padding-top: 22px;
+	padding-bottom: 0;
+	background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/dinner-location-1770-2x.jpg);
+	background-color: #FFF;
+	min-height: 707px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 1770px 707px;
+	font-size: 20pt;
+}
+div.dinner h2 {
+	font-size: 36pt;
+	font-weight: 400;
+	margin-bottom: 25px;
+	padding-top: 55px;
+}
+div.dinner p.invite {
+	width: 445px;
+	line-height: 1.2;
+	margin-bottom: -16px;
+}
+div.dinner div.location {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 38px;
+	margin-top: 10px;
+}
+div.dinner div.location p {
+	font-size: 12pt;
+	width: 327px;
+}
+div.dinner p.location {
+	font-size: 16pt;
+}
+#content.full-width div.section.sponsors {
+	padding-top: 20px;
+}
+div.sponsors h2 {
+	font-size: 32pt;
+	text-align: center;
+	font-weight: 400;
+}
+div.logos {
+	text-align: center;
+	margin-top: 31px;
+}
+div.logos img,
+div.logos div.logo {
+	vertical-align: middle;
+	margin: 20px 29px;
+}
+div.kenna {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/kenna-262-2x.png);
+	background-size: 180px 43px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 180px;
+	height: 43px;
+	display: inline-block;
+}
+div.bay-dynamics {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/bay-dynamics-200-2x.png);
+	background-size: 180px 43px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 180px;
+	height: 43px;
+	display: inline-block;
+}
+div.netspi {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/netspi-200-2x.png);
+	background-size: 180px 43px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 180px;
+	height: 43px;
+	display: inline-block;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.kenna {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/kenna-262-1x.png);
+	}
+	div.bay-dynamics {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/bay-dynamics-200-1x.png);
+	}
+	div.netspi {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/netspi-200-1x.png);
+	}
+}
+div.trace {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/tracesecurity-200-2x.png);
+	background-size: 200px 51px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 200px;
+	height: 51px;
+	display: inline-block;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.trace {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/tracesecurity-200-1x.png);
+	}
+}
+div.lockpath {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/lockpath-2-color-200-2x.png);
+	background-size: 200px 24px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 200px;
+	height: 24px;
+	display: inline-block;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.lockpath {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/lockpath-2-color-200-1x.png);
+	}
+}
+div.brinqa {
+	background-image: url(https://ik.imagekit.io/qualys/image/logo/brinqa-200-2x.png);
+	background-size: 200px 68px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 200px;
+	height: 68px;
+	display: inline-block;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.brinqa {
+		background-image: url(https://ik.imagekit.io/qualys/image/logo/brinqa-200-1x.png);
+	}
+}
+h2.supporting {
+	margin-top: 50px;
+}
+div.html-overlay {
+	width: 500px;
+	padding-top: 13px;
+}
+div.html-overlay h5 {
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+a:hover {
+	cursor: pointer;
+}
+div.parallel {
+	width: 284px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 32px;
+	min-height: 170px;
+	float: left;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+div.parallel.first {
+	border-right: 1px solid #2C5291;
+	padding-left: 0;
+}
+div.parallel.last {
+	border-left: 1px solid #2C5291;
+	padding-right: 0;
+}
+img.headshot {
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+	margin-top: 5px;
+}
+a.button-type1.training {
+	font-size: 15pt;
+	padding: 5px 18px 7px;
+	margin-top: 9px;
+}
+body {
+	background-image: none;
+}
+div.qsc {
+	background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/qsc-498-2x.png);
+	background-size: 498px 28px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	display: inline-block;
+	width: 498px;
+	height: 28px;
+	margin-top: 41px;
+}
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 96dpi) {
+	div.qsc {
+		background-image: url(https://ik.imagekit.io/qualys/image/2015/qsc/qsc-498-1x.png);
+	}
+}
+p.soon {
+	text-align: center;
+	font-size: 15pt;
+	margin-top: 21px;
+	margin-bottom: 21px;
+}
+h4.trainer {
+	font-weight: 300;
+	text-transform: none;
+	margin-bottom: 2px;
+}
+p.credits {
+	margin-bottom: 20px;
+}
+td.item {
+	padding-bottom: 20px;
+}
+table.class1 {
+	margin-bottom: 50px;
+}
+span.topics {
+	font-weight: 300;
+}
+div.aria a {
+	color: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+}
+a.hotel{
+	color: #FFF;
+	text-decoration: underline;
+}
+a.hotel:hover {
+	color: #9CD4EE;
+}
+div.room-rsvp {
+	background-color: #FFF;
+	opacity: 0.83;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 298px;
+	border-radius: 10px;
+	opacity: 0.83;
+	text-align: left;
+	padding: 27px 33px 74px;
+	max-width: 448px;
+}
+#content div.venue-container {
+	height: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+div.venue-container div.container {
+	width: 1004px;
+	margin: 0 auto;
+	position: relative;
+}
+#content.full-width div.section.venue {
+	padding: 0;
+	background-color: #1E3479;
+	margin: 0 auto;
+	text-align: center;
+}
+div.room-rsvp h2 {
+	font-size: 27pt;
+	font-weight: 600;
+}
+div.room-rsvp p {
+	font-size: 14pt;
+}
+
+/*# sourceMappingURL=qsc.css.map */

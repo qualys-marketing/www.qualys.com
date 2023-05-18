@@ -1,0 +1,367 @@
+/*
+ * selectors to hide
+ */
+#nav,
+div.toolbar,
+div.section-nav,
+div.section-content > div > *,
+#breadcrumbs,
+.preprefooter,
+.prefooter,
+.footer,
+#footer > *,
+#footer span.logo-qualys-continuous-security,
+#toolbar,
+#nav,
+#breadcrumbs,
+#prefooter,
+#footer,
+#newsroom-nav,
+div.pseudo-h1,
+div.load-more,
+div.active-tracking,
+.careers .videos,
+.search-openings,
+#careers_openings .side-column,
+div.suite div.apps,
+body.customers-success-stories .image,
+#success-stories,
+body.customers-success-stories a.button-type1,
+#back-to-top,
+body.customers-success-stories div.section.nav,
+.schedule-demo,
+.live-chat,
+.promo-buttons,
+.mobile-footer,
+.mobile-nav,
+.mobile-header,
+.newsroom .section-nav,
+.awards .section-nav,
+.research .section-nav,
+.search-panel-wrapper,
+.search-panel-overlay,
+.newsroom .banner,
+.newsroom .local-nav,
+.newsroom p.h2,
+#overlay,
+div.news-release-actions,
+div.success-stories-actions {
+	display: none;
+}
+
+
+/*
+ * selectors to show
+ */
+body > div.header-wrapper,
+body > #content,
+div.section-content div > div.news-release,
+#footer,
+#footer > p {
+	display: block;
+}
+
+
+/*
+ * reset more things
+ */
+body,
+#header,
+#content.full-width,
+#content.full-width div.section,
+#content.full-width div.section-content,
+div.news-release,
+#footer {
+	background: none;
+	border: 0 none;
+	color: inherit;
+	height: auto;
+	min-height: 0;
+	line-height: normal;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+	position: inherit;
+	width: auto;
+	z-index: 1;
+}
+body, li:before, .ui-widget, input, textarea {
+	font-family: Arial, sans-serif !important;
+	font-smoothing: auto;
+	text-rendering: auto;
+}
+
+
+/* set document margins */
+@page {
+	margin: 1in;
+}
+body {
+	margin: 0;
+	line-height: 1.25;
+}
+
+
+#content {
+	border: 0 none;
+	border-radius: 0;
+	box-shadow: none;
+	color: black;
+}
+#newsroom-content {
+	border: 0 none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+}
+#container {
+	padding: 0;
+	margin: 0;
+}
+div.rest-of-content {
+	height: auto !important;
+}
+
+/* needed to print Success Stories properly */
+.clear-print {
+	clear: both;
+}
+.success-stories .section-content {
+	padding-top: 20px !important;
+}
+.newsroom div.news-release h1,
+.awards div.news-release h1,
+.research div.news-release h1 {
+	margin-top: 0;
+}
+img.success-story-image {
+	float: none;
+}
+body,
+div.header-background {
+	background: none;
+}
+
+
+div.news-release-body > br {
+	display: none;
+}
+table.financials {
+	width: 100%;
+	margin: 0;
+}
+
+/* naturally position logo */
+#logo {
+	top: auto;
+	left: auto;
+	position: inherit;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+/* adjust size of logo */
+#logo img {
+	font-size: 0.75in;
+	height: 1em;
+	margin: 0 0.5em 0.5em 0;
+	width: auto;
+}
+
+/* adjust vertical margins on heading and paragraphs */
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: bold !important;
+}
+div.news-release h1 {
+	font-size: 1.5em;
+	margin:  0 0 0.75rem;
+	padding: 0 0 0.75rem;
+}
+div.news-release h2 {
+	font-size: 1.125em;
+	color: #000;
+}
+div.news-release h1 ~ h2 {
+	margin: 0.75rem 0 1.25rem;
+}
+div.news-release h2,
+div.news-release h3,
+div.news-release h4,
+div.news-release h5,
+div.news-release h6,
+div.news-release p,
+div.news-release ul {
+	margin: 1.25rem 0;
+}
+div.news-release ul {
+	padding-left: 2.5rem;
+}
+div.news-release a {
+	color: black;
+	text-decoration: none;
+}
+
+/* print links */
+div.news-release a[href]:after {
+	color: #063F9A;
+	content: " (" attr(href) ")";
+}
+div.news-release a[href^="/"]:after {
+	content: " (https://www.qualys.com" attr(href) ")";
+}
+div.news-release a[href^="mailto"]:after {
+	content: "";
+	content: none;
+}
+#content.full-width div.section.news-releases {
+	margin-top: -40px;
+}
+#footer > p {
+	border-top: 1pt solid black;
+	font-size: 9pt;
+	line-height: 2;
+}
+
+/*
+ * success stories
+ * quotes
+ * images
+ */
+
+/* adjust size of third party logos on success stories */
+body.success-stories #content.full-width div.section.intro {
+	padding-top: 0;
+}
+body.success-stories #content div.company-info {
+	background-color: transparent;
+	margin-right: 0;
+	border-radius: 0;
+	padding: 0;
+	width: auto;
+	margin-top: 0;
+}
+body.success-stories #content .column2 {
+	float: none;
+	margin: 0;
+	width: auto;
+}
+body.success-stories div.logo {
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+body.success-stories div.logo img {
+	margin-top: 0;
+}
+body.success-stories div.company-profile {
+	margin-top: 0;
+}
+body.success-stories div.center {
+	text-align: left;
+}
+body.success-stories #content div.company-info p,
+body.success-stories #content div.company-info p b,
+body.success-stories #content div.company-info a,
+body.success-stories #content div.company-info ul,
+body.success-stories #content div.company-info li {
+	color: black;
+}
+body.success-stories #content div.company-info p,
+body.success-stories #content div.company-info ul,
+body.success-stories #content div.company-info li {
+	margin: 1.5rem 0;
+}
+body.success-stories #content div.company-info p:first-child {
+	margin: 0 0 1.5rem;
+}
+body.success-stories div.success-stories-actions {
+	display: block;
+}
+body.success-stories #main {
+	margin: 0 0 1.5rem;
+	page-break-before: always;
+}
+body.success-stories h1,
+body.customers.success-stories h1 {
+	border-bottom: 1pt solid black;
+	font-size: 1.5em;
+	margin:  0 0 0.75rem;
+	padding: 0 0 0.75rem;
+}
+body.success-stories h2,
+body.customers-success-stories h6 {
+	font-size: 1.125em;
+}
+body.success-stories h1 ~ h2,
+body.customers-success-stories h1 ~ h6 {
+	margin: 0.75rem 0 1.25rem;
+}
+body.success-stories img.success-story-homepage {
+	border: 1pt solid black;
+	display: block;
+	height: auto;
+	margin: 1.5rem 0;
+	width: 100%;
+	width: calc(100% - 2pt);
+}
+#content div.column2 div.content {
+	background: transparent;
+	font-size: inherit;
+	margin-top: 0;
+	padding: 0;
+}
+body.success-stories div.side-column {
+	border-right: 1pt solid black;
+	float: left;
+	margin: 0 0.75rem 0 0;
+	padding: 0 0.75rem 0 0;
+	width: 33%;
+	width: calc(33% - 0.75rem - 1pt);
+}
+#content .rest-of-content p.quote,
+.customers-success-stories #content p.quote {
+	color: black;
+	font-size: inherit;
+	line-height: 1.5;
+}
+#content div.side-column div.content img {
+	float: none;
+	height: auto;
+	margin: 0;
+	margin: 1.5rem 0;
+	padding-top: 0;
+	width: 80%;
+}
+body.success-stories img.success-story-image {
+	border: 1pt solid black;
+	display: block;
+	float: right;
+	height: auto;
+	margin: 0 0 1.5rem 0.75rem;
+	width: 67%;
+	width: calc(67% - 0.75rem - 2pt);
+}
+
+
+/*
+ * company contacts
+ */
+#company_contacts h1 {
+	text-align: left;
+}
+#company_contacts p.description,
+#company_contacts ul.countries,
+#company_contacts #content a {
+	display: none;
+}
+#company_contacts #content a[href^="mailto"] {
+	display: inline;
+}
+
+/*
+ * earnings release
+ */
+table.financials {
+	margin-bottom: 3em;
+}
+
+/*# sourceMappingURL=main.print.css.map */

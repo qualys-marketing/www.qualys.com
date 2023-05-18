@@ -1,0 +1,1804 @@
+#smb_qualysguard_express-lite div.slide {
+	box-shadow:         0 2px 8px rgba(153, 153, 153, 0.58);
+	color: #FFF;
+	position: relative;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: block;
+	width: 958px;
+	height: 434px;
+	float: left;
+}
+#smb_qualysguard_express-lite div.banner1 {
+	background-position: 0 -350px;
+	text-align: center;
+}
+#smb_qualysguard_express-lite div.banner2 {
+	background-position: 0 -800px;
+}
+#smb_qualysguard_express-lite div.banner3 {
+	background-position: 0 -1250px;
+}
+#smb_qualysguard_express-lite div.banner4 {
+	background-position: 0 -1700px;
+}
+#smb_qualysguard_express-lite div.banner5 {
+	background-position: 0 -2150px;
+}
+#smb_qualysguard_express-lite div.navi {
+	z-index: 199; /* one pixel below the sticky menu */
+	bottom: auto;
+	width: 100%;
+	margin: 0;
+	top: 455px;
+	left: 0;
+}
+#smb_qualysguard_express-lite div.banner1 h2 {
+	font-size: 36pt;
+	font-weight: 700;
+	text-align: center;
+	white-space:nowrap;
+	display: inline-block;
+	margin-top: 26px;
+}
+#smb_qualysguard_express-lite div.banner2 h2,
+#smb_qualysguard_express-lite div.banner3 h2,
+#smb_qualysguard_express-lite div.banner4 h2,
+#smb_qualysguard_express-lite div.banner5 h2 {
+	font-size: 30pt;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 33px;
+	width: 492px;
+	text-shadow: 0 2px 2px 0 rgba(0, 33, 100, 0.75);
+	margin-left: 52px;
+	line-height: 1.3;
+	margin-bottom: 10px;
+}
+span.stop-them {
+	font-weight: 500;
+	font-size: 22pt;
+	font-style: italic;
+	white-space: nowrap;
+}
+#smb_qualysguard_express-lite div.banner1 h3 {
+	font-size: 19pt;
+	font-weight: normal;
+}
+#smb_qualysguard_express-lite div.banner2 h3,
+#smb_qualysguard_express-lite div.banner3 h3,
+#smb_qualysguard_express-lite div.banner4 h3,
+#smb_qualysguard_express-lite div.banner5 h3 {
+	font-size: 18pt;
+	font-weight: normal;
+	margin-left: 52px;
+	width: 420px;
+	line-height: 1.4;
+}
+#smb_qualysguard_express-lite div.banner1 b {
+	font-weight: 500;
+	color: #FFF;
+}
+#smb_qualysguard_express-lite div.banner1 div.underline {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: block;
+	width: 126px;
+	height: 15px;
+	background-position: -700px 0;
+	position: relative;
+	left: 105px;
+}
+div.section.type1 {
+	background-color: #EDF4F7;
+	padding: 55px 45px; 
+}
+div.why-qualysguard div.text h2 {
+	font-size: 30pt;
+	color: #000;
+	padding-bottom: 12px;
+	line-height: 1;
+	padding-top: 0;
+}
+div.why-qualysguard div.text h3 {
+	font-size: 19pt;
+	font-weight: 500;
+	margin-bottom: 0;
+	margin-top: 14px;
+	color: #717171;
+}
+div.section.why-qualysguard div.text {
+	display: inline-block;
+	width: 427px;
+	vertical-align: top;
+	margin-top: 0;
+	margin-left: 53px;
+}
+div.why-qualysguard div.text .highlighted {
+	color: #DE1D0B;
+}
+div.why-qualysguard div.text p {
+	font-size: 13pt;
+	line-height: 1.4;
+}
+div.why-qualysguard div.video-wrapper {
+	width: 383px;
+	display: inline-block;
+	vertical-align: top;
+}
+div.why-qualysguard div.images-wrapper {
+	width: 292px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px 0 25px;
+}
+div.why-qualysguard a.video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	width: 383px;
+	height: 237px;
+	background-position: 0 0
+}
+div.why-qualysguard div.video-wrapper p,
+#smb_qualysguard_express div.banner p {
+	font-weight: 500;
+	text-align: center;
+}
+#smb_qualysguard_express div.banner a.free-trial {
+	padding: 4px 13px;
+}
+#smb_qualysguard_express-lite div.express-lite-slideshow a.free-trial {
+	padding: 4px 13px;
+	margin-left: 52px;
+	text-align: center;
+	margin-top: 26px;
+}
+div.why-qualysguard div.video-wrapper a.free-trial,
+div.section.type4 a.free-trial,
+div.banner a.button-type1.free-trial {
+	font-size: 21pt;
+	font-weight: 500;
+	padding: 6px 19px;
+	text-align: center;
+	margin-top: 24px;
+}
+div.why-qualysguard div.video-wrapper a.free-trial {
+	font-weight: normal;
+	padding: 4px 17px 8px;
+}
+div.why-qualysguard div.video-wrapper a.free-trial span.arrow-down-cloud {
+	margin: 0;
+}
+div.why-qualysguard div.video-wrapper p.nothing-to-install,
+div.banner p.nothing-to-install {
+	font-size: 11pt;
+}
+div.why-qualysguard div.button-wrapper {
+	text-align: center;
+}
+div.section.type2 {
+	background-color: #FFF;
+	padding: 50px 42px;
+	border-top:  1px solid #D2D2D2;
+	box-shadow: inset none;
+}
+body.qualysguard-consultant  div.section.type2.breadcrumbs,
+body.qualysguard div.section.type2.breadcrumbs,
+#qualysguard-subscription-plans div.section.type2.breadcrumbs {
+	padding: 24px 42px;
+	border-top: none;
+	border-bottom: none;
+}
+div.section.type5.testimonial {
+	padding: 50px 42px;
+}
+div.section.type2.testimonial {
+	padding-bottom: 0;
+}
+div.section.type2.testimonial h2 {
+	text-align: center;
+	font-size: 29pt;
+	margin-bottom: 35px;
+}
+div.section.testimonial div.logos {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	width: 895px;
+	height: 49px;
+	background-position: 0 -250px;
+	margin-bottom: 30px;
+	margin-left: -10px;
+}
+#smb_qualysguard_express div.section.testimonial div.logos {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	width: 879px;
+	height: 67px;
+	background-position: 0 -2600px;
+	margin-left: -5px;
+}
+#enterprises_qualysguard div.section.testimonial div.logos {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-enterprise.png);
+	width: 879px;
+	height: 58px;
+	background-position: 0 -1600px;
+	margin-left: -5px;
+}
+div.quote-wrapper {
+	display: inline-block;
+}
+div.section.testimonial blockquote {
+	font-size: 21pt;
+	color: #5399EF;
+	width: 532px;
+	line-height: 1.2;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+#smb_qualysguard_express div.section.testimonial blockquote {
+	font-size: 19pt;
+}
+div.section.testimonial blockquote:before {
+	content: "";
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	width: 38px;
+	height: 24px;
+	background-position: -700px -50px;
+}
+div.section.testimonial blockquote:after {
+	content: "";
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	width: 38px;
+	height: 24px;
+	background-position: -750px -50px;
+}
+div.section.testimonial blockquote b {
+	font-weight: 500;
+}
+div.section.testimonial blockquote span.quote {
+	font-size: 66pt;
+}
+div.section.testimonial p.author {
+	font-size: 13pt;
+	color: #5399EF;
+	margin-top: 5px;
+}
+div.section.testimonial div.video-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+div.section.testimonial a.video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 262px;
+	height: 139px;
+	background-position: -400px 0;
+	text-indent: -9999px;
+	display: block;
+}
+#smb_qualysguard_express div.section.testimonial a.video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-position: 0 -2700px;
+}
+#enterprises_qualysguard div.section.testimonial a.video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-enterprise.png);
+	background-position: 0 -1700px;
+}
+div.section.testimonial div.video-wrapper p {
+	text-align: right;
+	font-weight: 500;
+	font-size: 12pt;
+}
+div.section.testimonial div.testimonial-wrapper {
+	margin: 0 24px;
+}
+div.section.type3.qg-lite-description h2 {
+	font-size: 29pt;
+	margin-bottom: 15px;
+}
+div.section.type3.qg-lite-description h2 span.for {
+	font-size: 17pt;
+	font-weight: normal;
+}
+div.section.type3.qg-lite-description {
+	background-color: #FFF;
+}
+div.section.type3.features {
+	background-color: #FFF;
+	padding-top: 0;
+}
+div.section.type3.qg-lite-description div.text {
+	width: 450px;
+	margin-right: 50px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0;
+}
+div.section.type3.qg-express-description div.text, {
+	margin-right: 50px;
+	vertical-align: top;
+	margin-top: 0;
+}
+div.section.type3.qg-lite-description div.steps,
+div.section.type3.qg-express-description div.features {
+	width: 375px;
+	display: inline-block;
+	vertical-align: top;
+	color: #FFF;
+}
+div.section.type3.qg-express-description ul {
+	margin-left: 5px;
+}
+div.section.type3.qg-express-description div.features {
+	width: 375px;
+	display: inline-block;
+	vertical-align: top;
+	color: #FFF;
+}
+#smb_qualysguard_express div.features,
+#enterprises_qualysguard div.features {
+	width: 284px;
+	margin-right: 10px;
+	position: relative;
+}
+#smb_qualysguard_express div.features li,
+#enterprises_qualysguard div.features li,
+#smb_qualysguard_express div.features p,
+#enterprises_qualysguard div.features p {
+	padding-left: 1em;
+}
+div.steps div.heading,
+#smb_qualysguard_express div.features div.heading,
+#enterprises_qualysguard div.features div.heading  {
+	padding: 18px 27px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#smb_qualysguard_express div.features div.heading div.icon,
+#enterprises_qualysguard div.features div.heading div.icon {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	text-indent: -9999px;
+	position: absolute;
+	background-position: -700px -250px;
+	right: 26px;
+}
+#smb_qualysguard_express div.features.enhanced-operations div.heading div.icon,
+#enterprises_qualysguard div.features.enhanced-operations div.heading div.icon {
+	width: 48px;
+	height: 40px;
+	background-position: -700px -250px;
+	top: 24px;
+}
+#smb_qualysguard_express div.features.simpler-compliance div.heading div.icon,
+#enterprises_qualysguard div.features.simpler-compliance div.heading div.icon {
+	width: 42px;
+	height: 41px;
+	background-position: -800px -250px;
+	top: 23px;
+}
+div.steps div.heading {
+	background-color: #0F73B2;
+}
+div.steps div.heading h3,
+#smb_qualysguard_express div.features div.heading h3,
+#enterprises_qualysguard div.features div.heading h3 {
+	font-size: 19pt;
+	line-height: 1.2;
+}
+div.steps div.content,
+#smb_qualysguard_express div.features div.content,
+#enterprises_qualysguard div.features div.content {
+	padding: 14px 20px 9px;
+	font-size: 11pt;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#smb_qualysguard_express div.features div.content {
+	height: 320px;
+}
+#enterprises_qualysguard div.features div.content {
+	height: 443px;
+}
+#smb_qualysguard_express div.features div.content a,
+#enterprises_qualysguard div.features div.content a  {
+	color: #FFF;
+}
+div.steps div.content {
+	background-color: #00A3E3;
+}
+div.steps div.content li,
+div.features.enhanced-operations div.content li {
+	line-height: 1.3;
+	margin-bottom: 10px;
+}
+#smb_qualysguard_express div.features div.content ul,
+#enterprises_qualysguard div.features div.content ul {
+	margin-bottom: 10px;
+}
+div.section.type4 {
+	background: #075CDA;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzA3NWNkYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ZmFjZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: linear-gradient(to bottom,  #075CDA 1%,#5FACEE 100%);
+	color: #FFF;
+	padding: 35px 0 62px;
+	text-align: center;
+}
+div.section.type4 h2 {
+	margin-bottom: 13px;
+}
+div.section.type4 a.free-trial {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+a.free-trial.subscription,
+a.free-trial.view-demo {
+	vertical-align: top;
+}
+div.section.type4 a.free-trial.subscription {
+	padding: 9px 45px;
+}
+a.free-trial.subscription p {
+	color: #A1D0FD;
+}
+div.section.type4 div.button-wrapper,
+div.section.type4 a.free-trial {
+	display: inline-block;
+}
+div.section.type4 div.button-wrapper {
+	margin-right: 18px;
+}
+div.section.type4 div.button-wrapper a.button-type4.free-trial {
+	box-shadow: 0 0 0 1px #457934;
+}
+#content div.section.type4 p.phone {
+	font-size: 16pt;
+	font-weight: 500;
+}
+div.section.type5 {
+	background: #DDDCDC;
+	background: linear-gradient(to bottom,  #E7E6E6 0%,#FFF 50%,#FFF 100%);
+	box-shadow: none;
+	border: none;
+	text-align: center;
+	padding: 40px 10px;
+}
+div.resource {
+	float: none;
+	display: inline-block;
+	width: 208px;
+	margin-right: 11px;
+	vertical-align: top;
+}
+div.resources h2 {
+	margin-bottom: 24px;
+}
+div.resources h3 {
+	margin-top: 21px;
+}
+a.media {
+	background-color: #525252;
+	width: 208px;
+	height: 164px;
+	margin-bottom: 11px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	text-indent: -9999px;
+}
+#smb_qualysguard_express a.media {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+}
+#enterprises_qualysguard a.media {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-enterprise.png);
+}
+div.resource.vm-for-dummies a.media {
+	background-position: 0 -2600px;
+}
+div.resource.nine-steps a.media {
+	background-position: -250px -2600px;
+}
+div.resource.ahold a.media {
+	background-position: -500px -2600px;
+}
+div.resource.best-practices a.media {
+	background-position: -750px -2600px;
+}
+div.resource.vm-pci-pc-was-dummies a.media {
+	background-position: 0 -2400px;
+}
+div.resource.security-compliance a.media {
+	background-position: -250px -2400px;
+}
+#smb_qualysguard_express div.resource.nine-steps a.media {
+	background-position: -500px -2400px;
+}
+div.resource.ogilvy a.media {
+	background-position: -750px -2400px;
+}
+#enterprises_qualysguard div.resource.security-compliance a.media {
+	background-position: 0 -1400px;
+}
+div.resource.efficient-ciso a.media {
+	background-position: -250px -1400px;
+}
+div.resource.microsoft-case-study a.media {
+	background-position: -500px -1400px;
+}
+#enterprises_qualysguard div.resource.best-practices a.media {
+	background-position: -750px -1400px;
+}
+div.resources p {
+	text-align: left;
+}
+
+
+/*
+* Styles for QG Express Overview page
+*/
+#smb_qualysguard_express div.banner h2 {
+	font-size: 33pt;
+	padding-bottom: 0;
+}
+#smb_qualysguard_express div.banner h3 {
+	font-size: 17pt;
+	color: #686868;
+	font-weight: normal;
+	width: 506px;
+	z-index: 100;
+	position: relative;
+}
+#smb_qualysguard_express div.banner {
+	padding: 75px 0 0 57px;
+	position: relative;
+	background-color: #FFF;
+	height: 418px;
+	margin-top: -57px;
+}
+#smb_qualysguard_express div.banner a.video {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 305px;
+	height: 132px;
+	background-position: -650px -350px;
+	text-indent: -9999px;
+	display: block;
+	margin-top: 27px;
+}
+#smb_qualysguard_express div.banner div.devices {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 600px;
+	height: 493px;
+	background-position: 0 -93px;
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+div.express-slideshow {
+	position: relative;
+}
+div.express-slideshow div.slide {
+	position: relative;
+	height: 437px;
+	float: left;
+	width: 958px;
+}
+div.background {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 958px;
+	height: 437px;
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+div.express-slideshow div.slide1 div.background {
+	background-position: 0 -600px;
+}
+div.express-slideshow div.slide2 div.background {
+	background-position: 0 -1050px;
+}
+div.express-slideshow div.slide3 div.background {
+	background-position: 0 -1500px;
+}
+div.express-slideshow div.slide4 div.background {
+	background-position: 0 -1950px;
+}
+div.express-slideshow div.slide div.content {
+	z-index: 100;
+	position: relative;
+	text-align: center;
+	padding: 32px 105px;
+	color: #FFF;
+	width: 748px;
+	height: 404px;
+}
+div.express-slideshow div.slide h2 {
+	font-size: 30pt;
+	text-shadow: 4px 3px 5px rgba(2, 3, 3, 0.5);
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 31px;
+}
+#content div.express-slideshow div.slide p {
+	font-size: 17pt;
+	text-align: left;
+	width: 375px;
+	line-height: 1.2;
+}
+div.express-slideshow div.slide div.button-wrapper {
+	text-align: left;
+	margin: 20px 0 0;
+	float: none !important;
+}
+div.express-slideshow div.slide p.read-more a {
+	color: #FFF;
+	font-size: 14pt;
+}
+div.express-slideshow div.navi {
+	position: absolute;
+	top: 389px;
+	z-index: 100;
+}
+a.prev,
+a.next {
+	display: inline-block;
+	position: absolute;
+	top: 159px;
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 35px;
+	height: 92px;
+	text-indent: -9999px;
+	z-index: 200;
+	cursor: pointer;
+}
+a.prev {
+	background-position: -601px -250px;
+	left: 10px;
+}
+a.next {
+	background-position: -650px -250px;
+	right: 10px;
+}
+div.express-lite-slideshow a.prev,
+div.express-lite-slideshow a.next {
+	top: 210px;
+}
+#smb_qualysguard_express div.section.type1.why-qualysguard {
+	background-color: #FFF;
+	border-bottom: 1px solid #D2D2D2;
+}
+#was_features_scrollable a.next,
+#was_features_scrollable a.prev {
+	display: none;
+}
+
+
+/**
+ * next and prev arrows for feature navigation
+ */
+div.features a.prev,
+div.features a.next {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png) no-repeat scroll;
+	background-position:-179px 38px;
+	background-clip: content-box;
+	cursor: pointer;
+	height: 17px;
+	opacity: 0.6;
+	overflow: hidden;
+	padding: 38px 21px;
+	text-indent: -9999px;
+	top: 0;
+	width: 17px;
+}
+div.features a.next.active,
+div.features a.next:active,
+div.features a.next:hover,
+div.features a.prev.active,
+div.features a.prev:active,
+div.features a.prev:hover {
+	opacity: 1;
+}
+div.features a.prev {
+	left: 0;
+	background-position: -1028px -12px;
+}
+div.features a.next {
+	right: 0;
+}
+
+
+div.qualysguard-platform {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 292px;
+	height: 225px;
+	text-indent: -9999px;
+	background-position: -600px 0;
+}
+div.why-qualysguard div.features {
+	margin: 12px 0 0 66px;
+	display: inline-block;
+}
+div.why-qualysguard div.features div div {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-express.png);
+	background-color: transparent;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+#content div.why-qualysguard div.features p {
+	display: inline-block;
+	color: #154780;
+	font-size: 18pt;
+	font-weight: 500;
+}
+div.why-qualysguard h6 {
+	font-size: 14pt;
+	text-align: center;
+	margin: 13px 0 0;
+	color: #717171;
+}
+div.why-qualysguard p.learn-more {
+	font-size: 11pt;
+	font-weight: 500;
+	text-align: center;
+}
+div.icon-auditing {
+	background-position: -300px 0;
+}
+div.icon-compliance {
+	background-position: -350px 0;
+}
+div.icon-protection {
+	background-position: -400px 0;
+}
+div.feature-wrapper {
+	margin-bottom: 5px;
+}
+#smb_qualysguard_express #banner2,
+#enterprises_qualysguard #banner2{
+	background: #075CDA;
+	background: linear-gradient(to bottom,  #075CDA 0%,#5FACEE 100%);
+	left: 0;
+	height: 415px;
+}
+#smb_qualysguard_express #banner2 h1,
+#enterprises_qualysguard #banner2 h1 {
+	text-align: left;
+	font-size: 26pt;
+	line-height: 1.2;
+}
+#smb_qualysguard_express #banner2 div.text,
+#enterprises_qualysguard #banner2 div.text {
+	top: 54px;
+	left: 70px;
+}
+#smb_qualysguard_express #banner2 div.container,
+#enterprises_qualysguard #banner2 div.container {
+	height: 415px;
+}
+#smb_qualysguard_express #banner2 div.navi,
+#enterprises_qualysguard #banner2 div.navi {
+	top: 380px;
+}
+div.section.type9 {
+	padding-left: 0;
+	padding-right: 0;
+}
+div.section.type9,
+#smb_qualysguard_express div.section.type3,
+#enterprises_qualysguard div.section.type3 {
+	background: #FFF;
+	background: linear-gradient(to bottom,  #FFF 0%,#FFF 19%,#F5F5F5 100%);
+	border-bottom: 2px solid #D3DAE5;
+	padding-top: 28px;
+}
+#smb_qualysguard_express a.badge:hover,
+#enterprises_qualysguard a.badge:hover {
+	text-decoration: none;
+	background-color: #FFF;
+}
+#smb_qualysguard_express a.vm,
+#enterprises_qualysguard a.vm {
+	background-color: #19599B;
+	box-shadow:         2px 2px 0 #20235D;
+	border: 2px solid #19599B;
+}
+#smb_qualysguard_express a.vm:hover,
+#enterprises_qualysguard a.vm:hover {
+	color: #19599B;
+}
+#smb_qualysguard_express a.pc,
+#smb_qualysguard_express a.saq,
+#smb_qualysguard_express a.pci,
+#enterprises_qualysguard a.pc,
+#enterprises_qualysguard a.saq,
+#enterprises_qualysguard a.pci {
+	background-color: #62BA5C;
+	box-shadow:         2px 2px 0 #0D4427;
+	border: 2px solid #62BA5C;
+}
+#smb_qualysguard_express a.pc:hover,
+#smb_qualysguard_express a.saq:hover,
+#smb_qualysguard_express a.pci:hover,
+#enterprises_qualysguard a.pc:hover,
+#enterprises_qualysguard a.saq:hover,
+#enterprises_qualysguard a.pci:hover {
+	color: #62BA5C;
+}
+#smb_qualysguard_express a.was,
+#smb_qualysguard_express a.mds,
+#smb_qualysguard_express a.waf,
+#enterprises_qualysguard a.was,
+#enterprises_qualysguard a.mds,
+#enterprises_qualysguard a.waf {
+	background-color: #00B0ED;
+	box-shadow:         2px 2px 0 #253F83;
+	border: 2px solid #00B0ED;
+}
+#smb_qualysguard_express a.was:hover,
+#smb_qualysguard_express a.mds:hover,
+#smb_qualysguard_express a.waf:hover,
+#enterprises_qualysguard a.was:hover,
+#enterprises_qualysguard a.mds:hover,
+#enterprises_qualysguard a.waf:hover {
+	color: #00B0ED;
+}
+#smb_qualysguard_express a.seal,
+#enterprises_qualysguard a.seal {
+	background-color: #97999C;
+	box-shadow:         2px 2px 0 #2F2F2F;
+	border: 2px solid #97999C;
+}
+#smb_qualysguard_express a.seal:hover,
+#enterprises_qualysguard a.seal:hover {
+	color: #97999C;
+}
+#smb_qualysguard_express a.badge,
+#enterprises_qualysguard a.badge {
+	border-radius: 10px;
+	border-top-right-radius: 0;
+	width: auto;
+	height: 57px;
+	background-image: none;
+	float: none;
+	display: inline-block;
+	margin: 0 3px 0 0;
+	vertical-align: top;
+	text-indent: 0;
+	padding: 4px 7px;
+	color: #FFF;
+	line-height: 1.3;
+	text-align: left;
+}
+div.badge-wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+div.section.type9 p.features {
+	font-weight: 500;
+	text-align: center;
+	margin: 18px 0;
+}
+#smb_qualysguard_express a.badge p,
+#enterprises_qualysguard a.badge p {
+	font-size: 10pt;
+	line-height: 1.3;
+}
+#smb_qualysguard_express a.badge abbr, 
+#enterprises_qualysguard a.badge abbr {
+	text-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/*
+* Styles for QG Express Lite Features page
+*/
+#partners_qualysguard-consultant_features div.features,
+body.qualysguard.features div.features {
+	background: #0D69E4;
+	background: linear-gradient(to bottom,  #0D69E4 0%,#4897E9 100%);
+	border-bottom: 2px solid #FFF;
+	height: 94px;
+	padding: 0 60px;
+	position: absolute;
+	top: 56px;
+	width: 838px;
+	z-index: 100;
+}
+#partners_qualysguard-consultant_features div.features,
+#enterprises_qualysguard_features div.features,
+#smb_qualysguard_express_features div.features {
+	border-bottom: 8px solid #1D76DC;
+	height: 125px;
+	padding: 0;
+	width: auto;
+	background: #387BCA; /* Old browsers */ /* FF3.6+ */
+	background: linear-gradient(to bottom,  #387BCA 0%,#1B579D 100%); /* W3C */
+}
+#partners_qualysguard-consultant_features #content div.features a.feature,
+#enterprises_qualysguard_features #content div.features a.feature,
+#smb_qualysguard_express_features #content div.features a.feature {
+	opacity: 1;
+	height: 125px;
+	width: 159px;
+	border-left: 1px solid #558ECE;
+	border-bottom: 1px solid #558ECE;
+	float: left;
+	position: relative;
+}
+#partners_qualysguard-consultant_features #content div.features a.feature.first,
+#enterprises_qualysguard_features #content div.features a.platform,
+#smb_qualysguard_express_features #content div.features a.platform {
+	width: 158px;
+}
+#partners_qualysguard-consultant_features #content div.features a.feature.active, 
+#partners_qualysguard-consultant_features #content div.features a.feature:active, 
+#enterprises_qualysguard_features #content div.features a.feature.active,
+#enterprises_qualysguard_features #content div.features a.feature:active,
+#smb_qualysguard_express_features #content div.features a.feature.active,
+#smb_qualysguard_express_features #content div.features a.feature:active {
+	border-bottom: none;
+}
+a.feature div.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 11px 22.5px 0;
+	border-color: #1D76DC transparent transparent;
+	position: absolute;
+	top: auto;
+	bottom: -19px;
+	left: 57px;
+	display: none;
+}
+a.feature div.border {
+	height: 8px;
+	width: 958px;
+	position: absolute;
+	bottom: -9px;
+}
+#partners_qualysguard-consultant_features #content div.features a.platform.active,
+#partners_qualysguard-consultant_features #content div.features a.asset-discovery.active,
+#partners_qualysguard-consultant_features #content div.features a.network-security.active,
+#enterprises_qualysguard_features #content div.features a.platform.active,
+#enterprises_qualysguard_features #content div.features a.asset-discovery.active,
+#enterprises_qualysguard_features #content div.features a.network-security.active,
+#smb_qualysguard_express_features #content div.features a.platform.active,
+#smb_qualysguard_express_features #content div.features a.asset-discovery.active,
+#smb_qualysguard_express_features #content div.features a.network-security.active {
+	border-bottom: 1px solid #1D76DC; 
+}
+#enterprises_qualysguard_features #content div.features a.web-app-security.active,
+#enterprises_qualysguard_features #content div.features a.threat-protection.active,
+#smb_qualysguard_express_features #content div.features a.web-app-security.active,
+#smb_qualysguard_express_features #content div.features a.threat-protection.active {
+	border-bottom: 1px solid #62C5FD; 
+}
+#enterprises_qualysguard_features #content div.features a.compliance-monitoring.active,
+#smb_qualysguard_express_features #content div.features a.compliance-monitoring.active {
+	border-bottom: 1px solid #49BF5D; 
+}
+#enterprises_qualysguard_features a.web-app-security.active div.border,
+#smb_qualysguard_express_features a.web-app-security.active div.border {
+	left: -479px;
+	background-color: #62C5FD;
+}
+#enterprises_qualysguard_features a.asset-discovery div.border,
+#smb_qualysguard_express_features a.asset-discovery div.border {
+	left: -160px;
+}
+#enterprises_qualysguard_features a.network-security div.border,
+#smb_qualysguard_express_features a.network-security div.border {
+	left: -319px;
+}
+#enterprises_qualysguard_features a.web-app-security div.border,
+#smb_qualysguard_express_features a.web-app-security div.border {
+	left: -480px;
+}
+#enterprises_qualysguard_features a.threat-protection div.border,
+#smb_qualysguard_express_features a.threat-protection div.border {
+	left: -640px;
+}
+#enterprises_qualysguard_features a.threat-protection.active div.border,
+#smb_qualysguard_express_features a.threat-protection.active div.border {
+	left: -639px;
+	background-color: #62C5FD;
+}
+#enterprises_qualysguard_features a.compliance-monitoring div.border,
+#smb_qualysguard_express_features a.compliance-monitoring div.border {
+	left: -800px;
+}
+#enterprises_qualysguard_features a.compliance-monitoring.active div.border,
+#smb_qualysguard_express_features a.compliance-monitoring.active div.border {
+	left: -799px;
+	background-color: #49BF5D;
+}
+#partners_qualysguard-consultant_features a.feature.active div.triangle,
+#enterprises_qualysguard_features a.feature.active div.triangle,
+#smb_qualysguard_express_features a.feature.active div.triangle {
+	display: block;
+}
+#enterprises_qualysguard_features a.web-app-security div.triangle,
+#enterprises_qualysguard_features a.threat-protection div.triangle,
+#smb_qualysguard_express_features a.web-app-security div.triangle,
+#smb_qualysguard_express_features a.threat-protection div.triangle {
+	border-color: #62C5FD transparent transparent;
+}
+#enterprises_qualysguard_features a.compliance-monitoring div.triangle,
+#smb_qualysguard_express_features a.compliance-monitoring div.triangle {
+	border-color: #49BF5D transparent transparent;
+}
+#partners_qualysguard-consultant_features div.features a.feature.first,
+#enterprises_qualysguard_features #content div.features a.feature.first,
+#smb_qualysguard_express_features #content div.features a.feature.first {
+	border-left: none !important;
+}
+#partners_qualysguard-consultant_features div.features a.feature.last,
+#enterprises_qualysguard_features #content div.features a.feature.last,
+#smb_qualysguard_express_features #content div.features a.feature.last {
+	border-right: none;
+}
+#partners_qualysguard-consultant_features div.features a.feature p,
+#enterprises_qualysguard_features #content div.features a.feature p,
+#smb_qualysguard_express_features #content div.features a.feature p {
+	opacity: 1;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12pt;
+	line-height: 1.4;
+	margin-top: 72px;
+}
+#smb_qualysguard_express-lite_features div.features {
+	width: 842px;
+	padding: 0 58px;
+}
+body.qualysguard-consultant.features a.feature,
+body.qualysguard-consultant.features div.features a.more,
+body.qualysguard.features a.feature,
+body.qualysguard.features div.features a.more {
+	background: transparent;
+	width: 120px;
+	height: 94px;
+	margin-right: 0;
+	color: #FFF;
+	opacity: 0.6;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+body.qualysguard.features div.features a.more {
+	width: 118px;
+}
+body.qualysguard.features #content a.feature p,
+body.qualysguard.features #content div.features a.more p {
+	font-size: 10pt;
+	font-weight: 500;
+	margin-top: 56px;
+	line-height: 1;
+}
+body.qualysguard.features a.feature:hover,
+body.qualysguard.features div.features a.more:hover,
+body.qualysguard.features a.feature:active,
+body.qualysguard.features div.features a.more:active,
+body.qualysguard.features a.feature.active,
+body.qualysguard.features div.features a.more.active {
+	text-decoration: none;
+	background: #3F90FC;
+	background: linear-gradient(to bottom,  #3F90FC 0%,#64AFFE 100%);
+	opacity: 1;
+}
+body.qualysguard-consultant.features a.feature div.icon,
+body.qualysguard.features a.feature div.icon,
+body.qualysguard.features a.more div.icon {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	text-indent: -9999px;
+	position: absolute;
+	top: 15px;
+}
+#partners_qualysguard-consultant_features a.feature:hover, 
+#partners_qualysguard-consultant_features a.feature:active,
+#partners_qualysguard-consultant_features a.feature.active,
+#enterprises_qualysguard_features a.feature:hover, 
+#enterprises_qualysguard_features a.feature:active,
+#enterprises_qualysguard_features a.feature.active,
+#smb_qualysguard_express_features a.feature:hover, 
+#smb_qualysguard_express_features a.feature:active,
+#smb_qualysguard_express_features a.feature.active {
+	background: #64A8F5; /* Old browsers */ /* FF3.6+ */
+	background: linear-gradient(to bottom,  #64A8F5 0%,#64A8F5 0%,#3D8DE9 49%,#2D84E7 50%,#1D76DC 100%); /* W3C */
+}
+#enterprises_qualysguard_features a.web-app-security:hover, 
+#enterprises_qualysguard_features a.web-app-security:active,
+#enterprises_qualysguard_features a.web-app-security.active,
+#enterprises_qualysguard_features a.threat-protection:hover, 
+#enterprises_qualysguard_features a.threat-protection:active,
+#enterprises_qualysguard_features a.threat-protection.active,
+#smb_qualysguard_express_features a.web-app-security:hover, 
+#smb_qualysguard_express_features a.web-app-security:active,
+#smb_qualysguard_express_features a.web-app-security.active,
+#smb_qualysguard_express_features a.threat-protection:hover, 
+#smb_qualysguard_express_features a.threat-protection:active,
+#smb_qualysguard_express_features a.threat-protection.active {
+	background: #A4DDFE; /* Old browsers */ /* FF3.6+ */
+	background: linear-gradient(to bottom,  #A4DDFE 0%,#82D1FE 49%,#77CDFD 50%,#62C5FD 100%); /* W3C */
+}
+#enterprises_qualysguard_features a.compliance-monitoring:hover, 
+#enterprises_qualysguard_features a.compliance-monitoring:active,
+#enterprises_qualysguard_features a.compliance-monitoring.active,
+#smb_qualysguard_express_features a.compliance-monitoring:hover, 
+#smb_qualysguard_express_features a.compliance-monitoring:active,
+#smb_qualysguard_express_features a.compliance-monitoring.active {
+	background: #86E797; /* Old browsers */ /* FF3.6+ */
+	background: linear-gradient(to bottom,  #86E797 0%,#65D378 49%,#59CE6D 50%,#49BE5D 100%); /* W3C */
+}
+#partners_qualysguard-consultant_features a.feature div.icon,
+#enterprises_qualysguard_features a.feature div.icon,
+#smb_qualysguard_express_features a.feature div.icon {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite.png);
+}
+#partners_qualysguard-consultant_features a.feature div.icon,
+#enterprises_qualysguard_features a.feature.platform div.icon,
+#smb_qualysguard_express_features a.feature.platform div.icon {
+	width: 86px;
+	height: 43px;
+	background-position: -500px -100px;
+	left: 37px;
+	top: 21px;
+}
+#enterprises_qualysguard_features a.feature.asset-discovery div.icon,
+#smb_qualysguard_express_features a.feature.asset-discovery div.icon {
+	width: 86px;
+	height: 56px;
+	background-position: -600px -100px;
+	left: 37px;
+	top: 11px;
+}
+#enterprises_qualysguard_features a.feature.network-security div.icon,
+#smb_qualysguard_express_features a.feature.network-security div.icon {
+	width: 64px;
+	height: 73px;
+	background-position: -500px -150px;
+	left: 48px;
+	top: 1px;
+}
+#enterprises_qualysguard_features a.feature.web-app-security div.icon,
+#smb_qualysguard_express_features a.feature.web-app-security div.icon {
+	width: 79px;
+	height: 63px;
+	background-position: -850px -1200px;
+	left: 45px;
+	top: 5px;
+}
+#enterprises_qualysguard_features a.feature.threat-protection div.icon,
+#smb_qualysguard_express_features a.feature.threat-protection div.icon {
+	width: 67px;
+	height: 67px;
+	background-position: -900px -650px;
+	left: 47px;
+	top: 7px;
+}
+#enterprises_qualysguard_features a.feature.compliance-monitoring  div.icon,
+#smb_qualysguard_express_features a.feature.compliance-monitoring  div.icon {
+	width: 64px;
+	height: 62px;
+	background-position: -950px -1200px;
+	left: 47px;
+	top: 9px;
+}
+body.qualysguard.features a.feature.platform div.icon {
+	width: 72px;
+	height: 29px;
+	background-position: 0 0;
+	left: 24px;
+}
+body.qualysguard.features a.feature.perimeter-scanning div.icon {
+	width: 59px;
+	height: 39px;
+	background-position: -550px 0;
+	left: 30px;
+}
+body.qualysguard.features a.feature.internal-scanning div.icon {
+	width: 49px;
+	height: 36px;
+	background-position: -150px 0;
+	left: 42px;
+	top: 13px;
+}
+body.qualysguard.features a.feature.continuous-monitoring div.icon {
+	width: 50px;
+	height: 35px;
+	background-position: -650px 0;
+	left: 39px;
+	top: 13px;
+}
+body.qualysguard.features a.feature.password-security div.icon {
+	width: 36px;
+	height: 39px;
+	background-position: -700px 0;
+	left: 48px;
+	top: 13px;
+}
+body.qualysguard.features a.feature.computer-configurations div.icon {
+	width: 44px;
+	height: 39px;
+	background-position: -750px 0;
+	left: 44px;
+	top: 13px;
+}
+body.qualysguard.features a.feature.questionnaires div.icon {
+	width: 38px;
+	height: 41px;
+	background-position: -800px 0;
+	left: 44px;
+	top: 8px;
+}
+body.qualysguard.features a.feature.latest-patches div.icon {
+	width: 32px;
+	height: 37px;
+	background-position: -250px 0;
+	left: 45px;
+	top: 11px;
+}
+body.qualysguard.features a.feature.pci-compliance div.icon {
+	width: 36px;
+	height: 35px;
+	background-position: -300px 0;
+	left: 42px;
+	top: 11px;
+}
+body.qualysguard.features a.feature.owasp-scanning div.icon {
+	width: 44px;
+	height: 45px;
+	background-position: -850px 0;
+	left: 42px;
+	top: 6px;
+}
+body.qualysguard.features a.feature.find-vulnerabilities div.icon {
+	width: 38px;
+	height: 38px;
+	background-position: -350px 0;
+	left: 42px;
+	top: 13px;
+}
+body.qualysguard.features a.feature.asset-management div.icon {
+	width: 51px;
+	height: 31px;
+	background-position: -900px 0;
+	left: 36px;
+	top: 17px;
+}
+body.qualysguard.features a.feature.manage-tickets div.icon {
+	width: 50px;
+	height: 30px;
+	background-position: -1000px 0;
+	left: 36px;
+	top: 17px;
+}
+body.qualysguard.features a.feature.zero-day-patch-tuesday div.icon {
+	width: 9px;
+	height: 33px;
+	background-position: -1000px -50px;
+	left: 56px;
+	top: 15px;
+}
+body.qualysguard.features a.feature.dashboards-reports div.icon {
+	width: 38px;
+	height: 39px;
+	background-position: -400px 0;
+	left: 43px;
+	top: 10px;
+}
+body.qualysguard.features a.feature.integrate-apis div.icon {
+	width: 61px;
+	height: 46px;
+	background-position: -1000px -100px;
+	left: 31px;
+	top: 9px;
+}
+body.qualysguard.features a.feature.public-private-cloud div.icon {
+	width: 56px;
+	height: 38px;
+	background-position: -1000px -150px;
+	left: 31px;
+	top: 9px;
+}
+body.qualysguard.features a.feature.qg-suite div.icon {
+	width: 69px;
+	height: 34px;
+	background-position: -450px 0;
+	left: 25px;
+	top: 11px;
+}
+body.qualysguard.features a.more div.icon {
+	width: 16px;
+	height: 17px;
+	background-position: -200px 0;
+	left: 53px;
+	top: 25px;
+}
+body.qualysguard-consultant.features div.banner,
+body.qualysguard.features div.banner {
+	position: relative;
+	height: 319px;
+	padding: 50px 57px;
+}
+body.qualysguard-consultant.features div.background,
+body.qualysguard.features div.background {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 100%;
+	height: 419px;
+	background-position: 0 -50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+body.qualysguard-consultant.features div.banner div.content,
+body.qualysguard.features div.banner div.content {
+	position: relative;
+	color: #1D3250;
+	width: 467px;
+	display: inline-block;
+}
+body.qualysguard-consultant.features #content div.banner p,
+body.qualysguard.features #content div.banner p {
+	font-size: 13pt;
+}
+body.qualysguard-consultant.features div.banner p.powered-by,
+body.qualysguard.features div.banner p.powered-by {
+	background-color: #0B50A6;
+	color: #FFF;
+	padding: 3px 16px;
+	display: inline-block;
+	border-radius: 5px;
+}
+body.qualysguard-consultant.features div.banner h2,
+body.qualysguard.features div.banner h2 {
+	font-size: 38pt;
+	color: #FFF;
+	line-height: 1.2;
+}
+body.qualysguard-consultant.features div.banner a.read-more b,
+body.qualysguard.features div.banner a.read-more b {
+	color: #2A4666;
+	position: relative;
+}
+body.qualysguard-consultant.features div.banner div.consultant-platform,
+body.qualysguard.features div.banner div.qualysguard-platform {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	position: absolute;
+	display: inline-block;
+	right: 67px;
+	top: 89px;
+	width: 323px;
+	height: 248px;
+	background-position: -450px -1250px;
+}
+body.qualysguard-consultant.features div.section,
+body.qualysguard.features div.section {
+	padding: 63px;
+	text-align: left;
+}
+body.qualysguard-consultant.features div.scan-perimeter,
+body.qualysguard.features div.scan-perimeter {
+	background-color: #FFF;
+}
+div.image-container {
+	display: inline-block;
+	text-align: center;
+}
+div.product-feature div.image-container div.image,
+div.product-feature div.image-container a.image {
+	margin-bottom: 20px;
+	margin-right: 0;
+}
+div.product-feature div.image-container a.free-trial {
+	margin-top: 15px;
+}
+div.link-wrapper a {
+	font-style: italic;
+	font-weight: 500;
+	margin-right: 10px;
+	font-size: 10pt;
+}
+div.link-wrapper a:before {
+	content: "";
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 5px;
+}
+div.link-wrapper a.screenshot:before {
+	width: 23px;
+	height: 19px;
+	background-position: -1000px -200px;
+}
+div.link-wrapper a.watch-demo:before {
+	width: 24px;
+	height: 18px;
+	background-position: -1000px -250px;
+}
+div.link-wrapper a.schedule-demo:before {
+	width: 20px;
+	height: 20px;
+	background-position: -1000px -300px;
+}
+body.qualysguard-consultant.features div.section div.image,
+body.qualysguard-consultant.features div.section a.image,
+body.qualysguard.features div.section div.image,
+body.qualysguard.features div.section a.image {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 0;
+	margin-left: 0;
+}
+body.qualysguard-consultant.features div.scan-perimeter div.image,
+body.qualysguard-consultant.features div.scan-perimeter a.image,
+body.qualysguard.features div.scan-perimeter div.image,
+body.qualysguard.features div.scan-perimeter a.image {
+	width: 400px;
+	height: 226px;
+	background-position: 0 -500px;
+}
+div.product-feature.scan-perimeter div.text,
+#smb_qualysguard_express-lite_features div.product-feature.owasp-top-10 div.text,
+#smb_qualysguard_express-lite_features div.product-feature.check-pci-compliance div.text,
+div.product-feature.verify-compliance div.text,
+div.product-feature.latest-patches div.text,
+#smb_qualysguard_express_features div.product-feature.find-vulnerabilities div.text,
+#smb_qualysguard_express_features div.product-feature.zero-day-patch-tuesday div.text,
+#smb_qualysguard_express_features div.product-feature.dashboards-reports div.text,
+#enterprises_qualysguard_features div.product-feature.rogue-devices div.text,
+#enterprises_qualysguard_features div.product-feature.audit-for-compliance div.text,
+#enterprises_qualysguard_features div.product-feature.check-pci-compliance div.text,
+#enterprises_qualysguard_features div.product-feature.find-vulnerabilities div.text,
+#enterprises_qualysguard_features div.product-feature.zero-day-patch-tuesday div.text,
+#enterprises_qualysguard_features div.product-feature.dashboards-reports div.text,
+#enterprises_qualysguard_features div.product-feature.compliance-solutions div.text  {
+	margin-left: 46px;
+	margin-right: 0;
+}
+div.product-feature.scan-network div.text,
+div.product-feature.dashboards div.text,
+div.product-feature.check-pci-compliance div.text,
+div.product-feature.owasp-top-10 div.text,
+#smb_qualysguard_express-lite_features div.product-feature.latest-patches div.text,
+#smb_qualysguard_express_features div.product-feature.manage-tickets div.text,
+#smb_qualysguard_express_features div.product-feature.integrate-apis div.text,
+#smb_qualysguard_express_features div.product-feature.compliance-solutions div.text,
+#enterprises_qualysguard_features div.product-feature.verify-compliance div.text,
+#enterprises_qualysguard_features div.product-feature.questionnaires div.text,
+#enterprises_qualysguard_features div.product-feature.asset-management div.text,
+#enterprises_qualysguard_features div.product-feature.manage-tickets div.text,
+#enterprises_qualysguard_features div.product-feature.integrate-apis div.text,
+#enterprises_qualysguard_features div.product-feature.public-private-cloud div.text {
+	margin-left: 0;
+	margin-right: 46px;
+}
+body.qualysguard-consultant.features #content div.section div.text,
+body.qualysguard.features #content div.section div.text {
+	display: inline-block;
+	width: 373px;
+	vertical-align: top;
+	margin-top: 0;
+}
+body.qualysguard.features #content div.section.latest-patches div.text {
+	width: 450px;
+}
+body.qualysguard.features div.section h2 {
+	line-height: 1.3;
+	padding: 0 0 21px;
+	text-align: left;
+}
+body.qualysguard.features div.section.type4 h2 {
+	text-align: center;
+}
+body.qualysguard.features #content div.section p {
+	font-size: 13pt;
+	text-align: left;
+}
+body.qualysguard.features a.icon-video:after {
+	content: "";
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	width: 23px;
+	height: 14px;
+	background-position: -650px -1050px;
+	margin-left: 7px;
+}
+body.qualysguard.features div.scan-network {
+	text-align: left;
+}
+div.product-feature div.image,
+div.product-feature a.image {
+	background-image: url(https://ik.imagekit.io/qualys/image/sprite-qg-features.png);
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	float: none !important;
+}
+body.qualysguard.features div.scan-network div.image,
+body.qualysguard.features div.scan-network a.image {
+	width: 400px;
+	height: 226px;
+	background-position: -450px -500px;
+	margin-left: 0;
+	margin-right: 0;
+}
+body.qualysguard.features hr,
+#qualysguard-subscription-plans hr {
+	border-top: 1px solid #EDEDED;
+	background-color: #EDEDED;
+	height: 2px;
+	border-bottom: 1px solid #FCFCFC;
+	margin: 0;
+}
+body.qualysguard.features div.latest-patches div.image-container {
+	margin: 0 29px;
+}
+body.qualysguard.features div.latest-patches div.image,
+body.qualysguard.features div.latest-patches a.image {
+	width: 201px;
+	height: 204px;
+	background-position: 0 -750px;
+	margin-left: 0;
+	margin-right: 0;
+}
+body.qualysguard.features #content div.section.type4 p,
+body.qualysguard.features #content div.section.type4 {
+	text-align: center;
+}
+body.qualysguard.features #content div.section.type4 p.nothing-to-install,
+body.qualysguard.features #content div.section.type4 p.options-pricing {
+	font-size: 11pt;
+	text-align: center;
+}
+body.qualysguard.features div.check-pci-compliance div.image,
+body.qualysguard.features div.check-pci-compliance a.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: -250px -750px;
+} 
+div.check-pci-compliance div.image,
+div.check-pci-compliance a.image {
+	margin: 0;
+}
+#enterprises_qualysguard_features  div.check-pci-compliance div.image {
+	margin-left: 0;
+	margin-right: 0;
+}
+body.qualysguard.features div.find-vulnerabilities div.image {
+	width: 408px;
+	height: 233px;
+	background-position: 0 -1000px;
+}
+div.dashboards a.image {
+	width: 408px;
+	height: 233px;
+	margin: 0 36px 0 0;
+	background-position: -450px -1000px;
+}
+#smb_qualysguard_express-lite_features div.dashboards a.image {
+	background-position: -450px -2750px;
+}
+#enterprises_qualysguard_features div.dashboards a.image,
+#smb_qualysguard_express-lite_features div.dashboards a.image {
+	margin-left: 0;
+	margin-right: 0;
+}
+body.qualysguard.features div.compliance-solutions a.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -1250px;
+}
+#enterprises_qualysguard_features div.compliance-solutions a.image {
+	margin-left: 0;
+	margin-right: 0;
+}
+body.qualysguard.features div.verify-compliance div.image {
+	width: 408px;
+	height: 233px;
+	background-position: 0 -1500px;
+}
+#enterprises_qualysguard_features div.verify-compliance div.image {
+	margin-left: 0;
+	margin-right: 0;
+}
+div.owasp-top-10 div.image,
+div.owasp-top-10 a.image {
+	width: 408px;
+	height: 233px;
+	margin: 0;
+	background-position: -450px -1500px;
+}
+div.owasp-top-10 div.image,
+div.owasp-top-10 a.image {
+	margin: 0;
+}
+body.qualysguard.features div.rogue-devices div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -1750px;
+}
+body.qualysguard.features div.audit-for-compliance div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: -450px -1750px;
+}
+body.qualysguard.features div.questionnaires div.image,
+body.qualysguard.features div.questionnaires a.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -2000px;
+}
+body.qualysguard.features div.manage-tickets div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: -450px -2000px;
+}
+body.qualysguard.features div.zero-day-patch-tuesday div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -2250px;
+}
+body.qualysguard.features div.integrate-apis div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: -450px -2250px;
+}
+body.qualysguard.features div.dashboards-reports div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -2500px;
+}
+body.qualysguard.features div.asset-management div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: -450px -2500px;
+}
+body.qualysguard.features div.public-private-cloud div.image {
+	width: 408px;
+	height: 233px;
+	margin-left: 0;
+	margin-right: 0;
+	background-position: 0 -2750px;
+}
+body.qualysguard.features div.compliance-solutions ul {
+	font-size: 14pt;
+}
+#smb_qualysguard_express-lite div.tab-container a.tab {
+	padding: 10px 16px;
+}
+#smb_qualysguard_express-lite a.feature-box span.icon {
+	margin: 0 auto 7px;
+}
+a.feature-box.perimeter-scanning span.icon {
+	background-position: -600px -1200px;
+	height: 38px;
+	width: 59px;
+	margin-bottom: 3px !important;
+}
+a.feature-box.web-app-scanning span.icon {
+	background-position: -750px -1100px;
+	height: 43px;
+	width: 44px;
+	margin-bottom: 2px !important;
+}
+a.feature-box.latest-patches span.icon {
+	background-position: -700px -1200px;
+	height: 37px;
+	width: 32px;
+}
+a.feature-box.pci-compliance span.icon {
+	background-position: -550px -1250px;
+	height: 35px;
+	width: 36px;
+}
+a.feature-box.dashboard-reports span.icon {
+	background-position: -600px -1250px;
+	height: 39px;
+	width: 38px;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.rotate-screenshot {
+	background: transparent url(https://ik.imagekit.io/qualys/image/sprite-qg-express-lite.png) no-repeat scroll 0 0;
+	width: 397px;
+	height: 325px;
+	display: block;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.perimeter-scanning {
+	background-position: 0 -2800px;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.web-app-scanning {
+	background-position: -450px -2800px;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.latest-patches {
+	background-position: 0 -3150px;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.pci-compliance {
+	background-position: -450px -3150px;
+}
+#smb_qualysguard_express-lite div.catalog-screenshot a.dashboard-reports {
+	background-position: 0 -3500px;
+}
+#smb_qualysguard_express-lite div.features h2 {
+	font-size: 20pt;
+	padding-right: 10px;
+}
+#smb_qualysguard_express-lite div.features div.text {
+	font-weight: 500;
+}
+body.features div.link-wrapper a.image-overlay {
+	display: inline;
+}
+
+/*# sourceMappingURL=smb.css.map */

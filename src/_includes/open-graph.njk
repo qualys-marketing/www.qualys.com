@@ -1,0 +1,106 @@
+{#  required Open Graph tags #}
+{% if page["og:title"] %}
+<meta property="og:title" content="{{ page["og:title"] }}" />
+{% endif %}
+{% if page["og:type"] %}
+<meta property="og:type" content="{{ page["og:type"] }}" />
+{% endif %}
+{% if page["og:url"] %}
+<meta property="og:url" content="{{ page["og:url"] }}" />
+{% endif %}
+{% if page["og:image"] %}
+<meta property="og:image" content="{{ page["og:image"] }}" />
+{% else %}
+<meta property="og:image" content="{{ site.asset }}/image/qualys-card-summary-thumbnail.jpg" />
+{% endif %}
+{#  optional Open Graph tags #}
+{% if page["og:audio"] %}
+<meta property="og:audio" content="{{ page["og:audio"] }}" />
+{% endif %}
+{% if page["og:description"] %}
+<meta property="og:description" content="{{ page["og:description"] }}" />
+{% endif %}
+{% if page["og:determiner"] %}
+<meta property="og:determiner" content="{{ page["og:determiner"] }}" />
+{% endif %}
+{% if page["og:locale"] %}
+<meta property="og:locale" content="{{ page["og:locale"] }}" />
+{% endif %}
+{% if page["og:locale:alternate"] %}
+<meta property="og:locale:alternate" content="{{ page["og:locale:alternate"] }}" />
+{% endif %}
+{% if page["og:site_name"] %}
+<meta property="og:site_name" content="{{ page["og:site_name"] }}" />
+{% endif %}
+{% if page["og:video"] %}
+<meta property="og:video" content="{{ page["og:video"] }}" />
+{% endif %}
+{#  Twitter Card tags #}
+{% if page["twitter:card"] %}
+<meta name="twitter:card" content="{{ page["twitter:card"] }}" />
+{% else %}
+<meta name="twitter:card" content="summary" />
+{% endif %}
+{% if page["twitter:site"] %}
+<meta name="twitter:site" content="{{ page["twitter:site"] }}" />
+{% endif %}
+{% if page["twitter:site:id"] %}
+<meta name="twitter:site:id" content="{{ page["twitter:site:id"] }}" />
+{% endif %}
+{% if page["twitter:creator"] %}
+<meta name="twitter:creator" content="{{ page["twitter:creator"] }}" />
+{% endif %}
+{% if page["twitter:creator:id"] %}
+<meta name="twitter:creator:id" content="{{ page["twitter:creator:id"] }}" />
+{% endif %}
+{% if page["twitter:description"] %}
+<meta name="twitter:description" content="{{ page["twitter:description"] }}" />
+{% endif %}
+{% if page["twitter:title"] %}
+<meta name="twitter:title" content="{{ page["twitter:title"] }}" />
+{% endif %}
+{% if page["twitter:image"] %}
+<meta name="twitter:image" content="{{ page["twitter:image"] }}" />
+{% endif %}
+{% if page["twitter:image:alt"] %}
+<meta name="twitter:image:alt" content="{{ page["twitter:image:alt"] }}" />
+{% endif %}
+{% if page["twitter:player"] %}
+<meta name="twitter:player" content="{{ page["twitter:player"] }}" />
+{% endif %}
+{% if page["twitter:player:width"] %}
+<meta name="twitter:player:width" content="{{ page["twitter:player:width"] }}" />
+{% endif %}
+{% if page["twitter:player:height"] %}
+<meta name="twitter:player:height" content="{{ page["twitter:player:height"] }}" />
+{% endif %}
+{% if page["twitter:player:stream"] %}
+<meta name="twitter:player:stream" content="{{ page["twitter:player:stream"] }}" />
+{% endif %}
+{% if page["twitter:app:name:iphone"] %}
+<meta name="twitter:app:name:iphone" content="{{ page["twitter:app:name:iphone"] }}" />
+{% endif %}
+{% if page["twitter:app:id:iphone"] %}
+<meta name="twitter:app:id:iphone" content="{{ page["twitter:app:id:iphone"] }}" />
+{% endif %}
+{% if page["twitter:app:url:iphone"] %}
+<meta name="twitter:app:url:iphone" content="{{ page["twitter:app:url:iphone"] }}" />
+{% endif %}
+{% if page["twitter:app:name:ipad"] %}
+<meta name="twitter:app:name:ipad" content="{{ page["twitter:app:name:ipad"] }}" />
+{% endif %}
+{% if page["twitter:app:id:ipad"] %}
+<meta name="twitter:app:id:ipad" content="{{ page["twitter:app:id:ipad"] }}" />
+{% endif %}
+{% if page["twitter:app:url:ipad"] %}
+<meta name="twitter:app:url:ipad" content="{{ page["twitter:app:url:ipad"] }}" />
+{% endif %}
+{% if page["twitter:app:name:googleplay"] %}
+<meta name="twitter:app:name:googleplay" content="{{ page["twitter:app:name:googleplay"] }}" />
+{% endif %}
+{% if page["twitter:app:id:googleplay"] %}
+<meta name="twitter:app:id:googleplay" content="{{ page["twitter:app:id:googleplay"] }}" />
+{% endif %}
+{% if page["twitter:app:url:googleplay"] %}
+<meta name="twitter:app:url:googleplay" content="{{ page["twitter:app:url:googleplay"] }}" />
+{% endif %}

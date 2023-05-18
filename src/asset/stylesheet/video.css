@@ -1,0 +1,145 @@
+body {
+	background-color: #262626;
+	color: #EEE;
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #CCC;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#chapters,
+#transcription {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 40em;
+}
+
+#chapters li > a,
+#transcription li > a {
+	display: inline-flex;
+	margin: 0.25em 0;
+	padding: 0.25em 0;
+}
+
+html,
+body,
+.wrapper-to-position-in-the-middle {
+	height: 100%;
+	width: 100%;
+}
+
+/* center with flexbox */
+.wrapper-to-position-in-the-middle {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+/*
+* limit width to fit the video in the available height
+* must limit width because the video "height" is padding, not height
+*/
+.wrapper-with-inverse-ratio-16x9 {
+	flex: 1 0 100%;
+	max-width: 177.778vh;
+	max-width: calc(16 / 9 * 100vh);
+}
+
+/*
+* maintain aspect ratio by using padding instead of height
+*/
+.wrapper-with-intrinsic-ratio-16x9 {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-bottom: calc(9 / 16 * 100%);
+	position: relative;
+}
+
+/*
+* limit width to fit the video in the available height
+* must limit width because the video "height" is padding, not height
+*/
+.wrapper-with-inverse-ratio-16x10 {
+	flex: 1 0 100%;
+	max-width: 160vh;
+	max-width: calc(16 / 10 * 100vh);
+}
+
+/*
+* maintain aspect ratio by using padding instead of height
+*/
+.wrapper-with-intrinsic-ratio-16x10 {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 62.5%;
+	padding-bottom: calc(10 / 16 * 100%);
+	position: relative;
+}
+
+/*
+* limit width to fit the video in the available height
+* must limit width because the video "height" is padding, not height
+*/
+.wrapper-with-inverse-ratio-3x2 {
+	flex: 1 0 100%;
+	max-width: 150vh;
+	max-width: calc(3 / 2 * 100vh);
+}
+
+/*
+* maintain aspect ratio by using padding instead of height
+*/
+.wrapper-with-intrinsic-ratio-3x2 {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 66.67%;
+	padding-bottom: calc(2 / 3 * 100%);
+	position: relative;
+}
+
+/*
+* limit width to fit the video in the available height
+* must limit width because the video "height" is padding, not height
+*/
+.wrapper-with-inverse-ratio-4x3 {
+	flex: 1 0 100%;
+	max-width: 133.33vh;
+	max-width: calc(4 / 3 * 100vh);
+}
+
+/*
+* maintain aspect ratio by using padding instead of height
+*/
+.wrapper-with-intrinsic-ratio-4x3 {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 66.67%;
+	padding-bottom: calc(3 / 4 * 100%);
+	position: relative;
+}
+
+/* stretch the iframe to fill it's parent element */
+.element-to-stretch,
+.wrapper-with-intrinsic-ratio > * {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*# sourceMappingURL=video.css.map */

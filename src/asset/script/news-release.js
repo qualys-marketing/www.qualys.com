@@ -1,0 +1,3 @@
+"use strict";/* global jQuery */(function(a){"use strict";// convert images so when clicked on, large version appears in an overlay
+a(".news-release-body img").each(function(b,c){a(c).next("br").remove(),a(c).parent("p").addClass("image-container");var d=a(c).attr("src"),e=a(c).parent().find("em").text(),f="<a href=\"".concat(d,"\" data-fancybox data-caption=\"").concat(e,"\"></a>");a(c).wrap(f)})})(jQuery);
+//# sourceMappingURL=news-release.js.map

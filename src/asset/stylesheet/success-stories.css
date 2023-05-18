@@ -1,0 +1,219 @@
+.q-grid__container {
+	margin-bottom: 3em;
+	margin-top: 45px;
+}
+@media (min-width: 720px) {
+	.q-grid__container {
+		margin-bottom: 8.75em;
+		margin-top: 100px;
+	}
+}
+
+.q-success-story__header-wraper {
+	display: flex;
+	flex-direction: column;
+}
+.q-success-story__company-column {
+	order: 2;
+	float: none;
+	margin: 0 auto 2em;
+	width: 100%;
+	max-width: 400px;
+	background: #6A778B;
+	color: #FFF;
+	padding: 20px;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	font-size: 0.875em;
+}
+@media (min-width: 720px) {
+	.q-success-story__header-wraper {
+		display: block;
+		flex-direction: unset;
+	}
+	.q-success-story__company-column {
+		display: block;
+		float: right;
+		width: 260px;
+		max-width: none;
+		margin-left: 2.5em;
+		margin-bottom: 2em;
+		margin-top: 52px;
+	}
+}
+.q-success-story__quote {
+	margin: 2em auto;
+	background: #6A778B;
+	color: #FFF;
+	padding: 1.85em;
+	width: 100%;
+	max-width: 400px;
+}
+@media (min-width: 720px) {
+	.q-success-story__quote {
+		float: left;
+		margin: 0 2.5em 2em 0;
+		width: 280px;
+		max-width: none;
+	}
+}
+.q-success-story__quote blockquote {
+	padding: 0;
+	margin: 0;
+}
+.q-success-story__quote blockquote:before {
+	content: "“";
+	display: inline;
+	float: left;
+	margin-left: -15px;
+	margin-right: 5px;
+	font-size: 25px;
+}
+.q-success-story__quote blockquote p {
+	margin: 0 0 1em;
+	font-style: italic;
+	line-height: 1.65;
+}
+.q-success-story__quote blockquote footer {
+	margin: 1.85em 0 0;
+	line-height: 1.4;
+	font-size: 0.85em;
+	font-family: Gotham, sans-serif;
+}
+.q-success-story__quote blockquote footer h5 {
+	margin: 0 0 0.65em;
+	font-weight: 400;
+	font-size: 1.45em;
+	color: #FFF;
+}
+.q-success-story__quote--headshot {
+	max-width: 100%;
+	width: 169px;
+	height: 169px;
+	border-radius: 50%;
+	display: block;
+	margin: 1.45em 0 0;
+}
+
+.q-success-story__company-info--website {
+	text-decoration: none;
+}
+.q-success-story__main--screenshot {
+	max-width: 760px;
+	text-align: center;
+	border: 1px solid #6A778B;
+	margin-bottom: 2em;
+	display: none;
+	flex-direction: column;
+}
+@media (min-width: 720px) {
+	.q-success-story__main--screenshot {
+		display: flex;
+	}
+}
+.q-success-story__main--screenshot img {
+	max-width: 100%;
+	height: auto;
+}
+.q-success-story__company-logo {
+	margin: -19px -19px 20px;
+	display: block;
+	background: #FFF;
+	padding: 20px;
+}
+.q-success-story__company-logo img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.q-success-story__company-info--text p {
+	margin: 0 0 1.35em;
+}
+.q-success-story__company-info--text ul {
+	margin: 0 0 1em;
+	padding: 0 0 0 1em;
+}
+.q-success-story__company-info--text ul li {
+	margin-bottom: 0.5em;
+}
+.q-success-story__company-info--text ul li:last-child {
+	margin-bottom: 0;
+}
+.q-success-story__main--heading {
+	color: #262626;
+	letter-spacing: -0.01em;
+	font-family: Gotham, sans-serif;
+	font-size: 34px;
+	font-weight: 500;
+	margin: 0 0 0.568em;
+	line-height: 1.15;
+}
+.q-success-story__main--sub-heading {
+	font-family: Gotham, sans-serif;
+	font-weight: 300;
+	letter-spacing: -0.375pt;
+	color: #707F93;
+	font-size: 1.25em;
+	margin: 0 0 1.45em;
+	line-height: 1.4;
+}
+@media (min-width: 375px) {
+	.q-success-story__main--heading {
+		font-size: 34px;
+		font-size: calc(0.01093 * 100vw + (29.90164px));
+	}
+}
+@media (min-width: 1290px) {
+	.q-success-story__main--heading {
+		font-size: 44px;
+	}
+}
+.q-success-story__main p {
+	margin: 0 0 1em;
+}
+.q-success-story__main h5 {
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	margin: 1.45em 0 0.5em;
+	font-size: 1.125em;
+	color: #30405B;
+}
+.q-success-story__picture {
+	display: block;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+.q-success-story__picture img {
+	width: 100%;
+	height: auto;
+}
+@media (min-width: 720px) {
+	.q-success-story__picture {
+		display: flex;
+		max-width: 760px;
+		flex-direction: column;
+		margin-bottom: 0;
+		margin-top: 0.5em;
+	}
+	.q-success-story__picture--center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.q-success-story__picture--right {
+		max-width: 380px;
+		float: right;
+		margin-left: 2em;
+	}
+	.q-success-story__picture--left {
+		max-width: 380px;
+		float: left;
+		margin-right: 2em;
+	}
+}
+p.q-success-story__attribution {
+	margin: 0.5em 0 0;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+/*# sourceMappingURL=success-stories.css.map */

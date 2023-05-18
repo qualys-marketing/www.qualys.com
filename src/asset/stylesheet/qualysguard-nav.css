@@ -1,0 +1,289 @@
+/*
+ * style for submenu
+ */
+div.submenu {
+	background: #FFF;
+	background: linear-gradient(to bottom, #FFF 0%, #FFF 19%, #F5F5F5 100%);
+	border-bottom: 1px solid #B1B0B0;
+	height: 56px;
+	line-height: 1;
+	padding: 0 0 0 32px;
+	position: absolute;
+	top: 0;
+	width: 926px;
+	z-index: 100;
+}
+div.submenu {
+	padding-left: 21px;
+	width: 937px;
+}
+div.stuck div.submenu {
+	position: fixed;
+	top: 0 !important;
+	z-index: 300;
+}
+div.stuck div.features {
+	position: fixed;
+	top: 57px !important;
+	z-index: 200;
+}
+div.submenu h1 {
+	letter-spacing: -0.033em;
+}
+div.submenu h1,
+div.submenu h1 .qualysguard b {
+	display: inline-block;
+	font-size: 14pt;
+	font-weight: normal;
+	line-height: 1;
+	margin: 19px 0 0;
+	text-align: left;
+}
+div.sticky-menu div.submenu h1,
+div.sticky-menu div.submenu h1 .qualysguard b {
+	font-size: 13pt;
+	white-space: nowrap;
+}
+div.submenu h1 .qualysguard b {
+	font-weight: 700;
+	margin-top: 0;
+	position: relative;
+}
+div.submenu h1 .qualysguard > b {
+	cursor: pointer;
+	text-decoration: underline;
+}
+div.submenu ul {
+	float: right;
+	display: inline-block;
+	margin: 22px 2.5em 0 0;
+}
+div.submenu li {
+	display: inline-block;
+	line-height: 1;
+	margin-left: 2.5em;
+}
+div.submenu li:first-child {
+	margin-left: 0;
+}
+div.submenu,
+div.submenu a {
+	color: #333;
+	font-size: 10pt;
+}
+div.submenu a.active {
+	color: #000;
+	font-weight: 500;
+}
+div.stuck div.submenu a.submenu-cta {
+	background: #DE1D0B;
+	border-radius: 7px;
+	color: white;
+	display: inline-block;
+	font-weight: 500;
+	margin: -0.667em -1em;
+	padding: 0.52em 1em;
+}
+div.stuck div.submenu a.submenu-cta:active {
+	background: #B5000B;
+}
+div.submenu h1 .qualysguard {
+	display: inline;
+	padding-bottom: 20px;
+}
+.product-subnav {
+	background: #FFF;
+	border-radius: 3px;
+	box-shadow: 0 1px 8px 1px rgba(12, 12, 12, 0.21);
+	display: none;
+	font-weight: normal;
+	left: 0;
+	line-height: 48px;
+	padding: 12px 62px 20px 20px;
+	position: absolute;
+	top: 56px;
+	white-space: nowrap;
+}
+div.submenu .product-subnav a {
+	font-size: 13pt;
+}
+.product-subnav a:before,
+div.submenu h1 .cm-badge,
+div.submenu h1 .vm-badge,
+div.submenu h1 .pc-badge,
+div.submenu h1 .pci-badge,
+div.submenu h1 .was-badge,
+div.submenu h1 .waf-badge,
+div.submenu h1 .mds-badge,
+div.submenu h1 .seal-badge,
+div.submenu h1 .tp-badge,
+div.submenu h1 .saq-badge {
+	content: "";
+	display: inline-block;
+	float: none;
+	height: 43px;
+	margin-left: 4px;
+	margin-right: 10px;
+	overflow: hidden;
+	text-indent: -9999px;
+	vertical-align: middle;
+	width: 62px;
+}
+div.submenu h1 .cm-badge,
+div.submenu h1 .vm-badge,
+div.submenu h1 .pc-badge,
+div.submenu h1 .pci-badge,
+div.submenu h1 .was-badge,
+div.submenu h1 .waf-badge,
+div.submenu h1 .mds-badge,
+div.submenu h1 .seal-badge,
+div.submenu h1 .tp-badge,
+div.submenu h1 .saq-badge {
+	margin-right: 3px;
+	margin-top: -12px;
+	vertical-align: top;
+}
+.product-subnav a.cm:before,
+div.submenu h1 .cm-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/cm-shine.svg) no-repeat;
+}
+.product-subnav a.saq:before,
+div.submenu h1 .saq-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/saq-shine.svg) no-repeat;
+}
+.product-subnav a.av:before,
+div.submenu h1 .av-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/av-shine.svg) no-repeat;
+}
+.product-subnav a.vm:before,
+div.submenu h1 .vm-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/vm-shine.svg) no-repeat;
+}
+.product-subnav a.pc:before,
+div.submenu h1 .pc-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/pc-shine.svg) no-repeat;
+}
+.product-subnav a.pci:before,
+div.submenu h1 .pci-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/pci-shine.svg) no-repeat;
+}
+.product-subnav a.was:before,
+div.submenu h1 .was-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/was-shine.svg) no-repeat;
+}
+.product-subnav a.waf:before,
+div.submenu h1 .waf-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/waf-shine.svg) no-repeat;
+}
+.product-subnav a.mds:before,
+div.submenu h1 .mds-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/md-shine.svg) no-repeat;
+}
+.product-subnav a.seal:before,
+div.submenu h1 .seal-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/qualys-shine.svg) no-repeat;
+}
+.product-subnav a.tp:before,
+div.submenu h1 .tp-badge {
+	background: transparent url(https://ik.imagekit.io/qualys/image/badge/tp-shine.svg) no-repeat;
+}
+div.submenu h1 .qualysguard:hover > b {
+	text-decoration: underline;
+}
+div.submenu h1 .qualysguard:hover .product-subnav {
+	display: block;
+}
+.product-subnav > span {
+	display: block;
+}
+.product-subnav p.suite {
+	line-height: 2.3;
+	margin-left: 6px;
+}
+.product-subnav p.suite b {
+	color: #333;
+}
+#container {
+	padding-top: 0;
+}
+div.submenu .product-name {
+	font-size: 13pt;
+	font-weight: 500;
+	color: #000;
+}
+div.sticky-menu.product-nav {
+	height: 56px;
+}
+span.beta {
+	font-size: 8pt;
+	padding: 0 2px;
+	margin-left: 5px;
+}
+span.beta.saq {
+	background-color: #48743A;
+	color: #FFF;
+	text-transform: uppercase;
+}
+span.beta.cm {
+	background-color: #C00;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+/* converted pages */
+
+div.sticky-menu div.submenu .product-subnav {
+	left: 1px;
+}
+div.section-navigation div.features {
+	position: static;
+}
+div.sticky-menu {
+	margin: 0;
+}
+div.sticky-menu div.submenu {
+	background-image: none;
+	background: #E4EBF1;
+	border-bottom: 1px solid #D4D8DC;
+	border-top: 0;
+	margin: 0;
+	padding: 0 40px;
+	width: 100%;
+	box-sizing: border-box;
+}
+div.sticky-menu.stuck div.submenu ul.type1,
+div.sticky-menu div.submenu ul.type1 {
+	margin-right: 14px;
+}
+div.sticky-menu div.submenu div.subwrap {
+	margin: 0 auto;
+	position: relative;
+}
+div.sticky-menu div.submenu ul.type1 {
+	margin-right: 0;
+}
+div.badge-pc,
+div.badge-pc,
+div.badge-cm,
+div.badge-waf,
+div.badge-vm,
+div.badge-vm,
+div.badge-was {
+	float: left;
+	margin: 6px 10px 0 0;
+}
+.dropdown-triangle {
+	border-color: #333 transparent transparent;
+	border-style: solid;
+	border-width: 8px 8px 0;
+	display: inline-block;
+	height: 0;
+	margin-left: 8px;
+	width: 0;
+	font-size: 0;
+}
+.product-subnav p.subscription {
+	margin-left: -70px;
+}
+
+/*# sourceMappingURL=qualysguard-nav.css.map */
