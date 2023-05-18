@@ -13,13 +13,13 @@ Clone the "qualys" repo from Github
     git clone https://github.com/javanigus/qualys.git
 
 The repo will be cloned to /Users/{{username}}/Projects/qualys/.  
-Open that folder VisualStudio Code.  
+Open that folder in VisualStudio Code.  
 Open a new terminal in VS Code.  
 Install node dependencies.  
 
     npm install
 
-Run eleventy in the termimal.  
+Run eleventy in the terminal.  
 
     npx @11ty/eleventy --serve
 
@@ -27,7 +27,7 @@ Eleventy will start a local web server, usually at http://localhost:8080/. Brows
 Make changes to files.  
 Stage, commit and push the changes back to Github in VS Code.  
 Go to https://github.com/javanigus/qualys/commits/main to verify commit in Github.  
-Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/)
+Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/).  
 Create a .env file in the project root folder and add the following to it.  
 
     ENVIRONMENT=development
@@ -221,4 +221,6 @@ copy the partial code into an include file and replace the partrial reference as
     squareBaseline: true
     }) }}
 
+ ### Move JSON data to _data folder
+ If you encounter inline JSON data within HTML, e.g. a list of management team members, create a new file for it in _data, e.g. _data/management.json and put the JSON data there. The data will be accessible as it will be global. 
  
