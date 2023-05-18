@@ -5,6 +5,7 @@ require('dotenv').config();
  * available in all templates under the global `site` object
  */
 
+console.log("process.env.ENVIRONMENT="+process.env.ENVIRONMENT);
 
 let envIsProd = process.env.ENVIRONMENT === "production";
 

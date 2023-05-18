@@ -78,6 +78,8 @@
 	</div>
 </footer>
 
-<h1>For Debugging</h1>
-<h2>All variables available on this page </h2>
-<pre><code>{{ datum | debug }}</code></pre>
+{% if not site.env.production %}
+	<h1>For Debugging</h1>
+	<h2>All variables available on this page </h2>
+	<pre><code>{{ datum | debug }}</code></pre>
+{% endif %}
