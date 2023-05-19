@@ -137,7 +137,7 @@ When you see a reference to a partial like this
 Copy the partial code into a new file under _includes, e.g. /src/_includes/vimeo-player.njk  
 Replace the Handlebars reference as follows
 
-    {% include "vimeo-player.njk" %}
+    {% include "vendor/vimeo-player.njk" %}
 
 ### Replace Handlesbars syntax with Nunjucks syntax
 Replace

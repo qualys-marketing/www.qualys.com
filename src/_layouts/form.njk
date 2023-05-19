@@ -1,0 +1,18 @@
+---
+layout: default.njk
+---
+
+{% layoutblock 'appendStyles' %}
+	{% include "vendor/fancybox-css.njk" %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css" integrity="sha256-vpKTO4Ob1M4bZ8RAvZvYMtinMz1XjH0QYdAO2861V9M=" crossorigin="anonymous">
+{% endlayoutblock %}
+
+{% layoutblock 'appendScripts' %}
+	{% include "vendor/underscore.njk" %}
+	{% include "vendor/jquery.njk" %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.min.js" integrity="sha256-sWRRk18sgo7+CF6eNBm/BByZ84FD5yC87JJ4A3kZg2k=" crossorigin="anonymous"></script>
+	<script src="/asset/script/marketo.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+	<script src="/asset/script/job-title-auto-complete.js"></script>
+	{% include "vendor/fancybox.njk" %}
+{% endlayoutblock %}
