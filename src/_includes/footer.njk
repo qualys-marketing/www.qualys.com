@@ -1,5 +1,3 @@
-{%- from "component.njk" import component -%}
-
 <footer class="q-footer">
 	<div class="q-footer__container">
 		<div class="q-footer__row">
@@ -67,9 +65,8 @@
 				</ul>
 
 				<div class="q-footer__social">
-					{{ component('social-list', {
-						centered: 'true'
-					}) }}
+					{% set centered = "true" %}
+					{% include "social-list.njk" %}
 				</div>
 
 			</div>

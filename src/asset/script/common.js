@@ -1865,7 +1865,7 @@ window._.throttle = window._.throttle || function(func, wait, options) {
 				};
 
 				// put multiple values for the same key into an array
-				if (params.hasOwnProperty(decoded.key)) {
+				if (hasOwnProperty(decoded.key)) {
 					if (params[decoded.key] instanceof Array) {
 						params[decoded.key] = params[decoded.key].concat(decoded.value);
 					} else {
@@ -2310,7 +2310,7 @@ window._.throttle = window._.throttle || function(func, wait, options) {
 
 		// get the leadsource parameter value from the URL query string
 		urlParams = qualys.parseQueryString(window.location.search);
-		leadsource = urlParams.leadsource;
+		leadsource = urlleadsource;
 
 		function getLogo(url) {
 			// AJAX in the partner logo

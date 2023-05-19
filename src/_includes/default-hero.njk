@@ -1,14 +1,14 @@
 <!-- standard page hero -->
-<div class="q-default-hero q-default-hero--{{params.color}}{% if params.disableAnimation %} q-default-hero--no-animation{% endif %}{% if params.squareBaseline %} q-default-hero--square-baseline{% endif %}">
+<div class="q-default-hero q-default-hero--{{color}}{% if disableAnimation %} q-default-hero--no-animation{% endif %}{% if squareBaseline %} q-default-hero--square-baseline{% endif %}">
 	<div class="q-default-hero__container">
 
 		<div class="q-default-hero__content">
-			<h1 class="q-default-hero__heading">{{ params.heroTitle }}</h1>
-			<h2 class="q-default-hero__subheading">{{ params.subheading }}</h2>
+			<h1 class="q-default-hero__heading">{{ heroTitle }}</h1>
+			<h2 class="q-default-hero__subheading">{{ subheading }}</h2>
 
-			{% if params.video %}
+			{% if video %}
 			<div class="q-default-hero__link">
-				<a class="q-play-button2" data-fancybox href="{{params.video}}">
+				<a class="q-play-button2" data-fancybox href="{{video}}">
 					<span class="q-play-button__text q-link2">Watch video</span>
 					<svg class="q-play-button__arrow" width="31" height="31" xmlns="http://www.w3.org/2000/svg">
 						<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
@@ -20,8 +20,8 @@
 			</div>
 			{% endif %}
 
-			{% if params.ctaPartial %}
-				{% include params.ctaPartial %}
+			{% if ctaPartial %}
+				{% include ctaPartial %}
 			{% endif %}
 		</div>
 
@@ -30,33 +30,33 @@
 			<div class="q-default-hero__box-wrap">
 
 				<!-- square component content -->
-				{% if params.quote %}
+				{% if quote %}
 					<div class="q-square q-square--justified">
 						<div class="q-square__inner">
 							<div class="q-square__content">
 								<blockquote class="q-blockquote q-blockquote--active">
-									{% if params.logo %}
+									{% if logo %}
 									<div class="q-blockquote__brand">
-										<img loading="lazy"  alt="{{params.logoAlt}}" data-src="{{site.asset}}/image/logo/{{params.logo}}" class="lazyload">
+										<img loading="lazy"  alt="{{logoAlt}}" data-src="{{site.asset}}/image/logo/{{logo}}" class="lazyload">
 									</div>
 									{% endif %}
-									{% if params.squareLink %}
-										{{params.squareLink}}
+									{% if squareLink %}
+										{{squareLink}}
 									{% endif %}
-									<p class="q-blockquote__content">{{params.quote}}</p>
+									<p class="q-blockquote__content">{{quote}}</p>
 									<cite class="q-blockquote__cite">
-										{% if params.headshot %}
-										<img loading="lazy"  class="q-blockquote__headshot lazyload" data-src="{{site.asset}}/image/headshots/{{params.headshot}}" width="64" height="64" alt>
+										{% if headshot %}
+										<img loading="lazy"  class="q-blockquote__headshot lazyload" data-src="{{site.asset}}/image/headshots/{{headshot}}" width="64" height="64" alt>
 										{% endif %}
 										<span class="q-blockquote__cite-detail">
-											{% if params.citeName %}
+											{% if citeName %}
 												<span class="q-blockquote__name">
-												{{params.citeName}}
+												{{citeName}}
 											</span>
 											{% endif %}
-											{% if params.citeRole %}
+											{% if citeRole %}
 											<span class="q-blockquote__role">
-												{{params.citeRole}}
+												{{citeRole}}
 											</span>
 											{% endif %}
 										</span>
@@ -68,14 +68,14 @@
 				{% endif %}
 
 				<!-- custom content -->
-				{% if params.squarePartial %}
-					{% include params.squarePartial %}
+				{% if squarePartial %}
+					{% include squarePartial %}
 				{% endif %}
 			</div>
 
 			<!-- splash image -->
-			<div class="q-default-hero__image" style="background-image: url('{{site.asset}}/image/{{params.background}}')">
-				{% if params.appsOverviewPage %}
+			<div class="q-default-hero__image" style="background-image: url('{{site.asset}}/image/{{background}}')">
+				{% if appsOverviewPage %}
 					<div class="row">
 						<!-- set 1 -->
 						<img loading="lazy"  class="app-badge hidden set-1 lazyload" data-src="{{site.asset}}/image/app-icons/white-ai.svg">

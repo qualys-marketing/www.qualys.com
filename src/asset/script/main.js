@@ -1760,7 +1760,7 @@
 				};
 
 				// put multiple values for the same key into an array
-				if (params.hasOwnProperty(decoded.key)) {
+				if (hasOwnProperty(decoded.key)) {
 					if (params[decoded.key] instanceof Array) {
 						params[decoded.key] = params[decoded.key].concat(decoded.value);
 					} else {

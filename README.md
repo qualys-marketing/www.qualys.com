@@ -47,12 +47,13 @@ Create a .env file in the project root folder and add the following to it.
     │  │  ├─ site.js  
     │  │  ├─ footerLinks.json  
     │  │  ├─ ...  
-    │  ├─ _includes/ (all partials and reusable components go in here)  
+    │  ├─ _includes/ (all reusable partials go in here)  
     │  │  ├─ header.njk  
     │  │  ├─ footer.njk  
     │  │  ├─ ...  
     │  ├─ _layouts/ (all layouts go in here)  
     │  │  ├─ default.njk  
+    │  │  ├─ form.njk  
     │  ├─ asset/ (all static assets go in there)  
     │  │  ├─ stylesheet/  
     │  │  │  ├─ common.css (global CSS file)  
@@ -96,10 +97,6 @@ Add "layout: default.njk" to YAML frontmatter (or some other layout).
     ...
     ___
 
-### Add component support
-Add the following line below the YAML frontmatter.  
-
-    {%- from "component.njk" import  component -%}
 
 ### Update CSS block
 Replace
@@ -114,20 +111,30 @@ with
     <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
 
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+
+    {% layoutblock 'appendStyles-form' %}
+    <link  rel="stylesheet"  href="index.css">
+    {% endlayoutblock %}
   
 ### Update JS block
 Replace
 
     {{#append "scripts"}}
-    <script src="index.js"></script>
+    <script src="company.js"></script>
     {{/append}}
 
 with
 
     {% layoutblock 'appendScripts-default' %}
-    <script  src="index.js"></script>
+    <script  src="company.js"></script>
     {% endlayoutblock %}
 
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+
+    {% layoutblock 'appendScripts-form' %}
+    <script  src="company.js"></script>
+    {% endlayoutblock %}
   
 ### Update Handlebars "Partial" references
 When you see a reference to a partial like this
@@ -137,7 +144,32 @@ When you see a reference to a partial like this
 Copy the partial code into a new file under _includes, e.g. /src/_includes/vimeo-player.njk  
 Replace the Handlebars reference as follows
 
-    {% include "vendor/vimeo-player.njk" %}
+    {% include "vimeo-player.njk" %}
+
+If the partial includes parameters, pass the parameters using {% set %} as in this this example.
+
+Replace
+
+    {{>
+    default-hero
+    color="red"
+    title="About Qualys."
+    subheading="The leading provider of information security and compliance cloud solutions."
+    background="about-us-hero-desktop.jpg"
+    squarePartial="company/square.njk"
+    squareBaseline=true
+    }}
+
+with
+
+    {% set href = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css" %}
+    {% set color = "red" %}
+    {% set heroTitle = "About Qualys." %}
+    {% set subheading = "The leading provider of information security and compliance cloud solutions." %}
+    {% set background = "about-us-hero-desktop.jpg" %}
+    {% set squarePartial = "company/square.njk" %}
+    {% set squareBaseline = true %}
+    {% include "default-hero.njk" %}
 
 ### Replace Handlesbars syntax with Nunjucks syntax
 Replace
@@ -194,33 +226,6 @@ with
 with
 
     #}
-
-### Replace Handlebars partials that pass parameters with Nunjuncks components
-For example, if you encounter a partial like the one below
-
-    {{>
-    default-hero
-    color="red"
-    title="About Qualys."
-    subheading="The leading provider of information security and compliance cloud solutions."
-    background="about-us-hero-desktop.jpg"
-    squarePartial="company/square.njk"
-    squareBaseline=true
-    }}
-
-  
-
-copy the partial code into an include file and replace the partrial reference as follows:
-
-    {{ component('default-hero', {
-    href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css',
-    color: "red",
-    title: "About Qualys.",
-    subheading: "The leading provider of information security and compliance cloud solutions."
-    background: "about-us-hero-desktop.jpg",
-    squarePartial: "company/square.njk"
-    squareBaseline: true
-    }) }}
 
  ### Move JSON data to _data folder
  If you encounter inline JSON data within HTML, e.g. a list of management team members, create a new file for it in _data, e.g. _data/management.json and put the JSON data there. The data will be accessible as it will be global. 

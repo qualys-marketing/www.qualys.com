@@ -8,7 +8,6 @@ og:type: website
 og:url: https://www.qualys.com/company/
 twitter:card: summary
 ---
-{%- from "component.njk" import component -%}
 
 {% layoutblock 'appendStyles-default' %}
     <link rel="stylesheet" href="company.css">
@@ -20,15 +19,14 @@ twitter:card: summary
     <script src="company.js"></script>
 {% endlayoutblock %}
 
-{{ component('default-hero', {
-	href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css',
-	color: "red",
-	heroTitle: "About Qualys.",
-	subheading: "The leading provider of information security and compliance cloud solutions.",
-	background: "about-us-hero-desktop.jpg",
-	squarePartial: "company/square.njk",
-	squareBaseline: true
-}) }}
+{% set href = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css" %}
+{% set color = "red" %}
+{% set heroTitle = "About Qualys." %}
+{% set subheading = "The leading provider of information security and compliance cloud solutions." %}
+{% set background = "about-us-hero-desktop.jpg" %}
+{% set squarePartial = "company/square.njk" %}
+{% set squareBaseline = true %}
+{% include "default-hero.njk" %}
 
 <div class="q-company-intro">
 	<div class="q-company-intro__container">
@@ -265,9 +263,10 @@ twitter:card: summary
 					<a href="https://www.google.com/maps/place/919+E+Hillsdale+Blvd,+Foster+City,+CA+94404/" target="_blank" rel="noopener" class="q-link">Directions</a>
 				</p>
 				<div class="q-company-contact__socialLinks">
-          {{ component('social-list', {
-            dark: true
-          }) }}
+
+		{% set dark = true %}
+		{% include "social-list.njk" %}
+
 				</div>
 
 			</div>

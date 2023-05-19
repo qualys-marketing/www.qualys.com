@@ -58,7 +58,7 @@ function sanitize(string) {
 
 		// get leadsource value from the url
 		urlParams = qualys.parseQueryString(window.location.search);
-		leadsource = urlParams.leadsource;
+		leadsource = urlleadsource;
 
 		// partnetr leadsource array, add values in the array to support more partners
 		leadsourceArray = ["344572624"];
@@ -274,11 +274,11 @@ function sanitize(string) {
 		var urlParams, leadsource, x, x_decode, x_values, x_fname, fnameField, x_lname, lnameField, x_email, emailField, x_cname, cnameField, x_title, titleField, x_phone, phoneField, x_country, countryField, x_state, stateField, x_size, sizeField, x_qaccount, qaccountField, accountYes, accountNo;
 
 		urlParams = qualys.parseQueryString(window.location.search);
-		leadsource = urlParams.leadsource;
+		leadsource = urlleadsource;
 
 		if( leadsource && typeof leadsource === "string"){
 
-			x = urlParams.x;
+			x = urlx;
 
 			if( x && typeof x === "string") {
 

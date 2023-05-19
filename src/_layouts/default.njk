@@ -8,8 +8,6 @@
 }
 ---
 
-{%- from "component.njk" import component -%}
-
 <!DOCTYPE html>
 <html lang="{% if lang  %}{{ lang }}{%  else  %}{{ site.lang }}{%  endif  %}" class="no-js">
 <head>
@@ -50,9 +48,8 @@
 	<link rel="canonical" href="{%  if canonical %}{{ canonical }}{% else %}https://www.qualys.com{{ __path }}{%  endif  %}">
 	<meta name="theme-color" content="#2E8BE0">
 
-	{{ component('async-css', {
-		href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css'
-	}) }}
+	{% set href = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css" %}
+	{% include "async-css.njk" %}
 
 	<link rel="stylesheet" href="/asset/stylesheet/common.css">
 	{% renderlayoutblock 'appendStyles-default' %}
@@ -73,9 +70,8 @@
 	</div>
 	{% endif %}
 
-	{{ component('grid-overlay', {
-		visibility: 'hidden'
-	}) }}
+	{% set visibility = "hidden" %}
+	{% include "grid-overlay.njk" %}
 
 	<!-- BEGIN CONTENT -->
 	{{ content | safe }}
