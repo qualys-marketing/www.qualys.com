@@ -110,7 +110,7 @@ Replace
 
 with
 
-    {% layoutblock 'appendStyles' %}
+    {% layoutblock 'appendStyles-default' %}
     <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
 
@@ -119,13 +119,13 @@ with
 Replace
 
     {{#append "scripts"}}
-    <script src="company.js"></script>
+    <script src="index.js"></script>
     {{/append}}
 
 with
 
-    {% layoutblock 'appendScripts' %}
-    <script  src="company.js"></script>
+    {% layoutblock 'appendScripts-default' %}
+    <script  src="index.js"></script>
     {% endlayoutblock %}
 
   

@@ -1,0 +1,33 @@
+<script src="{{site.marketo.base.url}}/js/forms2/js/forms2.min.js"></script>
+<form
+	class="q-form"
+	data-form-id="q-form"
+	data-asset-id="{{assetId}}"
+	data-input-solutionsInterestedOther="{{solutionsInterestedOther}}"
+	data-input-assetIdFromCompanySize="{{assetIdFromCompanySize}}"
+	data-confirm = "{{confirmUrl}}"
+	id="mktoForm_{{formId}}"
+></form>
+<script data-load-form-in-page="true">
+MktoForms2.loadForm(
+	{% if site.env.production %}
+		"{{site.marketo.base.url}}"
+	{% else %}
+		{% if baseUrl %}
+			"{{baseUrl}}"
+		{% else %}
+			"{{site.marketo.base.url}}"
+		{% endif %}
+	{% endif %},
+	{% if site.env.production %}
+		"{{site.marketo.munchkin.id}}"
+	{% else %}
+		{% if munchkinId %}
+			"{{munchkinId}}"
+		{% else %}
+			"{{site.marketo.munchkin.id}}"
+		{% endif %}
+	{% endif %},
+	{{formId}});
+</script>
+<noscript>Please enable JavaScript.</noscript>

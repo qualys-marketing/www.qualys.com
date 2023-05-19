@@ -1,0 +1,212 @@
+.heroContent br {
+	display: none;
+}
+.hero-container {
+	margin-top: 60px;
+	margin-bottom: 5%;
+}
+@media (min-width: 1290px) {
+	.hero-container {
+		margin-top: 60px;
+		margin-bottom: 90px;
+	}
+}
+@media (min-width: 720px) {
+	.hero-container {
+		margin-top: 5.39301%;
+		margin-bottom: 33px;
+	}
+	.heroContent br {
+		display: block;
+	}
+}
+@media (min-width: 1290px) {
+	.heading--4 {
+		color: #262626;
+		font-size: 19px;
+		margin-top: 1em;
+		margin-bottom: 22px;
+	}
+}
+@media (min-width: 1290px) {
+	.heading--1 {
+		margin-bottom: 22px;
+	}
+}
+.q-bullet-list {
+	margin-bottom: 12%;
+}
+.q-bullet-list__item {
+	padding: 0 0 6% 40px;
+}
+@media (min-width: 1290px) {
+	.q-bullet-list__item {
+		padding: 0 0 36px 40px;
+	}
+}
+.screens {
+	margin: 10%;
+	margin-bottom: 14%;
+}
+@media (min-width: 720px) {
+	.screens {
+		margin-top: -3%;
+	}
+}
+@media (min-width: 1290px) {
+	.screens {
+		margin: -56px 0 178px -97px;
+		width: 1118px;
+	}
+}
+.q-default-hero__form {
+	background: #F7FAFC;
+	color: #6A778B;
+	padding-top: 27px;
+}
+@media (min-width: 720px) {
+	.q-default-hero__form {
+		padding: 15px 50px;
+	}
+}
+@media (min-width: 1280px) {
+	.q-default-hero__form {
+		margin-top: -30px;
+		padding: 27px 80px;
+	}
+}
+.q-default-hero__form .heading--4 {
+	font-size: 19px;
+	margin-bottom: 16px;
+}
+/*@media (min-width: 720px) {
+	.q-default-hero__form .heading--4 {
+		font-size: inherit;
+	}
+}*/
+.show-first-panel .panel1,
+.show-next-panel .panel2 {
+	display: block;
+	visibility: visible;
+}
+.show-first-panel .panel2,
+.show-next-panel .panel1 {
+	display: none;
+	visibility: hidden;
+}
+
+.q-default-hero__trialform-privacy {
+	font-size: 0.875em;
+	margin-bottom: 22px;
+	text-align: center;
+	font-weight: 300;
+	font-family: Gotham, sans-serif;
+	display: inline-block;
+	width: 100%;
+	margin-top: 16px;
+	letter-spacing: -0.011em;
+}
+.q-default-hero__trialform-privacy a:active,
+.q-default-hero__trialform-privacy a:focus {
+	outline: 0;
+}
+.screens-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.screens-wrapper.standalone {
+	display: none;
+}
+.trial-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+.trial-container .q-grid__row {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.trial-container .functions {
+	padding-left: 45px;
+	padding-right: 45px;
+}
+.features-col {
+	padding-right: 0;
+}
+@media (min-width: 720px) {
+	.functions .screens-wrapper {
+		display: none;
+	}
+	.screens-wrapper.standalone {
+		display: flex;
+	    margin: 0 5%;
+	}
+	.trial-container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.trial-container .q-grid__row {
+		display: flex;
+		flex-direction: row;
+	}
+	.trial-container .functions {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.features-col {
+		padding-right: 1em;
+	}
+}
+@media (min-width: 1080px) {
+	.trial-container {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+@media (min-width: 1280px) {
+	.features-col {
+		padding-right: 5em;
+	}
+}
+/*
+ * Fancybox modal window for privacy policy content
+ */
+.fancybox-slide--iframe .fancybox-content {
+	width: 600px;
+	max-width: 80%;
+	max-height: 80%;
+	margin: 0;
+}
+
+/*
+ * free trial form design changes WEB-6283
+ */
+.mktoButtonRow .mktoButtonWrap {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.mktoButton {
+	border-radius: 2px;
+	height: 88px;
+	padding: 0 25px;
+	transition: background 400ms;
+}
+.mktoButton:last-child {
+	background: #ED2E26;
+}
+.mktoButton:last-child:hover,
+.mktoButton:last-child:active,
+.mktoButton:last-child:focus {
+	background: #D91A12;
+}
+.mktoButton:focus {
+	outline: none;
+}
+.mktoRadioList {
+	margin-bottom: 0;
+}
+.heroContent {
+	max-width: 530px;
+}

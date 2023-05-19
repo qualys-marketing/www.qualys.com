@@ -1,0 +1,91 @@
+---
+layout: form.njk
+title: Qualys Cloud Platform Free Trial | Qualys
+description: Get full access to the award-winning Qualys Cloud Platform and take the entire collection of Qualys Cloud Apps for a test drive. Start your free trial now!
+og:description: Get full access to the award-winning Qualys Cloud Platform and take the entire collection of Qualys Cloud Apps for a test drive. Start your free trial now!
+og:title: Qualys Cloud Platform Free Trial | Qualys
+og:type: website
+og:url: https://www.qualys.com/free-trial/
+twitter:card: summary
+---
+
+{% layoutblock 'appendHints-form' %}
+	<link rel="preconnect" href="https://d9n6nn3hir28n.cloudfront.net" crossorigin>
+{% endlayoutblock %}
+
+{% layoutblock 'appendStyles-form' %}
+	<link  rel="stylesheet"  href="index.css">
+{% endlayoutblock %}
+
+{% layoutblock 'appendScripts-form' %}
+	<script  src="index.js"></script>
+{% endlayoutblock %}
+
+<div class="q-grid__container hero-container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-7 heroContent">
+				<h1 class="heading--1">Free Trial: Qualys Cloud Platform</h1>
+				<p class="paragraph--1 subheading">Get full access to the award-winning Qualys Cloud Platform. It's an out-of-the-box solution that's centrally managed and self-updating.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="q-grid__container trial-container">
+	<div class="q-grid__inner heroImage">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-5 functions">
+				<div class="screens-wrapper">
+					<img loading="lazy" data-src="{{site.asset}}/image/screens-1353-2x.jpg" width="1353" class="screens lazyload" alt="Qualys Cloud Platform on a desktop and a laptop device | Qualys">
+				</div>
+				<div class="column features-col">
+					<ul class="q-bullet-list">
+						<li class="q-bullet-list__item">
+							Use it, unlimited scope, for up to 30 days
+						</li>
+						<li class="q-bullet-list__item">
+							Try the entire collection of Qualys Cloud Apps
+						</li>
+						<li class="q-bullet-list__item">
+							Discover all your assets and get 2-second visibility &mdash; whether on premises, in cloud instances or mobile endpoints 
+						</li>
+						<li class="q-bullet-list__item">
+							Identify critical vulnerabilities, malware, exploits and misconfigurations
+						</li>
+						<li class="q-bullet-list__item">
+							Prioritize vulnerability remediation
+						</li>
+						<li class="q-bullet-list__item">
+							Automatically patch or quarantine assets
+						</li>
+						<li class="q-bullet-list__item">
+							Detect suspicious activity and stop attacks
+						</li>
+						<li class="q-bullet-list__item">
+							Comply with internal and external policies
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="q-grid__column q-grid__column-5 form">
+				<div class="heroBox">
+					<!-- square component content -->
+
+					<!-- custom content -->
+					<div class="q-default-hero__form">
+						<h4 class="heading--4">Start your free trial</h4>
+						{% set formId = "1798" %}
+						{% include "form.njk" %}
+						{% include "privacy-respect.njk" %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="screens-wrapper standalone">
+	<img loading="lazy"  data-src="{{site.asset}}/image/screens-1353-2x.jpg" width="1353" class="screens lazyload" alt="Qualys Cloud Platform on a desktop and a laptop device | Qualys">
+</div>

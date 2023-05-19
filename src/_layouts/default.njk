@@ -11,27 +11,27 @@
 {%- from "component.njk" import component -%}
 
 <!DOCTYPE html>
-<html lang="{% if page.lang  %}{{ page.lang }}{%  else  %}{{ site.lang }}{%  endif  %}" class="no-js">
+<html lang="{% if lang  %}{{ lang }}{%  else  %}{{ site.lang }}{%  endif  %}" class="no-js">
 <head>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{%  if page.description %}
-		<meta name="description" content="{{ page.description }}">
+	{%  if description %}
+		<meta name="description" content="{{ description }}">
 	{%  endif  %}
-	{%  if page.robots %}
-		<meta name="robots" content="{{ page.robots }}">
+	{%  if robots %}
+		<meta name="robots" content="{{ robots }}">
 	{%  endif  %}
 
 	{% include "open-graph.njk" %}
 
-	<title>{{ page.title }}</title>
+	<title>{{ title }}</title>
 
 	{#  preconnect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
 	<link rel="preconnect" href="https://ik.imagekit.io/qualys" crossorigin>
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 	<link rel="preconnect" href="https://unpkg.com" crossorigin>
-	{% renderlayoutblock 'appendHints' %}
+	{% renderlayoutblock 'appendHints-default' %}
 
 	{#  load Pingdom Realtime User Monitoring before all other external assets #}
 	{% include "prum.njk" %}
@@ -47,7 +47,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
 	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
-	<link rel="canonical" href="{%  if page.canonical %}{{ page.canonical }}{% else %}https://www.qualys.com{{ __path }}{%  endif  %}">
+	<link rel="canonical" href="{%  if canonical %}{{ canonical }}{% else %}https://www.qualys.com{{ __path }}{%  endif  %}">
 	<meta name="theme-color" content="#2E8BE0">
 
 	{{ component('async-css', {
@@ -55,10 +55,10 @@
 	}) }}
 
 	<link rel="stylesheet" href="/asset/stylesheet/common.css">
-	{% renderlayoutblock 'appendStyles' %}
+	{% renderlayoutblock 'appendStyles-default' %}
 
 	{#  script tags in scripts-head should be async #}
-	{% renderlayoutblock 'appendScriptsInHead' %}
+	{% renderlayoutblock 'appendScripts-defaultInHead-default' %}
 
 	{% include "gtm.njk" %}
 
@@ -67,7 +67,7 @@
 
 	{% include "gtm-noscript.njk" %}
 
-	{% if not page.noHeader %}
+	{% if not noHeader %}
 	<div class="{{ simplified-header }}">
 		{% include "header.njk" %}
 	</div>
@@ -77,13 +77,15 @@
 		visibility: 'hidden'
 	}) }}
 
+	<!-- BEGIN CONTENT -->
 	{{ content | safe }}
+	<!-- END CONTENT -->
 
-	{% if not page.noFooter %}
+	{% if not noFooter %}
 		{% include "footer.njk" %}
 	{% endif %}
 
-	{% if not page.noMobileTrialBanner %}
+	{% if not noMobileTrialBanner %}
 		{% include "mobile-trial-banner.njk" %}
 	{% endif %}
 
@@ -106,7 +108,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>
 	<script src="/asset/script/common.js"></script>
-	{% renderlayoutblock 'appendScripts' %}
+	{% renderlayoutblock 'appendScripts-default' %}
 
 </body>
 </html>

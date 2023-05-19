@@ -10,14 +10,14 @@ twitter:card: summary
 ---
 {%- from "component.njk" import component -%}
 
-{% layoutblock 'appendStyles' %}
-    <link rel="stylesheet" href="index.css">
+{% layoutblock 'appendStyles-default' %}
+    <link rel="stylesheet" href="company.css">
 {% endlayoutblock %}
 
 {# add any scripts that need to go AFTER other scripts before the closing </body> tag #}
-{% layoutblock 'appendScripts' %}
+{% layoutblock 'appendScripts-default' %}
     {% include "vendor/vimeo-player.njk" %}
-    <script src="index.js"></script>
+    <script src="company.js"></script>
 {% endlayoutblock %}
 
 {{ component('default-hero', {
