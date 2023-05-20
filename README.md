@@ -80,6 +80,14 @@ Migrate one folder at a time, without subfolders. You will be migrating from the
 
 Copy and paste hbs, css and js files within one folder, e.g. /company/.  
 
+### Rename CSS files
+If you encounter any CSS files with an hbs extension, e.g. index.css.hbs, 
+
+ 1. Remove the .hbs extension so the file name is index.css
+ 2. Remove an Handlebars syntax within the file
+
+Eleventy will always process files with hbs, njk, md extensions and output an HTML file, e.g. index.css.html, wnich is never what we want. 
+
 ### Delete unused code
 Delete the following code.  
 
@@ -227,6 +235,40 @@ with
 
     #}
 
- ### Move JSON data to _data folder
- If you encounter inline JSON data within HTML, e.g. a list of management team members, create a new file for it in _data, e.g. _data/management.json and put the JSON data there. The data will be accessible as it will be global. 
- 
+Replace
+
+    {{@root.site.asset}}
+
+with
+
+    {{site.asset}}
+
+
+ ### Replace inline JSON data (jsonContext)
+ If you encounter inline JSON data within HTML, replace it with a {% set %} statement, e.g. replace this
+
+    {{#jsonContext '[
+	{
+		"dark": "true",
+		"quote" : [{
+			"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
+			"citeRole" : "VP & CISO, TiVo Corporation",
+			"citeName" : "Hemanta Swain",
+			"headshot" : "hemanta-swain-64-2x.png"
+		}]
+	}
+	]'}}
+	{{> quote-box this}}
+
+ with this
+
+    {% set dark = true %}
+    {% set quotes =  [{
+		"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
+		"citeRole": "VP & CISO, TiVo Corporation",
+		"citeName": "Hemanta Swain",
+		"headshot": "hemanta-swain-64-2x.png"
+	}]
+	%}
+	{% include "quote-box.njk" %}
+
