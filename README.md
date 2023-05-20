@@ -243,32 +243,56 @@ with
 
     {{site.asset}}
 
+Replace
+
+    @first
+
+with
+
+    loop.first
 
  ### Replace inline JSON data (jsonContext)
  If you encounter inline JSON data within HTML, replace it with a {% set %} statement, e.g. replace this
 
     {{#jsonContext '[
 	{
-		"dark": "true",
-		"quote" : [{
-			"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
-			"citeRole" : "VP & CISO, TiVo Corporation",
-			"citeName" : "Hemanta Swain",
-			"headshot" : "hemanta-swain-64-2x.png"
-		}]
-	}
-	]'}}
-	{{> quote-box this}}
+		"heading"	: "Web Application Scanning",
+		"copy"		: "Find, fix security holes in web apps, APIs.",
+		"icon"		: "was",
+		"url"		: "/apps/web-app-scanning/"
+	},
+	{
+		"heading"	: "Web Application Firewall",
+		"copy"		: "Block attacks and patch web application vulnerabilities.",
+		"icon"		: "waf",
+		"url"		: "/apps/web-app-firewall/"
+	}]'}}
+	
+	{{#each this}}
+	<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+	<p>{{copy}}</p>
+	<a href="{{url}}" class="q-link">Learn more</a>
+	{{/each}}
 
  with this
 
-    {% set dark = true %}
-    {% set quotes =  [{
-		"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
-		"citeRole": "VP & CISO, TiVo Corporation",
-		"citeName": "Hemanta Swain",
-		"headshot": "hemanta-swain-64-2x.png"
-	}]
-	%}
-	{% include "quote-box.njk" %}
+    {% set data = [
+	{
+		"heading"	: "Web Application Scanning",
+		"copy"		: "Find, fix security holes in web apps, APIs.",
+		"icon"		: "was",
+		"url"		: "/apps/web-app-scanning/"
+	},
+	{
+		"heading"	: "Web Application Firewall",
+		"copy"		: "Block attacks and patch web application vulnerabilities.",
+		"icon"		: "waf",
+		"url"		: "/apps/web-app-firewall/"
+	}] %}
+	
+	{% for item in quotes %}
+	<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
+	<p>{{item.copy}}</p>
+	<a href="{{item.url}}" class="q-link">Learn more</a>
+	{% endfor %}
 

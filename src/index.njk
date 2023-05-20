@@ -354,8 +354,8 @@ twitter:card: summary
 					<ul class="q-bullet-list q-bullet-list--sm bullet-list-right">
 						{% for item in data %}
 						<li class="q-bullet-list__item">
-							<h3 class="heading--4 q-home__cp-list{% if class %} {{class}}{% endif %}">{{heading}}</h3>
-							<p>{{copy}}</p>
+							<h3 class="heading--4 q-home__cp-list{% if item.class %} {{item.class}}{% endif %}">{{item.heading}}</h3>
+							<p>{{item.copy}}</p>
 						</li>
 						{% endfor %}
 					</ul>
@@ -538,12 +538,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 									{% endfor %}
@@ -556,12 +556,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 									{% endfor %}
@@ -627,12 +627,12 @@ twitter:card: summary
 										<div class="q-home-apps__block-content">
 											<div class="apps-block-header">
 												<div class="apps-block-icon">
-													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 												</div>
-												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 											</div>
-											<p>{{copy}}</p>
-											<a href="{{url}}" class="q-link">Learn more</a>
+											<p>{{item.copy}}</p>
+											<a href="{{item.url}}" class="q-link">Learn more</a>
 										</div>
 									</div>
 									{% endfor %}
@@ -645,12 +645,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 										{% endfor %}
@@ -697,12 +697,12 @@ twitter:card: summary
 										<div class="q-home-apps__block-content">
 											<div class="apps-block-header">
 												<div class="apps-block-icon">
-													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 												</div>
-												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 											</div>
-											<p>{{copy}}</p>
-											<a href="{{url}}" class="q-link">Learn more</a>
+											<p>{{item.copy}}</p>
+											<a href="{{item.url}}" class="q-link">Learn more</a>
 										</div>
 									</div>
 									{% endfor %}
@@ -715,12 +715,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 									{% endfor %}
@@ -748,12 +748,12 @@ twitter:card: summary
 										<div class="q-home-apps__block-content">
 											<div class="apps-block-header">
 												<div class="apps-block-icon">
-													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 												</div>
-												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 											</div>
-											<p>{{copy}}</p>
-											<a href="{{url}}" class="q-link">Learn more</a>
+											<p>{{item.copy}}</p>
+											<a href="{{item.url}}" class="q-link">Learn more</a>
 										</div>
 									</div>
 									{% endfor %}
@@ -766,12 +766,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 									{% endfor %}
@@ -823,11 +823,11 @@ twitter:card: summary
 										<div class="q-home-apps__block-content">
 											<div class="apps-block-header">
 												<div class="apps-block-icon">
-													<img data-src="{{site.asset}}/image/app-icons/solid/{{zicon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 												</div>
 											</div>
-											<p>{{copy}}</p>
-											<a href="{{url}}" class="q-link">Learn more</a>
+											<p>{{item.copy}}</p>
+											<a href="{{item.url}}" class="q-link">Learn more</a>
 										</div>
 									</div>
 									{% endfor %}
@@ -840,12 +840,12 @@ twitter:card: summary
 											<div class="q-home-apps__block-content">
 												<div class="apps-block-header">
 													<div class="apps-block-icon">
-														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{item.icon}}.svg" width="70" loading="lazy" class="lazyload"/>
 													</div>
-													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+													<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 												</div>
-												<p>{{copy}}</p>
-												<a href="{{url}}" class="q-link">Learn more</a>
+												<p>{{item.copy}}</p>
+												<a href="{{item.url}}" class="q-link">Learn more</a>
 											</div>
 										</div>
 									{% endfor %}

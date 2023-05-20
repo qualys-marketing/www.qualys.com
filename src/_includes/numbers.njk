@@ -1,8 +1,8 @@
 <div class="q-numbers{% if linear %} q-numbers--linear{% endif %}{% if animate %} q-numbers--will-animate{% endif %}">
 	{% for item in numbers %}
 		<div class="q-numbers__item">
-			<span class="q-numbers__value">{{value}}</span>
-			<span class="q-numbers__heading">{{title}}</span>
+			<span class="q-numbers__value">{{item.value}}</span>
+			<span class="q-numbers__heading">{{item.title}}</span>
 			{% if link %}{{link}}{% endif %}
 		</div>
 	{% endfor %}
