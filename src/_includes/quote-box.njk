@@ -12,8 +12,8 @@
 		{% endif %}
 		<div class="q-quote-box__content">
 			<!-- blockquote component -->
-			{% for item in quotes %}
-			<blockquote class="q-blockquote q-blockquote--dark{% if @first %} q-blockquote--active{% endif %}">
+			{% for item in quote %}
+			<blockquote class="q-blockquote q-blockquote--dark{% if loop.first %} q-blockquote--active{% endif %}">
 				{% if item.logo %}
 				<div class="q-blockquote__brand">
 					<img alt="{{logoAlt}}" data-src="{{site.asset}}/image/logo/{{item.logo}}" class="lazyload" loading="lazy">

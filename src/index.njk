@@ -241,14 +241,14 @@ twitter:card: summary
 		<div class="q-grid__inner">
 			<div class="q-grid__row">
 				<div class="q-grid__column q-grid__column-10">
-					{% set dark = true %}
-					{% set quotes =  [{
+
+					{% set quote = [{
 							"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
 							"citeRole": "VP & CISO, TiVo Corporation",
 							"citeName": "Hemanta Swain",
 							"headshot": "hemanta-swain-64-2x.png"
 						}]
-					%}
+					 %}
 
 					{% include "quote-box.njk" %}
 
@@ -897,16 +897,12 @@ twitter:card: summary
 											</a>
 										</div>
 										<div class="q-home__testimonial-text">
-											{% set data = [
-												{
-													"dark": "true",
-													"quote" : [{
-														"text": "We\'re a wholly cloud environment. As our cloud infrastructure expands, Qualys expands with it. It scans any assets that are alive and checks for new assets, so we can maintain constant eyes on our cloud environment.",
-														"citeRole" : "Director of Risk & Info Security at Ancestry",
-														"citeName" : "Grant Johnson"
-													}]
-												}
-											] %}
+											{% set quote = [{
+													"text": "We\'re a wholly cloud environment. As our cloud infrastructure expands, Qualys expands with it. It scans any assets that are alive and checks for new assets, so we can maintain constant eyes on our cloud environment.",
+													"citeRole" : "Director of Risk & Info Security at Ancestry",
+													"citeName" : "Grant Johnson"
+												}]
+											%}
 
 											{% include "quote-box.njk" %}
 										</div>
@@ -918,16 +914,12 @@ twitter:card: summary
 											</a>
 										</div>
 										<div class="q-home__testimonial-text">
-											{% set data = [
-												{
-													"dark": "true",
-													"quote" : [{
-														"text": "Qualys is helping us identify our assets with Global AssetView and the upgrades to patch management that will help us identify more deeply the missing patches and devices that we may not have seen previously due to not knowing they were there.",
-														"citeRole" : "Senior Managing Engineer at the Home Depot",
-														"citeName" : "Beverly Richardson"
-													}]
-												}
-											] %}
+											{% set quote = [{
+													"text": "Qualys is helping us identify our assets with Global AssetView and the upgrades to patch management that will help us identify more deeply the missing patches and devices that we may not have seen previously due to not knowing they were there.",
+													"citeRole" : "Senior Managing Engineer at the Home Depot",
+													"citeName" : "Beverly Richardson"
+												}]
+											%}
 
 											{% include "quote-box.njk" %}
 										</div>
@@ -939,16 +931,12 @@ twitter:card: summary
 											</a>
 										</div>
 										<div class="q-home__testimonial-text">
-											{% set data = [
-												{
-													"dark": "true",
-													"quote" : [{
-														"text": "Qualys has given us visibility to all of our endpoints and servers, especially through the Qualys Cloud Agent. This has allowed us to gain visibility to vulnerabilities that we\'ve never had access to, especially since our workforce is typically mobile and at client sites.",
-														"citeRole" : "Senior Manager at Deloitte",
-														"citeName" : "Gregston Chu"
-													}]
-												}
-											] %}
+											{% set quote = [{
+													"text": "Qualys has given us visibility to all of our endpoints and servers, especially through the Qualys Cloud Agent. This has allowed us to gain visibility to vulnerabilities that we\'ve never had access to, especially since our workforce is typically mobile and at client sites.",
+													"citeRole" : "Senior Manager at Deloitte",
+													"citeName" : "Gregston Chu"
+												}]
+											%}
 
 											{% include "quote-box.njk" %}
 										</div>
@@ -960,16 +948,12 @@ twitter:card: summary
 											</a>
 										</div>
 										<div class="q-home__testimonial-text">
-											{% set data = [
-												{
-													"dark": "true",
-													"quote" : [{
-														"text": "Qualys has helped us with getting our (developers) near real-time data to let them know what their vulnerabilities are as early as possible so that they can fix them and then move on with their development lifecycle.",
-														"citeRole" : "Senior Security Manager at Caterpillar",
-														"citeName" : "Brian Rossi"
-													}]
-												}
-											] %}
+											{% set quote = [{
+													"text": "Qualys has helped us with getting our (developers) near real-time data to let them know what their vulnerabilities are as early as possible so that they can fix them and then move on with their development lifecycle.",
+													"citeRole" : "Senior Security Manager at Caterpillar",
+													"citeName" : "Brian Rossi"
+												}]
+											%}
 
 											{% include "quote-box.njk" %}
 										</div>
@@ -1029,9 +1013,9 @@ twitter:card: summary
 								<div class="q-home-feed__type">
 									{% if blogPost %}
 										<a href="https://blog.qualys.com" class="q-home-feed__type-link">{{type}}</a>
-									{% elif pressRelease %}
+									{% elseif pressRelease %}
 										<a href="/company/newsroom/news-releases/" class="q-home-feed__type-link">{{type}}</a>
-									{% elif mediaCoverage %}
+									{% elseif mediaCoverage %}
 										<a href="/company/newsroom/media-coverage/usa/" class="q-home-feed__type-link">{{type}}</a>
 									{% else %}
 										<a href="/company/events/" class="q-home-feed__type-link">{{type}}</a>
