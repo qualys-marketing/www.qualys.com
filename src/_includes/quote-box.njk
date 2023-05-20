@@ -1,0 +1,50 @@
+<div class="q-quote-box{% if image %}} q-quote-box--has-image{% endif %}">
+	<div class="q-quote-box__row">
+		{% if image %}}
+		<div class="q-quote-box__image">
+			<img class="q-quote-box__img lazyload"
+				data-src="{{site.asset}}/image/{{image}}"
+				width="520"
+				height="520"
+				loading="lazy"
+				alt="Business colleagues discuss IT security and compliance | Qualys, Inc.">
+		</div>
+		{% endif %}
+		<div class="q-quote-box__content">
+			<!-- blockquote component -->
+			{% for item in quotes %}
+			<blockquote class="q-blockquote q-blockquote--dark{% if @first %} q-blockquote--active{% endif %}">
+				{% if item.logo %}
+				<div class="q-blockquote__brand">
+					<img alt="{{logoAlt}}" data-src="{{site.asset}}/image/logo/{{item.logo}}" class="lazyload" loading="lazy">
+				</div>
+				{% endif %}
+				<p class="q-blockquote__content q-blockquote__content--no-quotes">
+					{{item.text}}
+				</p>
+				<cite class="q-blockquote__cite q-blockquote__cite--dark">
+					{% if item.headshot %}
+					<img class="q-blockquote__headshot lazyload"
+						 data-src="{{site.asset}}/image/headshots/{{item.headshot}}"
+						 width="64"
+						 height="64"
+						 loading="lazy">
+					{% endif %}
+					<span class="q-blockquote__cite-detail">
+						{% if item.citeName %}
+						<span class="q-blockquote__name">
+							{{item.citeName}}
+						</span>
+						{% endif %}
+						{% if item.citeRole %}
+						<span class="q-blockquote__role">
+							{{item.citeRole}}
+						</span>
+						{% endif %}
+					</span>
+				</cite>
+			</blockquote>
+			{% endfor %}
+		</div>
+	</div>
+</div>

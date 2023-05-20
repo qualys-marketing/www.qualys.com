@@ -1,12 +1,1081 @@
 ---
 layout: default.njk
-title: Qualys
-description: The leading provider of information security and compliance cloud solutions.
-og:description: The leading provider of information security and compliance cloud solutions.
-og:title: Qualys
+publicationDate: 2021-05-18T06:30:00-0700
+title: IT Security and Compliance Platform | Qualys, Inc.
+description: Qualys, Inc. helps your business automate the full spectrum of auditing, compliance and protection of your IT systems and web applications.
+og:description: Qualys, Inc. helps your business automate the full spectrum of auditing, compliance and protection of your IT systems and web applications.
+og:title: IT Security and Compliance Platform | Qualys, Inc.
 og:type: website
 og:url: https://www.qualys.com/
 twitter:card: summary
 ---
-<h2>{{ title }}</h2>
-<p>This is a test.</p>
+
+{% layoutblock 'appendStyles-default' %}
+	{% include "vendor/fancybox-css.njk" %}
+	<link  rel="stylesheet"  href="index.css">
+{% endlayoutblock %}
+
+{% layoutblock 'appendScripts-default' %}
+	{% include "vendor/jquery.njk" %}
+	{% include "vendor/fancybox.njk" %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.3/lottie_svg.min.js" integrity="sha256-1LmUDzx23/AXL920x0iaqcWeIzBTGnoJ7XfihOpYd+o=" crossorigin="anonymous"></script>
+	{% include "vendor/underscore.njk" %}
+	{% include "vendor/vimeo-player.njk" %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.26.0/luxon.min.js" integrity="sha512-cYjGoxnM2sxryDRpKhwi8uTszEw2zufuDVz1dWlm1+wlvwnhQ4wu00BokHH4IKlogGJNL+2a2GYvHN+xaoUxjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="index.js"></script>
+{% endlayoutblock %}
+
+{% layoutblock 'appendHints-default' %}
+	<link rel="preconnect" href="https://images.contentful.com" crossorigin>
+{% endlayoutblock %}
+
+
+	<div class="q-home-hero">
+		<div class="q-home-hero__container">
+
+			<div class="swiper swiper-container-hero">
+				<div class="swiper-wrapper">
+                   	<div class="swiper-slide ">
+						<div class="q-home-hero__container-inner virtual-summit-slide">
+							<p class="paragraph--1 virtual-summit-text">Virtual Summit</p>
+							<div class="q-home-hero__content-wrapper q-grid__row">
+								
+								<div class="q-home-hero__content-left q-grid__column-8">
+									
+									<div class="virtual-summit">
+									   <img src="{{site.asset}}/image/qcrs23-asset-2023-cyber-risk-summit-logo.png" alt="virtual summit">
+									 <p class="paragraph--1 virtual-register">
+										<a href="/2023/04/virtual-summit/?utm_source=homepage&utm_medium=banner&utm_campaign=global-eventvirtual-cyberrisksummit-q22023" class="virtual-summit-link">
+										Learn More <span class="icn"> <img src="/asset/image/tru/cta-red-arrow.png"></span> </a></p>
+									   <p class="paragraph--1  virtual-summit-time hidden">April 25, 2023 / 10:00 AM - 1:00 PM PT</p>
+									
+									</div>
+								</div>
+									<div class="q-home-hero__content-right q-right-virtual-summit q-grid__column-4">
+										<p class="q-home-hero__virtual-summit">
+										Join us on demand to gain fresh perspectives on transformative topics that will help you tackle your toughest cyber risk threats head on.	
+										</p>
+									<p class="paragraph--1 presented_by" >Presented By</p>
+									<img src="/asset/image/logo/qualys.svg" width="150" 
+									alt="Qulays" class="virtual-summit-logo">
+									</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide tc-slide">
+						<div class="q-home-hero__container-inner">
+							<div class="q-home-hero__content-wrapper">
+								<div class="q-home-hero__tc-content">
+									<div class="q-home-hero__tc-banner">
+										<div class="q-home-hero__tc-live-label">
+											<img src="{{site.asset}}/image/home/totalcloud-hero-type-sub.png?tr=w-1045"/>
+										</div>
+										<div class="q-home-hero__tc-live-content">
+											<h2 class="q-home-hero__tc-heading">Unified Vulnerability, Threat, and Posture Management</h2>
+											<p class="q-home-hero__tc-text">Simplify your cloud security posture with Qualys TotalCloud, a
+												comprehensive cloud security platform that manages vulnerabilities, scans laC and detects threats&mdash;all
+												in single, unified posture dashboard view.</p>
+											<div class="q-home-hero__tc-live-cta">
+												<a href="/apps/totalcloud/" class="q-button right"><span>Learn More</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="q-home-hero__tc-icon">
+									<img src="{{site.asset}}/image/home/q-supericon-totalcloud.png" width="940" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide platform-slide">
+						<div class="q-home-hero__container-inner">
+							<div class="q-home-hero__content-wrapper">
+								<div class="q-home-hero__content-left">
+									<h1 class="q-home-hero__heading">
+										<div class="line1"><span class="nowrap">One Platform</span></div>
+										<div class="line2">One Agent</div>
+										<div class="line3">One View</div>
+									</h1>
+									<p class="q-home-hero__text">
+										The <a href="/cloud-platform/">Qualys Cloud Platform</a> and its powerful <a href="/cloud-agent/">Cloud Agent</a> provide organizations with a single IT, security and compliance solution – from prevention to detection to response!
+									</p>
+									<a href="/cloud-platform/" class="q-button right q-home-hero__cta"><span>Learn more</span></a>
+								</div>
+								<div class="q-home-hero__content-right">
+									<div class="hero-diagram-wrapper">
+										<div class="hero-diagram">
+											<img src="{{site.asset}}/image/home/edr-globe.png" width="580" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide csam-slide">
+						<div class="q-home-hero__container-inner">
+							<div class="q-home-hero__content-wrapper">
+								<div class="q-home-hero__content-left csam-banner">
+									<img class="vmdr-logo" src="{{site.asset}}/image/home/csam2/csam2-hero-type.svg" alt="CSAM 2.0" >
+									<h2 class="q-home-hero__subheading">
+										<span class="light">with</span> External Attack Surface Management
+									</h2>
+									<h2 class="q-home-hero__subheading-2">
+										See Your Attack Surface Like an Attacker Would
+									</h2>
+									<p class="q-home-hero__text">
+										Power up your Vulnerability Management program with continuous discovery, prioritization and remediation for your entire on-prem, cloud and hybrid networks and assets before attacks happen.
+									</p>
+									<a href="/apps/cybersecurity-asset-management/" class="q-button right q-home-hero__cta"><span>Learn More</span></a>
+								</div>
+								<div class="q-home-hero__content-right">
+									<img src="{{site.asset}}/image/home/csam2/csam2-supericon.svg" alt="" class="hero-diagram">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide vmdr-slide">
+						<div class="q-home-hero__container-inner vmdr-banner-inner">
+							<div class="q-home-hero__content-wrapper">
+								<div class="q-home-hero__content-left vmdr-banner">
+									<div class="q-home-hero__vmdr-live-label">
+									   <img class="vmdr-logo" src="{{site.asset}}/image/type-vmdr-shadow.png" alt="VMDR" >
+									</div>
+									<div class="q-home-hero__vmdr-live-content">
+										<h2 class="q-home-hero__vmdr-heading">
+											Revolutionizing Cybersecurity Risk Management
+										</h2>
+										<p class="q-home-hero__vmdr-text">
+											New capabilities give security and IT operations teams unprecedented insights into risk posture and the ability to automate workflows, so they can prioritize and quickly respond to the most critical threats.
+										</p>
+										<a href="/apps/vulnerability-management-detection-response/?utm_source=homepage-banner-cta&utm_medium=website&utm_campaign=vmdr-launch-q2-2022&utm_term=vmdr-pp-homepage-banner-cta-q2-2022&utm_content=vmdr-product-page" class="q-button right q-home-hero__cta"><span>Learn more</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="swiper-pagination-hero"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+	{# <div class="q-home-hero qsc-promo">
+		<div class="q-home-hero__container">
+			<div class="q-home-hero__container-inner">
+				<img class="qsc22-vegas lazyload" loading="lazy" data-src="{{site.asset}}/image/home/qsc22-las-vegas.svg" alt="">
+				<p class="qsc">Qualys Security Conference</p>
+				<a href="/qsc/2022/las-vegas/?utm_source=qualys-homepage&utm_medium=event&utm_campaign=homepage-banner-qsc-2022&utm_term=qsc-q4-2022&utm_content=qualys-homepage-qsc&leadsource=344572821" class="q-button right"><span>Register Today</span></a>
+			</div>
+		</div>
+	</div> #}
+
+	{# <div class="q-grid__container cyber-risk-summit-container">
+		<a class="" href="/2023/04/virtual-summit/?utm_source=homepage&utm_medium=banner&utm_campaign=global-eventvirtual-cyberrisksummit-q22023">
+			<img class="desktop lazyload" loading="lazy" data-src="{{site.asset}}/image/2023-cyber-risk-summit-april-25-desktop.png" alt="">
+			<img class="mobile lazyload" loading="lazy" data-src="{{site.asset}}/image/2023-cyber-risk-summit-april-25-mobile.png" alt="">
+		</a>
+	</div> #}
+
+	<div class="q-grid__container asset-inventory-dashboard">
+
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-5">
+					<div class="q-laptop q-laptop--fixed-width" id="ai-dashboard-laptop">
+						<img data-src="{{site.asset}}/image/home/home-ai-dashboard-breakdown.png" width="592" class="ai-dashboard-braekdown lazyload" loading="lazy" alt="Screen capture of the Qualys Global AssetView app | Qualys, Inc."/>
+						<div class="q-laptop__screen">
+								<img class="q-laptop__image lazyload" loading="lazy" data-src="{{site.asset}}/image/home/home-ai-dashboard-screenshot.jpg">
+						</div>
+					</div>
+				</div>
+				<div class="q-grid__column q-grid__column-5">
+					<div class="ai-dashboard-copy-wrapper">
+						<h2 class="q-home-intro__heading">You can’t secure IT assets you can’t see or don’t know exist</h2>
+						<p class="q-home-intro__copy">Automatically identify all known and unknown assets on your global hybrid-IT—on prem, endpoints, clouds, containers, mobile, OT and IoT—for a complete, categorized inventory, enriched with details such as vendor lifecycle information and much more. Because visibility is fundamental to security, we’ve decided to make our <a href="/apps/global-assetview/">Global AssetView</a> app absolutely free!</p>
+						<a href="/apps/global-assetview/" class="q-button right">
+							<span>Create Account</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	 <div class="q-grid__container intro">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-5">
+					<h2 class="q-home-panel__heading">Analyze threats and misconfigurations—in real time, with six sigma accuracy</h2>
+					<p class="paragraph--1">Continuously and automatically detect vulnerabilities and critical misconfigurations across your global hybrid environment. Get real-time alerts on zero-day vulnerabilities, compromised assets and network irregularities.</p>
+				</div>
+				<div class="q-grid__column q-grid__column-5 vm-widget">
+					<img data-src="{{site.asset}}/image/home/vm-widget.png" class="vm-widget-img lazyload" loading="lazy" width="605" alt="Screen capture of the Vulnerability Age tool | Qualys, Inc." />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-5">
+					<h2 class="q-home-panel__heading">Focus on what’s most urgent</h2>
+					<p class="paragraph--1">Using the latest threat intel, advanced correlation and powerful machine learning, the Qualys Cloud Platform automatically prioritizes the riskiest vulnerabilities and potential threats on your most critical assets—reducing thousands of vulnerabilities to the few hundred that matter.</p>
+				</div>
+				<div class="q-grid__column q-grid__column-5 rapid-patch">
+					<h2 class="q-home-panel__heading">Rapidly patch critical threats, and quarantine assets with a single click</h2>
+					<p class="paragraph--1">Automatically deploy the most relevant, superseding <a href="/apps/patch-management/" class="q-link--undecorated">patch</a> to quickly remediate vulnerabilities and threats across any size environment. If a device appears suspicious, quarantine it until it can be investigated.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container testimonial-quote">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-10">
+					{% set dark = true %}
+					{% set quotes =  [{
+							"text": "Integration was one of our key challenges as we were going through a consolidation of many tools. Bringing everything together and getting visibility in one Qualys dashboard has helped us. Now we have a dashboard where we’re able to see everything and take action quickly.”",
+							"citeRole": "VP & CISO, TiVo Corporation",
+							"citeName": "Hemanta Swain",
+							"headshot": "hemanta-swain-64-2x.png"
+						}]
+					%}
+
+					{% include "quote-box.njk" %}
+
+					<img alt="TiVo" data-src="{{site.asset}}/image/logo/tivi-logo.svg" width="10" class="q-home__quote-logo lazyload" loading="lazy">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container separator">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-10">
+					<hr>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	 <div class="q-grid__container cloud-platform">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-5">
+					<h2 class="q-home-panel__heading">The power of the Qualys Cloud Platform</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-home__numbers-columns-left">
+					<div class="q-home__video-poster">
+						<a data-fancybox href="https://vimeo.com/321568314?autoplay=1">
+							<img data-src="{{site.asset}}/image/home/video-poster-play.svg" width="68" class="q-home__video-poster-icon lazyload"
+								loading="lazy" />
+							<img data-src="{{site.asset}}/image/home/video-globe-poster.jpg" class="poster lazyload" loading="lazy" width="660" />
+						</a>
+					</div>
+
+					<div class="q-home__platform-numbers">
+						<h4 class="q-home__platform-numbers-heading">Platform in numbers</h4>
+					{% set linear = true %}
+					{% set animate = true %}
+					{% set numbers =  [{
+								"title": "Data points indexed elasticsearch clusters",
+								"value": "8+ trillion"
+							},
+							{
+								"title": "Security events per year",
+								"value": "2+ trillion"
+							},
+							{
+								"title": "IP scans and audits per year",
+								"value": "6+ billion"
+							},
+							{
+								"title": "Kafka messages per day",
+								"value": "5+ billion"
+							},
+							{
+								"title": "Integrated IT, security and compliance apps",
+								"value": "20+ apps",
+								"link": "<a href=\"/apps/\">More</a>"
+							},
+							{
+								"title": "Six Sigma scanning accuracy",
+								"value": "99.99966%",
+								"link": "<a href=\"/scanning-accuracy/\">More</a>"
+							}
+						]
+					%}
+					{% include "numbers.njk" %}
+
+					</div>
+				</div>
+				<div class="q-grid__column q-home__numbers-columns-right q-home__numbers-bullets">
+					{% set data =  [{
+							"heading": "Unparalleled visibility, speed and scale",
+							"copy": "Get instant visibility and control of all your global IT assets at infinite scale!",
+							"class": "mobile-active"
+						},
+						{
+							"heading": "Six Sigma accuracy",
+							"copy": "Eliminate false positives once and for all. Qualys consistently exceeds Six Sigma 99.99966% accuracy, the industry standard for high quality."
+						},
+						{
+							"heading": "A platform that grows with you",
+							"copy": "As your needs change, easily and seamlessly add powerful functionality, coverage and users."
+						},
+						{
+							"heading": "See the results in one place",
+							"copy": "The Qualys Cloud Platform is an end-to-end solution for all aspects of IT, security and compliance. Avoid the gaps that come with trying to glue together siloed solutions."
+						},
+						{
+							"heading": "Drastically reduce cost",
+							"copy": "Save significant resources and the time otherwise required managing multiple solutions."
+						}
+					]
+					%}
+					<ul class="q-bullet-list q-bullet-list--sm bullet-list-right">
+						{% for item in data %}
+						<li class="q-bullet-list__item">
+							<h3 class="heading--4 q-home__cp-list{% if class %} {{class}}{% endif %}">{{heading}}</h3>
+							<p>{{copy}}</p>
+						</li>
+						{% endfor %}
+					</ul>
+
+					<a href="/cloud-platform/" class="q-button q-home__numbers-cta right">
+						<span>Learn more</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container separator">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-10">
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container it-security">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-6">
+					<h2 class="q-home-panel__heading">Consolidate your IT, security and compliance stack in a single platform</h2>
+					<p class="paragraph--1">Avoid the gaps that come with trying to glue together siloed solutions. Qualys Cloud Platform is an end-to-end solution that keeps your teams in sync.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-grid__container it-security-blocks">
+		<div class="q-grid__inner">
+			<div class="q-grid__row">
+				<div class="q-grid__column q-grid__column-10">
+					<div class="q-home__security-panel-container">
+						<div class="q-home__security-panel left-panel">
+							<div class="q-home__security-panel-content">
+								<div class="q-home__security-panel-box first-box mobile-active">
+									<h3>Infrastructure Security</h3>
+									<p>Everything you need for on-premises data center security: asset inventory, passive and active scanning, vulnerability management, and more.</p>
+									<a href="/solutions/infrastructure/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+								<div class="q-home__security-panel-box middle-box">
+									<h3>Web App Security</h3>
+									<p>Qualys continually detects all your web apps – approved and unapproved – and provides continuous cloud-based protection.</p>
+									<a href="/solutions/web-app/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+								<div class="q-home__security-panel-box last-box">
+									<h3>DevOps</h3>
+									<p>Test for vulnerabilities throughout your development cycle.</p>
+									<a href="/solutions/devops/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="q-home__security-panel right-panel">
+							<div class="q-home__security-panel-content">
+								<div class="q-home__security-panel-box first-box">
+									<h3>Cloud Security</h3>
+									<p>With native AWS, Azure and Google Cloud integrations, Qualys gives you instant visibility into these instances and full security and compliance control.</p>
+									<a href="/solutions/cloud/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+								<div class="q-home__security-panel-box middle-box">
+									<h3>Endpoint Security</h3>
+									<p>The variety and quantity of endpoints on your network continue to rise, and so do security and compliance risks. Qualys continuously protects your endpoints from suspicious activity and attacks – from prevention to detection to response.</p>
+									<a href="/solutions/endpoint/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+								<div class="q-home__security-panel-box last-box">
+									<h3>Compliance</h3>
+									<p>Enforce compliance with complex internal policies, industry mandates and external regulations, and assess vendor risk. </p>
+									<a href="/solutions/compliance/">Read <span class="nowrap">more <img class="link-arrow lazyload" loading="lazy" data-src="{{site.asset}}/image/icon/link-arrow-white.svg" width="7" height="10"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-home__powerful-apps">
+		<div class="q-home__powerful-apps-container">
+			<div class="q-home__powerful-apps-inner">
+				<div class="q-home__powerful-apps-wrapper">
+					<div class="q-home__powerful-apps-header">
+						<img data-src="{{site.asset}}/image/home/all-apps-icon.svg" width="90" loading="lazy" class="lazyload"/>
+						<h2 class="q-home-panel__heading">20+ powerful apps!</h2>
+						<p class="paragraph--1">Qualys Cloud Platform apps are fully integrated and natively share the data they collect for real-time analysis and correlation. Adding another app is as easy a checking a box!</p>
+					</div>
+					<div class="q-home__powerful-apps-tabs-container">
+						<div class="q-home__powerful-apps-tabs">
+							<ul class="q-home__powerful-apps-tab-list">
+								<li class="apps-tab active-tab tab1" data-tab="page1">
+									<a href="javascript:void(0)" class="apps-tab-link">
+										<div class="app-tab-content-image">
+											<img data-src="{{site.asset}}/image/home/app-tab-assets.svg" width="56" loading="lazy" class="lazyload"/>
+										</div>
+										<div class="app-tab-content-text">Asset Management</div>
+									</a>
+								</li>
+								<li class="apps-tab tab2" data-tab="page2">
+									<a href="javascript:void(0)" class="apps-tab-link">
+										<div class="app-tab-content-image">
+											<img data-src="{{site.asset}}/image/home/app-tab-it-security.svg" width="56" loading="lazy" class="lazyload"/>
+										</div>
+										<div class="app-tab-content-text">IT Security</div>
+									</a>
+								</li>
+								<li class="apps-tab tab3" data-tab="page3">
+									<a href="javascript:void(0)" class="apps-tab-link">
+										<div class="app-tab-content-image">
+											<img data-src="{{site.asset}}/image/home/app-tab-container.svg" width="72" loading="lazy" class="lazyload"/>
+										</div>
+										<div class="app-tab-content-text">Cloud-Native Security</div>
+									</a>
+								</li>
+								<li class="apps-tab tab4" data-tab="page4">
+									<a href="javascript:void(0)" class="apps-tab-link">
+										<div class="app-tab-content-image">
+											<img data-src="{{site.asset}}/image/home/app-tab-was.svg" width="51" loading="lazy" class="lazyload"/>
+										</div>
+										<div class="app-tab-content-text">Web App Security</div>
+									</a>
+								</li>
+								<li class="apps-tab tab5" data-tab="page5">
+									<a href="javascript:void(0)" class="apps-tab-link">
+										<div class="app-tab-content-image">
+											<img data-src="{{site.asset}}/image/home/app-tab-compliance.svg" width="40" loading="lazy" class="lazyload"/>
+										</div>
+										<div class="app-tab-content-text">Compliance</div>
+									</a>
+								</li>
+								<div class="underbar"></div>
+							</ul>
+							<div class="apps-tab-arrow-mobile">
+								<img data-src="{{site.asset}}/image/home/app-tab-notch.svg" width="12" loading="lazy" class="lazyload"/>
+							</div>
+							<div class="app-category-menu-overlay"></div>
+							<div class="app-category-menu-list">
+								<ul>
+									<li><a href="javascript:void(0)" class="apps-menu-tab" data-tab="page1" data-menu="tab1">Asset Management</a></li>
+									<li><a href="javascript:void(0)" class="apps-menu-tab" data-tab="page2" data-menu="tab2">IT Security</a></li>
+									<li><a href="javascript:void(0)" class="apps-menu-tab" data-tab="page3" data-menu="tab3">Cloud/Container Security</a></li>
+									<li><a href="javascript:void(0)" class="apps-menu-tab" data-tab="page4" data-menu="tab4">Web App Security</a></li>
+									<li><a href="javascript:void(0)" class="apps-menu-tab" data-tab="page5" data-menu="tab5">Compliance</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="q-home__powerful-apps-page-container">
+							<div class="apps-page page1 active-page">
+								{% set data = [
+									{
+										"heading"	: "Global AssetView",
+										"copy"		: "You can’t secure what you can’t see or don’t know.",
+										"icon"		: "gav",
+										"url"		: "/apps/global-assetview/",
+										"free"		: true
+									},
+									{
+										"heading"	: "CyberSecurity Asset Management",
+										"copy"		: "Find and manage cybersecurity risks in IT assets.",
+										"icon"		: "csam",
+										"url"		: "/apps/cybersecurity-asset-management/"
+									},
+									{
+										"heading"	: "Certificate Inventory",
+										"copy"		: "Inventory TLS/SSL digital certificates on a global scale.",
+										"icon"		: "cri",
+										"url"		: "/apps/certificate-inventory/"
+									}
+								]
+								%}
+
+								<div class="q-home-apps__grid">
+									{% for item in data %}
+										<div class="q-home-apps__block">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+
+								<div class="q-home-apps__slider">
+									<div class="swiper-wrapper">
+									{% for item in data %}
+										<div class="q-home-apps__block swiper-slide">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}} {% if free %}- <span class="free">It's Free!</span>{% endif %}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+									{% endfor %}
+									</div>
+								</div>
+
+							</div>
+							<div class="apps-page page2">
+								{% set data = [
+									{
+										"heading"	: "Vulnerability Management, Detection and Response",
+										"copy"		: "Discover, assess, prioritize, and patch vulnerabilities in one app!",
+										"icon"		: "vmdr",
+										"url"		: "/apps/vulnerability-management-detection-response/"
+									},
+									{
+										"heading"	: "Threat Protection",
+										"copy"		: "Pinpoint your most critical threats and prioritize patching.",
+										"icon"		: "tp",
+										"url"		: "/apps/threat-protection/"
+									},
+									{
+										"heading"	: "Continuous Monitoring",
+										"copy"		: "Alerts you in real time about network irregularities.",
+										"icon"		: "cm",
+										"url"		: "/apps/continuous-monitoring/"
+									},
+									{
+										"heading"	: "Patch Management",
+										"copy"		: "Streamline and accelerate vulnerability remediation for all your IT assets.",
+										"icon"		: "pm",
+										"url"		: "/apps/patch-management/"
+									},
+									{
+										"heading"	: "Endpoint Detection and Response",
+										"copy"		: "Accurately detect and respond to attacks across all endpoints. ",
+										"icon"		: "edr",
+										"url"		: "/apps/endpoint-detection-response/"
+									},
+									{
+										"heading"	: "Certificate Assessment",
+										"copy"		: "Assess your digital certificates and TLS configurations.",
+										"icon"		: "cra",
+										"url"		: "/apps/certificate-assessment/"
+									},
+									{
+										"heading"	: "SaaS Detection and Response",
+										"copy"		: "Get continuous visibility into your SaaS applications and fix security and compliance issues.",
+										"icon"		: "saasdr",
+										"url"		: "/apps/saas-detection-response/"
+									},
+									{
+										"heading"	: "Context XDR",
+										"copy"		: "Bring context & clarity to enterprise security operations.",
+										"icon"		: "xdr",
+										"url"		: "/apps/extended-detection-response/"
+									}
+								]
+								%}
+								<div class="q-home-apps__grid">
+									{% for item in data %}
+									<div class="q-home-apps__block">
+										<div class="q-home-apps__block-content">
+											<div class="apps-block-header">
+												<div class="apps-block-icon">
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+												</div>
+												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+											</div>
+											<p>{{copy}}</p>
+											<a href="{{url}}" class="q-link">Learn more</a>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="q-home-apps__slider">
+									<div class="swiper-wrapper">
+										{% for item in data %}
+										<div class="q-home-apps__block swiper-slide">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+							<div class="apps-page page3">
+								{% set data = [
+									{
+										"heading"	: "TotalCloud",
+										"copy"		: "Assess your entire cloud attack surface exposure using multiple scanning options.",
+										"icon"		: "tc",
+										"url"		: "/apps/totalcloud/"
+									},
+									{
+										"heading"	: "Cloud Inventory",
+										"copy"		: "Comprehensive inventory of your public cloud workloads and infrastructure.",
+										"icon"		: "ci",
+										"url"		: "/apps/cloud-inventory/"
+									},
+									{
+										"heading"	: "Cloud Security Assessment",
+										"copy"		: "Continuously monitor and assess your cloud assets and resources for misconfigurations and non-standard deployments.",
+										"icon"		: "csa",
+										"url"		: "/apps/cloud-security-assessment/"
+									},
+									{
+										"heading"	: "Container Security",
+										"copy"		: "Discover, track and continuously secure containers – from build to runtime.",
+										"icon"		: "cs",
+										"url"		: "/apps/container-security/"
+									},
+									{
+										"heading"	: "Cloud Detection Response",
+										"copy"		: "Continuous cloud-native security, visibility, and compliance for your multi-cloud environment.",
+										"icon"		: "cdr",
+										"url"		: "/apps/cloud-detection-response/"
+									}
+								]%}
+
+								<div class="q-home-apps__grid">
+									{% for item in data %}
+									<div class="q-home-apps__block">
+										<div class="q-home-apps__block-content">
+											<div class="apps-block-header">
+												<div class="apps-block-icon">
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+												</div>
+												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+											</div>
+											<p>{{copy}}</p>
+											<a href="{{url}}" class="q-link">Learn more</a>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="q-home-apps__slider">
+									<div class="swiper-wrapper">
+									{% for item in data %}
+										<div class="q-home-apps__block swiper-slide">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+									{% endfor %}
+									</div>
+								</div>
+							</div>
+							<div class="apps-page page4">
+								{% set data = [
+									{
+										"heading"	: "Web Application Scanning",
+										"copy"		: "Find, fix security holes in web apps, APIs.",
+										"icon"		: "was",
+										"url"		: "/apps/web-app-scanning/"
+									},
+									{
+										"heading"	: "Web Application Firewall",
+										"copy"		: "Block attacks and patch web application vulnerabilities.",
+										"icon"		: "waf",
+										"url"		: "/apps/web-app-firewall/"
+									}
+								] %}
+								<div class="q-home-apps__grid">
+									{% for item in data %}
+									<div class="q-home-apps__block">
+										<div class="q-home-apps__block-content">
+											<div class="apps-block-header">
+												<div class="apps-block-icon">
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+												</div>
+												<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+											</div>
+											<p>{{copy}}</p>
+											<a href="{{url}}" class="q-link">Learn more</a>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="q-home-apps__slider">
+									<div class="swiper-wrapper">
+									{% for item in data %}
+										<div class="q-home-apps__block swiper-slide">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+									{% endfor %}
+									</div>
+								</div>
+							</div>
+							<div class="apps-page page5">
+								{% set data = [
+									{
+										"heading"	: "Policy Compliance",
+										"copy"		: "Assess security configurations of IT systems throughout your network.",
+										"icon"		: "pc",
+										"url"		: "/apps/policy-compliance/"
+									},
+									{
+										"heading"	: "Security Configuration Assessment",
+										"copy"		: "Automate configuration assessment of global IT assets.",
+										"icon"		: "sca",
+										"url"		: "/apps/security-configuration-assessment/"
+									},
+									{
+										"heading"	: "PCI Compliance",
+										"copy"		: "Automate, simplify and attain PCI compliance quickly.",
+										"icon"		: "pci",
+										"url"		: "/apps/pci-asv-compliance/"
+									},
+									{
+										"heading"	: "File Integrity Monitoring",
+										"copy"		: "Log and track file changes across global IT systems.",
+										"icon"		: "fim",
+										"url"		: "/apps/file-integrity-monitoring/"
+									},
+									{
+										"heading"	: "Security Assessment Questionnaire",
+										"copy"		: "Assess business process risk from third parties and internal teams.",
+										"icon"		: "saq",
+										"url"		: "/apps/security-assessment-questionnaire/"
+									},
+									{
+										"heading"	: "Out-of-Band Configuration Assessment",
+										"copy"		: "Extend security and compliance to inaccessible assets.",
+										"icon"		: "oca",
+										"url"		: "/apps/out-of-band-configuration-assessment/"
+									}
+								] %}
+								<div class="q-home-apps__grid">
+									{% for item in data %}
+									<div class="q-home-apps__block">
+										<div class="q-home-apps__block-content">
+											<div class="apps-block-header">
+												<div class="apps-block-icon">
+													<img data-src="{{site.asset}}/image/app-icons/solid/{{zicon}}.svg" width="70" loading="lazy" class="lazyload"/>
+												</div>
+											</div>
+											<p>{{copy}}</p>
+											<a href="{{url}}" class="q-link">Learn more</a>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="q-home-apps__slider">
+									<div class="swiper-wrapper">
+									{% for item in data %}
+										<div class="q-home-apps__block swiper-slide">
+											<div class="q-home-apps__block-content">
+												<div class="apps-block-header">
+													<div class="apps-block-icon">
+														<img data-src="{{site.asset}}/image/app-icons/solid/{{icon}}.svg" width="70" loading="lazy" class="lazyload"/>
+													</div>
+													<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+												</div>
+												<p>{{copy}}</p>
+												<a href="{{url}}" class="q-link">Learn more</a>
+											</div>
+										</div>
+									{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-home__try">
+		<div class="q-home__try-container">
+			<div class="q-home__try-inner">
+				<div class="q-home__try-wrapper">
+					<div class="q-home__try-header">
+						<div class="q-home__try-q-slabs">
+							<img src="{{site.asset}}/image/home/q-slab-top.svg" class="q-slab-image q-slab-top" width="100"/>
+							<img src="{{site.asset}}/image/home/q-slab-middle.svg" class="q-slab-image q-slab-middle" width="100"/>
+							<img src="{{site.asset}}/image/home/q-slab-bottom.svg" class="q-slab-image q-slab-bottom" width="100"/>
+						</div>
+						<h2 class="q-home-panel__heading q-home__try-heading">See for yourself.<br> Try Qualys for free.</h2>
+						<p class="paragraph--1 q-home__try-text">Start your free trial today.<br> It's an out-of-the-box solution that's centrally managed and self-updating.<br> <a href="/company/contacts/">Email us</a> or call us at 1 (800) 745-4355.</p>
+						<a href="/free-trial/" class="q-button right q-home__try-button"><span>Try it free</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-home__trusted">
+		<div class="q-home__trusted-container">
+			<div class="q-home__trusted-inner">
+				<div class="q-home__trusted-wrapper">
+					<div class="q-home__trusted-header">
+						<h2 class="q-home-panel__heading">Trusted globally</h2>
+						<p class="paragraph--1">More than 10,000 subscription customers worldwide, including a majority of the Forbes Global 100 and Fortune 100, trust Qualys with their IT security. It’s safer, simpler, and more cost effective.</p>
+					</div>
+					<div class="q-home__testimonial-content">
+						<div class="q-home__testimonial-panel">
+							<div class="testimonial-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="q-home__testimonial-video">
+											<a data-fancybox href="https://vimeo.com/327726380?autoplay=1" class="q-home__testimonial-play">
+												<img data-src="{{site.asset}}/image/home/testimonial-poster-1.jpg" width="535" loading="lazy" class="lazyload"/>
+											</a>
+										</div>
+										<div class="q-home__testimonial-text">
+											{% set data = [
+												{
+													"dark": "true",
+													"quote" : [{
+														"text": "We\'re a wholly cloud environment. As our cloud infrastructure expands, Qualys expands with it. It scans any assets that are alive and checks for new assets, so we can maintain constant eyes on our cloud environment.",
+														"citeRole" : "Director of Risk & Info Security at Ancestry",
+														"citeName" : "Grant Johnson"
+													}]
+												}
+											] %}
+
+											{% include "quote-box.njk" %}
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="q-home__testimonial-video">
+											<a href="/customers/testimonials/home-depot/" class="q-home__testimonial-play">
+												<img data-src="{{site.asset}}/image/home/testimonial-poster-2.jpg" width="535" loading="lazy" class="lazyload"/>
+											</a>
+										</div>
+										<div class="q-home__testimonial-text">
+											{% set data = [
+												{
+													"dark": "true",
+													"quote" : [{
+														"text": "Qualys is helping us identify our assets with Global AssetView and the upgrades to patch management that will help us identify more deeply the missing patches and devices that we may not have seen previously due to not knowing they were there.",
+														"citeRole" : "Senior Managing Engineer at the Home Depot",
+														"citeName" : "Beverly Richardson"
+													}]
+												}
+											] %}
+
+											{% include "quote-box.njk" %}
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="q-home__testimonial-video">
+											<a href="/customers/testimonials/deloitte/" class="q-home__testimonial-play">
+												<img data-src="{{site.asset}}/image/home/testimonial-poster-3.jpg" width="535" loading="lazy" class="lazyload"/>
+											</a>
+										</div>
+										<div class="q-home__testimonial-text">
+											{% set data = [
+												{
+													"dark": "true",
+													"quote" : [{
+														"text": "Qualys has given us visibility to all of our endpoints and servers, especially through the Qualys Cloud Agent. This has allowed us to gain visibility to vulnerabilities that we\'ve never had access to, especially since our workforce is typically mobile and at client sites.",
+														"citeRole" : "Senior Manager at Deloitte",
+														"citeName" : "Gregston Chu"
+													}]
+												}
+											] %}
+
+											{% include "quote-box.njk" %}
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="q-home__testimonial-video">
+											<a href="/customers/testimonials/caterpillar/" class="q-home__testimonial-play">
+												<img data-src="{{site.asset}}/image/home/testimonial-poster-4.jpg" width="535" loading="lazy" class="lazyload"/>
+											</a>
+										</div>
+										<div class="q-home__testimonial-text">
+											{% set data = [
+												{
+													"dark": "true",
+													"quote" : [{
+														"text": "Qualys has helped us with getting our (developers) near real-time data to let them know what their vulnerabilities are as early as possible so that they can fix them and then move on with their development lifecycle.",
+														"citeRole" : "Senior Security Manager at Caterpillar",
+														"citeName" : "Brian Rossi"
+													}]
+												}
+											] %}
+
+											{% include "quote-box.njk" %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="q-home__testimonial-tabs">
+							<div class="q-home__testimonial-tabs-container slider-tabs">
+								<a href="javascript:void(0)" class="slide-tab slide-0 active-slide-tab">
+									<img data-src="{{site.asset}}/image/home/ancestry-logo.png" width="149" loading="lazy" class="lazyload"/>
+								</a>
+								<a href="javascript:void(0)" class="slide-tab slide-1">
+									<img data-src="{{site.asset}}/image/home/home-depot-logo.svg" width="93" loading="lazy" class="lazyload"/>
+								</a>
+								<a href="javascript:void(0)" class="slide-tab slide-2">
+									<img data-src="{{site.asset}}/image/home/deloitte-logo.svg" width="109" loading="lazy" class="lazyload"/>
+								</a>
+								<a href="javascript:void(0)" class="slide-tab slide-3">
+									<img data-src="{{site.asset}}/image/home/caterpillar-logo.svg" width="151" loading="lazy" class="lazyload"/>
+								</a>
+								<a href="/customers/#testimonials">
+									<span>View All</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="q-home-feed__pagination-wrapper">
+		<div class="q-home-feed__pagination2">
+			<button class="q-carousel-button q-carousel-button--prev">
+				<title>Previous</title>
+			</button>
+			<button class="q-carousel-button q-carousel-button--next">
+				<title>Next</title>
+			</button>
+		</div>
+	</div>
+	<div class="q-home-feed">
+		<div class="q-home-feed__container">
+			<div class="q-home-feed__container-inner">
+				<h2 class="q-home-feed__heading">
+					The latest IT security and compliance news
+				</h2>
+				<div class="q-home-feed__pagination">
+					{% include "carousel-buttons.njk" %}
+				</div>
+				<div class="q-home-feed__content swiper-container">
+					<div class="swiper-wrapper">
+						{% for item in page.items %}
+						<div class="q-home-feed__item swiper-slide">
+							<div>
+								<div class="q-home-feed__type">
+									{% if blogPost %}
+										<a href="https://blog.qualys.com" class="q-home-feed__type-link">{{type}}</a>
+									{% elif pressRelease %}
+										<a href="/company/newsroom/news-releases/" class="q-home-feed__type-link">{{type}}</a>
+									{% elif mediaCoverage %}
+										<a href="/company/newsroom/media-coverage/usa/" class="q-home-feed__type-link">{{type}}</a>
+									{% else %}
+										<a href="/company/events/" class="q-home-feed__type-link">{{type}}</a>
+									{% endif %}
+								</div>
+								<div class="q-home-feed__subject">
+									<h3 class="q-home-feed__title">
+										<a class="q-home-feed__title-link" href="{{link}}">
+										{% if rawHeadline %}
+											{{rawHeadline}}
+										{% else %}
+											{{headline}}
+										{% endif %}
+										</a>
+									</h3>
+									{% if start %}
+										<time class="q-home-feed__time" datetime="{{start}}">
+											{# {{moment start format="MMMM D" locale="en-US"}} #}
+										</time>
+										{% if end %}
+											<time class="q-home-feed__time" datetime="{{end}}">
+												{# – {{moment end format="D" locale="en-US"}} #}
+											</time>
+										{% endif %}
+									{% else %}
+										<time class="q-home-feed__time" datetime="{{publicationDate}}">
+											{# {{moment publicationDate format="LL" locale="en-US"}} #}
+										</time>
+									{% endif %}
+									{% if location %}
+										<div class="q-home-feed__location">
+										{{location}}
+										</div>
+									{% endif %}
+								</div>
+							</div>
+							<a class="q-link news-link" href="{{link}}">
+								Read more
+							</a>
+						</div>
+						{% endfor %}
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
