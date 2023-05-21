@@ -54,7 +54,7 @@ function sanitize(string) {
 	 */
 	qualysMarketo.loadZoomInfo = function (form) {
 
-		var urlParams, leadsource, leadsourceArray;
+		var urlParams, leadsource, urlleadsource, leadsourceArray;
 
 		// get leadsource value from the url
 		urlParams = qualys.parseQueryString(window.location.search);
@@ -271,7 +271,7 @@ function sanitize(string) {
 
 	 qualysMarketo.autoFillupForm = function ( form ) {
 
-		var urlParams, leadsource, x, x_decode, x_values, x_fname, fnameField, x_lname, lnameField, x_email, emailField, x_cname, cnameField, x_title, titleField, x_phone, phoneField, x_country, countryField, x_state, stateField, x_size, sizeField, x_qaccount, qaccountField, accountYes, accountNo;
+		var urlParams, leadsource, urlleadsource, x, x_decode, x_values, x_fname, fnameField, x_lname, lnameField, x_email, emailField, x_cname, cnameField, x_title, titleField, x_phone, phoneField, x_country, countryField, x_state, stateField, x_size, sizeField, x_qaccount, qaccountField, accountYes, accountNo;
 
 		urlParams = qualys.parseQueryString(window.location.search);
 		leadsource = urlleadsource;
