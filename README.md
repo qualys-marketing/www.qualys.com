@@ -341,6 +341,19 @@ Need more help? Contact ayahya@qualys.com.
 * [Eleventy static site builder docs](https://www.11ty.dev/docs/)
 * [Netlify docs](https://docs.netlify.com/)
 
+### File count
+|File type|Count  |
+|--|--|
+|/site/layouts/*.hbs  | 16 |
+|/site/partials/*.hbs  | 351 |
+|/site/pages/*.hbs  | 1659 |
+|/site/pages/*.css  | 602 |
+|/site/pages/*.js  | 258 |
+|/site/pages/*.data.js  | 73 |
+|/site/pages/*.json  | 110 |
+
+
 ### Migration plan
 1. Migrate all 16 layouts manually.
 2. Write a script (PHP, NodeJS, etc) to automate the migration of all 351 partials and all 1659 pages.
+3. Migrate all 73 data.js files manually.
