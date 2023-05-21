@@ -89,7 +89,7 @@ If you encounter any CSS files with an hbs extension, e.g. index.css.hbs,
 Eleventy will always process files with hbs, njk, md extensions and output an HTML file, e.g. index.css.html, wnich is never what we want. 
 
 ### Delete unused code
-Delete the following code.  
+Delete the following lines of code.
 
     {{#extends "default"}}
     {{/extends}}
@@ -110,38 +110,38 @@ Add "layout: default.njk" to YAML frontmatter (or some other layout).
 Replace
 
     {{#append "styles"}}
-    <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="index.css">
     {{/append}}
 
 with
 
     {% layoutblock 'appendStyles-default' %}
-    <link  rel="stylesheet"  href="index.css">
+	    <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
 
 Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
 
     {% layoutblock 'appendStyles-form' %}
-    <link  rel="stylesheet"  href="index.css">
+	    <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
   
 ### Update JS block
 Replace
 
     {{#append "scripts"}}
-    <script src="company.js"></script>
+	    <script src="company.js"></script>
     {{/append}}
 
 with
 
     {% layoutblock 'appendScripts-default' %}
-    <script  src="company.js"></script>
+	    <script  src="company.js"></script>
     {% endlayoutblock %}
 
 Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
 
     {% layoutblock 'appendScripts-form' %}
-    <script  src="company.js"></script>
+	    <script  src="company.js"></script>
     {% endlayoutblock %}
   
 ### Update Handlebars "Partial" references
@@ -160,12 +160,12 @@ Replace
 
     {{>
     default-hero
-    color="red"
-    title="About Qualys."
-    subheading="The leading provider of information security and compliance cloud solutions."
-    background="about-us-hero-desktop.jpg"
-    squarePartial="company/square.njk"
-    squareBaseline=true
+	    color="red"
+	    title="About Qualys."
+	    subheading="The leading provider of information security and compliance cloud solutions."
+	    background="about-us-hero-desktop.jpg"
+	    squarePartial="company/square.njk"
+	    squareBaseline=true
     }}
 
 with
@@ -177,6 +177,7 @@ with
     {% set background = "about-us-hero-desktop.jpg" %}
     {% set squarePartial = "company/square.njk" %}
     {% set squareBaseline = true %}
+    
     {% include "default-hero.njk" %}
 
 ### Replace Handlesbars syntax with Nunjucks syntax
@@ -251,7 +252,27 @@ with
 
     loop.first
 
- ### Replace inline JSON data (jsonContext)
+### Loops
+When looping over objects in Nunjucks, you must specify the name of the iterator and then using dot or bracket notation, prefix the key with the iterator name. Compare the following Handlebars to Nunjucks code.
+
+**Handlbars**
+
+    {{#each quotes}}
+		<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+		<p>{{copy}}</p>
+		<a href="{{url}}" class="q-link">Learn more</a>
+	{{/each}}
+
+ **Nunjucks**
+
+    {% for item in quotes %}
+		<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
+		<p>{{item.copy}}</p>
+		<a href="{{item.url}}" class="q-link">Learn more</a>
+	{% endfor %}
+
+
+### Replace inline JSON data (jsonContext)
  If you encounter inline JSON data within HTML, replace it with a {% set %} statement, e.g. replace this
 
     {{#jsonContext '[
@@ -269,9 +290,9 @@ with
 	}]'}}
 	
 	{{#each this}}
-	<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
-	<p>{{copy}}</p>
-	<a href="{{url}}" class="q-link">Learn more</a>
+		<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+		<p>{{copy}}</p>
+		<a href="{{url}}" class="q-link">Learn more</a>
 	{{/each}}
 
  with this
@@ -291,8 +312,35 @@ with
 	}] %}
 	
 	{% for item in quotes %}
-	<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
-	<p>{{item.copy}}</p>
-	<a href="{{item.url}}" class="q-link">Learn more</a>
+		<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
+		<p>{{item.copy}}</p>
+		<a href="{{item.url}}" class="q-link">Learn more</a>
 	{% endfor %}
 
+### Data.js files that fetch remote data
+When you encounter data.js files that fetch remote data, e.g. from Contentful, refactor the code to use the [Eleventy Fetch](https://www.11ty.dev/docs/plugins/fetch/). For example,
+
+    const EleventyFetch = require("@11ty/eleventy-fetch");
+    module.exports = async function() {
+	    let url = "https://api.github.com/repos/11ty/eleventy";
+	    /* This returns a promise */
+	    return EleventyFetch(url, {
+		    duration: "1d", // save for 1 day
+		    type: "json"    // we’ll parse JSON for you
+	    });
+    };
+
+
+### Help
+Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
+Need more help? Contact ayahya@qualys.com.
+
+### Resources
+* [Handlebars template engine docs](https://handlebarsjs.com/guide/#what-is-handlebars)
+* [Nunjucks template engine docs](https://mozilla.github.io/nunjucks/templating.html#user-defined-templates-warning)
+* [Eleventy static site builder docs](https://www.11ty.dev/docs/)
+* [Netlify docs](https://docs.netlify.com/)
+
+### Migration plan
+1. Migrate all 16 layouts manually.
+2. Write a script (PHP, NodeJS, etc) to automate the migration of all 351 partials and all 1659 pages.
