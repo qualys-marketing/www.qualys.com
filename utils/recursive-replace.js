@@ -80,14 +80,20 @@ const edit = filePath => {
 
   // REPLACE {{> vendor/vimeo-player }} with {% include vendor/vimeo-player.njk %}
   oldContent = newContent;
-  regex = '/\{\{>\s*([a-zA-Z0-9-_/]+)?\s*\}\}';
+  regex = '/\{\{>\s*([a-zA-Z0-9-_/]+)?\s*\}\}/';
   replaceVal = '{% include $1.njk %}';
   newContent = oldContent.replace(regex, replaceVal);
 
   // REPLACE {{> apps/hero-list this}} with {% include apps/hero-list.njk %}
   oldContent = newContent;
-  regex = '/\{\{>\s*([a-zA-Z0-9-_/]+)?\s*this\s*\}\}';
+  regex = '/\{\{>\s*([a-zA-Z0-9-_/]+)?\s*this\s*\}\}/';
   replaceVal = '{% include $1.njk %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
+  oldContent = newContent;
+  regex = '/\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/=:"'\s]+)\s*\}\}/';
+  replaceVal = '{% include $1.njk $2 %}';
   newContent = oldContent.replace(regex, replaceVal);
 
   // replace file extension from hbs to njk
