@@ -42,6 +42,19 @@ const edit = filePath => {
   replaceVal = '{% endif %}';
   newContent = oldContent.replace(regex, replaceVal);
 
+
+  // REPLACE {{markdown biography}} with {% biography | md %}
+  oldContent = newContent;
+  regex = /\{\{markdown\s+([a-zA-Z0-9-_]+)?\s*\}\}/gi;
+  replaceVal = '{% $1 | md %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{unless x}} with {% if not x %}
+  oldContent = newContent;
+  regex = /\{\{#unless\s+([a-zA-Z0-9-_]+)?\}\}/gi;
+  replaceVal = '{% if not $1 %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
   // REPLACE {{@root.site.asset}} with {{site.asset}}
   oldContent = newContent;
   regex = /\{\{@root\.site\.asset\}\}/gi;
