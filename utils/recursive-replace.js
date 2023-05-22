@@ -32,7 +32,7 @@ const edit = filePath => {
   var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
   // REPLACE {{#if class}} with {% if class %}
-  var regex = /\{\{#if\s+([a-zA-Z0-9-_]+)?\}\}/gi;
+  var regex = /\{\{#if\s+([a-zA-Z0-9-_\.]+)?\}\}/gi;
   var replaceVal = '{% if $1 %}';
   var newContent = oldContent.replace(regex, replaceVal);
 
@@ -105,8 +105,74 @@ const edit = filePath => {
 
   // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
   oldContent = newContent;
-  regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/=:"\'\s]+)\s*\}\}/gi;
+  regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/=:"'\s]+)\s*\}\}/gi;
   replaceVal = '{% include $1.njk $2 %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#each items as |child|}} with {% for child in items %}
+  oldContent = newContent;
+  regex = /\{\{#each\s+([a-zA-Z0-9-_/]+)?\s*as\s*\|\s*([a-zA-Z0-9-_/=:"'\s]+)?\s*\|\s*\}\}/gi;
+  replaceVal = '{% for $2 in $1 %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#each this}} with {% for item in this %}
+  oldContent = newContent;
+  regex = /\{\{#each\s+([a-zA-Z0-9-_/]+)?\s*\}\}/gi;
+  replaceVal = '{% for item in $1 %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{/each}} with {% endfor %}
+  oldContent = newContent;
+  regex = /\{\{\/each\}\}/gi;
+  replaceVal = '{% endfor %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#append "styles"}} with {% layoutblock 'appendStyles-default' %}
+  oldContent = newContent;
+  regex = /\{\{#append\s+"styles"\}\}/gi;
+  replaceVal = '{% layoutblock "appendStyles-default" %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#append "scripts"}} with {% layoutblock 'appendScripts-default' %}
+  oldContent = newContent;
+  regex = /\{\{#append\s+"scripts"\}\}/gi;
+  replaceVal = '{% layoutblock "appendScripts-default" %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#append "hints"}} with {% layoutblock 'appendHints-default' %}
+  oldContent = newContent;
+  regex = /\{\{#append\s+"hints"\}\}/gi;
+  replaceVal = '{% layoutblock "appendHints-default" %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{/append}} with {% endlayoutblock %}
+  oldContent = newContent;
+  regex = /\{\{\/append\s*\}\}/gi;
+  replaceVal = '{% endlayoutblock %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{lowercase-hyphen title}} with {{ title | lower | replace(" ", "-") }}
+  oldContent = newContent;
+  regex = /\{\{lowercase-hyphen\s+([a-zA-Z0-9-_/=:"'\s]+)?\s*\}\}/gi;
+  replaceVal = '{{ $1 | lower | replace(" ", "-") }}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE {{#jsonContext ' with {% set this = }}
+  oldContent = newContent;
+  regex = /\{\{#jsonContext\s+'/gi;
+  replaceVal = '] %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // REPLACE ]'}} with ] %}
+  oldContent = newContent;
+  regex = /\]'\}\}/gi;
+  replaceVal = '] %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // DELETE {{/jsonContext}}
+  oldContent = newContent;
+  regex = /\{\{\/jsonContext\s*\}\}/gi;
+  replaceVal = '';
   newContent = oldContent.replace(regex, replaceVal);
 
   // replace file extension from hbs to njk

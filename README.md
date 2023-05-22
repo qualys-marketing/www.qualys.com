@@ -143,6 +143,25 @@ Note: "-default" is the name of the layout the page immediately inherits from. I
     {% layoutblock 'appendScripts-form' %}
 	    <script  src="company.js"></script>
     {% endlayoutblock %}
+
+### Update Hints block
+Replace
+
+    {{#append "hints"}}
+	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
+    {{/append}}
+
+with
+
+    {% layoutblock 'appendHints-default' %}
+	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
+    {% endlayoutblock %}
+
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+
+    {% layoutblock 'appendHints-form' %}
+	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
+    {% endlayoutblock %}
   
 ### Update Handlebars "Partial" references
 When you see a reference to a partial like this
