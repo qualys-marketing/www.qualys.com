@@ -331,16 +331,6 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
     };
 
 
-### Help
-Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
-Need more help? Contact ayahya@qualys.com.
-
-### Resources
-* [Handlebars template engine docs](https://handlebarsjs.com/guide/#what-is-handlebars)
-* [Nunjucks template engine docs](https://mozilla.github.io/nunjucks/templating.html#user-defined-templates-warning)
-* [Eleventy static site builder docs](https://www.11ty.dev/docs/)
-* [Netlify docs](https://docs.netlify.com/)
-
 ### File count
 |File type|Count  |
 |--|--|
@@ -355,5 +345,17 @@ Need more help? Contact ayahya@qualys.com.
 
 ### Migration plan
 1. Migrate all 16 layouts manually.
-2. Write a script (PHP, NodeJS, etc) to automate the migration of all 351 partials and all 1659 pages.
-3. Migrate all 73 data.js files manually.
+2. Write a script (PHP, NodeJS, etc) to automate the migration of all 351 partials and all 1659 pages (recursive-replace.js)
+3. Migrate some code that the automation script could not migrate.
+4. Migrate all 73 data.js files manually.
+5. Migrate all redirects.
+
+### Help
+Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
+Need more help? Contact ayahya@qualys.com.
+
+### Resources
+* [Handlebars template engine docs](https://handlebarsjs.com/guide/#what-is-handlebars)
+* [Nunjucks template engine docs](https://mozilla.github.io/nunjucks/templating.html#user-defined-templates-warning)
+* [Eleventy static site builder docs](https://www.11ty.dev/docs/)
+* [Netlify docs](https://docs.netlify.com/)
