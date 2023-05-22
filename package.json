@@ -16,6 +16,7 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^3.0.0",
     "dotenv": "^16.0.3",
-    "netlify-plugin-cache": "^1.0.3"
+    "netlify-plugin-cache": "^1.0.3",
+    "nunjucks-markdown-filter": "^0.1.0"
   }
 }
