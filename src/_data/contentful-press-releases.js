@@ -3,6 +3,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({ path: path.resolve(__dirname, '../../.env') })
 
+// Contentful API docs
+// https://www.contentful.com/developers/docs/references/content-delivery-api/
 const space_id = "4l0w8syj29ap";
 const environment_id = "master";
 const access_token = process.env.CONTENTFUL_ACCESS_TOKEN;
