@@ -36,6 +36,13 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
 
+	eleventyConfig.addFilter('markdown', function(value) {
+		let markdown = require('markdown-it')({
+			html: true
+		});
+		return markdown.render(value);
+	});
+
 	// add support for blocks
     eleventyConfig.addShortcode('renderlayoutblock', function(name) {
         //return (this.page.layoutblock || {})[name] || '';

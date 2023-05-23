@@ -1,0 +1,31 @@
+---
+layout: single-column.njk
+description: Qualys privacy policy statement
+---
+
+{% layoutblock "appendStyles-single-column" %}
+	<link rel="stylesheet" href="index.css">
+{% endlayoutblock %}
+
+<div class="q-grid__container q-privacy-container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-9">
+
+					<h1 class="q-default-hero__heading">
+						{{title}}
+					</h1>
+
+					<p class="version">{{version}}</p>
+
+					<div class="page-section1">
+						{{ section1 | markdown | safe }}
+					</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

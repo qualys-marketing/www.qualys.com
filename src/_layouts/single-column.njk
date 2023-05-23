@@ -1,0 +1,15 @@
+---
+layout: default.njk
+---
+
+{% layoutblock 'appendStyles-default' %}
+	<style>
+		.q-grid__container {
+			margin-bottom: 140px;
+			margin-top: 66px;
+		}
+	</style>
+	{% renderlayoutblock 'appendStyles-single-column' %}
+{% endlayoutblock %}
+
+{{ content | safe }}

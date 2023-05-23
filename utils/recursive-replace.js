@@ -44,7 +44,7 @@ const edit = filePath => {
 
   // REPLACE {{markdown biography}} with {% biography | md %}
   oldContent = newContent;
-  regex = /\{\{markdown\s+([a-zA-Z0-9-_]+)?\s*\}\}/gi;
+  regex = /\{\{markdown\s+([a-zA-Z0-9-_\.]+)?\s*\}\}/gi;
   replaceVal = '{% $1 | md %}';
   newContent = oldContent.replace(regex, replaceVal);
 
@@ -177,6 +177,41 @@ const edit = filePath => {
   // DELETE {{/jsonContext}}
   oldContent = newContent;
   regex = /\{\{\/jsonContext\s*\}\}/gi;
+  replaceVal = '';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // GET LAYOUT AND DELETE {{#extends "default"}}
+  oldContent = newContent;
+  regex = /\{\{#extends\s+"([a-zA-Z0-9-_/=:"'\s]+)?"\s*\}\}/gi;
+  replaceVal = '';
+  newContent = oldContent.replace(regex, replaceVal);
+  var arr = regex.exec(oldContent);
+  var layout = "default";
+  if (arr) {
+	layout = arr[1];
+  }
+  
+  // REPLACE --- with ---\n{layout}
+  oldContent = newContent;
+  regex = /---/i;
+  replaceVal = '---\nlayout: ' + layout + '.njk';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // DELETE {{/extends}}
+  oldContent = newContent;
+  regex = /\{\{\/extends\s*\}\}/gi;
+  replaceVal = '';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // DELETE {{#block "content"}}
+  oldContent = newContent;
+  regex = /\{\{#block\s+"content"\s*\}\}/gi;
+  replaceVal = '';
+  newContent = oldContent.replace(regex, replaceVal);
+
+  // DELETE {{/block}}
+  oldContent = newContent;
+  regex = /\{\{\/block\s*\}\}/gi;
   replaceVal = '';
   newContent = oldContent.replace(regex, replaceVal);
 

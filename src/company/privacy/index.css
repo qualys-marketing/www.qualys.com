@@ -1,0 +1,59 @@
+.version {
+	font-family: Gotham, sans-serif;
+	margin-bottom: 7px;
+}
+.page-section1 a {
+	color: #2E8BE0;
+	text-decoration: none;
+}
+.page-section1 p,
+.page-section1 li {
+	font-size: 15px;
+	line-height: 1.8;
+}
+@media (min-width: 720px) {
+	.page-section1 p,
+	.page-section1 li {
+		font-size: 14pt;
+	}
+}
+.page-section1 a:hover {
+	text-decoration: underline;
+}
+.trustearc {
+	display: inline-block;
+	margin-bottom: 3em;
+}
+.q-default-hero__heading {
+	opacity: 1;
+}
+.q-privacy-container {
+	padding-top: 6.99301%;
+	padding-bottom: 6.99301%;
+}
+h2 {
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-family: Gotham, sans-serif;
+	font-size: 26px;
+	line-height: 1.15;
+	letter-spacing: -0.2px;
+	color: #262626;
+	font-weight: 400;
+}
+@media (min-width: 375px) {
+	h2 {
+		font-size: 26px;
+		font-size: calc(0.0153 * 100vw + (20.2623px));
+	}
+}
+@media (min-width: 1290px) {
+	h2 {
+		font-size: 40px;
+	}
+}
+strong {
+	color: #000;
+}
