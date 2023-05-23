@@ -45,7 +45,7 @@ const edit = filePath => {
   // REPLACE {{markdown biography}} with {% biography | md %}
   oldContent = newContent;
   regex = /\{\{markdown\s+([a-zA-Z0-9-_\.]+)?\s*\}\}/gi;
-  replaceVal = '{% $1 | md %}';
+  replaceVal = '{% $1 | markdown | safe %}';
   newContent = oldContent.replace(regex, replaceVal);
 
   // REPLACE {{unless x}} with {% if not x %}
