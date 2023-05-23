@@ -361,6 +361,17 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |/site/pages/*.data.js  | 73 |
 |/site/pages/*.json  | 110 |
 
+### File count containing jsonContext
+|Folder|Count  |
+|--|--|
+|/site/pages/*.hbs  | 131 |
+|/site/partials/*.hbs  | 27 |
+
+### File count containing contentful.createClient
+|Folder|Count  |
+|--|--|
+|/site/pages/*.data.js  | 44 |
+
 
 ### Migration plan
 1. Migrate all 16 layouts manually.
