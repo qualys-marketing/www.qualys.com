@@ -377,8 +377,9 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 1. Migrate all 16 layouts manually.
 2. Migrate all 351 partials and all 1659 pages programmatically using migration script: [recursive-replace.js](https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
 3. Migrate some code that the automation script could not migrate.
-4. Migrate all 73 data.js files manually.
-5. Migrate all redirects.
+4. Rename all data.js files to 11tydata.js 
+5. Migrate all 73 data.js files manually.
+6. Migrate all redirects.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
