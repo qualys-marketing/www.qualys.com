@@ -1,8 +1,6 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const jmespath = require('jmespath');
-const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') })
+require('dotenv').config({ path: require('find-config')('.env') })
 
 // Contentful API docs
 // https://www.contentful.com/developers/docs/references/content-delivery-api/
@@ -21,6 +19,8 @@ module.exports = async function() {
     });
 
 	var privacyContent = jmespath.search(data, "items[0].fields");
+
+	console.log(privacyContent);
 
 	return privacyContent;
 

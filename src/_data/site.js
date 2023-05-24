@@ -1,13 +1,12 @@
-const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config({ path: path.resolve(__dirname, '../../.env') })
+const jmespath = require('jmespath');
+require('dotenv').config({ path: require('find-config')('.env') })
 
 /*
  * site wide data
  * available in all templates under the global `site` object
  */
 
-let envIsProd = process.env.ENVIRONMENT === "production";
+let envIsProd = process.env.ENVIRONMENT === "production";console.log(url);
 
 module.exports = {
 	asset: envIsProd ? "https://ik.imagekit.io/qualys" : "/asset",
