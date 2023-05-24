@@ -6,7 +6,7 @@ require('dotenv').config({ path: require('find-config')('.env') })
  * available in all templates under the global `site` object
  */
 
-let envIsProd = process.env.ENVIRONMENT === "production";console.log(url);
+let envIsProd = process.env.ENVIRONMENT === "production";
 
 module.exports = {
 	asset: envIsProd ? "https://ik.imagekit.io/qualys" : "/asset",
