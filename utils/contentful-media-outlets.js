@@ -27,4 +27,15 @@ module.exports = async function() {
 	console.log(filteredData);
 
 	return filteredData;
+
+	// simplify data
+	var results = data.items.map(function (currentValue, index, arr) {
+		return currentValue.fields;
+	});
+
+	var simpleData = {items: results};
+	
+	console.log(simpleData);
+
+	return simpleData;
 }; 
