@@ -1124,7 +1124,7 @@
 /rv10/	/research/top10/	301
 /zero-day/	https://community.qualys.com/blogs/qualys-tech/2012/02/27/using-qualysguard-70-idefense-threat-intelligence-and-zero-day-risk-analyzer	301
 #
-#begin redirects for 2012-03-01 site launch
+# begin redirects for 2012-03-01 site launch
 #
 /resources/datasheets/	/resources/#/type/datasheet/topic/all/language/en	301
 /resources/guides/	/resources/#/type/guide/topic/all/language/en	301
