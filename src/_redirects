@@ -1,5 +1,163 @@
 # Redirects from what the browser requests to what we serve
 # 301: page has permanently moved to a new location
 # 302: page has temporarily moved to a new location
-/home               /               301
-/foo                /about          302
+
+# migrated from 404_notfound_case_302_found.php
+/tru/	https:/blog.qualys.com/vulnerabilities-threat-research 301
+/qsc22-las-vegas-register/	/qsc/2022/las-vegas/register/ 301
+/conferences/	/forms/vmdr/ 301
+/email-banner/	/qsc/2022/las-vegas/	302
+/platform-banner/	/log4shell-cve-2021-44228/	302
+/gift/	https:/qualys.orderpromos.com/ 301
+/edr-live/	https:/www.brighttalk.com/webcast/11673/427089 301
+/remote-endpoint-blog/	https:/blog.qualys.com/technology/2020/03/24/secure-your-global-remote-workforce 301
+/docs/whitepapers/qualys-guide-automating-cis-20-critical-controls.pdf	/docs/qualys-guide-automating-cis-20-critical-controls.pdf 301
+/vmdrlive/	/2020/vmdr-live/ 301
+/vmdr/	/subscriptions/vmdr	/apps/vulnerability-management-detection-response/	302
+/qradar/	/forms/qradar/	302
+/asset-inventory/	/lp/it-asset-inventory/	302
+/meetup/	/2019/meet-team/	302
+/investor-track-agenda/	/2018/qsc/investor/	302
+/qsc18-las-vegas-post-event-videos/	/2018/qsc/las-vegas/videos/	302
+/investor-track/	/emails/2018/qsc/register/las-vegas/investor-track/	302
+/ignite/	/2018/ignite/	302
+/reinvent/	/2018/reinvent/	302
+/picnic/	https:/docs.google.com/forms/d/e/1FAIpQLSeiLjaJcPt4mQZQ06cSAH6Psge43uZxWJz5-MrpPDPGgMUTZA/viewform	302
+/was-burp/	https:/blog.qualys.com/webappsec/2019/10/21/new-improved-qualys-was-burp-extension-now-available	302
+/forms/whitepapers/devsecops-securing-software-pipeline-enabling-digital-transformation/	/solutions/devsecops/	302
+/qsc-cirque/	/qsc-dinner	/2018/qsc/las-vegas/cirque-du-soleil/	302
+/qsc-agenda/	/qsc/2020/san-francisco/#agenda	302
+/qsc19-training/	/qsc/2019/las-vegas/#training	302
+/qsc-las-vegas/	/qsc/2019/las-vegas/	302
+/qsc-london/	/qsc/2023/london/	302
+/qsc-munich/	/qsc/2020/munich/	302
+/qsc-paris/	/qsc/2020/paris/	302
+/qsc-register-london/	/qsc/register/#london	302
+/qsc-register-munich/	/qsc/register/#munich	302
+/qsc-register-paris/	/qsc/register/#paris	302
+/qsc-register-berlin/	/qsc/register/	302
+/qsc-register	/qsc/register/	302
+/qsc/register	/qsc/register/	302
+/company/events/tradeshows/2016/qsc/munich	/qsc/register/	302
+/company/events/tradeshows/2016/qsc/london	/qsc/register/	302
+/company/events/tradeshows/2016/qsc/paris	/qsc/register/	302
+/qsc2021/	/qsc/2021/las-vegas/	302
+/beta-signup/	/free-trial/	302
+/company/events/	/	302
+/assessrisk/	https:/lps.qualys.com/SAQ.html	302
+/gdpr/	/lp/2018/gdpr/	302
+/login/	https:/community.qualys.com/docs/DOC-4172-identify-your-qualys-platform	302
+/market-leader/	/docs/qualys-frost-sullivan-2017-global-vulnerability-management-market-leadership-award.pdf	302
+/oneclick/	https:/lps.qualys.com/OneClick.html	302
+/2017securitytrends/	/forms/whitepapers/sans-cyber-security-trends-increase-security-2017/?utm_source=content-marketing&utm_medium=infographic&utm_campaign=demand-gen&utm_term=sans-trends-q1-2017&utm_content=whitepaper&leadsource=344554012	302
+/struts/	/forms/trials/suite/	302
+/threatprotect/	/suite/threatprotect/	302
+/tp	/suite/threatprotect/	302
+/trial/	/forms/trials/qualysguard/enterprise/	302
+/trial-enterprise	/forms/trials/qualysguard/enterprise/	302
+/trial-express/	/forms/trials/qualysguard/express/	302
+/trial-lite/	/forms/trials/qualysguard/lite/	302
+/assetview/	/suite/assetview/	302
+/av	/suite/assetview/	302
+/free-tools-trials/assetview	/suite/assetview/	302
+/vm-dummies/	/forms/ebook/vulnerability_management_dummies/?utm_source=press&utm_medium=press-release&utm_campaign=awareness&utm_term=vm&utm_content=dummies&leadsource=26158083	302
+/cloudagent/	/forms/trials/cloud-agent/	302
+/agents/	/cloud-agent/	302
+/sd/	/docs/service-description.pdf	302
+/sla/	/docs/service-level-agreement.pdf	302
+/free/	/free-tools-trials/	302
+/freesecurity	/free-tools-trials/	302
+/freesecurityeu	/free-tools-trials/	302
+/forms/trials/vulnerability_management_110207	/free-tools-trials/	302
+/party/	https:/docs.google.com/forms/d/e/1FAIpQLSewuvkgcotS4r6aezYVf4fWSlXFkk9NOU68U4VBI9A_N2MyFQ/viewform	302
+/advocate/	https:/docs.google.com/forms/d/18Opge4yX6suXKevmfekm6zVhmNOBXmt5Rbu8Cobm174/viewform	302
+/splunk-app-blog/	https:/community.qualys.com/blogs/qualys-tech/2015/10/07/new-qualys-app-for-splunk-enterprise	302
+/servicenow-signup/	/partners/solution-technology/#/partner/servicenow	302
+/servicenow-blog/	https:/blog.qualys.com/technology/2016/02/29/new-certified-qualys-app-for-servicenow-cmdb	302
+/qsc-survey/	https:/docs.google.com/forms/d/e/1FAIpQLSf4Gdi421NSfyiA4gGswv8KwLx0vbXwfaGFpucWRqX0DXW_DQ/viewform	302
+/qsc-dubai/	/qsc/get-notified/	302
+/qsc-mumbai	/qsc/get-notified/	302
+/qsc-dubai-community/	https:/community.qualys.com/groups/qsc18-dubai	302
+/qsc-mumbai-community/	https:/community.qualys.com/groups/qsc18-mumbai	302
+/qsc-community/	https:/discussions.qualys.com/groups/qsc19	302
+/qsc-community-munich/	https:/community.qualys.com/groups/qsc16-munich	302
+/qsc-dinner-munich/	https:/lps.qualys.com/qsc-dinner-munich.html	302
+/qsc-feedback/	https:/docs.google.com/a/qualys.com/forms/d/15Ygq9DQR3zqo4AA3VIqy3Z2mBpkdPcFfE7ymchd5unY/viewform	302
+/rsa/	/qsc/2020/san-francisco/	302
+/rsac	/qsc/2020/san-francisco/	302
+/qscsf	/qsc/2020/san-francisco/	302
+/see-search-secure/	/lp/see-search/?leadsource=33231538	302
+/rsac-reception/	/2019/rsac/reception/	302
+/blackhat	/2021/black-hat-usa/	302
+/blackhat-booth	/2021/black-hat-usa/	302
+/2016/blackhat	/2021/black-hat-usa/	302
+/2017/blackhat	/2021/black-hat-usa/	302
+/2018/blackhat	/2021/black-hat-usa/	302
+/2019/blackhat	/2021/black-hat-usa/	302
+/bh/	/2021/black-hat-usa/	302
+/blackhat-reception/	/emails/2017/blackhat/reception/	302
+/blackhatparty	/emails/2017/blackhat/reception/	302
+/infosec/	/2019/infosec/	302
+/infosecurity	/2019/infosec/	302
+/company/events/tradeshows/2012/infosec	/2019/infosec/	302
+/company/events/tradeshows/2013/infosec	/2019/infosec/	302
+/company/events/tradeshows/2014/infosec	/2019/infosec/	302
+/company/events/tradeshows/2015/infosec	/2019/infosec/	302
+/2017/infosec	/2019/infosec/	302
+/2018/infosec	/2019/infosec/	302
+/qsc-community-berlin/	/2018/qsc/berlin/#agenda 301
+/qsc-community-london/	/2018/qsc/london/#agenda 301
+/qsc-community-paris/	/2018/qsc/paris/#agenda 301
+# temporarily retired the fr and german version of top-4
+# demand-gen team wants to bring them back later, 2016-04-07
+# if/when brought back, please update URLs to include language code
+/forms/quatre-controles-securite-majeurs	/forms/top-4-security-controls/	302
+/forms/top-4-sicherheitskontrollen	/forms/top-4-security-controls/	302
+/partners/solution-technology	/partners/solution-technology/symantec	/partners/integration/	302
+
+# migrated from 404_notfound.php
+/customers/testimonials*	/customers/#testimonials	302
+/videos/testimonials*	/customers/#testimonials	302
+/xml*	/customers/	302
+/alert*	/research/security-alerts/	302
+/events*	/company/events/	302
+/compref*	https://lps.qualys.com/subscription-preference.html	302
+/dummies*	/forms/ebook/vulnerability-management-for-dummies/	302
+/gosecure*	/forms/trials/secure-seal/	302
+/pci*	/suite/pci-compliance/	302
+/partners*	/partners/	302
+/support*	/support/	302
+/support/apphelp/qualys_secure*	/suite/secure-seal/	301
+/support/apphelp/malware*	/suite/malware-detection/	301
+/research/top10/article.pl*	/research/top10/	301
+/documentation/api*	https://community.qualys.com/community/developer	301
+/customers/casestudies/view?id=americanstate	/customers/success-stories/american-state-bank-relies-on-qualysguard/	301
+/customers/casestudies/view?id=bankofthewest	/customers/success-stories/bank-of-the-west-major-financial-institution-protects-information/	301
+/customers/casestudies/view?id=ebay	/customers/success-stories/ebay-securing-worlds-online-marketplace-qualysguard/	301
+/customers/casestudies/view?id=floridadoh	/customers/success-stories/florida-department-of-health/	301
+/customers/casestudies/view?id=scbank	/customers/success-stories/first-bank-and-trust/	301
+/customers/casestudies/view?id=firstbank	/customers/success-stories/first-bank-and-trust/	301
+/customers/casestudies/view?id=rightnow	/customers/success-stories/risk-reduction-rightnow-technologies-finds-better-way/	301
+/customers/casestudies/view?id=nybot	/customers/success-stories/nybot-maintaining-business-continuity/	301
+/customers/casestudies/view?id=globix	/customers/	301
+/customers/casestudies/view?id=rrdonnelley	/customers/	301
+/forms/trials/iframe	410
+/forms/trials/iframe/confirm	410
+/forms/trials/pci-compliance-iframe	410
+/forms/trials/pci-compliance-iframe/confirm	410
+/forms/trials/qualysguard_free_scan*	/forms/freescan/	301
+/company/newsroom/news-releases/benelux*	/company/newsroom/news-releases/netherlands:splat	301
+/research/alerts/view.php*	/research/security-alerts/	301
+/company/newsroom/mediacoverage/*	/company/newsroom/media-coverage/	301
+/company/events/tradeshows/qsc*	/qsc/	301
+/company/events/qualys-secure*	/qsc/	301
+/company/events/tradeshows/qsc*	/qsc/	301
+/company/events/tradeshows/rsa*	/rsac/	301
+/company/events/tradeshows/blackhat*	/blackhat/	301
+/company/events/tradeshows/infosec*	/infosec/	301
+/company/events/tradeshows*	/company/events/	301
+/asset/fonts/*	https://d1dejaj6dcqv24.cloudfront.net/fonts/:splat	301
+/docs/qualysguard*	 /docs/qualys:splat	301
+/docs/version/*	/docs/	301
+/try/*	/forms/:splat	301
+/company/newsroom/media-coverage/benelux*	/company/newsroom/media-coverage/netherlands/	301
