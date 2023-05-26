@@ -2105,7 +2105,8 @@
 /remote-endpoint-blog/	https://blog.qualys.com/technology/2020/03/24/secure-your-global-remote-workforce 301
 /docs/whitepapers/qualys-guide-automating-cis-20-critical-controls.pdf	/docs/qualys-guide-automating-cis-20-critical-controls.pdf 301
 /vmdrlive/	/2020/vmdr-live/ 301
-/vmdr/	/subscriptions/vmdr	/apps/vulnerability-management-detection-response/	302
+/vmdr/	/apps/vulnerability-management-detection-response/	302
+/subscriptions/vmdr	/apps/vulnerability-management-detection-response/	302
 /qradar/	/forms/qradar/	302
 /asset-inventory/	/lp/it-asset-inventory/	302
 /meetup/	/2019/meet-team/	302
@@ -2117,7 +2118,8 @@
 /picnic/	https://docs.google.com/forms/d/e/1FAIpQLSeiLjaJcPt4mQZQ06cSAH6Psge43uZxWJz5-MrpPDPGgMUTZA/viewform	302
 /was-burp/	https://blog.qualys.com/webappsec/2019/10/21/new-improved-qualys-was-burp-extension-now-available	302
 /forms/whitepapers/devsecops-securing-software-pipeline-enabling-digital-transformation/	/solutions/devsecops/	302
-/qsc-cirque/	/qsc-dinner	/2018/qsc/las-vegas/cirque-du-soleil/	302
+/qsc-cirque/	/2018/qsc/las-vegas/cirque-du-soleil/	302
+/qsc-dinner/	/2018/qsc/las-vegas/cirque-du-soleil/	302
 /qsc-agenda/	/qsc/2020/san-francisco/#agenda	302
 /qsc19-training/	/qsc/2019/las-vegas/#training	302
 /qsc-las-vegas/	/qsc/2019/las-vegas/	302
@@ -2205,7 +2207,8 @@
 # if/when brought back, please update URLs to include language code
 /forms/quatre-controles-securite-majeurs	/forms/top-4-security-controls/	302
 /forms/top-4-sicherheitskontrollen	/forms/top-4-security-controls/	302
-/partners/solution-technology	/partners/solution-technology/symantec	/partners/integration/	302
+/partners/solution-technology/	/partners/integration/	302
+/partners/solution-technology/symantec/	/partners/integration/	302
 
 # migrated from 404_notfound.php
 /customers/testimonials*	/customers/#testimonials	302
@@ -2233,10 +2236,10 @@
 /customers/casestudies/view?id=nybot	/customers/success-stories/nybot-maintaining-business-continuity/	301
 /customers/casestudies/view?id=globix	/customers/	301
 /customers/casestudies/view?id=rrdonnelley	/customers/	301
-/forms/trials/iframe	410
-/forms/trials/iframe/confirm	410
-/forms/trials/pci-compliance-iframe	410
-/forms/trials/pci-compliance-iframe/confirm	410
+/forms/trials/iframe	/free-trial/	410
+/forms/trials/iframe/confirm	/free-trial/confirm/	410
+/forms/trials/pci-compliance-iframe/	/forms/pci-compliance/	410
+/forms/trials/pci-compliance-iframe/confirm/	/forms/pci-compliance/confirm/	410
 /forms/trials/qualysguard_free_scan*	/forms/freescan/	301
 /company/newsroom/news-releases/benelux*	/company/newsroom/news-releases/netherlands:splat	301
 /research/alerts/view.php*	/research/security-alerts/	301
