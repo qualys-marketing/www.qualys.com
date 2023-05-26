@@ -977,7 +977,6 @@
 /company/careers/it/	/careers/	301
 /company/careers/marketing/	/careers/	301
 /company/careers/support/	/careers/	301
-/careers//	301
 /forms/asset-tagging/	https://community.qualys.com/blogs/qualys-tech/2012/07/25/introducing-qualysguard-dynamic-asset-tagging-and-management	301
 /nac/	/docs/QGNAC_DS_MECH.pdf	301
 /express/	/smb/qualysguard/express/	301
@@ -1339,7 +1338,8 @@
 /support/telephone/	/support/	301
 /support/training/	/support/	301
 /support/pgp/	/support/	301
-/support/file-upload/	/support/online/faqs	/support/faq/general/	301
+/support/file-upload/	/support/faq/general/	301
+/support/online/faqs	/support/faq/general/	301
 /support/online/faqs/audits/	/support/faq/audits/	301
 /support/online/faqs/general/	/support/faq/general/	301
 /support/online/faqs/malware-detection/	/support/faq/mds/	301
@@ -1646,7 +1646,8 @@
 /docs/qg_nac_ds.pdf	/	301
 /gms-fr/	/	301
 /lp/qualys-partners-best-practice-videos/	/	301
-/mastercard/	// Pages removed from new site build
+/mastercard/	/	301
+# Pages removed from new site build
 /research/	/	301
 /research/top10/	/	301
 /research/top10/2011/02/	/	301
@@ -1914,7 +1915,7 @@
 /docs/tower_records.pdf	/customers/	301
 /docs/ucmc_cs.pdf	/customers/	301
 /docs/university-westminster-maintaining-security-protecting-infrastructure-assets.pdf	/customers/	301
-/// redirect for research notes docs
+# redirect for research notes docs
 /docs/research-notes/qualys-8912-release-notes.pdf	/docs/release-notes/qualys-8912-release-notes.pdf	301
 /docs/research-notes/qualys-cloud-agent-linux-1.5-release-notes.pdf	/docs/release-notes/qualys-cloud-agent-linux-1.5-release-notes.pdf	301
 /docs/research-notes/qualys-cloud-agent-linux-mac-1.6-release-notes.pdf	/docs/release-notes/qualys-cloud-agent-linux-mac-1.6-release-notes.pdf	301
@@ -2094,14 +2095,14 @@
 /docs/qualys-ta-for-splunk.pdf	https://d1dejaj6dcqv24.cloudfront.net/docs/qualys-ta-for-splunk.pdf	301
 
 # migrated from 404_notfound_case_302_found.php
-/tru/	https:/blog.qualys.com/vulnerabilities-threat-research 301
+/tru/	https://blog.qualys.com/vulnerabilities-threat-research 301
 /qsc22-las-vegas-register/	/qsc/2022/las-vegas/register/ 301
 /conferences/	/forms/vmdr/ 301
 /email-banner/	/qsc/2022/las-vegas/	302
 /platform-banner/	/log4shell-cve-2021-44228/	302
-/gift/	https:/qualys.orderpromos.com/ 301
-/edr-live/	https:/www.brighttalk.com/webcast/11673/427089 301
-/remote-endpoint-blog/	https:/blog.qualys.com/technology/2020/03/24/secure-your-global-remote-workforce 301
+/gift/	https://qualys.orderpromos.com/ 301
+/edr-live/	https://www.brighttalk.com/webcast/11673/427089 301
+/remote-endpoint-blog/	https://blog.qualys.com/technology/2020/03/24/secure-your-global-remote-workforce 301
 /docs/whitepapers/qualys-guide-automating-cis-20-critical-controls.pdf	/docs/qualys-guide-automating-cis-20-critical-controls.pdf 301
 /vmdrlive/	/2020/vmdr-live/ 301
 /vmdr/	/subscriptions/vmdr	/apps/vulnerability-management-detection-response/	302
@@ -2113,8 +2114,8 @@
 /investor-track/	/emails/2018/qsc/register/las-vegas/investor-track/	302
 /ignite/	/2018/ignite/	302
 /reinvent/	/2018/reinvent/	302
-/picnic/	https:/docs.google.com/forms/d/e/1FAIpQLSeiLjaJcPt4mQZQ06cSAH6Psge43uZxWJz5-MrpPDPGgMUTZA/viewform	302
-/was-burp/	https:/blog.qualys.com/webappsec/2019/10/21/new-improved-qualys-was-burp-extension-now-available	302
+/picnic/	https://docs.google.com/forms/d/e/1FAIpQLSeiLjaJcPt4mQZQ06cSAH6Psge43uZxWJz5-MrpPDPGgMUTZA/viewform	302
+/was-burp/	https://blog.qualys.com/webappsec/2019/10/21/new-improved-qualys-was-burp-extension-now-available	302
 /forms/whitepapers/devsecops-securing-software-pipeline-enabling-digital-transformation/	/solutions/devsecops/	302
 /qsc-cirque/	/qsc-dinner	/2018/qsc/las-vegas/cirque-du-soleil/	302
 /qsc-agenda/	/qsc/2020/san-francisco/#agenda	302
@@ -2135,11 +2136,11 @@
 /qsc2021/	/qsc/2021/las-vegas/	302
 /beta-signup/	/free-trial/	302
 /company/events/	/	302
-/assessrisk/	https:/lps.qualys.com/SAQ.html	302
+/assessrisk/	https://lps.qualys.com/SAQ.html	302
 /gdpr/	/lp/2018/gdpr/	302
-/login/	https:/community.qualys.com/docs/DOC-4172-identify-your-qualys-platform	302
+/login/	https://community.qualys.com/docs/DOC-4172-identify-your-qualys-platform	302
 /market-leader/	/docs/qualys-frost-sullivan-2017-global-vulnerability-management-market-leadership-award.pdf	302
-/oneclick/	https:/lps.qualys.com/OneClick.html	302
+/oneclick/	https://lps.qualys.com/OneClick.html	302
 /2017securitytrends/	/forms/whitepapers/sans-cyber-security-trends-increase-security-2017/?utm_source=content-marketing&utm_medium=infographic&utm_campaign=demand-gen&utm_term=sans-trends-q1-2017&utm_content=whitepaper&leadsource=344554012	302
 /struts/	/forms/trials/suite/	302
 /threatprotect/	/suite/threatprotect/	302
@@ -2160,20 +2161,20 @@
 /freesecurity	/free-tools-trials/	302
 /freesecurityeu	/free-tools-trials/	302
 /forms/trials/vulnerability_management_110207	/free-tools-trials/	302
-/party/	https:/docs.google.com/forms/d/e/1FAIpQLSewuvkgcotS4r6aezYVf4fWSlXFkk9NOU68U4VBI9A_N2MyFQ/viewform	302
-/advocate/	https:/docs.google.com/forms/d/18Opge4yX6suXKevmfekm6zVhmNOBXmt5Rbu8Cobm174/viewform	302
-/splunk-app-blog/	https:/community.qualys.com/blogs/qualys-tech/2015/10/07/new-qualys-app-for-splunk-enterprise	302
+/party/	https://docs.google.com/forms/d/e/1FAIpQLSewuvkgcotS4r6aezYVf4fWSlXFkk9NOU68U4VBI9A_N2MyFQ/viewform	302
+/advocate/	https://docs.google.com/forms/d/18Opge4yX6suXKevmfekm6zVhmNOBXmt5Rbu8Cobm174/viewform	302
+/splunk-app-blog/	https://community.qualys.com/blogs/qualys-tech/2015/10/07/new-qualys-app-for-splunk-enterprise	302
 /servicenow-signup/	/partners/solution-technology/#/partner/servicenow	302
-/servicenow-blog/	https:/blog.qualys.com/technology/2016/02/29/new-certified-qualys-app-for-servicenow-cmdb	302
-/qsc-survey/	https:/docs.google.com/forms/d/e/1FAIpQLSf4Gdi421NSfyiA4gGswv8KwLx0vbXwfaGFpucWRqX0DXW_DQ/viewform	302
+/servicenow-blog/	https://blog.qualys.com/technology/2016/02/29/new-certified-qualys-app-for-servicenow-cmdb	302
+/qsc-survey/	https://docs.google.com/forms/d/e/1FAIpQLSf4Gdi421NSfyiA4gGswv8KwLx0vbXwfaGFpucWRqX0DXW_DQ/viewform	302
 /qsc-dubai/	/qsc/get-notified/	302
 /qsc-mumbai	/qsc/get-notified/	302
-/qsc-dubai-community/	https:/community.qualys.com/groups/qsc18-dubai	302
-/qsc-mumbai-community/	https:/community.qualys.com/groups/qsc18-mumbai	302
-/qsc-community/	https:/discussions.qualys.com/groups/qsc19	302
-/qsc-community-munich/	https:/community.qualys.com/groups/qsc16-munich	302
-/qsc-dinner-munich/	https:/lps.qualys.com/qsc-dinner-munich.html	302
-/qsc-feedback/	https:/docs.google.com/a/qualys.com/forms/d/15Ygq9DQR3zqo4AA3VIqy3Z2mBpkdPcFfE7ymchd5unY/viewform	302
+/qsc-dubai-community/	https://community.qualys.com/groups/qsc18-dubai	302
+/qsc-mumbai-community/	https://community.qualys.com/groups/qsc18-mumbai	302
+/qsc-community/	https://discussions.qualys.com/groups/qsc19	302
+/qsc-community-munich/	https://community.qualys.com/groups/qsc16-munich	302
+/qsc-dinner-munich/	https://lps.qualys.com/qsc-dinner-munich.html	302
+/qsc-feedback/	https://docs.google.com/a/qualys.com/forms/d/15Ygq9DQR3zqo4AA3VIqy3Z2mBpkdPcFfE7ymchd5unY/viewform	302
 /rsa/	/qsc/2020/san-francisco/	302
 /rsac	/qsc/2020/san-francisco/	302
 /qscsf	/qsc/2020/san-francisco/	302
