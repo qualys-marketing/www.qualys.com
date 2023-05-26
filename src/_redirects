@@ -68,8 +68,8 @@
 /trurisk/	/trurisk/	301
 /truerisk/	/trurisk/	301
 /docs/qualys-cloud-agent-mac-install-guide_donotuse.pdf	/docs/qualys-cloud-agent-macos-install-guide.pdf	301
-/partners/vas/	partners/var	301
-/partners/pci/	partners	301
+/partners/vas/	/partners/var	301
+/partners/pci/	/partners	301
 /edr-simple-endpoint-security/	https://event.on24.com/wcc/r/3722586/B79E0AD0D2C18830ED08E78C13A37F6E	301
 /edr-2022-webinar/	https://event.on24.com/wcc/r/3722586/B79E0AD0D2C18830ED08E78C13A37F6E	301
 /edr-2022-press-release/	https://www.qualys.com/company/newsroom/news-releases/usa/qualys-delivers-multi-vector-edr-2-0-with-enhanced-prioritization/	301
@@ -969,7 +969,7 @@
 /itpolicyfordummies/	/forms/ebook/it-policy-compliance-for-dummies/	301
 /pc4dummies/	/forms/ebook/it-policy-compliance-for-dummies/	301
 /pcfordummies/	/forms/ebook/it-policy-compliance-for-dummies/	301
-/docs/idc_vendor_shares_2009/	docs/idc_vendor_shares_2009.pdf	301
+/docs/idc_vendor_shares_2009/	/docs/idc_vendor_shares_2009.pdf	301
 /careers/openings/	/careers/	301
 /company/careers/	/careers/	301
 /company/careers/admin/	/careers/	301
@@ -1556,7 +1556,7 @@
 /docs//@stake	https://en.wikipedia.org/wiki/@stake	301
 /docs//%40stake	https://en.wikipedia.org/wiki/@stake	301
 
-/// Whitepapers moved from docs to whitepapers folder
+# Whitepapers moved from docs to whitepapers folder
 /docs/qualys-new-info-risk-landscape-de.pdf	/resources/#/type/all/topic/all/language/de	301
 /forms/whitepapers/antworten-auf-risiken/de/	/resources/#/type/all/topic/all/language/de	301
 /docs/qualys-7-steps-de.pdf	/resources/#/type/all/topic/all/language/de	301
