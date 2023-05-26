@@ -1,0 +1,28 @@
+---
+layout: default.njk
+---
+
+{% layoutblock 'appendStyles-default' %}
+	<link href="/asset/stylesheet/ebook-confirm.css" rel="stylesheet">
+	{% renderlayoutblock 'appendHints-ebook-confirm' %}
+{% endlayoutblock %}
+
+<div class="q-grid__container q-lp__container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-6">
+				{{ content | safe }}
+			</div>
+			<div class="q-grid__column q-grid__column-4">
+
+				<div class="q-ebook-limited-edition">
+					<img src="{{site.asset}}/image/ebooks-limited-edition.png">
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

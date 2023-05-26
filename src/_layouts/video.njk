@@ -1,0 +1,76 @@
+---js
+{
+  eleventyComputed: {
+    datum(data) {
+      return data;
+    }
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{page.lang}}{{else}}{{site.lang}}{% endif %}" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+	{% renderlayoutblock 'appendMeta-video' %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{page.description}}">
+	{% include open-graph.njk %}
+	
+	<title>{{page.title}}</title>
+
+	{# preconnect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
+	{% renderlayoutblock 'appendHints-video' %}
+	<link rel="preconnect" href="https://d1dejaj6dcqv24.cloudfront.net" crossorigin>
+	<link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+	
+
+	{# load Pingdom Realtime User Monitoring before all other external assets #}
+	{% include prum.njk %}
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="https://www.qualys.com{{__path}}">
+
+	<link rel="stylesheet" href="/asset/stylesheet/video.css">
+	{% renderlayoutblock 'appendStyles-video' %}
+	
+
+	{# script tags in scripts-head should be async #}
+	{% renderlayoutblock 'appendScripts-defaultInHead-vimeo' %}
+	
+
+	{% include gtm.njk %}
+
+</head>
+<body>
+
+	{% include gtm-noscript.njk %}
+
+	<div class="wrapper-to-position-in-the-middle">
+		<div class="wrapper-with-inverse-ratio-{% if page.video.ratio %}{{page.video.ratio}}{{else}}16x9{% endif %}">
+			<div class="wrapper-with-intrinsic-ratio wrapper-with-intrinsic-ratio-{% if page.video.ratio %}{{page.video.ratio}}{{else}}16x9{% endif %}">
+				<!-- BEGIN CONTENT -->
+				{{ content | safe }}
+				<!-- END CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	{% renderlayoutblock 'appendChapters-vimeo' %}
+
+	{% renderlayoutblock 'appendScripts-vimeo' %}
+	
+
+</body>
+</html>

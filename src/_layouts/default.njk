@@ -20,6 +20,7 @@
 	{%  if robots %}
 		<meta name="robots" content="{{ robots }}">
 	{%  endif  %}
+	{% renderlayoutblock 'appendMeta-default' %}
 
 	{% include "open-graph.njk" %}
 

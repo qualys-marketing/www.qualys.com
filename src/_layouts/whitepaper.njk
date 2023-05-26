@@ -1,0 +1,41 @@
+---
+layout: form.njk
+---
+
+{% layoutblock 'appendHints-form' %}
+	<link rel="preconnect" href="https://d9n6nn3hir28n.cloudfront.net" crossorigin>
+	<link rel="preconnect" href="https://lps.qualys.com" crossorigin>
+	{% renderlayoutblock 'appendHints-whitepaper' %}
+{% endlayoutblock %}
+
+{% layoutblock 'appendStyles-form' %}
+	<link rel="stylesheet" href="/asset/stylesheet/whitepaper.css">
+	{% renderlayoutblock 'appendStyles-whitepaper' %}
+{% endlayoutblock %}
+
+{% layoutblock "appendScripts-form" %}
+	<script src="/asset/script/whitepaper.js"></script>
+	{% renderlayoutblock 'appendScripts-whitepaper' %}
+{% endlayoutblock %}
+
+<div class="q-grid__container q-lp__container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-5">
+
+				{% renderlayoutblock 'whitepaper-column-content' %}
+
+			</div>
+			<div class="q-grid__column q-grid__column-5 q-lp__form-column-wrapper">
+				<div class="q-lp__form-column">
+
+					{% renderlayoutblock 'whitepaper-column-form' %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

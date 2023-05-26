@@ -1,0 +1,90 @@
+---js
+{
+  eleventyComputed: {
+    datum(data) {
+      return data;
+    }
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{page.lang}}{{else}}{{site.lang}}{% endif %}" class="legacy no-js {% if not page.desktopOnly %}mobile{% endif %}">
+<head>
+	{# preconnect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
+	<link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin>
+	<link href="https://d1uyme8f6ss6qi.cloudfront.net" rel="preconnect" crossorigin>
+	<link href="https://cdn.rawgit.com" rel="preconnect" crossorigin>
+
+	<meta charset="utf-8">
+	{% renderlayoutblock 'appendMeta-0-empty' %}
+
+	{% if not page.desktopOnly %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% endif %}
+	<meta name="description" content="{{page.description}}">
+	{% include open-graph.njk %}
+	
+	<title>{{page.title}}</title>
+
+	{# load Pingdom Realtime User Monitoring before all other external assets #}
+	{% include prum.njk %}
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="{% if page.canonical %}{{page.canonical}}{{else}}https://www.qualys.com{{__path}}{% endif %}">
+	<meta name="theme-color" content="#2E8BE0">
+
+	<link rel="stylesheet" href="/asset/stylesheet/main.css">
+	<link rel="stylesheet" href="/asset/stylesheet/common.css">
+	{% renderlayoutblock 'appendStyles-0-empty' %}
+	
+	{# script tags in scripts-head should be async #}
+	<script async src="/asset/script/lazy-load-google-fonts.js"></script>
+	<script async src="/asset/script/lazy-load-print-css.js"></script>
+	{% renderlayoutblock 'appendScripts-defaultInHead-0-empty' %}
+
+	{% if site.env.production %}
+		{% include vwo.njk %}
+		{% include gtm.njk %}
+	{% endif %}
+
+</head>
+<body id="{{page.bodyId}}" class="{{page.bodyClass}} preload-transition">
+
+	{% include gtm-noscript.njk %}
+
+	<!-- BEGIN CONTENT -->
+	{{ content | safe }}
+	<!-- END CONTENT -->
+
+	<!-- polyfills -->
+	<!--[if lt IE 10]>
+		{% include vendor/es5-shim.njk %}
+	<![endif]-->
+	<!--[if IE]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js" integrity="sha384-G1LHj+SfI1gc9FouJCB24YnAzzjhDNfhwrUPgo2Fb4Jde/lBnkHXjd83QvEZraLK" crossorigin="anonymous"></script>
+	<![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+	{% include vendor/jquery.njk %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+	{% include vendor/underscore.njk %}
+	<script src="/asset/script/main.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js" integrity="sha256-myZzY//RkhcJzO+K7rI0+s//nxzn5NPz0fJB+jLTD4U=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js" integrity="sha256-afJiX6/8g5cuB8Wo8OHvvJkfPqELqXWFo3CJ6X4OaaY=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js" integrity="sha256-DduSm/LUUYs64edTqYOB3PoxzmxP5xCdcNwnWo6yZjg=" crossorigin="anonymous"></script>
+	<script src="/asset/script/common.js"></script>
+	{% renderlayoutblock 'appendScripts-0-empty' %}
+
+</body>
+</html>

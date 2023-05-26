@@ -1,0 +1,29 @@
+---
+layout: default.njk
+---
+
+{% layoutblock 'appendStyles-default' %}
+	<link href="/asset/stylesheet/case-studies.css" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
+	{% renderlayoutblock 'appendStyles-case-studies' %}
+{% endlayoutblock %}
+
+{% layoutblock 'appendScripts-default' %}
+	<script src="/asset/script/case-studies.js"></script>
+	{% renderlayoutblock 'appendScripts-case-studies' %}
+{% endlayoutblock %}
+
+<div class="q-grid__container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-10">
+
+				{{ content | safe }}
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

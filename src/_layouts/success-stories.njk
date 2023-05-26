@@ -1,0 +1,25 @@
+---
+layout: default.njk
+---
+
+{% layoutblock 'appendStyles-default' %}
+	<link href="/asset/stylesheet/success-stories.css" rel="stylesheet">
+	{% renderlayoutblock 'appendStyles-simple' %}
+{% endlayoutblock %}
+
+<div class="q-grid__container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column-10">
+
+				<!-- BEGIN CONTENT -->
+				{{ content | safe }}
+				<!-- END CONTENT -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

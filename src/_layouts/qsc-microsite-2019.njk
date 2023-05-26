@@ -1,0 +1,21 @@
+---
+layout: 0-qsc-new.njk
+---
+
+{% layoutblock 'appendStyles-0-qsc-new' %}
+	<link href="/asset/stylesheet/qsc.css" rel="stylesheet">
+	{% renderlayoutblock 'appendStyles-qsc-microsite-2019' %}
+{% endlayoutblock %}
+
+{{ content | safe }}
+
+{% set logoImage="image/logo/qsc-sans-year.svg" %}
+{% set logoAlt="Qualys Security Conference" %}
+{% set logoUrl="/qsc/locations/" %}
+{% set ctaText="Get Notified" %}
+{% set ctaUrl="/qsc/get-notified/" %}
+{% include "qsc-header.njk" %}
+{% include qsc-mobile-nav.njk %}
+
+
+
