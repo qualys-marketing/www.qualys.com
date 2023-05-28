@@ -36,6 +36,7 @@ Create a .env file in the project root folder and add the following to it.
 ## Overview of file structure
 
     /  
+    ├─ .cache/  (stores cached data)
     ├─ node_modules/  
     ├─ www/ (built files go in here)  
     │  ├─ favicon.ico  
@@ -65,10 +66,22 @@ Create a .env file in the project root folder and add the following to it.
     │  │  ├─ ...  
     │  ├─ index.css  (home page CSS)  
     │  ├─ index.js  (home page JS)  
-    │  ├─ index.njk (home page HTML)  
+    │  ├─ index.njk (home page HTML)
+    │  ├─ _headers (contains custom HTTP headers)
+    │  ├─ _redirects (contains 2K+ redirects)
+    │  ├─ .well-known
+    │  │  ├─ security.txt (cybersecurity reporting info)  
+    │  ├─ recursive-replace.js (migration script)
+    │  ├─ 404.html
+    │  ├─ sitemap.xml
+    ├─ utils
+    │  ├─ recursive-replace.js (migration script)
+    │  ├─ ...             
     ├─ .gitignore  
     ├─ package.json  
     ├─ README.md  
+    ├─ netlify.toml (Netlify config file)  
+    ├─ .eleventy.js (Eleventy config file)  
     ├─ .env  
     ├─ ...  
 
@@ -374,12 +387,17 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 
 
 ### Migration plan
-1. Migrate all 16 layouts manually.
-2. Migrate all 351 partials and all 1659 pages programmatically using migration script: [recursive-replace.js](https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
-3. Migrate some code that the automation script could not migrate.
-4. Rename all data.js files to 11tydata.js 
-5. Migrate all 73 data.js files manually.
-6. Migrate all redirects.
+1. Migrate all 16 layouts manually. [DONE]
+2. Migrate all redirects. [DONE]
+3. Migrate all custom headers. [DONE]
+4. Migrate all favicons. [DONE]
+5. Migrate robots.txt. [DONE]
+6. Migrate sitemap.
+7. Migrate all 351 partials and all 1659 pages programmatically using migration script. [IN PROGRESS] (https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
+8. Migrate some code that the automation script could not migrate.
+9. Rename all data.js files to 11tydata.js 
+10. Migrate all 73 data.js files manually.
+11. Migrate search functionality.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
@@ -390,5 +408,3 @@ Need more help? Contact ayahya@qualys.com.
 * [Nunjucks template engine docs](https://mozilla.github.io/nunjucks/templating.html#user-defined-templates-warning)
 * [Eleventy static site builder docs](https://www.11ty.dev/docs/)
 * [Netlify docs](https://docs.netlify.com/)
-
-This is the end.
