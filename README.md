@@ -9,8 +9,9 @@ A migration of the Qualys website to Eleventy, Github and Netlify.
 * **Version Control**: [Github](https://github.com/)
 * **Build and Web Hosting**: [Netlify](https://docs.netlify.com/)
 * **Content Management System**: [Contentful](https://www.contentful.com/)
+* **Image optimization and CDN**: [ImageKit](https://imagekit.io/)
 
-The static site generator converts Nunjucks templates and data from JSON files, or node.js modules, into HTML files for the site. The Eleventy Fetch plugin fetches and caches data from the Contentful Delivery API. That data is also used to build pages.
+The static site generator converts Nunjucks templates and data from JSON files, or node.js modules, into HTML files for the site. The Eleventy Fetch plugin fetches and caches data from the Contentful Delivery API. That data is also used to build pages. When you commit and push changes to Github, that will automatically trigger Netlify to clone the repo, build the static site, and publish the changes to the Netlify CDN.
 
 ## Setup
 
