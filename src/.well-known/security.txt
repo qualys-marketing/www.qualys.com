@@ -2,4 +2,4 @@ Contact: mailto:security@qualys.com
 Contact: https://www.qualys.com/company/contacts/
 Canonical: https://www.qualys.com/.well-known/security.txt
 Policy: https://www.qualys.com/docs/responsible-disclosure-policy.pdf
-Hiring: https://www.qualys.com/careers/
+Vulnerabilities: https://www.qualys.com/security-advisories/
