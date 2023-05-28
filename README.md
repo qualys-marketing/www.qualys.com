@@ -2,6 +2,16 @@
 # www.qualys.com
 
 A migration of the Qualys website to Eleventy, Github and Netlify.
+
+## New Site Stack
+* **Static Site Generator**: [Eleventy](https://www.11ty.dev/docs/)
+* **Template Engine**: [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
+* **Version Control**: [Github](https://github.com/)
+* **Build and Web Hosting**: [Netlify](https://docs.netlify.com/)
+* **Content Management System**: [Contentful](https://www.contentful.com/)
+
+The static site generator converts Nunjucks templates and data from JSON files, or node.js modules, into HTML files for the site. The Eleventy Fetch plugin fetches and caches data from the Contentful Delivery API. That data is also used to build pages.
+
 ## Setup
 
 Change to desired folder path, e.g.
@@ -15,6 +25,7 @@ Clone the "qualys" repo from Github
 The repo will be cloned to /Users/{{username}}/Projects/qualys/.  
 Open that folder in VisualStudio Code.  
 Open a new terminal in VS Code.  
+If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/). 
 Install node dependencies.  
 
     npm install
@@ -26,12 +37,10 @@ Run eleventy in the terminal.
 Eleventy will start a local web server, usually at http://localhost:8080/. Browse to that URL to verify the site loads.  
 Scroll down to the bottom of the page. Below the footer, you'll see a data dump of all variables accessible to the page you are viewing.  
 Make changes to files.  
-Stage, commit and push the changes back to Github in VS Code.  
+Stage, commit and push the changes back to Github (you can use VS Code to commit and push changes).
 Go to https://github.com/javanigus/qualys/commits/main to verify commit in Github.  
 Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/).  
-Create a .env file in the project root folder and add the following to it.  
-
-    ENVIRONMENT=development
+Create a .env file in the project root folder and add the content from a coworker's .env file.
 
 ## Overview of file structure
 
@@ -397,14 +406,7 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 8. Migrate some code that the automation script could not migrate.
 9. Rename all data.js files to 11tydata.js 
 10. Migrate all 73 data.js files manually.
-11. Migrate search functionality.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
 Need more help? Contact ayahya@qualys.com.
-
-### Resources
-* [Handlebars template engine docs](https://handlebarsjs.com/guide/#what-is-handlebars)
-* [Nunjucks template engine docs](https://mozilla.github.io/nunjucks/templating.html#user-defined-templates-warning)
-* [Eleventy static site builder docs](https://www.11ty.dev/docs/)
-* [Netlify docs](https://docs.netlify.com/)
