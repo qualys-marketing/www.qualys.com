@@ -1,0 +1,19 @@
+---
+permalink: /sitemap-product-help.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+	{% for item in docsWebHelpSitemap %}
+	<sitemap>
+		<loc>https://docs.qualys.com/en{{item}}</loc>
+	</sitemap>
+	{% endfor %}
+
+	{% for item in sitemaps %}
+	<sitemap>
+		<loc>https://qualysguard.qg2.apps.qualys.com{{item}}</loc>
+	</sitemap>
+	{% endfor %}
+</sitemapindex>
