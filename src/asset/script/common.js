@@ -2310,7 +2310,9 @@ window._.throttle = window._.throttle || function(func, wait, options) {
 
 		// get the leadsource parameter value from the URL query string
 		urlParams = qualys.parseQueryString(window.location.search);
-		leadsource = urlleadsource;
+		if (typeof urlleadsource !== 'undefined') {
+			leadsource = urlleadsource;
+		}
 
 		function getLogo(url) {
 			// AJAX in the partner logo
