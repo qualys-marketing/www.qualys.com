@@ -1,4 +1,5 @@
 const inspect = require("util").inspect;
+const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src", {
@@ -32,6 +33,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.on('eleventy.after', async () => {
 
 	});
+
+	eleventyConfig.addPlugin(PostCSSPlugin);
 
 	eleventyConfig.ignores.add("src/404.html");
 
