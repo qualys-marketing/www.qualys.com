@@ -401,10 +401,11 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 5. Migrate robots.txt. :heavy_check_mark:
 6. Add [PostCSS auto-prefixer](https://www.npmjs.com/package/eleventy-plugin-postcss) support :heavy_check_mark:
 7. Migrate sitemap. :heavy_check_mark:  
-8. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
-9. Migrate some code that the automation script could not migrate.
-10. Rename all data.js files to 11tydata.js 
-11. Migrate all 73 data.js files manually.
+8. Migrate sitemap for product help.
+9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
+10. Migrate some code that the automation script could not migrate.
+11. Rename all data.js files to 11tydata.js 
+12. Migrate all 73 data.js files manually.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
