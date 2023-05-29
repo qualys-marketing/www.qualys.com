@@ -94,6 +94,7 @@ Create a .env file in the project root folder and add the content from a coworke
     ├─ netlify.toml (Netlify config file)  
     ├─ .eleventy.js (Eleventy config file)  
     ├─ .env (local environment variables: tokens, passwords, etc)
+    ├─ postcss.config.js (PostCSS config file - include autoprefixer)
     ├─ ...  
 
 
@@ -393,16 +394,17 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 
 
 ### Migration steps
-1. Migrate all 16 layouts manually. [DONE]
-2. Migrate all redirects. [DONE]
-3. Migrate all custom headers. [DONE]
-4. Migrate all favicons. [DONE]
-5. Migrate robots.txt. [DONE]
-6. Migrate sitemap.
-7. Migrate all 351 partials and all 1659 pages programmatically using migration script. [IN PROGRESS] (https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
-8. Migrate some code that the automation script could not migrate.
-9. Rename all data.js files to 11tydata.js 
-10. Migrate all 73 data.js files manually.
+1. Migrate all 16 layouts manually. :heavy_check_mark:
+2. Migrate all redirects. :heavy_check_mark:
+3. Migrate all custom headers. :heavy_check_mark:
+4. Migrate all favicons. :heavy_check_mark:
+5. Migrate robots.txt. :heavy_check_mark:
+6. Add [PostCSS auto-prefixer](https://www.npmjs.com/package/eleventy-plugin-postcss) support :heavy_check_mark:
+7. Migrate sitemap.
+8. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
+9. Migrate some code that the automation script could not migrate.
+10. Rename all data.js files to 11tydata.js 
+11. Migrate all 73 data.js files manually.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
