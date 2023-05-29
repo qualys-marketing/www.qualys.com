@@ -26,7 +26,7 @@ Clone the "qualys" repo from Github
 The repo will be cloned to /Users/{{username}}/Projects/www.qualys.com/.  
 Open that folder in VisualStudio Code.  
 Open a new terminal in VS Code.  
-If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/). 
+If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/).   
 Install node dependencies.  
 
     npm install
