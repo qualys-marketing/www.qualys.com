@@ -1,0 +1,35 @@
+---
+eleventyExcludeFromCollections: true
+---
+
+<style>
+    table, td {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+    th {
+        background-color: #efefef;
+    }
+    td {
+        padding: 0.5em;
+    }
+</style>
+
+<table>
+    <thead>
+    <tr>
+        <th>Page</th>
+        <th>Last modified</th>
+    </tr>
+    </thead>
+    <% collections.all.forEach(function(page){ %>
+        <% if (!page.url.endsWith(".css")) { %>
+        <tr>
+            <td>
+                <a href="<%= site.url %><%= page.url%>"><%= site.url %><%= page.url%></a>
+            </td>
+            <td><%= page.date.toISOString() %></td>
+        </tr>
+		<% } %>
+    <% }); %>
+</table>
