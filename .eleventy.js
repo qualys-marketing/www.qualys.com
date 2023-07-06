@@ -70,6 +70,11 @@ module.exports = function(eleventyConfig) {
         return '';
     });
 
+	eleventyConfig.setServerOptions({
+		// Whether DOM diffing updates are applied where possible instead of page reloads
+    	domDiff: false,
+	});
+
 	return {
 		dir: {
 			input: "src",
