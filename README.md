@@ -392,6 +392,12 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |--|--|
 |/site/pages/*.data.js  | 44 |
 
+### Old website files containing "return page" that generate multiple pages
+* /site/pages/company/newsroom/news-releases/index.data.js
+* /site/pages/company/newsroom/media-coverage/media-coverage.data.js
+* /site/pages/training/course/course.data.js
+* /site/pages/training/library/library.data.js
+* /site/pages/webcasts/webcasts.data.js
 
 ### Migration steps
 1. Migrate all 16 layouts manually. :heavy_check_mark:
@@ -405,7 +411,8 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
 10. Migrate some code that the automation script could not migrate.
 11. Rename all data.js files to 11tydata.js 
-12. Migrate all 73 data.js files manually.
+12. Migrate data.js files that generate multiple pages, e.g. press releases, manually
+12. Migrate all other 73 data.js files manually.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
