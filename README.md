@@ -431,7 +431,7 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |site/pages/partners/integration/integration.data.js:||No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
 |site/pages/partners/integration/list/index.data.js:||No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
 |site/pages/qsc/2022/atlanta/index.data.js:|Contentful||Yearly|Easy||
-|site/pages/qsc/2022/chicago/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/chicago/index.data.js:|Contentful||Yearly|Easy||
 |site/pages/qsc/2022/dallas/index.data.js:|Contentful||Yearly|Easy||
 |site/pages/qsc/2022/las-vegas/index.data.js:|Contentful||Yearly|Easy||
 |site/pages/qsc/2022/london/index.data.js:|Contentful||Yearly|Easy||
