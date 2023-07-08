@@ -401,6 +401,7 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |Training | Yes |Replace React with Svelte|
 |Vulnerability Detection Pipeline | Yes |Replace React with Svelte|
 
+### Pages that pull external data
 |File|Source|Migrate or not|Frequency of use|Difficulty Level|Note|
 |--|--|--|--|--|--|
 |site/pages/2022/black-hat-usa/index.data.js:|Contentful||Yearly|Easy||
