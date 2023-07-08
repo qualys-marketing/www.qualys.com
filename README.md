@@ -401,53 +401,52 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |Training | Yes |Replace React with Svelte|
 |Vulnerability Detection Pipeline | Yes |Replace React with Svelte|
 
-### Pages that pull external data
-|File|Migrate or not|Frequency of use|Difficulty Level|Note|
-|--|--|--|--|--|
-|site/pages/2022/black-hat-usa/index.data.js:||Yearly|Easy||
-|site/pages/2023/04/virtual-summit/index.data.js:||Quarterly|Easy||
-|site/pages/2023/05/servicenow-knowledge/index.data.js:|No||Easy||File copied unnecessarily|
-|site/pages/community/channels.data.js:|No||
-|site/pages/community/fetch-content.js:|No||
-|site/pages/community/index.data.js:|No||
-|site/pages/company/community-terms-of-use/index.data.js:|No||
-|site/pages/company/events/speaking-engagements.json.data.js:|||Easy||
-|site/pages/company/events/webcasts.json.data.js:|||Easy||
-|site/pages/company/newsroom/industry-analyst-reports/data.js:|||Easy||
-|site/pages/company/newsroom/media-contacts/data.js:|No||Easy||PR team always asks web team to update this. Just move to local JSON file.|
-|site/pages/company/newsroom/media-coverage/media-coverage.data.js:|||Difficult|Must also create a array of pages|
-|site/pages/company/newsroom/news-releases/news-release.data.js:|||Difficult|Must also create a array of pages|
-|site/pages/company/privacy/index.data.js:||Yearly|Easy||
-|site/pages/company/privacy/content/index.data.js:||Yearly|Easy||
-|site/pages/documentation/documentation.data.js:||Monthly|Easy||Docs team always asks web team to update this|
-|site/pages/documentation/release-notes/release-notes.json.data.js:||Monthly|Easy|Docs team always asks web team to update this|
-|site/pages/fundamentals/what-is-vulnerability-management-detection-response/datasheet-data.js:|||Easy||
-|site/pages/fundamentals/what-is-vulnerability-management-detection-response/infographic-data.js:|||Easy||
-|site/pages/fundamentals/what-is-vulnerability-management-detection-response/reports-data.js:|||Easy||
-|site/pages/fundamentals/what-is-vulnerability-management-detection-response/webinars-data.js:|||Moderate||
-|site/pages/fundamentals/what-is-vulnerability-management-detection-response/whitepaper-data.js:|||Easy||
-|site/pages/notifications/notifications.data.js:|No||
-|site/pages/partners/integration/integration.data.js:|No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
-|site/pages/partners/integration/list/index.data.js:|No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
-|site/pages/qsc/2022/atlanta/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/chicago/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/dallas/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/las-vegas/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/london/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/mumbai/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/new-york/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2022/san-francisco/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2023/london/index.data.js:||Yearly|Easy||
-|site/pages/qsc/2023/munich/index.data.js:||Yearly|Easy||
-|site/pages/research/security-advisories/security-advisories.data.js:||Quarterly|Easy||
-|site/pages/research/security-alerts/security-alert.data.js:||Quarterly|Difficult |Pulls data from both Contentful and vuln office server.|
-|site/pages/resources/resources.data.js:||Monthly|Moderate|Everyone asks web team to update this. Consider moving to local JSON file.|
-|site/pages/training/training.data.js:||Monthly|Difficult |This is part of a React app. It pulls data from Heroku / GeoLearning.|
-|site/pages/training/course/course.data.js:||Monthly|Easy||
-|site/pages/training/library/library.data.js:||Monthly|Difficult |Training team always asks web team to update this. It pulls data from Vimeo.|
-|site/pages/tru/security-alerts-data.js:|||Difficult |This pulls data from vuln office server.|
-|site/pages/tru/webinars-data.js:|||Moderate||
-|site/pages/webcasts/webcasts.data.js:|||Easy||
+|File|Source|Migrate or not|Frequency of use|Difficulty Level|Note|
+|--|--|--|--|--|--|
+|site/pages/2022/black-hat-usa/index.data.js:|Contentful||Yearly|Easy||
+|site/pages/2023/04/virtual-summit/index.data.js:|Contentful||Quarterly|Easy||
+|site/pages/2023/05/servicenow-knowledge/index.data.js:|Contentful|No||Easy|File copied unnecessarily|
+|site/pages/community/channels.data.js:||No||
+|site/pages/community/fetch-content.js:||No||
+|site/pages/community/index.data.js:||No||
+|site/pages/company/community-terms-of-use/index.data.js:||No||
+|site/pages/company/events/speaking-engagements.json.data.js:|Contentful||Easy||
+|site/pages/company/events/webcasts.json.data.js:|Contentful||Easy||
+|site/pages/company/newsroom/industry-analyst-reports/data.js:|Contentful||Easy||
+|site/pages/company/newsroom/media-contacts/data.js:||No|Easy||PR team always asks web team to update this. Just move to local JSON file.|
+|site/pages/company/newsroom/media-coverage/media-coverage.data.js:|Contentful||Difficult||Must also create a array of pages|
+|site/pages/company/newsroom/news-releases/news-release.data.js:|Contentful||Difficult||Must also create a array of pages|
+|site/pages/company/privacy/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/company/privacy/content/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/documentation/documentation.data.js:|Contentful|Monthly|Easy||Docs team always asks web team to update this|
+|site/pages/documentation/release-notes/release-notes.json.data.js:|Contentful|Monthly|Easy||Docs team always asks web team to update this|
+|site/pages/fundamentals/what-is-vulnerability-management-detection-response/datasheet-data.js:|Contentful||Easy||
+|site/pages/fundamentals/what-is-vulnerability-management-detection-response/infographic-data.js:|Contentful||Easy||
+|site/pages/fundamentals/what-is-vulnerability-management-detection-response/reports-data.js:|Contentful||Easy||
+|site/pages/fundamentals/what-is-vulnerability-management-detection-response/webinars-data.js:|Contentful||Moderate||
+|site/pages/fundamentals/what-is-vulnerability-management-detection-response/whitepaper-data.js:|Contentful||Easy||
+|site/pages/notifications/notifications.data.js:|Contentful|No||
+|site/pages/partners/integration/integration.data.js:||No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
+|site/pages/partners/integration/list/index.data.js:||No|Rarely||Partner team always asks web team to update this. Just move to local JSON file.|
+|site/pages/qsc/2022/atlanta/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/chicago/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/dallas/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/las-vegas/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/london/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/mumbai/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/new-york/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2022/san-francisco/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2023/london/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/qsc/2023/munich/index.data.js:|Contentful|Yearly|Easy||
+|site/pages/research/security-advisories/security-advisories.data.js:|Contentful|Quarterly|Easy||
+|site/pages/research/security-alerts/security-alert.data.js:|Contentful + Vuln Server|Quarterly|Difficult ||Pulls data from both Contentful and vuln office server.|
+|site/pages/resources/resources.data.js:|Contentful|Monthly|Moderate||Everyone asks web team to update this. Consider moving to local JSON file.|
+|site/pages/training/training.data.js:|Contentful + Heroku|Monthly|Difficult ||This is part of a React app. It pulls data from Heroku / GeoLearning.|
+|site/pages/training/course/course.data.js:|Contentful|Monthly|Easy||
+|site/pages/training/library/library.data.js:|Contentful + Vimeo|Monthly|Difficult ||Training team always asks web team to update this. It pulls data from Vimeo.|
+|site/pages/tru/security-alerts-data.js:|Contentful + Vuln Server||Difficult ||This pulls data from vuln office server.|
+|site/pages/tru/webinars-data.js:|Contentful||Moderate||
+|site/pages/webcasts/webcasts.data.js:|Contentful||Easy||
 
 ### Old website files containing "return page" that generate multiple pages
 * /site/pages/company/newsroom/news-releases/index.data.js
