@@ -33,7 +33,7 @@ Install node dependencies.
 
 Run eleventy in the terminal.  
 
-    npx @11ty/eleventy --serve
+    npx @11ty/eleventy --serve --incremental
 
 Eleventy will start a local web server, usually at http://localhost:8080/. Browse to that URL to verify the site loads.  
 Scroll down to the bottom of the page. Below the footer, you'll see a data dump of all variables accessible to the page you are viewing.  
