@@ -21,7 +21,7 @@ Change to desired folder path, e.g.
 
 Clone the "qualys" repo from Github
 
-    https://github.com/qualys-marketing/www.qualys.com.git
+    git clone https://github.com/qualys-marketing/www.qualys.com.git
 
 The repo will be cloned to /Users/{{username}}/Projects/www.qualys.com/.  
 Open that folder in VisualStudio Code.  
