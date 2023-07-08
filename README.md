@@ -470,7 +470,7 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 10. Migrate some code that the automation script could not migrate.
 11. Rename all data.js files to 11tydata.js 
 12. Migrate data.js files that generate multiple pages, e.g. press releases, manually
-13. Migrate data.js files that pull data from Contentful, e.g. privacy policy, manually
+13. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
 14. Migrate all other data.js files manually.
 
 ### Help
