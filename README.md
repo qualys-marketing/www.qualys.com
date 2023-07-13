@@ -7,7 +7,7 @@ A migration of the Qualys website to Eleventy, Github and Netlify.
 * **Static Site Generator**: [Eleventy](https://www.11ty.dev/docs/)
 * **Template Engine**: [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
 * **Version Control**: [Github](https://github.com/)
-* **Build Sytstem and Web Hosting**: [Netlify](https://docs.netlify.com/)
+* **Build System and Web Hosting**: [Netlify](https://docs.netlify.com/)
 * **Content Management System**: [Contentful](https://www.contentful.com/)
 * **Image Optimization and CDN**: [ImageKit](https://imagekit.io/)
 
@@ -397,8 +397,8 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 |--|--|--|
 |Community | No |Redirect Community to Discussions site|
 |Docs Release Notes | Yes |Replace React with Svelte|
-|Find a Partner | Yes |Replace React with Svelte|
-|Training | Yes |Replace React with Svelte|
+|Find a Partner | Yes |Replace React with PartnerFleet|
+|Training | Yes |Replace React with JavaScript / jQuery|
 |Vulnerability Detection Pipeline | Yes |Replace React with Svelte|
 
 ### Pages that pull external data
