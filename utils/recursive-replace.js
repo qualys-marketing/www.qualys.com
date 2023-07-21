@@ -1,5 +1,5 @@
-/* 
-This NodeJS script will recursively read files in a folder 
+/*
+This NodeJS script will recursively read files in a folder
 and execute a series of search and replace commands.
 Run it as follows: node recursive-replace.js
 */
@@ -190,7 +190,7 @@ const edit = filePath => {
   if (arr) {
 	layout = arr[1];
   }
-  
+
   // REPLACE --- with ---\n{layout}
   oldContent = newContent;
   regex = /---/i;
@@ -223,7 +223,7 @@ const edit = filePath => {
 };
 
 const main = () => {
-  const dir = 'files';
+  const dir = 'partials'; // folder name containing files
   const filePaths = walk(dir);
   filePaths.forEach(filePath => edit(filePath));
 };

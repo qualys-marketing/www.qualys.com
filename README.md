@@ -23,95 +23,95 @@ Clone the "qualys" repo from Github
 
     git clone https://github.com/qualys-marketing/www.qualys.com.git
 
-The repo will be cloned to /Users/{{username}}/Projects/www.qualys.com/.  
-Open that folder in VisualStudio Code.  
-Open a new terminal in VS Code.  
-If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/).   
-Install node dependencies.  
+The repo will be cloned to /Users/{{username}}/Projects/www.qualys.com/.
+Open that folder in VisualStudio Code.
+Open a new terminal in VS Code.
+If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/).
+Install node dependencies.
 
     npm install
 
-Run eleventy in the terminal.  
+Run eleventy in the terminal.
 
     npx @11ty/eleventy --serve --incremental
 
-Eleventy will start a local web server, usually at http://localhost:8080/. Browse to that URL to verify the site loads.  
-Scroll down to the bottom of the page. Below the footer, you'll see a data dump of all variables accessible to the page you are viewing.  
-Make changes to files.  
+Eleventy will start a local web server, usually at http://localhost:8080/. Browse to that URL to verify the site loads.
+Scroll down to the bottom of the page. Below the footer, you'll see a data dump of all variables accessible to the page you are viewing.
+Make changes to files.
 Stage, commit and push the changes back to Github (you can use VS Code to commit and push changes).
-Go to https://github.com/qualys-marketing/www.qualys.com/commits/main to verify commit in Github.  
-Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/).  
+Go to https://github.com/qualys-marketing/www.qualys.com/commits/main to verify commit in Github.
+Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/).
 Create a .env file in the project root folder and add the content from a coworker's .env file.
 
 ## Overview of file structure
 
-    /  
+    /
     ├─ .cache/  (stores cached data from Eleventy Fetch plugin)
     ├─ node_modules/ (stores node modules after running npm install)
-    ├─ www/ (built files go in here)  
-    │  ├─ favicon.ico  
-    │  ├─ index.html  
-    │  ├─ robots.txt  
-    │  ├─ ...  
-    ├─ src/ (source files go in here)  
-    │  ├─ _data/ (global data files go in here)  
-    │  │  ├─ site.js  
-    │  │  ├─ footerLinks.json  
-    │  │  ├─ ...  
-    │  ├─ _includes/ (all reusable partials go in here)  
-    │  │  ├─ header.njk  
-    │  │  ├─ footer.njk  
-    │  │  ├─ ...  
-    │  ├─ _layouts/ (all layouts go in here)  
-    │  │  ├─ default.njk  
-    │  │  ├─ form.njk  
-    │  ├─ asset/ (all static assets go in there)  
-    │  │  ├─ stylesheet/  
-    │  │  │  ├─ common.css (global CSS file)  
-    │  │  │  ├─ ...  
-    │  │  ├─ script/  
-    │  │  │  ├─ common.js (global JS file)  
-    │  │  │  ├─ ...  
-    │  │  ├─ image/  
-    │  │  ├─ ...  
+    ├─ www/ (built files go in here)
+    │  ├─ favicon.ico
+    │  ├─ index.html
+    │  ├─ robots.txt
+    │  ├─ ...
+    ├─ src/ (source files go in here)
+    │  ├─ _data/ (global data files go in here)
+    │  │  ├─ site.js
+    │  │  ├─ footerLinks.json
+    │  │  ├─ ...
+    │  ├─ _includes/ (all reusable partials go in here)
+    │  │  ├─ header.njk
+    │  │  ├─ footer.njk
+    │  │  ├─ ...
+    │  ├─ _layouts/ (all layouts go in here)
+    │  │  ├─ default.njk
+    │  │  ├─ form.njk
+    │  ├─ asset/ (all static assets go in there)
+    │  │  ├─ stylesheet/
+    │  │  │  ├─ common.css (global CSS file)
+    │  │  │  ├─ ...
+    │  │  ├─ script/
+    │  │  │  ├─ common.js (global JS file)
+    │  │  │  ├─ ...
+    │  │  ├─ image/
+    │  │  ├─ ...
     │  ├─ .well-known
-    │  │  ├─ security.txt (cybersecurity reporting info)  
-    │  ├─ index.css  (home page CSS)  
-    │  ├─ index.js  (home page JS)  
+    │  │  ├─ security.txt (cybersecurity reporting info)
+    │  ├─ index.css  (home page CSS)
+    │  ├─ index.js  (home page JS)
     │  ├─ index.njk (home page HTML)
     │  ├─ _headers (contains custom HTTP headers)
     │  ├─ _redirects (contains all redirects)
     │  ├─ 404.html
     │  ├─ sitemap.xml
-    │  ├─ robots.txt  
+    │  ├─ robots.txt
     │  ├─ ...
     ├─ utils
     │  ├─ recursive-replace.js (migration script)
-    │  ├─ ...             
-    ├─ .gitignore  
+    │  ├─ ...
+    ├─ .gitignore
     ├─ package.json (list of all node module dependencies to install)
     ├─ README.md (this file that you are reading)
-    ├─ netlify.toml (Netlify config file)  
-    ├─ .eleventy.js (Eleventy config file)  
+    ├─ netlify.toml (Netlify config file)
+    ├─ .eleventy.js (Eleventy config file)
     ├─ .env (local environment variables: tokens, passwords, etc)
     ├─ postcss.config.js (PostCSS config file - include autoprefixer)
-    ├─ ...  
+    ├─ ...
 
 
 ## Instructions for migrating web pages
-Migrate one folder at a time, without subfolders. You will be migrating from the Handlebars templating engine (hbs) to the [Nunjucks templating engine](https://mozilla.github.io/nunjucks/templating.html) (njk). 
+Migrate one folder at a time, without subfolders. You will be migrating from the Handlebars templating engine (hbs) to the [Nunjucks templating engine](https://mozilla.github.io/nunjucks/templating.html) (njk).
 
 ### Copy files
 
-Copy and paste hbs, css and js files within one folder, e.g. /company/.  
+Copy and paste hbs, css and js files within one folder, e.g. /company/.
 
 ### Rename CSS files
-If you encounter any CSS files with an hbs extension, e.g. index.css.hbs, 
+If you encounter any CSS files with an hbs extension, e.g. index.css.hbs,
 
  1. Remove the .hbs extension so the file name is index.css
  2. Remove an Handlebars syntax within the file
 
-Eleventy will always process files with hbs, njk, md extensions and output an HTML file, e.g. index.css.html, wnich is never what we want. 
+Eleventy will always process files with hbs, njk, md extensions and output an HTML file, e.g. index.css.html, wnich is never what we want.
 
 ### Delete unused code
 Delete the following lines of code.
@@ -122,7 +122,7 @@ Delete the following lines of code.
     {{/block}}
 
 ### Specify layout
-Add "layout: default.njk" to YAML frontmatter (or some other layout).  
+Add "layout: default.njk" to YAML frontmatter (or some other layout).
 
     ---
     layout: default.njk
@@ -144,12 +144,12 @@ with
 	    <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
 
-Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
 
     {% layoutblock 'appendStyles-form' %}
 	    <link  rel="stylesheet"  href="index.css">
     {% endlayoutblock %}
-  
+
 ### Update JS block
 Replace
 
@@ -163,7 +163,7 @@ with
 	    <script  src="company.js"></script>
     {% endlayoutblock %}
 
-Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
 
     {% layoutblock 'appendScripts-form' %}
 	    <script  src="company.js"></script>
@@ -182,18 +182,18 @@ with
 	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
     {% endlayoutblock %}
 
-Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be 
+Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
 
     {% layoutblock 'appendHints-form' %}
 	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
     {% endlayoutblock %}
-  
+
 ### Update Handlebars "partial" references
 When you see a reference to a partial like this
 
     {{> vendor/vimeo-player }}
 
-Copy the partial code into a new file under _includes, e.g. /src/_includes/vimeo-player.njk  
+Copy the partial code into a new file under _includes, e.g. /src/_includes/vimeo-player.njk
 Replace the Handlebars reference as follows
 
     {% include "vendor/vimeo-player.njk" %}
@@ -220,7 +220,7 @@ with
     {% set background = "about-us-hero-desktop.jpg" %}
     {% set squarePartial = "company/square.njk" %}
     {% set squareBaseline = true %}
-    
+
     {% include "default-hero.njk" %}
 
 ### Replace Handlebars syntax with Nunjucks syntax
@@ -329,7 +329,7 @@ When looping over objects in Nunjucks, you must specify the name of the iterator
 		"copy"		: "Block attacks and patch web application vulnerabilities.",
 		"url"		: "/apps/web-app-firewall/"
 	}]'}}
-	
+
 	{{#each this}}
 		<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
 		<p>{{copy}}</p>
@@ -349,7 +349,7 @@ When looping over objects in Nunjucks, you must specify the name of the iterator
 		"copy"		: "Block attacks and patch web application vulnerabilities.",
 		"url"		: "/apps/web-app-firewall/"
 	}] %}
-	
+
 	{% for item in quotes %}
 		<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
 		<p>{{item.copy}}</p>
@@ -459,19 +459,20 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 
 ### Migration steps
 1. Migrate all 16 layouts manually. :heavy_check_mark:
-2. Migrate all redirects. :heavy_check_mark:
+2. Migrate all redirects. :heavy_check_mark: (add recent changes)
 3. Migrate all custom headers. :heavy_check_mark:
 4. Migrate all favicons. :heavy_check_mark:
 5. Migrate robots.txt. :heavy_check_mark:
 6. Add [PostCSS auto-prefixer](https://www.npmjs.com/package/eleventy-plugin-postcss) support :heavy_check_mark:
-7. Migrate sitemap. :heavy_check_mark:  
+7. Migrate sitemap. :heavy_check_mark:
 8. Migrate sitemap for product help. :heavy_check_mark:
 9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/javanigus/qualys/blob/main/utils/recursive-replace.js).
-10. Migrate some code that the automation script could not migrate.
-11. Rename all data.js files to 11tydata.js 
-12. Migrate data.js files that generate multiple pages, e.g. press releases, manually
-13. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
-14. Migrate all other data.js files manually.
+10. Change all .hbs file extensions to .njk
+11. Migrate some code that the automation script could not migrate.
+12. Rename all data.js files to 11tydata.js
+13. Migrate data.js files that generate multiple pages, e.g. press releases, manually
+14. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
+15. Migrate all other data.js files manually.
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
