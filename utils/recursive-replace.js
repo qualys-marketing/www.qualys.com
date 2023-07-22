@@ -1,7 +1,8 @@
 /*
 This NodeJS script will recursively read files in a folder
 and execute a series of search and replace commands.
-Run it as follows: node recursive-replace.js
+Set the name of the folder as the value of the "dir" variable.
+Run the script as follows: node recursive-replace.js
 */
 
 const fs = require('fs');
@@ -78,6 +79,12 @@ const edit = filePath => {
   replaceVal = 'loop.first';
   newContent = oldContent.replace(regex, replaceVal);
 
+  // REPLACE @index with loop.index
+  oldContent = newContent;
+  regex = /@index/gi;
+  replaceVal = 'loop.index';
+  newContent = oldContent.replace(regex, replaceVal);
+
   // REPLACE {{!-- with {#
   oldContent = newContent;
   regex = /\{\{!--/gi;
@@ -96,6 +103,12 @@ const edit = filePath => {
   replaceVal = '{% include $1 %}';
   newContent = oldContent.replace(regex, replaceVal);
 
+  // REPLACE {{> (lookup . 'partial') this }} with {% include partial %}
+  oldContent = newContent;
+  regex = /\{\{>\s*\(\s*lookup\s*\.\s*\'([a-zA-Z0-9-_]+)?\'\s*\)\s*this\s*\}\}/gi;
+  replaceVal = '{% include $1 %}';
+  newContent = oldContent.replace(regex, replaceVal);
+
   // REPLACE {{> vendor/vimeo-player }} with {% include vendor/vimeo-player.njk %}
   oldContent = newContent;
   regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*\}\}/gi;
@@ -110,7 +123,7 @@ const edit = filePath => {
 
   // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
   oldContent = newContent;
-  regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/=:"'\s]+)\s*\}\}/gi;
+  regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/\.=:"'\s]+)\s*\}\}/gi;
   replaceVal = '{% include $1.njk $2 %}';
   newContent = oldContent.replace(regex, replaceVal);
 
@@ -165,7 +178,7 @@ const edit = filePath => {
   // REPLACE {{#jsonContext ' with {% set this = }}
   oldContent = newContent;
   regex = /\{\{#jsonContext\s+'/gi;
-  replaceVal = '] %}';
+  replaceVal = '{% set this =';
   newContent = oldContent.replace(regex, replaceVal);
 
   // REPLACE ]'}} with ] %}
@@ -214,6 +227,10 @@ const edit = filePath => {
   regex = /\{\{\/block\s*\}\}/gi;
   replaceVal = '';
   newContent = oldContent.replace(regex, replaceVal);
+
+  // todo
+  // /partials/apps/cmdb-hero-laptop.hbs
+  // /partials.laptop.hbs
 
   // replace file extension from hbs to njk
   // filePath = filePath.replace(".hbs", ".njk");
