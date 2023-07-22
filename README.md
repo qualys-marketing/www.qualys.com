@@ -466,8 +466,8 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 6. Add [PostCSS auto-prefixer](https://www.npmjs.com/package/eleventy-plugin-postcss) support :heavy_check_mark:
 7. Migrate sitemap. :heavy_check_mark:
 8. Migrate sitemap for product help. :heavy_check_mark:
-9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
-10. Change all .hbs file extensions to .njk (https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
+9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:[See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
+10. Change all .hbs file extensions to .njk [See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
 11. Migrate some code that the automation script could not migrate, like the code blocks below.
 12. Rename all data.js files to 11tydata.js
 13. Migrate data.js files that generate multiple pages, e.g. press releases, manually
