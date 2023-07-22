@@ -125,7 +125,19 @@ const edit = filePath => {
     // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
     oldContent = newContent;
     regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/\.=:"'\s]+)\s*\}\}/gi;
-    replaceVal = '{% include $1.njk $2 %}';
+    var arr = regex.exec(oldContent);
+    var statements = "";
+    //console.log(arr);
+    //console.log("-----------");
+    if (arr && arr[2]) {
+      var variablesArray = arr[2].split(/"\s+/gi);
+      variablesArray = variablesArray.filter(n => n);
+      statements = variablesArray.map(function (statement) {
+        return `{% set ${statement}" %}`;
+      });
+      statements = statements.join("\n");
+    }
+    replaceVal = statements + "\n" + '{% include $1.njk %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{#each items as |child|}} with {% for child in items %}
@@ -144,30 +156,6 @@ const edit = filePath => {
     oldContent = newContent;
     regex = /\{\{\/each\}\}/gi;
     replaceVal = '{% endfor %}';
-    newContent = oldContent.replace(regex, replaceVal);
-
-    // REPLACE {{#append "meta-tags"}} with {% layoutblock 'appendMeta-default' %}
-    oldContent = newContent;
-    regex = /\{\{#append\s+"meta-tags"\}\}/gi;
-    replaceVal = '{% layoutblock "appendMeta-default" %}';
-    newContent = oldContent.replace(regex, replaceVal);
-
-    // REPLACE {{#append "styles"}} with {% layoutblock 'appendStyles-default' %}
-    oldContent = newContent;
-    regex = /\{\{#append\s+"styles"\}\}/gi;
-    replaceVal = '{% layoutblock "appendStyles-default" %}';
-    newContent = oldContent.replace(regex, replaceVal);
-
-    // REPLACE {{#append "scripts"}} with {% layoutblock 'appendScripts-default' %}
-    oldContent = newContent;
-    regex = /\{\{#append\s+"scripts"\}\}/gi;
-    replaceVal = '{% layoutblock "appendScripts-default" %}';
-    newContent = oldContent.replace(regex, replaceVal);
-
-    // REPLACE {{#append "hints"}} with {% layoutblock 'appendHints-default' %}
-    oldContent = newContent;
-    regex = /\{\{#append\s+"hints"\}\}/gi;
-    replaceVal = '{% layoutblock "appendHints-default" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{/append}} with {% endlayoutblock %}
@@ -208,13 +196,37 @@ const edit = filePath => {
     var arr = regex.exec(oldContent);
     var layout = "default";
     if (arr) {
-    layout = arr[1];
+      layout = arr[1];
     }
 
     // REPLACE --- with ---\n{layout}
     oldContent = newContent;
     regex = /---/i;
     replaceVal = '---\nlayout: ' + layout + '.njk';
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{#append "meta-tags"}} with {% layoutblock 'appendMeta-layout' %}
+    oldContent = newContent;
+    regex = /\{\{#append\s+"meta-tags"\}\}/gi;
+    replaceVal = `{% layoutblock "appendMeta-${layout}" %}`;
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{#append "styles"}} with {% layoutblock 'appendStyles-default' %}
+    oldContent = newContent;
+    regex = /\{\{#append\s+"styles"\}\}/gi;
+    replaceVal = `{% layoutblock "appendStyles-${layout}" %}`;
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{#append "scripts"}} with {% layoutblock 'appendScripts-default' %}
+    oldContent = newContent;
+    regex = /\{\{#append\s+"scripts"\}\}/gi;
+    replaceVal = `{% layoutblock "appendScripts-${layout}" %}`;
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{#append "hints"}} with {% layoutblock 'appendHints-default' %}
+    oldContent = newContent;
+    regex = /\{\{#append\s+"hints"\}\}/gi;
+    replaceVal = `{% layoutblock "appendHints-${layout}" %}`;
     newContent = oldContent.replace(regex, replaceVal);
 
     // DELETE {{/extends}}
@@ -226,6 +238,18 @@ const edit = filePath => {
     // DELETE {{#block "content"}}
     oldContent = newContent;
     regex = /\{\{#block\s+"content"\s*\}\}/gi;
+    replaceVal = '';
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // DELETE {{#block "prefooter-contents"}}
+    oldContent = newContent;
+    regex = /\{\{#block\s+"prefooter-contents"\s*\}\}/gi;
+    replaceVal = '';
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // DELETE {{#block "preheader"}}
+    oldContent = newContent;
+    regex = /\{\{#block\s+"preheader"\s*\}\}/gi;
     replaceVal = '';
     newContent = oldContent.replace(regex, replaceVal);
 
