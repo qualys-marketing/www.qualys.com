@@ -473,6 +473,14 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 13. Migrate data.js files that generate multiple pages, e.g. press releases, manually
 14. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
 15. Migrate all other data.js files manually.
+16. Move all images to AWS / ImageKit.
+17. Move all PDFs to AWS CloudFront (assets2.qualys.com)
+
+### Cutover Steps
+1. Run recursive-replace.js
+2. Run recursive-file-extension-replace.js
+3. Test
+4. Update DNS to point to Netlify
 
 ```
 {{>
