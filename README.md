@@ -509,7 +509,41 @@ central \"single-pane-of-glass\" dashboard."
 {{moment page.startTime format="LLLL z" tz="UTC" locale="en-US"}}
 ```
 
-### Cutover Steps
+### Development Steps for Migration Script
+
+1. Copy source "pages" folder and "partials" folder and paste them into temporary "migration" folder
+2. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "pages"
+3. Run migration scripts
+```
+node recursive-replace.js
+node recursive-file-extension-replace.js
+```
+4. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "partials"
+5. Run migration scripts
+```
+node recursive-replace.js
+node recursive-file-extension-replace.js
+```
+7. Copy contents of migrated "pages" folder to new site's "src" folder
+8. Copy contents of migrated "partials" folder to new site's "_includes" folder
+9. Open the new site in a terminal and run Eleventy
+```
+npx @11ty/eleventy --serve --incremental
+```
+10. Fix errors by updating migration script
+11. git reset the local repo
+12. Optionally, delete empty folders with
+```
+find . -type d -empty -delete
+```
+13. Repeat all steps until migration script runs without error and produces desired results.
+
+### Troubleshooting
+If you lose your .env file, copy the one in the source website and remove the Contenful Preview API tokens.
+
+If Eleventy acts up, like saying it can't find a layout that does exist, close and reopen the terminal and rerun Eleventy.
+
+### Launch Steps
 1. Run recursive-replace.js
 2. Run recursive-file-extension-replace.js
 3. Test [See list of all pages](https://qualys-poc2.netlify.app/list-of-all-pages/)
