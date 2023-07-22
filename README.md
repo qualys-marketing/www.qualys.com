@@ -482,6 +482,9 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
   fixedWidth=true
 }}
 ```
+```
+<div id="modal-{{../id}}-{{@index}}">
+```
 
 ![New Stack Workflow](https://ik.imagekit.io/qualys/New%20Qualys%20Website%20Tech%20Stack_KHNROprnu.png?updatedAt=1689984271373)
 
