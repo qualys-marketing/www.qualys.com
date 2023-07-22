@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="{% if lang %}{{lang}}{{else}}{{site.lang}}{% endif %}" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+	{% renderlayoutblock 'appendMeta-default' %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{description}}">
+		{% if noCache %}
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		{% endif %}
+		{% include "open-graph.njk" %}
+	
+	<title>{{title}}</title>
+
+	{# pre-connect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
+	{% renderlayoutblock 'appendHints-default' %}
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="preconnect" href="https://d1uyme8f6ss6qi.cloudfront.net">
+		<link rel="preconnect" href="https://static.cloud.coveo.com">
+		<link rel="preconnect" href="https://unpkg.com">
+		{{! pre load Gotham font since it is used most on Community}}
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-light.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff" as="font" type="font/woff2" crossorigin>
+	
+
+	{# load Pingdom Realtime User Monitoring before all other external assets #}
+	{% include "prum.njk" %}
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="{% if canonical %}{{canonical}}{{else}}{{__path}}{% endif %}">
+
+	{% renderlayoutblock 'appendStyles-default' %}
+		{% set href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" %}
+{% set integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" %}
+{% set crossorigin="anonymous" %}
+{% include "async-css.njk" %}
+		{% set href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" %}
+{% set integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" %}
+{% set crossorigin="anonymous" %}
+{% include "async-css.njk" %}
+		{% set href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" %}
+{% set integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" %}
+{% set crossorigin="anonymous" %}
+{% include "async-css.njk" %}
+
+{% set href="/asset/community/shared-min-30em.css" %}
+{% set media="screen and (min-width: 30em)" %}
+{% include "async-css.njk" %}
+
+{% set href="/asset/community/shared-min-60em.css" %}
+{% set media="screen and (min-width: 60em)" %}
+{% include "async-css.njk" %}
+	
+
+	{# script tags in scripts-head should be async#}
+	{% renderlayoutblock 'appendScripts-defaultInHead-default' %}
+	
+
+	{% include "gtm.njk" %}
+
+</head>
+<body>
+
+	{% include "gtm-noscript.njk" %}
+
+	{% if not noHeader %}
+		{% include "header.njk" %}
+		{% include "header-community.njk" %}
+			<div class="q-search__container{% if searchBanner %} q-search__container-banner{% endif %}">
+				<div class="q-search">
+
+					{% if searchBanner %}
+					<h1>
+						Welcome to Qualys Community
+					</h1>
+					{% endif %}
+					<div id="searchbox">
+						<div class="CoveoAnalytics" data-search-hub="communityCoveo"></div>
+						<div class="q-coveo__wrapper">
+							<div class="q-coveo-searchbutton">
+								<div class="CoveoSearchButton"></div>
+							</div>
+							<div class="q-coveo-querybox">
+								<div class="CoveoOmnibox" data-enable-query-suggest-addon="true">
+									<div class="CoveoFacetValueSuggestions" data-field="@sfdcproducts"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		
+
+		<div class="q-sub-header">
+			<div class="q-sub-header__container">
+				{% include "sub-header.njk" %}
+			</div>
+		</div>
+
+		{% include "search.njk" %}
+
+	{% endif %}
+
+	<div class="q-body">
+		<div class="q-body__container">
+			<!-- BEGIN CONTENT -->
+			{{ content | safe }}
+			<!-- END CONTENT -->
+		</div>
+	</div>
+
+	{% if not noFooter %}
+		{% include footer-community.njk %}
+	{% endif %}
+
+	{% renderlayoutblock 'appendScripts-default' %}
+		<script id="site_data" type="application/json">
+			{{jsonStringify site}}
+		</script>
+		<script src="https://unpkg.com/coveo.analytics@2.18.24/dist/coveoua.js" integrity="sha384-8wcVSOM2hnT06Ca8hVEkWv2BAzl5l6oBL+vwJr6DNWMx74IEI6k3moVPSSkQApVs" crossorigin="anonymous"></script>
+		<script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10085/2/js/CoveoJsSearch.Lazy.min.js" integrity="sha512-vueueBf3ND6Jj5E31AIFE28WnA2gQaGt3jHb+Wx5c0bDFBiKgQ8in3T9L4nVHC02v1uEgsrD4vL6pgYUGwZ3Kw==" crossorigin="anonymous"></script>
+		<script src="/asset/community/shared.js"></script>
+		<script src="/asset/community/coveo.js"></script>
+	
+
+</body>
+</html>
