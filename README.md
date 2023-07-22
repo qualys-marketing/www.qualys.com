@@ -476,23 +476,29 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 16. Move all images to AWS / ImageKit.
 17. Move all PDFs to AWS CloudFront (assets2.qualys.com)
 
-### Cutover Steps
-1. Run recursive-replace.js
-2. Run recursive-file-extension-replace.js
-3. Test
-4. Update DNS to point to Netlify
-
 ```
 {{>
-  laptop
-  image=“apps/sac/sac-beta-screenshot-1291-1x.jpg”
-  centered=false
-  fixedWidth=true
+  {{> icon-plus-content
+						icon=icon
+						title=heading
+						copy=copy
+						divider=divider
+						link=link
+					}}
 }}
 ```
 ```
 <div id="modal-{{../id}}-{{@index}}">
 ```
+```
+central \"single-pane-of-glass\" dashboard."
+```
+
+### Cutover Steps
+1. Run recursive-replace.js
+2. Run recursive-file-extension-replace.js
+3. Test
+4. Update DNS to point to Netlify
 
 ![New Stack Workflow](https://ik.imagekit.io/qualys/New%20Qualys%20Website%20Tech%20Stack_KHNROprnu.png?updatedAt=1689984271373)
 
