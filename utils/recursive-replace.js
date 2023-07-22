@@ -44,10 +44,16 @@ const edit = filePath => {
     replaceVal = '{% endif %}';
     newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE {{markdown biography}} with {% biography | md %}
+    // REPLACE page.platform with platform
+    oldContent = newContent;
+    regex = /\s+page\.([a-zA-Z0-9-_]+)?/gi;
+    replaceVal = ' $1 ';
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
     oldContent = newContent;
     regex = /\{\{markdown\s+([a-zA-Z0-9-_\.]+)?\s*\}\}/gi;
-    replaceVal = '{% $1 | markdown | safe %}';
+    replaceVal = '{% if $1 %}{{ $1 | markdown | safe }}{% endif %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{unless x}} with {% if not x %}
@@ -101,25 +107,25 @@ const edit = filePath => {
     // REPLACE {{> (lookup . 'ctaPartial')}} with {% include ctaPartial %}
     oldContent = newContent;
     regex = /\{\{>\s*\(\s*lookup\s*\.\s*\'([a-zA-Z0-9-_]+)?\'\s*\)\s*\}\}/gi;
-    replaceVal = '{% include $1 %}';
+    replaceVal = '{% include "$1" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{> (lookup . 'partial') this }} with {% include partial %}
     oldContent = newContent;
     regex = /\{\{>\s*\(\s*lookup\s*\.\s*\'([a-zA-Z0-9-_]+)?\'\s*\)\s*this\s*\}\}/gi;
-    replaceVal = '{% include $1 %}';
+    replaceVal = '{% include "$1" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{> vendor/vimeo-player }} with {% include vendor/vimeo-player.njk %}
     oldContent = newContent;
     regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*\}\}/gi;
-    replaceVal = '{% include $1.njk %}';
+    replaceVal = '{% include "$1.njk" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{> apps/hero-list this}} with {% include apps/hero-list.njk %}
     oldContent = newContent;
     regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*this\s*\}\}/gi;
-    replaceVal = '{% include $1.njk %}';
+    replaceVal = '{% include "$1.njk" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
@@ -137,7 +143,7 @@ const edit = filePath => {
       });
       statements = statements.join("\n");
     }
-    replaceVal = statements + "\n" + '{% include $1.njk %}';
+    replaceVal = statements + "\n" + '{% include "$1.njk" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{#each items as |child|}} with {% for child in items %}
@@ -199,6 +205,12 @@ const edit = filePath => {
       layout = arr[1];
     }
 
+    // REPLACE date in frontmatter with mydate
+    oldContent = newContent;
+    regex = /^date:/gmi;
+    replaceVal = 'mydate:';
+    newContent = oldContent.replace(regex, replaceVal);
+
     // REPLACE --- with ---\n{layout}
     oldContent = newContent;
     regex = /---/i;
@@ -253,15 +265,23 @@ const edit = filePath => {
     replaceVal = '';
     newContent = oldContent.replace(regex, replaceVal);
 
+    // DELETE {{#block "single-column-content"}}
+    oldContent = newContent;
+    regex = /\{\{#block\s+"single-column-content"\s*\}\}/gi;
+    replaceVal = '';
+    newContent = oldContent.replace(regex, replaceVal);
+
     // DELETE {{/block}}
     oldContent = newContent;
     regex = /\{\{\/block\s*\}\}/gi;
     replaceVal = '';
     newContent = oldContent.replace(regex, replaceVal);
 
-    // todo
-    // /partials/apps/cmdb-hero-laptop.hbs
-    // /partials.laptop.hbs
+    // REPLACE {{ moment page.startTime format="LLLL z" }} with {{ moment }}
+    oldContent = newContent;
+    regex = /\{\{\s*moment\s+[a-zA-Z0-9\.\-"=_/\s]*\s*\}\}/gi;
+    replaceVal = 'MOMENT';
+    newContent = oldContent.replace(regex, replaceVal);
 
     // replace file extension from hbs to njk
     // filePath = filePath.replace(".hbs", ".njk");

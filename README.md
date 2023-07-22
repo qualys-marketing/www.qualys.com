@@ -505,6 +505,10 @@ central \"single-pane-of-glass\" dashboard."
 }}
 ```
 
+```
+{{moment page.startTime format="LLLL z" tz="UTC" locale="en-US"}}
+```
+
 ### Cutover Steps
 1. Run recursive-replace.js
 2. Run recursive-file-extension-replace.js
