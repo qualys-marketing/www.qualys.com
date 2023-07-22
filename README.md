@@ -468,14 +468,26 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 8. Migrate sitemap for product help. :heavy_check_mark:
 9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:(https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
 10. Change all .hbs file extensions to .njk (https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
-11. Migrate some code that the automation script could not migrate.
+11. Migrate some code that the automation script could not migrate, like the code blocks below.
 12. Rename all data.js files to 11tydata.js
 13. Migrate data.js files that generate multiple pages, e.g. press releases, manually
 14. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
 15. Migrate all other data.js files manually.
 
+```
+{{>
+  laptop
+  image=“apps/sac/sac-beta-screenshot-1291-1x.jpg”
+  centered=false
+  fixedWidth=true
+}}
+```
+
 ![New Stack Workflow](https://ik.imagekit.io/qualys/New%20Qualys%20Website%20Tech%20Stack_KHNROprnu.png?updatedAt=1689984271373)
 
 ### Help
 Confused? Try diffing similar pages that have already been migrated, e.g. company.hbs to company.njk.
-Need more help? Contact ayahya@qualys.com.
+Need more help?
+* Contact ayahya@qualys.com
+* Post a question on Stack Overflow
+* Hire a freelancer on upwork.com.
