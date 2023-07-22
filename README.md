@@ -479,12 +479,12 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 ```
 {{>
   {{> icon-plus-content
-						icon=icon
-						title=heading
-						copy=copy
-						divider=divider
-						link=link
-					}}
+    icon=icon
+    title=heading
+    copy=copy
+    divider=divider
+    link=link
+  }}
 }}
 ```
 ```
@@ -492,6 +492,17 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 ```
 ```
 central \"single-pane-of-glass\" dashboard."
+```
+
+```
+{{>
+  ipad
+  image=screenshotImage
+  alt=altText
+  centered=false
+  fixedWidth=true
+  animate=true
+}}
 ```
 
 ### Cutover Steps
