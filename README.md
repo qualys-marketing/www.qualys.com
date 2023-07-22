@@ -459,7 +459,7 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 
 ### Migration steps
 1. Migrate all 16 layouts manually. :heavy_check_mark:
-2. Migrate all redirects. :heavy_check_mark: (add recent changes)
+2. Migrate all redirects. :hourglass: (add recent changes)
 3. Migrate all custom headers. :heavy_check_mark:
 4. Migrate all favicons. :heavy_check_mark:
 5. Migrate robots.txt. :heavy_check_mark:
