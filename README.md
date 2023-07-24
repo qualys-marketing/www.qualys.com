@@ -16,25 +16,25 @@ The static site generator converts Nunjucks templates and data from JSON files, 
 ## Setup
 
 Change to desired folder path, e.g.
-
-    cd /Users/{{username}}/Projects/
-
+```Shell
+cd /Users/{{username}}/Projects/
+```
 Clone the "qualys" repo from Github
-
-    git clone https://github.com/qualys-marketing/www.qualys.com.git
-
+```Shell
+git clone https://github.com/qualys-marketing/www.qualys.com.git
+```
 The repo will be cloned to /Users/{{username}}/Projects/www.qualys.com/.
 Open that folder in VisualStudio Code.
 Open a new terminal in VS Code.
 If you don't have NodeJS, [install it](https://nodejs.dev/en/learn/how-to-install-nodejs/).
 Install node dependencies.
-
-    npm install
-
+```Shell
+npm install
+```
 Run eleventy in the terminal.
-
-    npx @11ty/eleventy --serve --incremental
-
+```Shell
+npx @11ty/eleventy --serve --incremental
+```
 Eleventy will start a local web server, usually at http://localhost:8080/. Browse to that URL to verify the site loads.
 Scroll down to the bottom of the page. Below the footer, you'll see a data dump of all variables accessible to the page you are viewing.
 Make changes to files.
@@ -44,59 +44,59 @@ Go to Netlify to verify changes are published (https://qualys-poc2.netlify.app/)
 Create a .env file in the project root folder and add the content from a coworker's .env file.
 
 ## Overview of file structure
-
-    /
-    ├─ .cache/  (stores cached data from Eleventy Fetch plugin)
-    ├─ node_modules/ (stores node modules after running npm install)
-    ├─ www/ (built files go in here)
-    │  ├─ favicon.ico
-    │  ├─ index.html
-    │  ├─ robots.txt
-    │  ├─ ...
-    ├─ src/ (source files go in here)
-    │  ├─ _data/ (global data files go in here)
-    │  │  ├─ site.js
-    │  │  ├─ footerLinks.json
-    │  │  ├─ ...
-    │  ├─ _includes/ (all reusable partials go in here)
-    │  │  ├─ header.njk
-    │  │  ├─ footer.njk
-    │  │  ├─ ...
-    │  ├─ _layouts/ (all layouts go in here)
-    │  │  ├─ default.njk
-    │  │  ├─ form.njk
-    │  ├─ asset/ (all static assets go in there)
-    │  │  ├─ stylesheet/
-    │  │  │  ├─ common.css (global CSS file)
-    │  │  │  ├─ ...
-    │  │  ├─ script/
-    │  │  │  ├─ common.js (global JS file)
-    │  │  │  ├─ ...
-    │  │  ├─ image/
-    │  │  ├─ ...
-    │  ├─ .well-known
-    │  │  ├─ security.txt (cybersecurity reporting info)
-    │  ├─ index.css  (home page CSS)
-    │  ├─ index.js  (home page JS)
-    │  ├─ index.njk (home page HTML)
-    │  ├─ _headers (contains custom HTTP headers)
-    │  ├─ _redirects (contains all redirects)
-    │  ├─ 404.html
-    │  ├─ sitemap.xml
-    │  ├─ robots.txt
-    │  ├─ ...
-    ├─ utils
-    │  ├─ recursive-replace.js (migration script)
-    │  ├─ ...
-    ├─ .gitignore
-    ├─ package.json (list of all node module dependencies to install)
-    ├─ README.md (this file that you are reading)
-    ├─ netlify.toml (Netlify config file)
-    ├─ .eleventy.js (Eleventy config file)
-    ├─ .env (local environment variables: tokens, passwords, etc)
-    ├─ postcss.config.js (PostCSS config file - include autoprefixer)
-    ├─ ...
-
+```
+/
+├─ .cache/  (stores cached data from Eleventy Fetch plugin)
+├─ node_modules/ (stores node modules after running npm install)
+├─ www/ (built files go in here)
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ robots.txt
+│  ├─ ...
+├─ src/ (source files go in here)
+│  ├─ _data/ (global data files go in here)
+│  │  ├─ site.js
+│  │  ├─ footerLinks.json
+│  │  ├─ ...
+│  ├─ _includes/ (all reusable partials go in here)
+│  │  ├─ header.njk
+│  │  ├─ footer.njk
+│  │  ├─ ...
+│  ├─ _layouts/ (all layouts go in here)
+│  │  ├─ default.njk
+│  │  ├─ form.njk
+│  ├─ asset/ (all static assets go in there)
+│  │  ├─ stylesheet/
+│  │  │  ├─ common.css (global CSS file)
+│  │  │  ├─ ...
+│  │  ├─ script/
+│  │  │  ├─ common.js (global JS file)
+│  │  │  ├─ ...
+│  │  ├─ image/
+│  │  ├─ ...
+│  ├─ .well-known
+│  │  ├─ security.txt (cybersecurity reporting info)
+│  ├─ index.css  (home page CSS)
+│  ├─ index.js  (home page JS)
+│  ├─ index.njk (home page HTML)
+│  ├─ _headers (contains custom HTTP headers)
+│  ├─ _redirects (contains all redirects)
+│  ├─ 404.html
+│  ├─ sitemap.xml
+│  ├─ robots.txt
+│  ├─ ...
+├─ utils
+│  ├─ recursive-replace.js (migration script)
+│  ├─ ...
+├─ .gitignore
+├─ package.json (list of all node module dependencies to install)
+├─ README.md (this file that you are reading)
+├─ netlify.toml (Netlify config file)
+├─ .eleventy.js (Eleventy config file)
+├─ .env (local environment variables: tokens, passwords, etc)
+├─ postcss.config.js (PostCSS config file - include autoprefixer)
+├─ ...
+```
 
 ## Instructions for migrating web pages
 Migrate one folder at a time, without subfolders. You will be migrating from the Handlebars templating engine (hbs) to the [Nunjucks templating engine](https://mozilla.github.io/nunjucks/templating.html) (njk).
@@ -115,210 +115,211 @@ Eleventy will always process files with hbs, njk, md extensions and output an HT
 
 ### Delete unused code
 Delete the following lines of code.
-
-    {{#extends "default"}}
-    {{/extends}}
-    {{#block "content"}}
-    {{/block}}
-
+```Handlebars
+{{#extends "default"}}
+{{/extends}}
+{{#block "content"}}
+{{/block}}
+```
 ### Specify layout
 Add "layout: default.njk" to YAML frontmatter (or some other layout).
-
-    ---
-    layout: default.njk
-    title: About Qualys
-    ...
-    ___
-
+```yaml
+---
+layout: default.njk
+title: About Qualys
+...
+---
+```
 
 ### Update CSS block
 Replace
-
-    {{#append "styles"}}
-	    <link rel="stylesheet" href="index.css">
-    {{/append}}
-
+```Handlebars
+{{#append "styles"}}
+	<link rel="stylesheet" href="index.css">
+{{/append}}
+```
 with
-
-    {% layoutblock 'appendStyles-default' %}
-	    <link  rel="stylesheet"  href="index.css">
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendStyles-default' %}
+	<link  rel="stylesheet"  href="index.css">
+{% endlayoutblock %}
+```
 Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
-
-    {% layoutblock 'appendStyles-form' %}
-	    <link  rel="stylesheet"  href="index.css">
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendStyles-form' %}
+	<link  rel="stylesheet"  href="index.css">
+{% endlayoutblock %}
+```
 ### Update JS block
 Replace
-
-    {{#append "scripts"}}
-	    <script src="company.js"></script>
-    {{/append}}
-
+```Handlebars
+{{#append "scripts"}}
+	<script src="company.js"></script>
+{{/append}}
+```
 with
-
-    {% layoutblock 'appendScripts-default' %}
-	    <script  src="company.js"></script>
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendScripts-default' %}
+	<script  src="company.js"></script>
+{% endlayoutblock %}
+```
 Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
-
-    {% layoutblock 'appendScripts-form' %}
-	    <script  src="company.js"></script>
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendScripts-form' %}
+  <script  src="company.js"></script>
+{% endlayoutblock %}
+```
 ### Update Hints block
 Replace
-
-    {{#append "hints"}}
-	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
-    {{/append}}
-
+```Handlebars
+{{#append "hints"}}
+	<link  rel="preconnect"  href="https://www.googletagmanager.com">
+{{/append}}
+```
 with
-
-    {% layoutblock 'appendHints-default' %}
-	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendHints-default' %}
+	<link  rel="preconnect"  href="https://www.googletagmanager.com">
+{% endlayoutblock %}
+```
 Note: "-default" is the name of the layout the page immediately inherits from. If the page uses the "form" layout, then the code block would be
-
-    {% layoutblock 'appendHints-form' %}
-	    <link  rel="preconnect"  href="https://www.googletagmanager.com">
-    {% endlayoutblock %}
-
+```Nunjucks
+{% layoutblock 'appendHints-form' %}
+	<link  rel="preconnect"  href="https://www.googletagmanager.com">
+{% endlayoutblock %}
+```
 ### Update Handlebars "partial" references
 When you see a reference to a partial like this
-
-    {{> vendor/vimeo-player }}
-
+```Handlebars
+{{> vendor/vimeo-player }}
+```
 Copy the partial code into a new file under _includes, e.g. /src/_includes/vimeo-player.njk
 Replace the Handlebars reference as follows
-
-    {% include "vendor/vimeo-player.njk" %}
-
+```Nunjucks
+{% include "vendor/vimeo-player.njk" %}
+```
 If the partial includes parameters, pass the parameters using {% set %} as in this this example.
 
 Replace
-
-    {{>
-    default-hero
-	    color="red"
-	    title="About Qualys."
-	    subheading="The leading provider of information security and compliance cloud solutions."
-	    background="about-us-hero-desktop.jpg"
-	    squarePartial="company/square.njk"
-	    squareBaseline=true
-    }}
-
+```Handlebars
+{{>
+default-hero
+  color="red"
+  title="About Qualys."
+  subheading="The leading provider of information security and compliance cloud solutions."
+  background="about-us-hero-desktop.jpg"
+  squarePartial="company/square.njk"
+  squareBaseline=true
+}}
+```
 with
+```Nunjucks
+{% set color = "red" %}
+{% set heroTitle = "About Qualys." %}
+{% set subheading = "The leading provider of information security and compliance cloud solutions." %}
+{% set background = "about-us-hero-desktop.jpg" %}
+{% set squarePartial = "company/square.njk" %}
+{% set squareBaseline = true %}
 
-    {% set color = "red" %}
-    {% set heroTitle = "About Qualys." %}
-    {% set subheading = "The leading provider of information security and compliance cloud solutions." %}
-    {% set background = "about-us-hero-desktop.jpg" %}
-    {% set squarePartial = "company/square.njk" %}
-    {% set squareBaseline = true %}
-
-    {% include "default-hero.njk" %}
-
+{% include "default-hero.njk" %}
+```
 ### Replace Handlebars syntax with Nunjucks syntax
 Replace
-
-    {{#if disableAnimation}}
-
+```Handlebars
+{{#if disableAnimation}}
+```
 with
-
-    {% if disableAnimation %}
+```Nunjucks
+{% if disableAnimation %}
+```
 Replace
-
-    {{/if}}
-
+```Handlebars
+{{/if}}
+```
 with
-
-    {% endif %}
-
+```Nunjucks
+{% endif %}
+```
 Replace
-
-    {{> (lookup . 'ctaPartial')}}
-
+```Handlebars
+{{> (lookup . 'ctaPartial')}}
+```
 with
-
-    {% include ctaPartial %}
-
+```Nunjucks
+{% include ctaPartial %}
+```
 Replace
-
-    {{{squareLink}}}
-
+```Handlebars
+{{{squareLink}}}
+```
 with
-
-    {{squareLink}}
-
+```Nunjucks
+{{squareLink}}
+```
 Replace
-
-    {{@root.site.asset}}
-
+```Handlebars
+{{@root.site.asset}}
+```
 with
-
-    {{site.asset}}
-
+```Nunjucks
+{{site.asset}}
+```
 Replace
-
-    {{!--
-
+```Handlebars
+{{!--
+```
 with
-
-    {#
-
-  Replace
-
-    --}}
-
-with
-
-    #}
-
+```Nunjucks
+{#
+```
 Replace
-
-    {{@root.site.asset}}
-
+```Handlebars
+--}}
+```
 with
-
-    {{site.asset}}
-
+```Nunjucks
+#}
+```
 Replace
-
-    @first
-
+```Handlebars
+{{@root.site.asset}}
+```
 with
-
-    loop.first
-
+```Nunjucks
+{{site.asset}}
+```
+Replace
+```Handlebars
+@first
+```
+with
+```Nunjucks
+loop.first
+```
 ### Loops
 When looping over objects in Nunjucks, you must specify the name of the iterator and, using dot or bracket notation, prefix the key with the iterator name. Compare the following Handlebars to Nunjucks code.
 
-**Handlbars**
-
-    {{#each quotes}}
-		<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
-		<p>{{copy}}</p>
-		<a href="{{url}}" class="q-link">Learn more</a>
-	{{/each}}
-
- **Nunjucks**
-
-    {% for item in quotes %}
-		<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
-		<p>{{item["copy"]}}</p>
-		<a href="{{item.url}}" class="q-link">Learn more</a>
-	{% endfor %}
-
+**Handlebars**
+```Handlebars
+{{#each quotes}}
+	<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+	<p>{{copy}}</p>
+	<a href="{{url}}" class="q-link">Learn more</a>
+{{/each}}
+```
+**Nunjucks**
+```Nunjucks
+{% for item in quotes %}
+	<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
+	<p>{{item["copy"]}}</p>
+	<a href="{{item.url}}" class="q-link">Learn more</a>
+{% endfor %}
+```
 
 ### Replace inline JSON data (jsonContext)
  If you encounter inline JSON data within HTML, replace it with a {% set %} statement, e.g. replace this
-
-    {{#jsonContext '[
+```Handlebars
+{{#jsonContext '[
 	{
 		"heading"	: "Web Application Scanning",
 		"copy"		: "Find, fix security holes in web apps, APIs.",
@@ -328,17 +329,18 @@ When looping over objects in Nunjucks, you must specify the name of the iterator
 		"heading"	: "Web Application Firewall",
 		"copy"		: "Block attacks and patch web application vulnerabilities.",
 		"url"		: "/apps/web-app-firewall/"
-	}]'}}
+	}
+]'}}
 
-	{{#each this}}
-		<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
-		<p>{{copy}}</p>
-		<a href="{{url}}" class="q-link">Learn more</a>
-	{{/each}}
-
+{{#each this}}
+	<h3 class="heading--4 apps-block-heading">{{heading}}</h3>
+	<p>{{copy}}</p>
+	<a href="{{url}}" class="q-link">Learn more</a>
+{{/each}}
+```
  with this
-
-    {% set data = [
+```Nunjucks
+{% set data = [
 	{
 		"heading"	: "Web Application Scanning",
 		"copy"		: "Find, fix security holes in web apps, APIs.",
@@ -348,27 +350,28 @@ When looping over objects in Nunjucks, you must specify the name of the iterator
 		"heading"	: "Web Application Firewall",
 		"copy"		: "Block attacks and patch web application vulnerabilities.",
 		"url"		: "/apps/web-app-firewall/"
-	}] %}
+	}
+] %}
 
-	{% for item in quotes %}
-		<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
-		<p>{{item.copy}}</p>
-		<a href="{{item.url}}" class="q-link">Learn more</a>
-	{% endfor %}
-
+{% for item in quotes %}
+	<h3 class="heading--4 apps-block-heading">{{item.heading}}</h3>
+	<p>{{item.copy}}</p>
+	<a href="{{item.url}}" class="q-link">Learn more</a>
+{% endfor %}
+```
 ### Data.js files that fetch remote data
 When you encounter data.js files that fetch remote data, e.g. from Contentful, refactor the code to use [Eleventy Fetch](https://www.11ty.dev/docs/plugins/fetch/). For example,
-
-    const EleventyFetch = require("@11ty/eleventy-fetch");
-    module.exports = async function() {
-	    let url = "https://api.github.com/repos/11ty/eleventy";
-	    /* This returns a promise */
-	    return EleventyFetch(url, {
-		    duration: "1d", // save for 1 day
-		    type: "json"    // we’ll parse JSON for you
-	    });
-    };
-
+```Javascript
+const EleventyFetch = require("@11ty/eleventy-fetch");
+module.exports = async function() {
+	let url = "https://api.github.com/repos/11ty/eleventy";
+	/* This returns a promise */
+	return EleventyFetch(url, {
+		duration: "1d", // save for 1 day
+		type: "json"    // we’ll parse JSON for you
+	});
+};
+```
 
 ### Old website file count
 |File type|Count  |
@@ -476,36 +479,36 @@ When you encounter data.js files that fetch remote data, e.g. from Contentful, r
 16. Move all images to AWS / ImageKit.
 17. Move all PDFs to AWS CloudFront (assets2.qualys.com)
 
-```
+```Handlebars
 {{>
-  {{> icon-plus-content
-    icon=icon
-    title=heading
-    copy=copy
-    divider=divider
-    link=link
-  }}
+	{{> icon-plus-content
+		icon=icon
+		title=heading
+		copy=copy
+		divider=divider
+		link=link
+	}}
 }}
 ```
-```
+```Handlebars
 <div id="modal-{{../id}}-{{@index}}">
 ```
 ```
 central \"single-pane-of-glass\" dashboard."
 ```
 
-```
+```Handlebars
 {{>
-  ipad
-  image=screenshotImage
-  alt=altText
-  centered=false
-  fixedWidth=true
-  animate=true
+	ipad
+	image=screenshotImage
+	alt=altText
+	centered=false
+	fixedWidth=true
+	animate=true
 }}
 ```
 
-```
+```Handlebars
 {{moment page.startTime format="LLLL z" tz="UTC" locale="en-US"}}
 ```
 
@@ -514,26 +517,26 @@ central \"single-pane-of-glass\" dashboard."
 1. Copy source "pages" folder and "partials" folder and paste them into temporary "migration" folder
 2. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "pages"
 3. Run migration scripts
-```
+```Shell
 node recursive-replace.js
 node recursive-file-extension-replace.js
 ```
 4. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "partials"
 5. Run migration scripts
-```
+```Shell
 node recursive-replace.js
 node recursive-file-extension-replace.js
 ```
 7. Copy contents of migrated "pages" folder to new site's "src" folder
 8. Copy contents of migrated "partials" folder to new site's "_includes" folder
 9. Open the new site in a terminal and run Eleventy
-```
+```Shell
 npx @11ty/eleventy --serve --incremental
 ```
 10. Fix errors by updating migration script
 11. git reset the local repo
 12. Optionally, delete empty folders with
-```
+```Shell
 find . -type d -empty -delete
 ```
 13. Repeat all steps until migration script runs without error and produces desired results.
