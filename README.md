@@ -480,14 +480,12 @@ module.exports = async function() {
 17. Move all PDFs to AWS CloudFront (assets2.qualys.com)
 
 ```Handlebars
-{{>
-	{{> icon-plus-content
-		icon=icon
-		title=heading
-		copy=copy
-		divider=divider
-		link=link
-	}}
+{{> icon-plus-content
+  icon=icon
+  title=heading
+  copy=copy
+  divider=divider
+  link=link
 }}
 ```
 ```Handlebars
