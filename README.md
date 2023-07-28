@@ -469,15 +469,16 @@ module.exports = async function() {
 6. Add [PostCSS auto-prefixer](https://www.npmjs.com/package/eleventy-plugin-postcss) support :heavy_check_mark:
 7. Migrate sitemap. :heavy_check_mark:
 8. Migrate sitemap for product help. :heavy_check_mark:
-9. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:[See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
-10. Change all .hbs file extensions to .njk [See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
-11. Migrate some code that the automation script could not migrate, like the code blocks below.
-12. Rename all data.js files to 11tydata.js
-13. Migrate data.js files that generate multiple pages, e.g. press releases, manually
-14. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
-15. Migrate all other data.js files manually.
-16. Move all images to AWS / ImageKit.
-17. Move all PDFs to AWS CloudFront (assets2.qualys.com)
+9. Have Vuln Detection Pipeline server publish JSON data to Github
+10. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:[See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
+11. Change all .hbs file extensions to .njk [See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
+12. Migrate some code that the automation script could not migrate, like the code blocks below.
+13. Rename all data.js files to 11tydata.js
+14. Migrate data.js files that generate multiple pages, e.g. press releases, manually
+15. Migrate data.js files that pull data from external sources, e.g. Contentful, manually
+16. Migrate all other data.js files manually.
+17. Move all images to AWS / ImageKit.
+18. Move all PDFs to AWS CloudFront (assets2.qualys.com)
 
 ```Handlebars
 {{> icon-plus-content
