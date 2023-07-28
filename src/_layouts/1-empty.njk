@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{% if  lang  %}{{ lang }}{{else}}{{site.lang}}{% endif %}" class="legacy no-js {% if not desktopOnly %}mobile{% endif %}">
+<head>
+	{#  preconnect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
+	<link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin>
+	<link href="https://d1uyme8f6ss6qi.cloudfront.net" rel="preconnect" crossorigin>
+	<link href="https://cdn.rawgit.com" rel="preconnect" crossorigin>
+
+	<meta charset="utf-8">
+	{% renderlayoutblock 'appendMeta-1-empty' %}
+		{% if not desktopOnly %}
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% endif %}
+		<meta name="description" content="{{ description }}">
+		{% include "open-graph.njk" %}
+
+	<title>{{ title }}</title>
+
+	{#  load Pingdom Realtime User Monitoring before all other external assets #}
+	{% include "prum.njk" %}
+
+	<link rel="icon" type="image/png" href="/favicon.png">
+
+	{% renderlayoutblock 'appendStyles-1-empty' %}
+
+
+	{#  script tags in scripts-head should be async #}
+	{% renderlayoutblock 'appendScripts-defaultInHead-1-empty' %}
+
+
+	{% if site.env.production %}
+		{% include "gtm.njk" %}
+	{% endif %}
+
+</head>
+<body id="{{ bodyId }}" class="{{ bodyClass }} preload-transition">
+
+	{% include "gtm-noscript.njk" %}
+
+	<!-- BEGIN CONTENT -->
+	{{ content | safe }}
+	<!-- END CONTENT -->
+
+	{% renderlayoutblock 'appendScripts-1-empty' %}
+
+
+</body>
+</html>
