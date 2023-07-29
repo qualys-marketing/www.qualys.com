@@ -123,12 +123,21 @@ const edit = filePath => {
     newContent = oldContent.replace(regex, replaceVal);
 
     /* REPLACE {{> social-list dark=true centered=true}} with
-    @#@ dark=true centered=true @#@
+    {% set dark=true centered=true %}
     {% include social-list.njk %} */
+    function replacer(match, p1, p2, offset, string) {
+      var variablesArray = p2.split(/"\s+/gi);
+      variablesArray = variablesArray.filter(n => n);
+      var statements = variablesArray.map(function (statement) {
+        return `{% set ${statement}" %}`;
+      });
+      statements = statements.join("\n") + "\n" + `{% include "${p1}.njk" %}`;
+      return statements;
+    }
+
     oldContent = newContent;
     regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/\.=:"'\s]+)\s*\}\}/gi;
-    replaceVal = "@#@ $2 @#@" + "\n" + '{% include "$1.njk" %}';
-    newContent = oldContent.replace(regex, replaceVal);
+    newContent = oldContent.replace(regex, replacer);
 
     // REPLACE {{#each items as |child|}} with {% for child in items %}
     oldContent = newContent;
@@ -267,10 +276,6 @@ const edit = filePath => {
     replaceVal = 'MOMENT';
     newContent = oldContent.replace(regex, replaceVal);
 
-    // todo
-    // /partials/apps/cmdb-hero-laptop.hbs
-    // /partials.laptop.hbs
-
     // replace file extension from hbs to njk
     // filePath = filePath.replace(".hbs", ".njk");
 
@@ -280,7 +285,7 @@ const edit = filePath => {
 };
 
 const main = () => {
-  const dir = 'pages'; // folder name containing files
+  const dir = 'temp'; // folder name containing files
   const filePaths = walk(dir);
   filePaths.forEach(filePath => edit(filePath));
 };
