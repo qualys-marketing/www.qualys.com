@@ -516,7 +516,7 @@ central \"single-pane-of-glass\" dashboard."
 1. Copy source "pages" folder and "partials" folder and paste them into temporary "migration" folder
 2. Delete the following files and folders in the "pages" folder:
 - migration/pages/trust-compliance/
-migration/pages/community/
+- migration/pages/community/
 - migration/pages/sitemap-product-help.njk
 - migration/pages/sitemap.njk
 2. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "pages"
@@ -534,17 +534,17 @@ node recursive-file-extension-replace.js
 7. Copy contents of migrated "pages" folder to new site's "src" folder
 8. Copy contents of migrated "partials" folder to new site's "_includes" folder
 10. Delete "src/trust-compliance" folder
-9. Open the new site in a terminal and run Eleventy
+11. Open the new site in a terminal and run Eleventy
 ```Shell
 npx @11ty/eleventy --serve --incremental
 ```
-10. Fix errors by updating migration script
-11. git reset the local repo
-12. Optionally, delete empty folders with
+12. Fix errors by updating migration script
+13. git reset the local repo
+14. Optionally, delete empty folders with
 ```Shell
 find . -type d -empty -delete
 ```
-13. Repeat all steps until migration script runs without error and produces desired results.
+15. Repeat all steps until migration script runs without error and produces desired results.
 
 ### Troubleshooting
 If you lose your .env file, copy the one in the source website and remove the Contenful Preview API tokens.
