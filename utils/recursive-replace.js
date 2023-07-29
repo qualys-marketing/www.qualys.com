@@ -58,7 +58,7 @@ const edit = filePath => {
 
     // REPLACE {{unless x}} with {% if not x %}
     oldContent = newContent;
-    regex = /\{\{#unless\s+([a-zA-Z0-9-_\.]+)?\s*\}\}/gi;
+    regex = /\{\{#unless\s+([a-zA-Z0-9-_\.@]+)?\s*\}\}/gi;
     replaceVal = '{% if not $1 %}';
     newContent = oldContent.replace(regex, replaceVal);
 
@@ -206,9 +206,14 @@ const edit = filePath => {
 
     // REPLACE --- with ---\n{layout}
     oldContent = newContent;
-    regex = /---/i;
+    regex = /^---/i;
+    regex2 = /^{{jsonStringify/i;
     replaceVal = '---\nlayout: ' + layout + '.njk';
-    newContent = oldContent.replace(regex, replaceVal);
+    if (regex.exec(oldContent) !== null) {
+      newContent = oldContent.replace(regex, replaceVal);
+    } else if (regex2.exec(oldContent) === null) {
+      newContent = replaceVal + "\n---" + oldContent;
+    }
 
     // REPLACE {{#append "meta-tags"}} with {% layoutblock 'appendMeta-layout' %}
     oldContent = newContent;
@@ -275,6 +280,16 @@ const edit = filePath => {
     regex = /\{\{\s*moment\s+[a-zA-Z0-9\.\-"=_/\s]*\s*\}\}/gi;
     replaceVal = 'MOMENT';
     newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{jsonStringify items  null 4}} with {{ items | jsonStringify(null, 4) }}
+    oldContent = newContent;
+    regex = /\{\{\s*jsonStringify\s+([a-zA-Z0-9\.\-"=_/]+)*\s*([a-zA-Z0-9\.\-"=_/]+)*?\s*?([a-zA-Z0-9\.\-"=_/]+)*?\s*\}\}/gi;
+    replaceVal = '{{ $1 | jsonStringify($2, $3) }}';
+    newContent = oldContent.replace(regex, replaceVal);
+
+    // todo
+    // /partials/apps/cmdb-hero-laptop.hbs
+    // /partials.laptop.hbs
 
     // replace file extension from hbs to njk
     // filePath = filePath.replace(".hbs", ".njk");

@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
 			"!**/*.11tydata.js",
 		]
 	});
-  
+
 	// Copy static folder
 	eleventyConfig.addPassthroughCopy("src/asset");
 
@@ -52,16 +52,25 @@ module.exports = function(eleventyConfig) {
 		return markdown.render(value);
 	});
 
+  eleventyConfig.addFilter('jsonStringify', function(value, replacer, space) {
+    if (value && value.replacer) {
+      // allow the data to provide it's own replacer
+      replacer = value.replacer;
+    }
+
+	  return JSON.stringify(value, replacer, space);
+	});
+
 	// add support for blocks
     eleventyConfig.addShortcode('renderlayoutblock', function(name) {
         //return (this.page.layoutblock || {})[name] || '';
         var blockContent = '';
         if (this.page.layoutblock && this.page.layoutblock[name]) {
             blockContent = this.page.layoutblock[name];
-        } 
+        }
         return blockContent;
     });
-  
+
     eleventyConfig.addPairedShortcode('layoutblock', function(content, name) {
         if (!this.page.layoutblock) {
             this.page.layoutblock = {};
