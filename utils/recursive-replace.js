@@ -46,7 +46,7 @@ const edit = filePath => {
 
     // REPLACE page.platform with platform
     oldContent = newContent;
-    regex = /\s+page\.([a-zA-Z0-9-_]+)?/gi;
+    regex = /page\.([a-zA-Z0-9-_]+)?/gi;
     replaceVal = ' $1 ';
     newContent = oldContent.replace(regex, replaceVal);
 
@@ -58,7 +58,7 @@ const edit = filePath => {
 
     // REPLACE {{unless x}} with {% if not x %}
     oldContent = newContent;
-    regex = /\{\{#unless\s+([a-zA-Z0-9-_\.]+)?\}\}/gi;
+    regex = /\{\{#unless\s+([a-zA-Z0-9-_\.]+)?\s*\}\}/gi;
     replaceVal = '{% if not $1 %}';
     newContent = oldContent.replace(regex, replaceVal);
 
@@ -92,16 +92,10 @@ const edit = filePath => {
     replaceVal = 'loop.index';
     newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE {{!-- with {#
+    // REPLACE {{!-- lorem }} with {# lorem #}
     oldContent = newContent;
-    regex = /\{\{!--/gi;
-    replaceVal = '{#';
-    newContent = oldContent.replace(regex, replaceVal);
-
-    // REPLACE --}} with #}
-    oldContent = newContent;
-    regex = /--\}\}/gi;
-    replaceVal = '#}';
+    regex = /\{\{!([\w\s*\-_/\\'.:\n]*)?\}\}/gim;
+    replaceVal = '{# $1 #}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{> (lookup . 'ctaPartial')}} with {% include ctaPartial %}
@@ -128,22 +122,12 @@ const edit = filePath => {
     replaceVal = '{% include "$1.njk" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE {{> social-list dark=true centered=true}} with {% include social-list.njk dark=true centered=true %}
+    /* REPLACE {{> social-list dark=true centered=true}} with
+    @#@ dark=true centered=true @#@
+    {% include social-list.njk %} */
     oldContent = newContent;
     regex = /\{\{>\s*([a-zA-Z0-9-_/]+)?\s*([a-zA-Z0-9-_/\.=:"'\s]+)\s*\}\}/gi;
-    var arr = regex.exec(oldContent);
-    var statements = "";
-    //console.log(arr);
-    //console.log("-----------");
-    if (arr && arr[2]) {
-      var variablesArray = arr[2].split(/"\s+/gi);
-      variablesArray = variablesArray.filter(n => n);
-      statements = variablesArray.map(function (statement) {
-        return `{% set ${statement}" %}`;
-      });
-      statements = statements.join("\n");
-    }
-    replaceVal = statements + "\n" + '{% include "$1.njk" %}';
+    replaceVal = "@#@ $2 @#@" + "\n" + '{% include "$1.njk" %}';
     newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{#each items as |child|}} with {% for child in items %}
@@ -282,6 +266,10 @@ const edit = filePath => {
     regex = /\{\{\s*moment\s+[a-zA-Z0-9\.\-"=_/\s]*\s*\}\}/gi;
     replaceVal = 'MOMENT';
     newContent = oldContent.replace(regex, replaceVal);
+
+    // todo
+    // /partials/apps/cmdb-hero-laptop.hbs
+    // /partials.laptop.hbs
 
     // replace file extension from hbs to njk
     // filePath = filePath.replace(".hbs", ".njk");

@@ -1,5 +1,5 @@
-/* 
-This NodeJS script will recursively read files in a folder 
+/*
+This NodeJS script will recursively read files in a folder
 and rename the file extension.
 Set the old file extensions in the regex line
 Set the new file extension in the "newExtension" variable.
@@ -36,7 +36,7 @@ const listDir = (dir, fileList = []) => {
     return fileList;
 };
 
-let foundFiles = listDir( './partials');
+let foundFiles = listDir( './pages');
 foundFiles.forEach(f => {
-   fs.renameSync(f.oldSrc, f.newSrc); 
+   fs.renameSync(f.oldSrc, f.newSrc);
 });

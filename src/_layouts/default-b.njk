@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="{% if  lang  %}{{ lang }}{{else}}{{site.lang}}{% endif %}" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+  {% renderlayoutblock 'appendMeta-default-b' %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% if  description  %}
+		<meta name="description" content="{{ description }}">
+		{% endif %}
+		{% if  robots  %}
+		<meta name="robots" content="{{ robots }}">
+		{% endif %}
+		{% include "open-graph.njk" %}
+
+	<title>{{ title }}</title>
+
+	{#  preconnect to CDNs to set up DNS/TCP/TLS connections ahead of time #}
+	{% renderlayoutblock 'appendHints-default-b' %}
+		<link rel="preconnect" href="https://ik.imagekit.io/qualys" crossorigin>
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+
+	{#  load Pingdom Realtime User Monitoring before all other external assets #}
+	{% include "prum.njk" %}
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="{% if  canonical  %}{{ canonical }}{{else}}https://www.qualys.com{{__path}}{% endif %}">
+	<meta name="theme-color" content="#2E8BE0">
+
+	{% renderlayoutblock 'appendStyles-default-b' %}
+	{% set href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css" %}
+{% include "async-css.njk" %}
+		<link rel="stylesheet" href="/asset/stylesheet/common.css">
+
+
+	{#  script tags in scripts-head should be async #}
+	{% renderlayoutblock 'appendScripts-defaultInHead-default-b' %}
+
+
+	{% include "gtm.njk" %}
+
+</head>
+<body>
+
+	{% include "gtm-noscript.njk" %}
+
+	{% if not noHeader %}
+	<div class="{{simplified-header}}">
+		{% include "header-b.njk" %}
+	</div>
+	{% endif %}
+
+	{% set visibility="hidden" %}
+{% include "grid-overlay.njk" %}
+
+	{% if not noBanner %}
+		{% set contentPartial="promo/tru-report/" %}
+		{% set	class="q-promo-container promo--hidden" %}
+		{% set	expires="2023-04-30T17:00:00Z" %}
+{% include "promo-banner.njk" %}
+		{# --
+			expiration date in UTC time in format yyyy-mm-ddThh-mm-ss in 24 hour format
+			get current UTC time from https://www.timeanddate.com/time/zone/timezone/utc
+			get future UTC time from https://everytimezone.com/
+			don't forget to update the mobile promo banner in mobile-trial-banner.hbs
+		-- #}
+	{% endif %}
+
+  <!-- BEGIN CONTENT -->
+	{{ content | safe }}
+	<!-- END CONTENT -->
+
+	{% if not noFooter %}
+		{% include "footer.njk" %}
+	{% endif %}
+
+	{% if not noMobileTrialBanner %}
+		{% include "mobile-trial-banner.njk" %}
+	{% endif %}
+
+	{% renderlayoutblock 'appendScripts-default-b' %}
+		<!-- polyfills -->
+		<!--[if lt IE 10]>
+			{% include "vendor/es5-shim.njk" %}
+		<![endif]-->
+		<!--[if IE]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js" integrity="sha384-G1LHj+SfI1gc9FouJCB24YnAzzjhDNfhwrUPgo2Fb4Jde/lBnkHXjd83QvEZraLK" crossorigin="anonymous"></script>
+		<![endif]-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js" integrity="sha256-IylDNWjip7FK2TJUYck237qBTBeSiwnSFDCjLG686D4=" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/core-js-bundle@3.6.5/minified.js" integrity="sha384-TTVcaKdKKsLSvxkJU8mv/ZrkBlSMUiXn57PWhpGFzfeuzqQW/krdvVzW8yqtTqz5" crossorigin="anonymous"></script>
+
+		<!-- libraries -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha384-zZbyq8BQ4BvQcv4xPxkJWWGPSVW6z+MufIHfxNTdnFQwc7J2Idz0zxeP6/bMqWJn" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha384-nK4khbhvZ/TNQaGnwee6RVFCDRfxcrLKZZqKCVqk1rF9AT8Etq3UZYCXZ7CCAd0K" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js" integrity="sha512-dPYTaB+Ip4gAl9vo6U0jSmI8v1AZKjPKH367mfo7pR5gLf1IKpjm3bIXIwm+MmYWEf0eiBEWSBqE+MdKUx0jfg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>
+		<script src="/asset/script/common-b.js"></script>
+
+
+</body>
+</html>
