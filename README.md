@@ -514,6 +514,10 @@ central \"single-pane-of-glass\" dashboard."
 ### Development Steps for Migration Script
 
 1. Copy source "pages" folder and "partials" folder and paste them into temporary "migration" folder
+2. Delete the following files and folders in the "pages" folder:
+- migration/pages/trust-compliance/
+- migration/pages/sitemap-product-help.njk
+- migration/pages/sitemap.njk
 2. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "pages"
 3. Run migration scripts
 ```Shell
