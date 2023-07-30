@@ -470,6 +470,7 @@ module.exports = async function() {
 7. Migrate sitemap. :heavy_check_mark:
 8. Migrate sitemap for product help. :heavy_check_mark:
 9. Have Vuln Detection Pipeline server publish JSON data to Github
+10. Write script to list side by side the file size of all html files generated from old hbs files and new njk files to compare sizes and quickly check if the migration script works correctly. Many strip out all whitespace.
 10. Migrate all 351 partials and all 1659 pages programmatically using migration script. :hourglass:[See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-replace.js).
 11. Change all .hbs file extensions to .njk [See script](https://github.com/qualys-marketing/www.qualys.com/blob/main/utils/recursive-file-extension-replace.js)
 12. Migrate some code that the automation script could not migrate, like the code blocks below.
