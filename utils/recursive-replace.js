@@ -94,7 +94,7 @@ const edit = filePath => {
 
     // REPLACE {{!-- lorem }} with {# lorem #}
     oldContent = newContent;
-    regex = /\{\{!([\w\s*\-_/\\'.:\n]*)?\}\}/gim;
+    regex = /\{\{!([\w\s*\-_/\\'.,:\n]*)?\}\}/gim;
     replaceVal = '{# $1 #}';
     newContent = oldContent.replace(regex, replaceVal);
 
