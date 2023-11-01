@@ -519,6 +519,7 @@ central \"single-pane-of-glass\" dashboard."
 3. Delete the following files and folders in the "pages" folder:
 - migration/pages/trust-compliance/
 - migration/pages/community/
+- migration/pages/emails/
 4. In recursive-replace.js and recursive-file-extension-replace.js, set folder name to "pages"
 5. Run migration scripts
 ```Shell
@@ -544,6 +545,13 @@ npx @11ty/eleventy --serve --incremental
 find . -type d -empty -delete
 ```
 15. Repeat all steps until migration script runs without error and produces desired results.
+16. 
+
+### Reset local repo to match remote / origin repo in GitHub
+1. Hard reset
+git reset --hard origin/main
+2. Delete empty folders
+find . -type d -empty -delete
 
 ### Troubleshooting
 If you lose your .env file, copy the one in the source website and remove the Contenful Preview API tokens.
