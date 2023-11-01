@@ -545,6 +545,13 @@ npx @11ty/eleventy --serve --incremental
 find . -type d -empty -delete
 ```
 15. Repeat all steps until migration script runs without error and produces desired results.
+16. 
+
+### Reset local repo to match remote / origin repo in GitHub
+1. Hard reset
+git reset --hard origin/main
+2. Delete empty folders
+find . -type d -empty -delete
 
 ### Troubleshooting
 If you lose your .env file, copy the one in the source website and remove the Contenful Preview API tokens.
