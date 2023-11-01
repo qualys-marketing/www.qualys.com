@@ -94,7 +94,7 @@ const edit = filePath => {
 
     // REPLACE {{!-- lorem }} with {# lorem #}
     oldContent = newContent;
-    regex = /\{\{!([\w\s*\-_/\\'.:\n]*)?\}\}/gim;
+    regex = /\{\{!([\w\s*\-_/\\'.,:\n]*)?\}\}/gim;
     replaceVal = '{# $1 #}';
     newContent = oldContent.replace(regex, replaceVal);
 
@@ -206,13 +206,13 @@ const edit = filePath => {
 
     // REPLACE --- with ---\n{layout}
     oldContent = newContent;
-    regex = /^---/i;
-    regex2 = /^{{jsonStringify/i;
+    regex1 = /^---\nlayout/i;
+    regex2 = /^---/i;
     replaceVal = '---\nlayout: ' + layout + '.njk';
-    if (regex.exec(oldContent) !== null) {
-      newContent = oldContent.replace(regex, replaceVal);
-    } else if (regex2.exec(oldContent) === null) {
-      newContent = replaceVal + "\n---" + oldContent;
+    if (regex1.exec(oldContent) !== null) {
+      // do nothing because we already ran the script
+    } else if (regex2.exec(oldContent) !== null) {
+      newContent = oldContent.replace(regex2, replaceVal) + oldContent;
     }
 
     // REPLACE {{#append "meta-tags"}} with {% layoutblock 'appendMeta-layout' %}
@@ -300,7 +300,7 @@ const edit = filePath => {
 };
 
 const main = () => {
-  const dir = 'temp'; // folder name containing files
+  const dir = 'pages'; // folder name containing files
   const filePaths = walk(dir);
   filePaths.forEach(filePath => edit(filePath));
 };
