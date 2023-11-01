@@ -533,6 +533,7 @@ node recursive-file-extension-replace.js
 ```
 7. Copy contents of migrated "pages" folder to new site's "src" folder
 8. Copy contents of migrated "partials" folder to new site's "_includes" folder
+9. Delete src/emails folder 
 11. Open the new site in a terminal and run Eleventy
 ```Shell
 npx @11ty/eleventy --serve --incremental
